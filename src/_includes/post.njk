@@ -1,0 +1,145 @@
+---
+layout: base.njk
+---
+
+<header class="relative h-[40vh] min-h-[350px] flex items-end justify-center text-center overflow-hidden pb-12">
+    
+    <div class="absolute inset-0 w-full h-full">
+        <img src="{{ image or '/assets/images/hero-athens-view.webp' }}" 
+             alt="{{ title }}" 
+             class="w-full h-full object-cover">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-gray-900/30"></div>
+    </div>
+    
+    <div class="relative z-10 px-4 max-w-3xl mx-auto">
+        
+        <span class="inline-block py-1 px-2 rounded-md bg-[--accent-color] text-white text-[10px] font-bold uppercase tracking-widest mb-3 shadow-sm">
+            {{ category or "Technical Insight" }}
+        </span>
+        
+        <h1 class="text-2xl md:text-4xl font-bold text-white mb-3 leading-tight drop-shadow-lg font-['Poppins']">
+            {{ title }}
+        </h1>
+        
+        <div class="flex flex-wrap justify-center gap-4 text-gray-200 text-xs font-mono opacity-90">
+            <span class="flex items-center gap-1">
+                📅 {{ date | dateString }}
+            </span>
+            <span class="flex items-center gap-1">
+                📍 {{ location or "Athens" }}
+            </span>
+            <span class="flex items-center gap-1">
+                🏗️ {{ property_type or "Residential" }}
+            </span>
+        </div>
+    </div>
+</header>
+
+<div class="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-12">
+    
+   <article class="w-full md:w-2/3 max-w-none">
+        
+        <a href="/klab/" class="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[--accent-color] mb-6 transition-colors no-underline">
+            <span>←</span> Back to Lab
+        </a>
+
+        <div class="bg-blue-50 dark:bg-slate-800 p-4 rounded-lg border-l-4 border-[--accent-color] mb-8 text-sm">
+            <p class="font-bold text-[--title-color] m-0">⚡ Quick Summary</p>
+            <p class="m-0 text-gray-600 dark:text-gray-300">{{ summary or "A deep dive into Athens construction risks." }}</p>
+        </div>
+
+        {% if comparison_slider.image_left and comparison_slider.image_right %}
+        <div class="my-8 not-prose">
+            <h3 class="font-bold text-xl mb-4 text-[--title-color] flex items-center gap-2">
+                {{ comparison_slider.title or "🔎 Forensic Analysis" }}: <span class="font-normal text-base">{{ comparison_slider.caption }}</span>
+            </h3>
+            
+            <img-comparison-slider class="rounded-xl shadow-xl border border-gray-200">
+                <img slot="first" src="{{ comparison_slider.image_left }}" width="100%" alt="Left View" />
+                <img slot="second" src="{{ comparison_slider.image_right }}" width="100%" alt="Right View" />
+            </img-comparison-slider>
+            
+            <p class="text-xs text-center text-gray-400 mt-2">← Drag the slider →</p>
+        </div>
+        {% endif %}
+
+        <div class="prose prose-lg prose-slate dark:prose-invert max-w-none">
+            {{ content | safe }}
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex items-start gap-4">
+            <img src="/assets/images/moi.webp" alt="Arnaud Zerdab" class="w-16 h-16 rounded-full object-cover border-2 border-[--accent-color]">
+            <div>
+                <h4 class="font-bold text-lg text-[--title-color]">Arnaud Zerdab</h4>
+                <p class="text-sm text-gray-500 mb-2">Founder, Klehomerie. Technical Asset Manager.</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                    Athens-based Technical Asset Management firm. Applying French technical standards to the Greek property market, Klehomerie provides independent "Red Flag Scans" and deep audits to protect foreign capital.
+                </p>
+                <a href="https://linkedin.com/in/arnaudzerdab" target="_blank" class="text-[--accent-color] text-xs font-bold hover:underline mt-2 inline-block">Connect on LinkedIn →</a>
+            </div>
+        </div>
+
+        <div class="mt-16 p-8 md:p-12 rounded-xl shadow-2xl border-t-8 border-[--accent-color] w-full" 
+             style="background-color: #ffffff !important; color: #111827 !important; min-height: 300px;">
+            
+            <h3 class="font-bold text-2xl mb-10 flex items-center gap-3 border-b border-gray-100 pb-6"
+                style="color: #0C2D48 !important;">
+                💬 Technical Discussion
+            </h3>
+            
+            <div id="cusdis_thread"
+                 style="width: 100%;"
+                 data-host="https://cusdis.com"
+                 data-app-id="f4977747-72f6-435b-8335-ff11aa6b53c7" 
+                 data-page-id="{{ page.url }}"
+                 data-page-url="https://klehomerie.com{{ page.url }}"
+                 data-page-title="{{ title }}"
+                 data-theme="light">
+            </div>
+            
+            <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+        </div>
+
+    </article>
+
+    <aside class="w-full md:w-1/3 space-y-8">
+        
+        <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 sticky top-24">
+            <h3 class="font-bold text-xl mb-2 text-[--title-color]">Stop Buying Blind.</h3>
+            <p class="text-sm text-gray-500 mb-6">Don't sign a contract until you've seen the infrared.</p>
+            <a href="/#contact" class="block w-full text-center bg-[--accent-color] hover:bg-[--accent-color-hover] text-white font-bold py-3 px-4 rounded-lg transition-colors">
+                Book a Red Flag Scan (€97)
+            </a>
+            <p class="text-xs text-center text-gray-400 mt-2">45-min Technical Diagnostic</p>
+        </div>
+
+        <div class="bg-[--secondary-bg] p-6 rounded-xl border border-[--border-color] sticky top-80">
+            <h3 class="font-bold text-lg mb-2 text-[--title-color]">Free Checklist 📋</h3>
+            <p class="text-sm mb-4 text-[--text-color]">Get the 16-point guide that inspired my Golden Ticket audit.</p>
+            
+            <form name="checklist-request" method="POST" action="/success/" netlify class="space-y-3">
+                <input type="email" name="email" placeholder="Enter your email" required 
+                       class="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 dark:bg-slate-700 text-sm">
+                
+                <button type="submit" class="w-full bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-2 px-4 rounded text-sm transition-colors flex items-center justify-center gap-2">
+                    Send it to me 📩
+                </button>
+            </form>
+            
+            <p class="text-xs text-center text-gray-400 mt-2">I respect your privacy. No spam.</p>
+        </div>
+
+    </aside>
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
+<style>
+  img-comparison-slider { visibility: visible; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+  .prose { max-width: 100%; }
+  /* Force clean resets on mobile */
+  @media (max-width: 768px) {
+      .container { padding-left: 1rem; padding-right: 1rem; }
+  }
+</style>

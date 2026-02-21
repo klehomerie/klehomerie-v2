@@ -1,0 +1,407 @@
+---
+layout: base.njk
+title: Klehomerie - Technical Asset Management & Technical Audits Athens
+---
+
+<header id="hero" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+    <picture class="absolute inset-0 w-full h-full">
+        <source media="(max-width: 768px)" srcset="/assets/images/hero-athens-view-mobile.webp" type="image/webp">
+        <source srcset="/assets/images/hero-athens-view.webp" type="image/webp">
+        <img src="/assets/images/hero-athens-view.webp" 
+             alt="Klehomerie Technical Asset Management - Athens Property Inspection" 
+             class="hero-img object-cover w-full h-full" 
+             fetchpriority="high" 
+             loading="eager">
+    </picture>
+    
+    <div class="hero-overlay absolute inset-0 bg-black bg-opacity-40"></div>
+    
+    <div class="relative z-10 px-4 max-w-4xl mx-auto mt-16">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg tracking-tight" data-lang-key="heroTitle">
+            Don't just collect rent. Protect the concrete.
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 mb-8 font-light drop-shadow-md" data-lang-key="heroSubtitle">
+            Technical Asset Management for International Investors.
+        </p>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" 
+                class="bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg flex items-center mx-auto gap-2">
+            <span data-lang-key="heroCTA">Book a Technical Scan</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center" data-lang-key="aboutTitle">About Klehomerie</h2>
+            <div class="grid md:grid-cols-3 gap-8 md:gap-12 items-center mb-16">
+                <div class="md:col-span-1">
+                    <picture>
+                        <source type="image/webp" srcset="/assets/images/moi.webp">
+                        <img src="/assets/images/moi.webp" loading="lazy" alt="Arnaud Zerdab - Technical Asset Manager & Construction Auditor Athens" class="rounded-lg mx-auto slide-in w-full max-w-xs md:max-w-full">
+                    </picture>
+                </div>
+                <div class="md:col-span-2 text-center md:text-left">
+                    <p class="text-lg" data-lang-key="aboutText"></p>
+                </div>
+            </div>
+            
+           <div class="grid md:grid-cols-3 gap-8 justify-center mt-12">
+             <div class="text-center p-4">
+                <div class="text-[--accent-color] text-4xl mb-4">🏗️</div>
+                <h3 class="font-bold text-xl mb-2" data-lang-key="iconRigorTitle">Technical Rigor</h3>
+                <p class="text-sm" data-lang-key="iconRigorText">Construction standards applied to management.</p>
+            </div>
+            <div class="text-center p-4">
+                <div class="text-[--accent-color] text-4xl mb-4">🛡️</div>
+                <h3 class="font-bold text-xl mb-2" data-lang-key="iconGuardTitle">Asset Guardianship</h3>
+                <p class="text-sm" data-lang-key="iconGuardText">Protecting the structure while you sleep.</p>
+            </div>
+             <div class="text-center p-4">
+                <div class="text-[--accent-color] text-4xl mb-4">🇫🇷</div>
+                <h3 class="font-bold text-xl mb-2" data-lang-key="iconIntlTitle">Intl. Standards</h3>
+                <p class="text-sm" data-lang-key="iconIntlText">French discipline, Greek reality.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 px-6 container mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[--title-color]" data-lang-key="servicesTitle">Our Missions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--accent-color] group">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">⛩️</div> <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="serviceGateTitle">The Gatekeeper</h3>
+                <p class="text-[--text-color] leading-relaxed" data-lang-key="serviceGateText">
+                    Before you plan a trip to Athens, we ensure the listing matches reality.
+                </p>
+            </div>
+            <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--title-color] group">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">👷</div> <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="serviceAuthTitle">The Authority</h3>
+                <p class="text-[--text-color] leading-relaxed" data-lang-key="serviceAuthText">
+                    Before closing the deal, we run a full audit. The weapon to negotiate.
+                </p>
+            </div>
+            <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--accent-color] group">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🛡️</div> <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="serviceGuardTitle">The Guardian</h3>
+                <p class="text-[--text-color] leading-relaxed" data-lang-key="serviceGuardText">
+                    Asset preservation maintenance and corporate-grade reporting.
+                </p>
+            </div>
+            <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--title-color] group">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">📋</div> <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="serviceCoordTitle">The Coordinator</h3>
+                <p class="text-[--text-color] leading-relaxed" data-lang-key="serviceCoordText">
+                    When we need to get it done, but done right.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="mt-20">
+        <div id="packages-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4"></div> 
+        <div class="mt-16 py-10 bg-[--secondary-bg] rounded-2xl mx-4 slide-in">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-2xl font-bold mb-2 text-[--title-color]" data-lang-key="rateCardTitle">Official Technical Rate Cards</h3>
+                <p class="text-[--text-color] mb-8 px-6" data-lang-key="rateCardDesc">Access our transparent pricing for asset guardianship and technical audits in Athens.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-6 px-6">
+                    <div class="flex-1 bg-[--card-bg] p-6 rounded-xl shadow-md border-b-4 border-[--accent-color] flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <span class="text-3xl">🇬🇧</span>
+                            <div class="text-left">
+                                <p class="font-bold text-sm text-[--title-color]">ENGLISH VERSION</p>
+                                <p class="text-xs text-gray-400">PDF • Technical Specs</p>
+                            </div>
+                        </div>
+                        <a href="/KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf" download class="bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 text-xs font-bold py-2 px-4 rounded transition-colors" data-lang-key="downloadLabel">Download</a>
+                    </div>
+
+                    <div class="flex-1 bg-[--card-bg] p-6 rounded-xl shadow-md border-b-4 border-[--accent-color] flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <span class="text-3xl">🇫🇷</span>
+                            <div class="text-left">
+                                <p class="font-bold text-sm text-[--title-color]">VERSION FRANÇAISE</p>
+                                <p class="text-xs text-gray-400">PDF • Spécifications</p>
+                            </div>
+                        </div>
+                        <a href="/KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf" download class="bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 text-xs font-bold py-2 px-4 rounded transition-colors" data-lang-key="downloadLabel">Télécharger</a>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-col items-center animate-pulse-slow">
+                    <p class="text-sm text-[--text-color] mb-2 font-medium" data-lang-key="callToActionTitle">Not sure which package fits your situation?</p>
+                    <a href="https://calendar.app.google/pNE9HLdXuUtCwgEi7" target="_blank" class="text-[--accent-color] font-bold hover:text-[--accent-color-hover] hover:underline flex items-center gap-2 transition-all transform hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span data-lang-key="callToActionBtn">Book a 15-min clarity call</span>
+                    </a>
+                </div>
+                <p class="text-[10px] text-gray-400 mt-6 uppercase tracking-widest" data-lang-key="vatDisclaimer">All prices are exclusive of VAT. VAT 24% is extra.</p>
+            </div>
+        </div>
+    </section>
+
+<section id="alacarte" class="py-20 bg-[--secondary-bg] transition-colors duration-300">
+    <div class="container mx-auto px-6 max-w-4xl">
+        
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold mb-4 text-[--title-color]" data-lang-key="calcTitle">The "Athens Asset" Risk Index</h2>
+            <p class="text-[--text-color]" data-lang-key="calcSubtitle">Do you really know what you are buying?</p>
+        </div>
+
+        <div id="quiz-questions" class="bg-[--card-bg] p-8 md:p-12 rounded-xl shadow-lg border-t-4 border-[--accent-color]">
+            <form id="riskForm" class="space-y-6">
+                
+                <div>
+                    <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q1">1. Electrical Check...</p>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q1" value="0" class="accent-[--accent-color]" required> 
+                            <span data-lang-key="ans_yes" class="text-[--text-color]">Yes</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q1" value="10" class="accent-[--accent-color]"> 
+                            <span data-lang-key="ans_no" class="text-[--text-color]">No</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q1" value="20" class="accent-[--accent-color]"> 
+                            <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q2">2. Plumbing Check...</p>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q2" value="0" class="accent-[--accent-color]" required> 
+                            <span data-lang-key="ans_yes" class="text-[--text-color]">No (Good)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q2" value="20" class="accent-[--accent-color]"> 
+                            <span data-lang-key="ans_no" class="text-[--text-color]">Yes (Moves)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q2" value="20" class="accent-[--accent-color]"> 
+                            <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q3">3. Security Check...</p>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q3" value="15" class="accent-[--accent-color]" required> 
+                            <span data-lang-key="ans_yes" class="text-[--text-color]">Yes (Protrudes)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q3" value="0" class="accent-[--accent-color]"> 
+                            <span data-lang-key="ans_no" class="text-[--text-color]">No (Flush)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q3" value="15" class="accent-[--accent-color]"> 
+                            <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q4">4. Heating Check...</p>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q4" value="10" class="accent-[--accent-color]" required> 
+                            <span data-lang-key="ans_yes" class="text-[--text-color]">Yes (Cold bottom)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q4" value="0" class="accent-[--accent-color]"> 
+                            <span data-lang-key="ans_no" class="text-[--text-color]">No (Uniform)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q4" value="10" class="accent-[--accent-color]"> 
+                            <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q5">5. Storm Check...</p>
+                    <div class="flex flex-wrap gap-4 text-sm">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q5" value="0" class="accent-[--accent-color]" required> 
+                            <span data-lang-key="ans_yes" class="text-[--text-color]">Yes</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q5" value="20" class="accent-[--accent-color]"> 
+                            <span data-lang-key="ans_no" class="text-[--text-color]">No</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="radio" name="q5" value="20" class="accent-[--accent-color]"> 
+                            <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" onclick="calculateRisk()" 
+                        class="w-full bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300 mt-4 shadow-md" 
+                        data-lang-key="calcButton">
+                    Calculate Risk Score ⚠️
+                </button>
+            </form>
+        </div>
+
+        <div id="quiz-result" class="hidden bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl border-2 border-[--accent-color] text-center">
+            
+            <div id="result-icon" class="text-6xl mb-2">🛡️</div>
+            <div id="score-text-display" class="text-2xl font-bold text-[--accent-color] mb-4"></div>
+
+            <h3 id="result-title" class="text-3xl font-bold mb-4 text-[--title-color]"></h3>
+            <p id="result-desc" class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"></p>
+
+            <div class="bg-blue-50 dark:bg-slate-700/50 p-6 rounded-xl border border-blue-100 dark:border-slate-600 max-w-lg mx-auto">
+                <p class="font-bold text-[--title-color] mb-2">Get the Full Protection Pack</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    Don't rely on just 5 questions. Enter your email to receive the official <strong>16-Point Audit Checklist</strong> and verify the rest.
+                </p>
+                
+                <form name="risk-assessment-lead" method="POST" action="/success/" netlify class="flex flex-col gap-3">
+                    <input type="hidden" name="risk_score" id="hidden-risk-score" value="">
+                    
+                    <input type="email" name="email" required placeholder="Enter your email address" 
+                           class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 focus:ring-2 focus:ring-[--accent-color] outline-none">
+                    
+                    <button type="submit" class="w-full bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                        Send me the Checklist 📩
+                    </button>
+                </form>
+            </div>
+
+            <button onclick="resetQuiz()" class="mt-6 text-sm text-gray-400 hover:text-[--accent-color] underline">
+                Retake Quiz
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<script>
+function calculateRisk() {
+    const form = document.getElementById('riskForm');
+    const formData = new FormData(form);
+    let score = 0;
+    let answered = 0;
+
+    // Sum up the weighted values (0, 10, 15, 20)
+    for (let pair of formData.entries()) {
+        score += parseInt(pair[1]);
+        answered++;
+    }
+
+    if (answered < 5) {
+        alert("Please answer all 5 questions.");
+        return;
+    }
+
+    // Elements
+    const quizContainer = document.getElementById('quiz-questions');
+    const resultContainer = document.getElementById('quiz-result');
+    const title = document.getElementById('result-title');
+    const desc = document.getElementById('result-desc');
+    const icon = document.getElementById('result-icon');
+    const scoreDisplay = document.getElementById('score-text-display');
+    const hiddenInput = document.getElementById('hidden-risk-score');
+
+    // Switch View
+    quizContainer.classList.add('hidden');
+    resultContainer.classList.remove('hidden');
+
+    // LOGIC: Max Score is around 85.
+    // Low: 0-20 | Med: 21-50 | High: 51+
+    
+    if (score >= 50) {
+        // HIGH RISK
+        icon.innerText = "🚨";
+        title.innerText = "Critical Risk Detected";
+        scoreDisplay.innerText = "Risk Score: " + score + " / 85";
+        desc.innerText = "Your asset is showing significant technical liabilities. Proceed with extreme caution.";
+        hiddenInput.value = "High Risk (" + score + ")";
+    } else if (score >= 20) {
+        // MEDIUM RISK
+        icon.innerText = "⚠️";
+        title.innerText = "Moderate Caution Required";
+        scoreDisplay.innerText = "Risk Score: " + score + " / 85";
+        desc.innerText = "There are red flags. Before you sign, you need to verify if these are cosmetic or structural.";
+        hiddenInput.value = "Medium Risk (" + score + ")";
+    } else {
+        // LOW RISK
+        icon.innerText = "✅";
+        title.innerText = "Preliminary Pass";
+        scoreDisplay.innerText = "Risk Score: " + score + " / 85";
+        desc.innerText = "The basics look solid. However, fresh paint can hide many sins. Use the full checklist to be sure.";
+        hiddenInput.value = "Low Risk (" + score + ")";
+    }
+}
+
+function resetQuiz() {
+    document.getElementById('riskForm').reset();
+    document.getElementById('quiz-result').classList.add('hidden');
+    document.getElementById('quiz-questions').classList.remove('hidden');
+}
+</script>
+
+    <section id="faq" class="py-20 bg-[--bg-color]">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[--title-color]" data-lang-key="faqTitle">Frequently Asked Questions</h2>
+            <div id="faq-container" class="space-y-4"></div>
+        </div>
+    </section>
+
+    <div id="image-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-90 flex items-center justify-center p-4 cursor-pointer">
+        <img id="modal-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl transform transition-transform duration-300 scale-95" alt="Expanded view">
+        <p class="absolute bottom-10 text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded">Tap anywhere to close</p>
+    </div>
+
+    <section id="contact" class="py-20 bg-[--secondary-bg]">
+        <div class="container mx-auto px-6">
+             <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="contactTitle">Secure Your Asset</h2>
+             <div class="max-w-lg mx-auto card p-8 rounded-lg shadow-lg">
+                    <p id="contact-form-message" class="text-sm mb-6 hidden p-3 rounded-lg bg-blue-100 text-blue-800"></p>
+                    <form id="contact-form" name="contact" netlify data-netlify="true">
+                        <div class="mb-4">
+                            <label for="name" class="block font-bold mb-2" data-lang-key="contactName">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[--accent-color] text-[--text-color]" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block font-bold mb-2" data-lang-key="contactEmail">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[--accent-color] text-[--text-color]" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block font-bold mb-2" data-lang-key="contactMessage">Technical Issue</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[--accent-color] text-[--text-color]" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 font-bold py-3 px-8 rounded-lg w-full transition duration-300" data-lang-key="contactButton">Send Request</button>
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="border-b w-1/5 lg:w-1/4"></span>
+                            <span class="text-xs text-center text-gray-500 uppercase" data-lang-key="or">or</span>
+                            <span class="border-b w-1/5 lg:w-1/4"></span>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <a href="https://calendar.app.google/pNE9HLdXuUtCwgEi7" target="_blank" class="text-[--accent-color] font-bold hover:underline flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span data-lang-key="scheduleCall">Schedule a Call</span>
+                            </a>
+                        </div>
+                    </form>
+             </div>
+             <div class="text-center mt-12">
+                    <p>Email: info@klehomerie.com</p>
+                    <p>Phone: (+30) 694 020 6368</p>
+             </div>
+        </div>
+    </section>
+</main>

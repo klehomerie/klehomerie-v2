@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+preview_styles:
+  - /assets/css/style.css
+
+collections:
+  - name: "posts"
+    label: "Lab Articles"
+    folder: "src/klab/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      # --- HIDDEN FIELDS (CRITICAL FOR ENGINE) ---
+      # These ensure the post uses the right template and appears on the grid
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "post"}
+
+      # A. THE BASICS
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "select", options: ["Red Flag Scans", "Golden Visa Strategy", "Regulatory Vigie", "French Standards"]}
+      - {label: "Language", name: "language", widget: "select", options: ["en", "fr"], default: "en"}
+      
+      # B. THE TECHNICAL METADATA
+      - {label: "Location", name: "location", widget: "string", hint: "e.g., Kypseli, Athens"}
+      - {label: "Property Type", name: "property_type", widget: "string", hint: "e.g., 1970s Polykatoikia"}
+      - {label: "Short Summary", name: "summary", widget: "text", hint: "Appears on the Grid Card and at the top of the article."}
+      - {label: "Hero Image", name: "image", widget: "image"}
+
+      # C. THE COMPARISON SLIDER
+      - label: "Before/After Slider Module"
+        name: "comparison_slider"
+        widget: "object"
+        collapsed: true
+        fields:
+          - {label: "Slider Title", name: "title", widget: "string", default: "🔎 Forensic Analysis", hint: "e.g., 'Thermal Scan', 'Renovation Progress'"}
+          - {label: "Left Image (Before/Normal)", name: "image_left", widget: "image", required: false}
+          - {label: "Right Image (After/Thermal)", name: "image_right", widget: "image", required: false}
+          - {label: "Caption", name: "caption", widget: "string", required: false}
+
+      # D. THE BODY CONTENT
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "Use the shortcode {{ CTA_RED_FLAG }} to insert the sales button."
