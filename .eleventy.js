@@ -29,11 +29,17 @@ module.exports = function(eleventyConfig) {
         </a>
     </div>`;
   });
+ // 4. CONFIGURATION
   return {
     dir: {
-      input: "src",
-      output: "_site",
-      includes: "_includes"
-    }
+      input: "src",    // <--- THIS IS THE KEY FIX
+      output: "_site", // This is where Netlify looks
+      includes: "_includes",
+      data: "_data"
+    },
+    templateFormats: ["md", "njk", "html"],
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
   };
 };
