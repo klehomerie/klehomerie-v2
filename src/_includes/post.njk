@@ -3,42 +3,30 @@ layout: base.njk
 ---
 
 <header class="relative h-[40vh] min-h-[350px] flex items-end justify-center text-center overflow-hidden pb-12">
-    
     <div class="absolute inset-0 w-full h-full">
         <img src="{{ image or '/assets/images/hero-athens-view.webp' }}" 
              alt="{{ title }}" 
              class="w-full h-full object-cover">
-        
         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-gray-900/30"></div>
     </div>
     
     <div class="relative z-10 px-4 max-w-3xl mx-auto">
-        
         <span class="inline-block py-1 px-2 rounded-md bg-[--accent-color] text-white text-[10px] font-bold uppercase tracking-widest mb-3 shadow-sm">
             {{ category or "Technical Insight" }}
         </span>
-        
         <h1 class="text-2xl md:text-4xl font-bold text-white mb-3 leading-tight drop-shadow-lg font-['Poppins']">
             {{ title }}
         </h1>
-        
         <div class="flex flex-wrap justify-center gap-4 text-gray-200 text-xs font-mono opacity-90">
-            <span class="flex items-center gap-1">
-                📅 {{ date | dateString }}
-            </span>
-            <span class="flex items-center gap-1">
-                📍 {{ location or "Athens" }}
-            </span>
-            <span class="flex items-center gap-1">
-                🏗️ {{ property_type or "Residential" }}
-            </span>
+            <span class="flex items-center gap-1">📅 {{ date | dateString }}</span>
+            <span class="flex items-center gap-1">📍 {{ location or "Athens" }}</span>
         </div>
     </div>
 </header>
 
 <div class="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-12">
     
-   <article class="w-full md:w-2/3 max-w-none">
+    <article class="w-full md:w-2/3 max-w-none">
         
         <a href="/klab/" class="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[--accent-color] mb-6 transition-colors no-underline">
             <span>←</span> Back to Lab
@@ -49,19 +37,50 @@ layout: base.njk
             <p class="m-0 text-gray-600 dark:text-gray-300">{{ summary or "A deep dive into Athens construction risks." }}</p>
         </div>
 
-        {% if comparison_slider.image_left and comparison_slider.image_right %}
-        <div class="my-8 not-prose">
-            <h3 class="font-bold text-xl mb-4 text-[--title-color] flex items-center gap-2">
-                {{ comparison_slider.title or "🔎 Forensic Analysis" }}: <span class="font-normal text-base">{{ comparison_slider.caption }}</span>
-            </h3>
-            
-            <img-comparison-slider class="rounded-xl shadow-xl border border-gray-200">
-                <img slot="first" src="{{ comparison_slider.image_left }}" width="100%" alt="Left View" />
-                <img slot="second" src="{{ comparison_slider.image_right }}" width="100%" alt="Right View" />
-            </img-comparison-slider>
-            
-            <p class="text-xs text-center text-gray-400 mt-2">← Drag the slider →</p>
+        <div class="flex flex-wrap gap-3 mb-8 not-prose border-b border-gray-100 dark:border-gray-700 pb-4">
+            <span class="text-xs font-bold text-gray-400 uppercase self-center mr-2">Share:</span>
+            <button onclick="copyArticleLink()" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-[--accent-color] hover:text-white transition-colors" title="Copy Link">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+            </button>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://klehomerie.com{{ page.url }}" target="_blank" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-[#0077b5] hover:text-white transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
         </div>
+
+        {% if visual_module.type == "Single Image" and visual_module.single_image %}
+            <figure class="my-10 not-prose">
+                <img src="{{ visual_module.single_image }}" class="rounded-xl shadow-lg w-full object-cover max-h-[500px] cursor-pointer" onclick="openModal(this.src)" alt="{{ visual_module.title }}">
+                <figcaption class="text-center text-sm text-gray-500 mt-2 italic">{{ visual_module.caption }}</figcaption>
+            </figure>
+        
+        {% elif visual_module.type == "Comparison Slider" and visual_module.slider_left and visual_module.slider_right %}
+            <div class="my-10 not-prose">
+                <h3 class="font-bold text-xl mb-4 text-[--title-color] flex items-center gap-2">
+                    {{ visual_module.title or "🔎 Forensic Analysis" }}
+                </h3>
+                <img-comparison-slider class="rounded-xl shadow-xl border border-gray-200">
+                    <img slot="first" src="{{ visual_module.slider_left }}" width="100%" alt="Before View" />
+                    <img slot="second" src="{{ visual_module.slider_right }}" width="100%" alt="After View" />
+                </img-comparison-slider>
+                <p class="text-xs text-center text-gray-400 mt-2">← Drag the slider →</p>
+                {% if visual_module.caption %}<p class="text-center text-sm text-gray-500 mt-2 italic">{{ visual_module.caption }}</p>{% endif %}
+            </div>
+
+        {% elif visual_module.type == "Image Carousel" and visual_module.carousel_images %}
+            <div class="my-10 not-prose relative group">
+                {% if visual_module.title %}<h3 class="font-bold text-xl mb-4 text-[--title-color]">{{ visual_module.title }}</h3>{% endif %}
+                
+                <div id="carousel-{{ date | slug }}" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 scroll-smooth hide-scrollbar">
+                    {% for item in visual_module.carousel_images %}
+                        <img src="{{ item }}" class="snap-center w-full md:w-3/4 flex-shrink-0 rounded-xl shadow-lg object-cover h-[400px] cursor-pointer" onclick="openModal(this.src)">
+                    {% endfor %}
+                </div>
+
+                <button onclick="scrollCarousel('carousel-{{ date | slug }}', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow hover:bg-white text-gray-800 transition-opacity opacity-0 group-hover:opacity-100">←</button>
+                <button onclick="scrollCarousel('carousel-{{ date | slug }}', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow hover:bg-white text-gray-800 transition-opacity opacity-0 group-hover:opacity-100">→</button>
+                
+                <p class="text-center text-sm text-gray-500 mt-2 italic">{{ visual_module.caption }}</p>
+            </div>
         {% endif %}
 
         <div class="prose prose-lg prose-slate dark:prose-invert max-w-none">
@@ -72,74 +91,46 @@ layout: base.njk
             <img src="/assets/images/moi.webp" alt="Arnaud Zerdab" class="w-16 h-16 rounded-full object-cover border-2 border-[--accent-color]">
             <div>
                 <h4 class="font-bold text-lg text-[--title-color]">Arnaud Zerdab</h4>
-                <p class="text-sm text-gray-500 mb-2">Founder, Klehomerie. Technical Asset Manager.</p>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                    Athens-based Technical Asset Management firm. Applying French technical standards to the Greek property market, Klehomerie provides independent "Red Flag Scans" and deep audits to protect foreign capital.
-                </p>
+                <p class="text-sm text-gray-500 mb-2">Founder, Klehomerie.</p>
                 <a href="https://linkedin.com/in/arnaudzerdab" target="_blank" class="text-[--accent-color] text-xs font-bold hover:underline mt-2 inline-block">Connect on LinkedIn →</a>
             </div>
         </div>
 
-        <div class="mt-16 p-8 md:p-12 rounded-xl shadow-2xl border-t-8 border-[--accent-color] w-full" 
-             style="background-color: #ffffff !important; color: #111827 !important; min-height: 300px;">
-            
-            <h3 class="font-bold text-2xl mb-10 flex items-center gap-3 border-b border-gray-100 pb-6"
-                style="color: #0C2D48 !important;">
-                💬 Technical Discussion
-            </h3>
-            
-            <div id="cusdis_thread"
-                 style="width: 100%;"
-                 data-host="https://cusdis.com"
-                 data-app-id="f4977747-72f6-435b-8335-ff11aa6b53c7" 
-                 data-page-id="{{ page.url }}"
-                 data-page-url="https://klehomerie.com{{ page.url }}"
-                 data-page-title="{{ title }}"
-                 data-theme="light">
-            </div>
-            
+        <div class="mt-16 p-8 md:p-12 rounded-xl shadow-2xl border-t-8 border-[--accent-color] w-full" style="background-color: #ffffff !important; color: #111827 !important;">
+            <h3 class="font-bold text-2xl mb-10 flex items-center gap-3 border-b border-gray-100 pb-6" style="color: #0C2D48 !important;">💬 Technical Discussion</h3>
+            <div id="cusdis_thread" style="width: 100%;" data-host="https://cusdis.com" data-app-id="f4977747-72f6-435b-8335-ff11aa6b53c7" data-page-id="{{ page.url }}" data-page-url="https://klehomerie.com{{ page.url }}" data-page-title="{{ title }}" data-theme="light"></div>
             <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
         </div>
 
     </article>
 
     <aside class="w-full md:w-1/3 space-y-8">
-        
         <div class="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 sticky top-24">
             <h3 class="font-bold text-xl mb-2 text-[--title-color]">Stop Buying Blind.</h3>
             <p class="text-sm text-gray-500 mb-6">Don't sign a contract until you've seen the infrared.</p>
-            <a href="/#contact" class="block w-full text-center bg-[--accent-color] hover:bg-[--accent-color-hover] text-white font-bold py-3 px-4 rounded-lg transition-colors">
-                Book a Red Flag Scan (€97)
-            </a>
-            <p class="text-xs text-center text-gray-400 mt-2">45-min Technical Diagnostic</p>
+            <a href="/#contact" class="block w-full text-center bg-[--accent-color] hover:bg-[--accent-color-hover] text-white font-bold py-3 px-4 rounded-lg transition-colors">Book a Red Flag Scan (€97)</a>
         </div>
-
         <div class="bg-[--secondary-bg] p-6 rounded-xl border border-[--border-color] sticky top-80">
             <h3 class="font-bold text-lg mb-2 text-[--title-color]">Free Checklist 📋</h3>
-            <p class="text-sm mb-4 text-[--text-color]">Get the 16-point guide that inspired my Golden Ticket audit.</p>
-            
+            <p class="text-sm mb-4 text-[--text-color]">The 16-point guide I use for every audit.</p>
             <form name="checklist-request" method="POST" action="/success/" netlify class="space-y-3">
-                <input type="email" name="email" placeholder="Enter your email" required 
-                       class="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 dark:bg-slate-700 text-sm">
-                
-                <button type="submit" class="w-full bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-2 px-4 rounded text-sm transition-colors flex items-center justify-center gap-2">
-                    Send it to me 📩
-                </button>
+                <input type="email" name="email" placeholder="Enter your email" required class="w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-600 dark:bg-slate-700 text-sm">
+                <button type="submit" class="w-full bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-2 px-4 rounded text-sm transition-colors flex items-center justify-center gap-2">Send it to me 📩</button>
             </form>
-            
-            <p class="text-xs text-center text-gray-400 mt-2">I respect your privacy. No spam.</p>
         </div>
-
     </aside>
 </div>
 
 <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css" />
+<script>
+    function copyArticleLink() { navigator.clipboard.writeText(window.location.href).then(() => { alert("Link copied to clipboard!"); }); }
+    function scrollCarousel(id, direction) { const container = document.getElementById(id); const scrollAmount = container.clientWidth * 0.8; container.scrollLeft += (direction * scrollAmount); }
+    function openModal(src) { const modal = document.getElementById('image-modal'); const modalImg = document.getElementById('modal-img'); if (modal && modalImg) { modalImg.src = src; modal.classList.remove('hidden'); } else { window.open(src, '_blank'); } }
+</script>
 <style>
   img-comparison-slider { visibility: visible; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-  .prose { max-width: 100%; }
-  /* Force clean resets on mobile */
-  @media (max-width: 768px) {
-      .container { padding-left: 1rem; padding-right: 1rem; }
-  }
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  @media (max-width: 768px) { .container { padding-left: 1rem; padding-right: 1rem; } }
 </style>
