@@ -174,18 +174,29 @@
         </div>
     </div>
     
-    <div id="mobile-menu" class="hidden md:hidden bg-[--bg-color] absolute w-full left-0 top-20 shadow-lg border-t border-gray-200 dark:border-gray-700">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-             <button class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-[--accent-color]" onclick="window.location.href='/#services'" data-lang-key="navServices">Missions</button>
-             <button class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-[--accent-color]" onclick="window.location.href='/#alacarte'" data-lang-key="navAlacarte">Diagnose</button>
-            <button class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-[--accent-color]" onclick="window.location.href='/#faq'" data-lang-key="faqTitle">FAQ</button> 
-            <button class="block w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-[--accent-color]" onclick="window.location.href='/#contact'" data-lang-key="navContact">Contact</button>
-             
-             <div class="flex justify-center space-x-4 py-2 border-t border-gray-200 dark:border-gray-700 mt-2">
-                <button class="lang-btn text-sm font-bold hover:text-[--accent-color]" data-lang="en">EN</button>
-                <button class="lang-btn text-sm font-bold hover:text-[--accent-color]" data-lang="fr">FR</button>
-                <button class="lang-btn text-sm font-bold hover:text-[--accent-color]" data-lang="gr">GR</button>
-             </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 absolute top-full left-0 w-full shadow-xl z-50">
+            <div class="flex flex-col p-4 space-y-4">
+                <a href="/#about" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()">About</a>
+                <a href="/#services" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()">Services</a>
+                <a href="/#packages" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()">Pricing</a>
+                
+                <a href="/klab/" class="flex items-center gap-2 text-[--accent-color] font-bold bg-orange-50 dark:bg-slate-800 p-3 rounded-lg" onclick="toggleMobileMenu()">
+                    <span>The Lab</span>
+                    <span class="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full">New</span>
+                </a>
+
+                <div class="pt-4 border-t border-gray-100 dark:border-gray-800">
+                    <a href="/#contact" class="block w-full text-center bg-[--accent-color] text-white font-bold py-3 rounded-lg shadow-md hover:bg-[#A94A2D] transition-colors" onclick="toggleMobileMenu()">
+                        Book a Scan
+                    </a>
+                </div>
+                
+                <div class="flex justify-center gap-4 pt-2">
+                    <button onclick="switchLanguage('en'); toggleMobileMenu()" class="text-2xl hover:scale-110 transition-transform" title="English">🇬🇧</button>
+                    <button onclick="switchLanguage('fr'); toggleMobileMenu()" class="text-2xl hover:scale-110 transition-transform" title="Français">🇫🇷</button>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </nav>
