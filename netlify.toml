@@ -1,6 +1,12 @@
 [build]
+  # 1. The Command to run
   command = "npm run build"
+  
+  # 2. The Folder to show the world (MUST match Eleventy output)
   publish = "_site"
+
+  # 3. The Directory where Netlify starts looking
+  base = "/"
 
 [context.production]
   environment = { NODE_ENV = "production" }
