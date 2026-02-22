@@ -1,9 +1,19 @@
 module.exports = function(eleventyConfig) {
-  // Copy assets to the final site
-  eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPassthroughCopy("./src/sitemap.xml");
-  eleventyConfig.addPassthroughCopy("src/admin");
+  // 1. PASSTHROUGHS (The "Bulletproof" Method)
+  // { "SOURCE_PATH" : "DESTINATION_PATH" }
+  // Copy the entire assets folder
+  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  // Copy the Admin folder
+  eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
+  // Copy the specific PDFs to the ROOT of the site (so /file.pdf works)
+  eleventyConfig.addPassthroughCopy({ 
+    "src/Klehomerie_Technical_Audit_Checklist.pdf": "Klehomerie_Technical_Audit_Checklist.pdf",
+    "src/KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf": "KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf",
+    "src/KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf": "KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf"
+  });
+
   // Watch for changes
   eleventyConfig.addWatchTarget("./src/assets/css/");
   eleventyConfig.addWatchTarget("./src/assets/js/");
