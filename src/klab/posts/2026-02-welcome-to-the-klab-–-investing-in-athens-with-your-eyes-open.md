@@ -12,7 +12,7 @@ image: /assets/images/uploads/technical-asset-management-athens-real-estate-audi
 visual_module:
   type: Single Image
   title: Technical Asset Management - Athens Real Estate Audit Klehomerie
-  single_image: /assets/images/uploads/technical-asset-management-athens-real-estate-audit-klehomerie.png
+  single_image: ""
 ---
 ## **The Two Sides of Athens**
 
