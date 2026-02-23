@@ -5,10 +5,11 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {% for page in collections.all %}
-  {% if not page.data.eleventyExcludeFromCollections and page.url %}
+  {# FILTER: Exclude admin, success page, and 404s #}
+  {% if not page.data.eleventyExcludeFromCollections and page.url and page.url != "/admin/" and page.url != "/success/" and page.url != "/404.html" %}
   <url>
     <loc>https://klehomerie.com{{ page.url | url }}</loc>
-    <lastmod>{{ page.date.toISOString() }}</lastmod>
+    <lastmod>{% if page.date.toISOString %}{{ page.date.toISOString() }}{% else %}{{ page.date }}{% endif %}</lastmod>
     <changefreq>{% if page.url == "/" %}daily{% else %}monthly{% endif %}</changefreq>
   </url>
   {% endif %}
