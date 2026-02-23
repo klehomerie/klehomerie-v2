@@ -16,13 +16,11 @@ visual_module:
 ---
 ## **The Two Sides of Athens**
 
-Athens is currently one of the most exciting real estate markets in Europe. The **yields** are real, **capital appreciation** is happening, and the lifestyle is literally unmatched. We aren't here to tell you not to invest; on the contrary, we believe in the strength of this market. We are here to help you invest with your eyes wide open.
+Athens is currently one of the most exciting real estate markets in Europe. The yields are real, **capital appreciation** is happening, and the lifestyle is literally unmatched. We aren't here to tell you not to invest; on the contrary, we believe in the strength of this market. We are here to help you invest with your eyes wide open.
 
 Most investors fall in love with the view from the balcony, the Mediterranean sun, and the *σιγα σιγα* (slowly, slowly) rhythm of life. At **Klehomerie**, we appreciate that beauty, but we focus our attention on the cracks in the balcony floor.
 
 In a city full of "hosts" focused on fluffing pillows, we focus on the **asset**. Because at the end of the day, you shouldn't just collect rent—you must **protect the concrete**.
-
-
 
 ## **Why We Opened the "Klab" (Knowledge Lab)**
 
@@ -71,8 +69,6 @@ What should immediately raise an eyebrow during a walkthrough? We share our diag
 
 ### {% CTA_RED_FLAG %}
 
-
-
 ### **3. Golden Visa Strategy: Technical Integrity First**
 
 Navigating the €250k or €800k threshold is about more than just paperwork; it’s about the asset you’re left with. We analyze the technical requirements of the program, with a specific focus on the "Commercial-to-Residential" conversion—helping you navigate this complex change of purpose without losing your sanity (or your investment's value).
@@ -92,8 +88,6 @@ At the end of the day, real estate is a game of endurance. In a city as ancient 
 Our philosophy is simple: **The value of an asset is found in its bones, not its paint.** We believe that by shifting the focus from "Property Management" to **Technical Asset Management**, we can help international owners navigate the Athenian market with the same confidence they would have in Paris, London, or Berlin. We are here to ensure that "Greek reality" doesn't become an "investor's nightmare," but rather a predictable, high-performing reality.
 
 ### **Welcome to the Klab**
-
-
 
 Whether you are looking for your first Golden Visa investment, managing a growing portfolio, or simply trying to understand why your Greek plumbing is acting up—we are glad you’re here.
 
