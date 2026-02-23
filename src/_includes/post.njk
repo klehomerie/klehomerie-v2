@@ -83,7 +83,7 @@ layout: base.njk
             </div>
         {% endif %}
 
-        <div class="prose prose-lg prose-slate dark:prose-invert max-w-none">
+        <prose prose-lg prose-slate dark:prose-invert max-w-none prose-p:mb-6 prose-p:leading-relaxed>
             {{ content | safe }}
         </div>
 
@@ -92,6 +92,9 @@ layout: base.njk
             <div>
                 <h4 class="font-bold text-lg text-[--title-color]">Arnaud Zerdab</h4>
                 <p class="text-sm text-gray-500 mb-2">Founder, Klehomerie.</p>
+                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Athens-based Technical Asset Management firm. Applying French technical standards to the Greek property market, Klehomerie provides independent "Red Flag Scans" and deep audits to protect foreign capital.
+                </p>
                 <a href="https://linkedin.com/in/arnaudzerdab" target="_blank" class="text-[--accent-color] text-xs font-bold hover:underline mt-2 inline-block">Connect on LinkedIn →</a>
             </div>
         </div>
@@ -134,3 +137,9 @@ layout: base.njk
   .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   @media (max-width: 768px) { .container { padding-left: 1rem; padding-right: 1rem; } }
 </style>
+<style>
+  /* FORCE PARAGRAPH SPACING */
+  .prose p {
+      margin-bottom: 1.5em !important;
+      line-height: 1.8 !important;
+  }
