@@ -83,15 +83,15 @@ layout: base.njk
             </div>
         {% endif %}
 
-        <prose prose-lg prose-slate dark:prose-invert max-w-none prose-p:mb-6 prose-p:leading-relaxed>
+        <div class="prose prose-lg prose-slate dark:prose-invert max-w-none prose-p:mb-6 prose-p:leading-relaxed">
             {{ content | safe }}
         </div>
 
         <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex items-start gap-4">
             <img src="/assets/images/moi.webp" alt="Arnaud Zerdab" class="w-16 h-16 rounded-full object-cover border-2 border-[--accent-color]">
             <div>
-                <h4 class="font-bold text-lg text-[--title-color]">Arnaud Zerdab</h4>
-                <p class="text-sm text-gray-500 mb-2">Founder, Klehomerie.</p>
+                <h4 class="font-bold text-lg text-[--title-color] dark:text-white">Arnaud Zerdab</h4>
+                <p class="text-sm text-gray-500 mb-2 dark:text-gray-400">Founder, Klehomerie.</p>
                 <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                     Athens-based Technical Asset Management firm. Applying French technical standards to the Greek property market, Klehomerie provides independent "Red Flag Scans" and deep audits to protect foreign capital.
                 </p>
@@ -136,11 +136,7 @@ layout: base.njk
   .hide-scrollbar::-webkit-scrollbar { display: none; }
   .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   @media (max-width: 768px) { .container { padding-left: 1rem; padding-right: 1rem; } }
-</style>
-<style>
+  
   /* FORCE PARAGRAPH SPACING */
-  .prose p {
-      margin-bottom: 1.5em !important;
-      line-height: 1.8 !important;
-  }
+  .prose p { margin-bottom: 1.5em !important; line-height: 1.8 !important; }
 </style>
