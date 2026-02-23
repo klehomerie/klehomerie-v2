@@ -22,6 +22,8 @@ Most investors fall in love with the view from the balcony, the Mediterranean su
 
 In a city full of "hosts" focused on fluffing pillows, we focus on the **asset**. Because at the end of the day, you shouldn't just collect rent—you must **protect the concrete**.
 
+
+
 ## **Why We Opened the "Klab" (Knowledge Lab)**
 
 Real estate in Greece is often described through the lens of "passion," "emotion," or "heritage." At Klehomerie, we believe it should be described through the lens of **technical predictability**.
@@ -47,11 +49,7 @@ Distance is often the single biggest risk to your real estate investment. By sha
 You are welcome—and encouraged—to use these guides to:
 
 * **Conduct your own Technical Audit:** Use our checklists to "stress-test" a property before you sign a deed.
-
-
 * **Coordinate your own repairs:** Use our standards to manage your local contractors and ensure your **CapEx** (Capital Expenditure) is invested in structural integrity, not just cosmetic fixes.
-
-
 
 We provide the intelligence for free because we believe in the value of the Athenian market. However, we also know that knowing *what* to do is only half the battle; having the "boots on the ground" to ensure it gets done right—and only once—is the other half.
 
@@ -70,6 +68,10 @@ We go beneath the surface. Expect deep dives into the structural "bones" of Athe
 ### **2. Red Flag Scans: Identifying Asset Risk**
 
 What should immediately raise an eyebrow during a walkthrough? We share our diagnostic lens on identifying "silent killers" like rising damp, dysfunctional HOA, or non-compliant past renovations. Most importantly, we provide the strategies to mitigate these risks before they become expensive liabilities.
+
+### {% CTA_RED_FLAG %}
+
+
 
 ### **3. Golden Visa Strategy: Technical Integrity First**
 
@@ -90,6 +92,8 @@ At the end of the day, real estate is a game of endurance. In a city as ancient 
 Our philosophy is simple: **The value of an asset is found in its bones, not its paint.** We believe that by shifting the focus from "Property Management" to **Technical Asset Management**, we can help international owners navigate the Athenian market with the same confidence they would have in Paris, London, or Berlin. We are here to ensure that "Greek reality" doesn't become an "investor's nightmare," but rather a predictable, high-performing reality.
 
 ### **Welcome to the Klab**
+
+
 
 Whether you are looking for your first Golden Visa investment, managing a growing portfolio, or simply trying to understand why your Greek plumbing is acting up—we are glad you’re here.
 
