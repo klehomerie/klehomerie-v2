@@ -3,14 +3,27 @@ layout: base.njk
 title: Check Your Inbox!
 ---
 <div class="min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
-    <div class="bg-green-100 dark:bg-green-900/30 p-6 rounded-full mb-6 text-6xl">
+    
+    <div class="bg-green-100 dark:bg-green-900/30 p-6 rounded-full mb-6 text-6xl shadow-inner">
         📨
     </div>
-    <h1 class="text-4xl font-bold mb-4 text-[--title-color]">Request Received!</h1>
-    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-lg mb-8">
-        We are sending the <strong>16-Point Technical Audit Checklist</strong> to your email right now.
+
+    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-[--title-color]">
+        Request Received!
+    </h1>
+
+    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg mb-8 leading-relaxed">
+        We are sending the requested <strong>Technical Resources</strong> to your email right now.
+        <br><span class="text-sm opacity-75">(Please check your Spam folder if you don't see it in 2 mins)</span>
     </p>
-    <a href="/klab/" class="text-[--accent-color] font-bold hover:underline">
-        ← Back to the Lab
-    </a>
+
+    <button onclick="history.back()" class="group flex items-center gap-2 text-[--accent-color] font-bold hover:text-[#A94A2D] transition-colors py-2 px-4 rounded-lg hover:bg-orange-50 dark:hover:bg-slate-800">
+        <span>←</span>
+        <span class="group-hover:underline">Return to previous page</span>
+    </button>
+    
+    <div class="mt-4">
+        <a href="/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-500 no-underline">or go to Homepage</a>
+    </div>
+
 </div>
