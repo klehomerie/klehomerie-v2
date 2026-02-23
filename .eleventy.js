@@ -29,14 +29,14 @@ module.exports = function(eleventyConfig) {
   // Usage: {% CTA_RED_FLAG %}
   eleventyConfig.addShortcode("CTA_RED_FLAG", function() {
     return `
-    <div class="my-8 p-6 bg-red-50 dark:bg-red-900/20 border-l-4 border-[--accent-color] rounded-r-lg shadow-sm not-prose">
-        <h3 class="font-bold text-xl mb-2 text-[--title-color] flex items-center gap-2">
-            <span>🚩</span> Suspect a hidden defect?
-        </h3>
-        <p class="mb-4 text-gray-700 dark:text-gray-300">Photos lie. Thermal imaging reveals the truth. Don't sign until you scan.</p>
-        <a href="/#contact" class="inline-block w-full md:w-auto text-center bg-[--accent-color] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#A94A2D] transition-colors shadow-md">
-            Book a Red Flag Scan (€97)
-        </a>
+    <div class="my-8 p-6 bg-red-50 dark:bg-red-900/20 border-l-4 border-[--accent-color] rounded-r-lg not-prose">
+      <h4 class="font-bold text-lg text-[--title-color] mb-2 m-0">🚩 Is this property actually sound?</h4>
+      <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+        A listing description is marketing. My report is technical reality. Get an independent visual check before you make an offer.
+      </p>
+      <a href="/#contact" class="inline-block bg-[--accent-color] text-white font-bold py-2 px-6 rounded hover:bg-[#A94A2D] transition-colors no-underline">
+        Verify this Property (€97)
+      </a>
     </div>`;
   });
  // 4. CONFIGURATION
