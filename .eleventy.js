@@ -1,27 +1,43 @@
 const Image = require("@11ty/eleventy-img");
 const path = require("path");
+const fs = require("fs"); // <--- IMPORT FILE SYSTEM
 
 async function generateSocialImage(src) {
-  if (!src) return "/assets/images/hero-athens-view.webp"; // Fallback
+  // Fallback default
+  const defaultImage = "/assets/images/hero-athens-view.webp";
+
+  if (!src) return defaultImage;
 
   // 1. Fix the path (CMS gives /assets/..., we need ./src/assets/...)
   let inputPath = "./src" + src;
 
-  // 2. Generate the image
-  let metadata = await Image(inputPath, {
-    widths: [1200], // Perfect size for LinkedIn/Facebook
-    formats: ["jpeg"], // LinkedIn PREFERS JPEG over WebP
-    outputDir: "./_site/assets/images/social/",
-    urlPath: "/assets/images/social/",
-    filenameFormat: function (id, src, width, format, options) {
-      const extension = path.extname(src);
-      const name = path.basename(src, extension);
-      return `${name}-social.${format}`;
-    }
-  });
+  // 2. SAFETY CHECK: Does the file actually exist?
+  if (!fs.existsSync(inputPath)) {
+    console.log(`⚠️  Image not found: ${inputPath} — using default.`);
+    return defaultImage; 
+  }
 
-  // 3. Return the new URL
-  return metadata.jpeg[0].url;
+  try {
+    // 3. Generate the image
+    let metadata = await Image(inputPath, {
+      widths: [1200],
+      formats: ["jpeg"],
+      outputDir: "./_site/assets/images/social/",
+      urlPath: "/assets/images/social/",
+      filenameFormat: function (id, src, width, format, options) {
+        const extension = path.extname(src);
+        const name = path.basename(src, extension);
+        return `${name}-social.${format}`;
+      }
+    });
+
+    // 4. Return the new URL
+    return metadata.jpeg[0].url;
+
+  } catch (e) {
+    console.log(`⚠️  Error processing image: ${inputPath} — ${e.message}`);
+    return defaultImage;
+  }
 }
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
