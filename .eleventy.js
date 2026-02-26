@@ -1,9 +1,14 @@
+const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
 const path = require("path");
-const fs = require("fs"); // <--- IMPORT FILE SYSTEM
+const fs = require("fs");
 
+/**
+ * IMAGE PROCESSING FUNCTION (With Safety Check)
+ * Automatically generates social media images from your posts.
+ */
 async function generateSocialImage(src) {
-  // Fallback default
+  // Default fallback image if none exists
   const defaultImage = "/assets/images/hero-athens-view.webp";
 
   if (!src) return defaultImage;
@@ -20,7 +25,7 @@ async function generateSocialImage(src) {
   try {
     // 3. Generate the image
     let metadata = await Image(inputPath, {
-      widths: [1200],
+      widths: [1200], // Perfect for LinkedIn
       formats: ["jpeg"],
       outputDir: "./_site/assets/images/social/",
       urlPath: "/assets/images/social/",
@@ -39,36 +44,35 @@ async function generateSocialImage(src) {
     return defaultImage;
   }
 }
+
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("./src/robots.txt");
-  eleventyConfig.addPassthroughCopy("./src/sitemap.xml");
-  eleventyConfig.addNunjucksAsyncFilter("socialImg", generateSocialImage);
-  // 1. PASSTHROUGHS (The "Bulletproof" Method)
-  // { "SOURCE_PATH" : "DESTINATION_PATH" }
-  // Copy the entire assets folder
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
-  // Copy the Admin folder
-  eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
-  // Copy the specific PDFs to the ROOT of the site (so /file.pdf works)
-  eleventyConfig.addPassthroughCopy({ 
-    "src/Klehomerie_Technical_Audit_Checklist.pdf": "Klehomerie_Technical_Audit_Checklist.pdf",
-    "src/KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf": "KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf",
-    "src/KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf": "KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf"
+
+  // 1. PASSTHROUGH COPIES (Move these files to the live site)
+  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/admin");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  // 2. FILTERS
+  
+  // Date Filter (e.g., "February 26, 2026")
+  eleventyConfig.addFilter("dateString", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("LLLL d, yyyy");
   });
 
-  // Watch for changes
-  eleventyConfig.addWatchTarget("./src/assets/css/");
-  eleventyConfig.addWatchTarget("./src/assets/js/");
-// DATE FILTER
-  eleventyConfig.addFilter("dateString", (dateObj) => {
-    return new Date(dateObj).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+  // Image Filter (Register the function we wrote above)
+  eleventyConfig.addNunjucksAsyncFilter("socialImg", generateSocialImage);
+
+
+  // 3. COLLECTIONS (This finds your Articles!)
+  eleventyConfig.addCollection("posts", function(collection) {
+    // Looks for any .md file inside src/klab/posts/
+    return collection.getFilteredByGlob("src/klab/posts/*.md").reverse();
   });
-  // --- SHORTCODES (The "Mobile CTA" Fix) ---
-  // Usage: {% CTA_RED_FLAG %}
+
+
+  // 4. SHORTCODES
+  
+  // CTA: "Is this property sound?"
   eleventyConfig.addShortcode("CTA_RED_FLAG", function() {
     return `
     <div class="my-8 p-6 bg-red-50 dark:bg-red-900/20 border-l-4 border-[--accent-color] rounded-r-lg not-prose">
@@ -81,17 +85,13 @@ module.exports = function(eleventyConfig) {
       </a>
     </div>`;
   });
- // 4. CONFIGURATION
+
+
+  // 5. SETTINGS
   return {
     dir: {
-      input: "src",    // <--- THIS IS THE KEY FIX
-      output: "_site", // This is where Netlify looks
-      includes: "_includes",
-      data: "_data"
-    },
-    templateFormats: ["md", "njk", "html"],
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
+      input: "src",
+      output: "_site"
+    }
   };
 };
