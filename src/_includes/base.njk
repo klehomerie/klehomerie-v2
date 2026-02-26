@@ -2,9 +2,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    {% set siteUrl = "https://klehomerie.com" %}
-    {% set currentImage = image or "/assets/images/hero-athens-view.webp" %}
-    {% set socialImage = siteUrl + currentImage %}
+   {% set siteUrl = "https://klehomerie.com" %}
+    
+{# 1. Check if we have a custom image, otherwise use default #}
+{% set originalImage = image or "/assets/images/hero-athens-view.webp" %}
+
+{# 2. Run it through our new processor (Must use 'await' because it's doing heavy work!) #}
+{% set socialImageUrl = originalImage | socialImg %}
+
+{# 3. Create the absolute URL #}
+{% set absoluteSocialImage = siteUrl + socialImageUrl %}
 
     <title>{{ title or "Klehomerie - Technical Asset Management & Technical Audits Athens" }}</title>
     <meta name="title" content="{{ title or "Klehomerie | Technical Asset Management & Due Diligence Athens" }}">
@@ -18,7 +25,7 @@
     <meta property="og:title" content="{{ title or "Investing in Athens with Your Eyes Open | Klehomerie" }}">
     <meta property="og:description" content="{{ summary or description or "Independent Snagging Lists & Technical Due Diligence for Investors in Athens. We protect the concrete." }}">
     
-    <meta property="og:image" content="{{ socialImage }}">
+    <meta property="og:image" content="{{ absoluteSocialImage }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -26,7 +33,7 @@
     <meta property="twitter:url" content="{{ siteUrl }}{{ page.url }}">
     <meta property="twitter:title" content="{{ title or "Athens Technical Asset Management | Klehomerie" }}">
     <meta property="twitter:description" content="{{ summary or description or "Applying French technical standards to Greek reality. Asset protection for the global investor." }}">
-    <meta property="twitter:image" content="{{ socialImage }}">
+    <meta property="twitter:image" content="{{ absoluteSocialImage }}">
 
     <link rel="alternate" hreflang="en" href="https://klehomerie.com/" />
     <link rel="alternate" hreflang="fr" href="https://klehomerie.com/?lang=fr" />

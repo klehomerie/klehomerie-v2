@@ -1,6 +1,32 @@
+const Image = require("@11ty/eleventy-img");
+const path = require("path");
+
+async function generateSocialImage(src) {
+  if (!src) return "/assets/images/hero-athens-view.webp"; // Fallback
+
+  // 1. Fix the path (CMS gives /assets/..., we need ./src/assets/...)
+  let inputPath = "./src" + src;
+
+  // 2. Generate the image
+  let metadata = await Image(inputPath, {
+    widths: [1200], // Perfect size for LinkedIn/Facebook
+    formats: ["jpeg"], // LinkedIn PREFERS JPEG over WebP
+    outputDir: "./_site/assets/images/social/",
+    urlPath: "/assets/images/social/",
+    filenameFormat: function (id, src, width, format, options) {
+      const extension = path.extname(src);
+      const name = path.basename(src, extension);
+      return `${name}-social.${format}`;
+    }
+  });
+
+  // 3. Return the new URL
+  return metadata.jpeg[0].url;
+}
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPassthroughCopy("./src/sitemap.xml");
+  eleventyConfig.addNunjucksAsyncFilter("socialImg", generateSocialImage);
   // 1. PASSTHROUGHS (The "Bulletproof" Method)
   // { "SOURCE_PATH" : "DESTINATION_PATH" }
   // Copy the entire assets folder
