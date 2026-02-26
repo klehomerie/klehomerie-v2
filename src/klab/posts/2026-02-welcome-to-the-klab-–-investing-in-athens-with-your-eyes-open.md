@@ -1,6 +1,6 @@
 ---
 title: Welcome to the Klab – Investing in Athens with Your Eyes Open
-summary: 'Investing in Athens real estate? Move beyond the "Greek Dream" and
+summary: 'Investing in Athens Real estate? Move beyond the "Greek Dream" and
   protect your capital. Join the Klab: Klehomerie’s knowledge base for technical
   audits, red flag scans, and asset protection.'
 date: 2026-02-23T17:17:00.000+02:00
