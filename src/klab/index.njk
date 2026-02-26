@@ -60,7 +60,7 @@ title: Klehomerie Lab - Technical Insights
 <section class="container mx-auto px-6 py-16 min-h-[50vh]">
     <div id="postsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        {% for post in collections.post | reverse %}
+        {% for post in collections.posts | reverse %}
         <article class="card rounded-xl overflow-hidden flex flex-col h-full shadow-lg transition-transform duration-300 hover:-translate-y-1 relative group"
                  data-category="{{ post.data.category }}"
                  data-language="{{ post.data.language or 'en' }}"
