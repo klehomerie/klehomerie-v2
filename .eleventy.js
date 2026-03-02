@@ -87,11 +87,13 @@ module.exports = function(eleventyConfig) {
   });
 
 
-  // 5. SETTINGS
+// 5. SETTINGS
   return {
     dir: {
-      input: "src",
-      output: "_site"
+      input: "src",          // Look for content in src/
+      output: "_site",       // Output to _site/
+      includes: "_includes", // Force look in src/_includes/
+      layouts: "_includes"   // Explicitly tell it layouts are here too
     }
   };
 };
