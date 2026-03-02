@@ -35,10 +35,12 @@ async function generateSocialImage(src) {
         return `${name}-social.${format}`;
       }
     });
-filenameFormat: function (id, src, width, format, options) {
+// Use the object property shorthand for the function
+      filenameFormat(id, src, width, format, options) {
         const extension = path.extname(src);
-        // This regex ensures no quotes or special characters break the URL
-        const name = path.basename(src, extension).replace(/[^a-z0-9]/gi, '-').toLowerCase();
+        const name = path.basename(src, extension)
+          .replace(/[^a-z0-9]/gi, '-') // Replaces quotes/spaces with dashes
+          .toLowerCase();
         return `${name}-social.${format}`;
       }
     // 4. Return the new URL
