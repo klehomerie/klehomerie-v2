@@ -47,6 +47,8 @@ async function generateSocialImage(src) {
 
 module.exports = function(eleventyConfig) {
 
+  // ADD THIS LINE AT THE TOP
+  eleventyConfig.setUseGitIgnore(false);
   // 1. PASSTHROUGH COPIES (Move these files to the live site)
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/admin");
