@@ -1,14 +1,6 @@
 [build]
-  # 1. The Command to run
+  publish = "_site"
   command = "npm run build"
   
-  # 2. The Folder to show the world (MUST match Eleventy output)
-  publish = "_site"
-
-  # 3. The Directory where Netlify starts looking
-  base = "/"
-
-[context.production]
-  environment = { NODE_ENV = "production" }
-  [build]
-  environment = { NPM_FLAGS = "--platform=linux --arch=x64" }
+  # Merge your environment variables into a single line
+  environment = { NODE_ENV = "production", NPM_FLAGS = "--platform=linux --arch=x64" }
