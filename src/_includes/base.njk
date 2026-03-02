@@ -7,12 +7,11 @@
 {# 1. Check if we have a custom image, otherwise use default #}
 {% set originalImage = image or "/assets/images/hero-athens-view.webp" %}
 
-{# 2. COMMENT THIS OUT FOR TESTING
+{# 2. Run it through our processor (This converts WebP -> JPEG) #}
 {% set socialImageUrl = originalImage | socialImg %}
-#}
 
-{# 3. Hardcode the URL for now to test the build #}
-{% set absoluteSocialImage = siteUrl + originalImage %}
+{# 3. Create the absolute URL #}
+{% set absoluteSocialImage = siteUrl + socialImageUrl %}
 
     <title>{{ title or "Klehomerie - Technical Asset Management & Technical Audits Athens" }}</title>
     <meta name="title" content="{{ title or "Klehomerie | Technical Asset Management & Due Diligence Athens" }}">
