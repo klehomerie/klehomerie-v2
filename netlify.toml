@@ -10,3 +10,5 @@
 
 [context.production]
   environment = { NODE_ENV = "production" }
+  [build]
+  environment = { NPM_FLAGS = "--platform=linux --arch=x64" }
