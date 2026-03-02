@@ -22,7 +22,7 @@ async function generateSocialImage(src) {
     return defaultImage; 
   }
 
-  try {
+try {
     // 3. Generate the image
     let metadata = await Image(inputPath, {
       widths: [1200], // Perfect for LinkedIn
@@ -31,22 +31,18 @@ async function generateSocialImage(src) {
       urlPath: "/assets/images/social/",
       filenameFormat: function (id, src, width, format, options) {
         const extension = path.extname(src);
-        const name = path.basename(src, extension);
-        return `${name}-social.${format}`;
-      }
-    });
-// Use the object property shorthand for the function
-      filenameFormat(id, src, width, format, options) {
-        const extension = path.extname(src);
         const name = path.basename(src, extension)
           .replace(/[^a-z0-9]/gi, '-') // Replaces quotes/spaces with dashes
           .toLowerCase();
         return `${name}-social.${format}`;
       }
+    });
+
     // 4. Return the new URL
     return metadata.jpeg[0].url;
 
   } catch (e) {
+
     console.log(`⚠️  Error processing image: ${inputPath} — ${e.message}`);
     return defaultImage;
   }
