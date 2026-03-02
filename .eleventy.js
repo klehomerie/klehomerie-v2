@@ -35,7 +35,11 @@ async function generateSocialImage(src) {
         return `${name}-social.${format}`;
       }
     });
-
+filenameFormat: function (id, src, width, format, options) {
+    const extension = path.extname(src);
+    const name = path.basename(src, extension).replace(/[^a-z0-9]/gi, '-').toLowerCase(); // Clean filename
+    return `${name}-social.${format}`;
+}
     // 4. Return the new URL
     return metadata.jpeg[0].url;
 
