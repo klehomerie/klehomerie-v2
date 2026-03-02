@@ -18,7 +18,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post.njk"}
+     
       
       # A. METADATA
       - {label: "Title", name: "title", widget: "string"}
