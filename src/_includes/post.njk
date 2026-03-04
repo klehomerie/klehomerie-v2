@@ -206,17 +206,43 @@ layout: base.njk
   
   /* Force Marker Color in Dark Mode */
   .dark .prose ul > li::marker { color: #d1d5db; }
+/* TARGET IMAGES INSIDE THE TEXT */
   .prose img {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%; /* Stays responsive on mobile */
-    height: auto;
-    border-radius: 0.75rem; /* Matches your rounded-xl class */
-}
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%; 
+      height: auto;
+      border-radius: 0.75rem; 
+      cursor: zoom-in; /* Shows a magnifying glass on hover */
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
 
-@media (min-width: 1024px) {
-    .prose img {
-        max-width: 750px !important; /* Forces the cap on large desktop screens */
-    }
-}
+  .prose img:hover {
+      transform: scale(1.02); /* Slight pop effect on hover */
+  }
+
+  @media (min-width: 768px) {
+      .prose img {
+          /* Force it to be a small thumbnail on desktop! */
+          max-width: 350px !important; 
+      }
+  }
+  // Automatically make all Markdown images clickable to open the modal
+    document.addEventListener('DOMContentLoaded', () => {
+        const articleImages = document.querySelectorAll('.prose img');
+        articleImages.forEach(img => {
+            img.addEventListener('click', () => {
+                openModal(img.src);
+            });
+        });
+
+        // Ensure the modal can be closed by clicking anywhere on it
+        const modal = document.getElementById('image-modal');
+        if(modal) {
+            modal.addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+        }
+    });
 </style>
