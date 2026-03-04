@@ -112,9 +112,9 @@ layout: base.njk
             </div>
         {% endif %}
 
-        <div class="prose prose-lg prose-slate dark:prose-invert max-w-none prose-p:mb-6 prose-p:leading-relaxed">
-            {{ content | safe }}
-        </div>
+       <div class="prose prose-lg prose-slate dark:prose-invert max-w-prose mx-auto prose-p:mb-6 prose-p:leading-relaxed">
+    {{ content | safe }}
+</div>
 
         <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex items-start gap-4">
             <img src="/assets/images/moi.webp" alt="Arnaud Zerdab" class="w-16 h-16 rounded-full object-cover border-2 border-[--accent-color]">
@@ -216,7 +216,7 @@ layout: base.njk
 
 @media (min-width: 1024px) {
     .prose img {
-        max-width: 800px; /* Limits size on large desktop screens */
+        max-width: 750px !important; /* Forces the cap on large desktop screens */
     }
 }
 </style>
