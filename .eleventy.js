@@ -25,7 +25,7 @@ async function generateSocialImage(src) {
 try {
     // 3. Generate the image
     let metadata = await Image(inputPath, {
-      widths: [1200], // Perfect for LinkedIn
+      widths: [600, 900, 1200], // Perfect for LinkedIn
       formats: ["jpeg"],
       outputDir: "./_site/assets/images/social/",
       urlPath: "/assets/images/social/",

@@ -30,7 +30,7 @@ layout: base.njk
 
 <div class="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-12">
     
-    <article class="w-full md:w-2/3 max-w-none">
+    <article class="w-full md:w-2/3 max-w-3xl">
         
         <a href="/klab/" class="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[--accent-color] mb-6 transition-colors no-underline">
             <span>←</span> Back to Lab
@@ -72,7 +72,7 @@ layout: base.njk
 
         {% if visual_module.type == "Single Image" and visual_module.single_image %}
             <figure class="my-10 not-prose">
-                <img src="{{ visual_module.single_image }}" class="rounded-xl shadow-lg w-full object-cover max-h-[500px] cursor-pointer" onclick="openModal(this.src)" alt="{{ visual_module.title }}">
+                <img src="{{ visual_module.single_image }}" class="w-auto max-w-full lg:max-w-[800px] mx-auto object-contain max-h-[70vh] cursor-pointer" onclick="openModal(this.src)" alt="{{ visual_module.title }}">
                 <figcaption class="text-center text-sm text-gray-500 mt-2 italic">{{ visual_module.caption }}</figcaption>
             </figure>
         
