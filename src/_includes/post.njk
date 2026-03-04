@@ -30,7 +30,7 @@ layout: base.njk
 
 <div class="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-12">
     
-    <article class="w-full md:w-2/3 max-w-3xl overflow-hidden md:overflow-visible">
+    <article class="w-full md:w-2/3 max-w-3xl min-w-0">
         
         <a href="/klab/" class="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[--accent-color] mb-6 transition-colors no-underline">
             <span>←</span> Back to Lab
@@ -196,7 +196,6 @@ layout: base.njk
         } 
     }
 
-    // THIS IS THE MOVED JAVASCRIPT! It now lives inside <script>
     document.addEventListener('DOMContentLoaded', () => {
         const articleImages = document.querySelectorAll('.prose img');
         articleImages.forEach(img => {
@@ -216,15 +215,31 @@ layout: base.njk
 </script>
 
 <style>
-  img-comparison-slider { visibility: visible; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+  /* 1. LOCK DOWN THE COMPONENT REGARDLESS OF WHERE IT LIVES */
+  img-comparison-slider { 
+      visibility: visible; 
+      width: 100%; 
+      max-width: 450px !important; /* Forces it to shrink even inside Markdown */
+      margin-left: auto !important; 
+      margin-right: auto !important; 
+      display: block !important;
+      border-radius: 12px; 
+      overflow: hidden; 
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); 
+  }
   
-  /* CRITICAL: Forces images inside the slider to obey container bounds */
-  img-comparison-slider img { max-width: 100% !important; height: auto !important; display: block; }
+  /* 2. PROTECT THE IMAGES INSIDE THE SLIDER FROM PROSE OVERRIDES */
+  img-comparison-slider img { 
+      width: 100% !important; 
+      max-width: 100% !important; 
+      height: auto !important; 
+      display: block !important;
+      margin: 0 !important; 
+  }
   
   .hide-scrollbar::-webkit-scrollbar { display: none; }
   .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   
-  /* Fixed your media query back to 768px for proper mobile container padding */
   @media (max-width: 768px) { .container { padding-left: 1rem; padding-right: 1rem; } }
   
   /* FORCE PARAGRAPH SPACING */
@@ -243,32 +258,31 @@ layout: base.njk
   }
   .prose li {
       margin-bottom: 0.5em !important;
-      padding-left: 0.5rem; /* Breathing room between bullet and text */
+      padding-left: 0.5rem; 
   }
   
   /* Force Marker Color in Dark Mode */
   .dark .prose ul > li::marker { color: #d1d5db; }
 
-  /* TARGET IMAGES INSIDE THE TEXT */
-  .prose img {
+  /* 3. TARGET STANDARD IMAGES INSIDE THE TEXT (Skipping the slider images) */
+  .prose img:not([slot]) {
       margin-left: auto !important;
       margin-right: auto !important;
       display: block !important;
       max-width: 100%; 
       height: auto;
       border-radius: 0.75rem; 
-      cursor: zoom-in; /* Shows a magnifying glass on hover */
+      cursor: zoom-in; 
       transition: transform 0.2s ease;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 
-  .prose img:hover {
-      transform: scale(1.02); /* Slight pop effect on hover */
+  .prose img:hover:not([slot]) {
+      transform: scale(1.02);
   }
 
   @media (min-width: 768px) {
-      .prose img {
-          /* Force it to be a small thumbnail on desktop! */
+      .prose img:not([slot]) {
           max-width: 350px !important; 
       }
   }
