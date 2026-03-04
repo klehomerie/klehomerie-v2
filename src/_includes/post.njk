@@ -30,7 +30,7 @@ layout: base.njk
 
 <div class="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-12">
     
-    <article class="w-full md:w-2/3 max-w-3xl">
+    <article class="w-full md:w-2/3 max-w-3xl overflow-hidden md:overflow-visible">
         
         <a href="/klab/" class="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-[--accent-color] mb-6 transition-colors no-underline">
             <span>←</span> Back to Lab
@@ -73,22 +73,23 @@ layout: base.njk
 {# 1. SINGLE IMAGE #}
         {% if visual_module.type == "Single Image" and visual_module.single_image %}
             <figure class="my-10 not-prose flex flex-col items-center">
-               <img src="{{ visual_module.single_image }}" 
-     class="w-full max-w-[400px] mx-auto object-contain rounded-xl shadow-lg cursor-pointer" 
-     onclick="openModal(this.src)" 
-     alt="{{ visual_module.title }}">
+                <img src="{{ visual_module.single_image }}" 
+                     class="w-full mx-auto object-contain rounded-xl shadow-lg cursor-pointer" 
+                     style="max-width: 450px; max-height: 50vh;"
+                     onclick="openModal(this.src)" 
+                     alt="{{ visual_module.title }}">
                 <figcaption class="text-center text-sm text-gray-500 mt-4 italic">{{ visual_module.caption }}</figcaption>
             </figure>
         
         {# 2. COMPARISON SLIDER #}
         {% elif visual_module.type == "Comparison Slider" and visual_module.slider_left and visual_module.slider_right %}
-           <div class="my-10 not-prose w-full max-w-[400px] mx-auto">
+            <div class="my-10 not-prose w-full mx-auto" style="max-width: 450px;">
                 <h3 class="font-bold text-xl mb-4 text-[--title-color] flex items-center gap-2">
                     {{ visual_module.title or "🔎 Forensic Analysis" }}
                 </h3>
                 <img-comparison-slider class="rounded-xl shadow-xl border border-gray-200">
-                    <img slot="first" src="{{ visual_module.slider_left }}" width="100%" alt="Before View" />
-                    <img slot="second" src="{{ visual_module.slider_right }}" width="100%" alt="After View" />
+                    <img slot="first" src="{{ visual_module.slider_left }}" class="w-full h-auto object-cover" style="max-width: 100%;" alt="Before View" />
+                    <img slot="second" src="{{ visual_module.slider_right }}" class="w-full h-auto object-cover" style="max-width: 100%;" alt="After View" />
                 </img-comparison-slider>
                 <p class="text-xs text-center text-gray-400 mt-2">← Drag the slider →</p>
                 {% if visual_module.caption %}<p class="text-center text-sm text-gray-500 mt-2 italic">{{ visual_module.caption }}</p>{% endif %}
@@ -96,7 +97,7 @@ layout: base.njk
 
         {# 3. IMAGE CAROUSEL #}
         {% elif visual_module.type == "Image Carousel" and visual_module.carousel_images %}
-            <div class="my-10 not-prose relative group w-full max-w-[400px] mx-auto">
+            <div class="my-10 not-prose relative group w-full mx-auto" style="max-width: 450px;">
                 {% if visual_module.title %}<h3 class="font-bold text-xl mb-4 text-[--title-color]">{{ visual_module.title }}</h3>{% endif %}
                 
                 <div id="carousel-{{ date | slug }}" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 scroll-smooth hide-scrollbar">
@@ -216,9 +217,15 @@ layout: base.njk
 
 <style>
   img-comparison-slider { visibility: visible; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+  
+  /* CRITICAL: Forces images inside the slider to obey container bounds */
+  img-comparison-slider img { max-width: 100% !important; height: auto !important; display: block; }
+  
   .hide-scrollbar::-webkit-scrollbar { display: none; }
   .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-  @media (max-width: 350px) { .container { padding-left: 1rem; padding-right: 1rem; } }
+  
+  /* Fixed your media query back to 768px for proper mobile container padding */
+  @media (max-width: 768px) { .container { padding-left: 1rem; padding-right: 1rem; } }
   
   /* FORCE PARAGRAPH SPACING */
   .prose p { margin-bottom: 1.5em !important; line-height: 1.8 !important; }
