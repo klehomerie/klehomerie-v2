@@ -73,16 +73,16 @@ layout: base.njk
 {# 1. SINGLE IMAGE #}
         {% if visual_module.type == "Single Image" and visual_module.single_image %}
             <figure class="my-10 not-prose flex flex-col items-center">
-                <img src="{{ visual_module.single_image }}" 
-                     class="w-auto max-w-full lg:max-w-lg mx-auto object-contain max-h-[50vh] rounded-xl shadow-lg cursor-pointer" 
-                     onclick="openModal(this.src)" 
-                     alt="{{ visual_module.title }}">
+               <img src="{{ visual_module.single_image }}" 
+     class="w-full max-w-[400px] mx-auto object-contain rounded-xl shadow-lg cursor-pointer" 
+     onclick="openModal(this.src)" 
+     alt="{{ visual_module.title }}">
                 <figcaption class="text-center text-sm text-gray-500 mt-4 italic">{{ visual_module.caption }}</figcaption>
             </figure>
         
         {# 2. COMPARISON SLIDER #}
         {% elif visual_module.type == "Comparison Slider" and visual_module.slider_left and visual_module.slider_right %}
-            <div class="my-10 not-prose max-w-full lg:max-w-lg mx-auto">
+           <div class="my-10 not-prose w-full max-w-[400px] mx-auto">
                 <h3 class="font-bold text-xl mb-4 text-[--title-color] flex items-center gap-2">
                     {{ visual_module.title or "🔎 Forensic Analysis" }}
                 </h3>
@@ -96,7 +96,7 @@ layout: base.njk
 
         {# 3. IMAGE CAROUSEL #}
         {% elif visual_module.type == "Image Carousel" and visual_module.carousel_images %}
-            <div class="my-10 not-prose relative group max-w-full lg:max-w-lg mx-auto">
+            <div class="my-10 not-prose relative group w-full max-w-[400px] mx-auto">
                 {% if visual_module.title %}<h3 class="font-bold text-xl mb-4 text-[--title-color]">{{ visual_module.title }}</h3>{% endif %}
                 
                 <div id="carousel-{{ date | slug }}" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 scroll-smooth hide-scrollbar">
