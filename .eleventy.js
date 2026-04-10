@@ -52,10 +52,14 @@ module.exports = function(eleventyConfig) {
 
   // ADD THIS LINE AT THE TOP
   eleventyConfig.setUseGitIgnore(false);
+  
   // 1. PASSTHROUGH COPIES (Move these files to the live site)
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  
+  // 👉 FIX: Explicitly copy any PDFs in your src/ folder to the root of your live site
+  eleventyConfig.addPassthroughCopy("src/*.pdf");
 
   // 2. FILTERS
   
