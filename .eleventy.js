@@ -2,6 +2,7 @@ const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
 const path = require("path");
 const fs = require("fs");
+const markdownIt = require("markdown-it"); // 👈 NEW: Required for overriding markdown images
 
 /**
  * IMAGE PROCESSING FUNCTION (With Safety Check)
@@ -57,31 +58,26 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
-  
-  // 👉 FIX: Explicitly copy any PDFs in your src/ folder to the root of your live site
   eleventyConfig.addPassthroughCopy("src/*.pdf");
 
   // 2. FILTERS
   
-  // Date Filter (e.g., "February 26, 2026")
+  // Date Filter
   eleventyConfig.addFilter("dateString", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("LLLL d, yyyy");
   });
 
-  // Image Filter (Register the function we wrote above)
+  // Image Filter
   eleventyConfig.addNunjucksAsyncFilter("socialImg", generateSocialImage);
 
-
-  // 3. COLLECTIONS (This finds your Articles!)
+  // 3. COLLECTIONS
   eleventyConfig.addCollection("posts", function(collection) {
-    // Looks for any .md file inside src/klab/posts/
     return collection.getFilteredByGlob("src/klab/posts/*.md").reverse();
   });
 
-
   // 4. SHORTCODES
   
-  // CTA: "Is this property sound?"
+  // CTA
   eleventyConfig.addShortcode("CTA_RED_FLAG", function() {
     return `
     <div class="my-8 p-6 bg-red-50 dark:bg-red-900/20 border-l-4 border-[--accent-color] rounded-r-lg not-prose">
@@ -95,14 +91,89 @@ module.exports = function(eleventyConfig) {
     </div>`;
   });
 
+  // 👇 NEW: ASYNC SHORTCODE FOR TEMPLATE IMAGES (Hero, Slider, etc.)
+  eleventyConfig.addAsyncShortcode("optimizedImage", async function(src, alt, sizes = "100vw", classes = "") {
+    if (!src) return "";
 
-// 5. SETTINGS
+    let inputPath = src.startsWith('/') ? "./src" + src : src;
+
+    if (!fs.existsSync(inputPath)) {
+      console.log(`⚠️  Image not found for shortcode: ${inputPath}`);
+      return `<img src="${src}" alt="${alt}" class="${classes}">`; // Fallback to raw tag if missing
+    }
+
+    let metadata = await Image(inputPath, {
+      widths: [400, 800, 1200],
+      formats: ["webp", "jpeg"],
+      urlPath: "/assets/images/optimized/",
+      outputDir: "./_site/assets/images/optimized/"
+    });
+
+    let imageAttributes = {
+      alt,
+      sizes,
+      class: classes,
+      loading: "lazy",
+      decoding: "async",
+    };
+
+    return Image.generateHTML(metadata, imageAttributes);
+  });
+
+  // 👇 NEW: MARKDOWN-IT OVERRIDE FOR IMAGES IN THE BODY TEXT
+  const mdLib = markdownIt({ html: true });
+  
+  mdLib.renderer.rules.image = function (tokens, idx, options, env, self) {
+    const token = tokens[idx];
+    const src = token.attrGet('src');
+    const alt = token.content;
+    
+    // Applying the same CSS classes you have defined in post.njk for prose images
+    const classes = "w-full mx-auto block rounded-xl shadow-lg transition-transform duration-200 hover:scale-[1.02] cursor-zoom-in";
+
+    let inputPath = src.startsWith('/') ? "./src" + src : src;
+
+    if (!fs.existsSync(inputPath)) {
+        return `<img src="${src}" alt="${alt}" class="${classes}">`;
+    }
+
+    // Process image generation in the background
+    Image(inputPath, {
+        widths: [800], // 800px is usually plenty wide for article body text
+        formats: ["webp", "jpeg"],
+        urlPath: "/assets/images/optimized/",
+        outputDir: "./_site/assets/images/optimized/"
+    });
+
+    // Use statsSync to generate the HTML tag synchronously (required for markdown-it)
+    let metadata = Image.statsSync(inputPath, {
+        widths: [800],
+        formats: ["webp", "jpeg"],
+        urlPath: "/assets/images/optimized/",
+        outputDir: "./_site/assets/images/optimized/"
+    });
+
+    let imageAttributes = {
+      alt: alt,
+      sizes: "(max-width: 768px) 100vw, 800px",
+      class: classes,
+      loading: "lazy",
+      decoding: "async"
+    };
+
+    return Image.generateHTML(metadata, imageAttributes);
+  };
+
+  // Tell Eleventy to use our modified markdown library
+  eleventyConfig.setLibrary("md", mdLib);
+
+  // 5. SETTINGS
   return {
     dir: {
-      input: "src",          // Look for content in src/
-      output: "_site",       // Output to _site/
-      includes: "_includes", // Force look in src/_includes/
-      layouts: "_includes"   // Explicitly tell it layouts are here too
+      input: "src",          
+      output: "_site",       
+      includes: "_includes", 
+      layouts: "_includes"   
     }
   };
 };

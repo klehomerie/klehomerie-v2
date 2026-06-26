@@ -8,9 +8,8 @@ layout: base.njk
 
 <header class="relative h-[40vh] min-h-[350px] flex items-end justify-center text-center overflow-hidden pb-12">
     <div class="absolute inset-0 w-full h-full">
-        <img src="{{ image or '/assets/images/hero-athens-view.webp' }}" 
-             alt="{{ title }}" 
-             class="w-full h-full object-cover">
+       {% set heroSrc = image or '/assets/images/hero-athens-view.webp' %}
+{% optimizedImage heroSrc, title, "(max-width: 768px) 100vw, 1200px", "w-full h-full object-cover" %}
         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-gray-900/30"></div>
     </div>
     
@@ -73,11 +72,7 @@ layout: base.njk
 {# 1. SINGLE IMAGE #}
         {% if visual_module.type == "Single Image" and visual_module.single_image %}
             <figure class="my-10 not-prose flex flex-col items-center">
-                <img src="{{ visual_module.single_image }}" 
-                     class="w-full mx-auto object-contain rounded-xl shadow-lg cursor-pointer" 
-                     style="max-width: 450px; max-height: 50vh;"
-                     onclick="openModal(this.src)" 
-                     alt="{{ visual_module.title }}">
+               {% optimizedImage visual_module.single_image, visual_module.title, "(max-width: 450px) 100vw, 450px", "w-full mx-auto object-contain rounded-xl shadow-lg cursor-pointer" %}
                 <figcaption class="text-center text-sm text-gray-500 mt-4 italic">{{ visual_module.caption }}</figcaption>
             </figure>
         
@@ -88,8 +83,8 @@ layout: base.njk
                     {{ visual_module.title or "🔎 Forensic Analysis" }}
                 </h3>
                 <img-comparison-slider class="rounded-xl shadow-xl border border-gray-200">
-                    <img slot="first" src="{{ visual_module.slider_left }}" class="w-full h-auto object-cover" style="max-width: 100%;" alt="Before View" />
-                    <img slot="second" src="{{ visual_module.slider_right }}" class="w-full h-auto object-cover" style="max-width: 100%;" alt="After View" />
+                    {% optimizedImage visual_module.slider_left, visual_module.title, "(max-width: 450px) 100vw, 450px", "w-full mx-auto object-contain rounded-xl shadow-lg cursor-pointer" %}
+                    {% optimizedImage visual_module.slider_right, visual_module.title, "(max-width: 450px) 100vw, 450px", "w-full mx-auto object-contain rounded-xl shadow-lg cursor-pointer" %}
                 </img-comparison-slider>
                 <p class="text-xs text-center text-gray-400 mt-2">← Drag the slider →</p>
                 {% if visual_module.caption %}<p class="text-center text-sm text-gray-500 mt-2 italic">{{ visual_module.caption }}</p>{% endif %}
@@ -101,10 +96,12 @@ layout: base.njk
                 {% if visual_module.title %}<h3 class="font-bold text-xl mb-4 text-[--title-color]">{{ visual_module.title }}</h3>{% endif %}
                 
                 <div id="carousel-{{ date | slug }}" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 scroll-smooth hide-scrollbar">
-                    {% for item in visual_module.carousel_images %}
-                        <img src="{{ item }}" class="snap-center w-full md:w-3/4 flex-shrink-0 rounded-xl shadow-lg object-cover h-[400px] cursor-pointer" onclick="openModal(this.src)">
-                    {% endfor %}
-                </div>
+    {% for item in visual_module.carousel_images %}
+        <div onclick="openModal('{{ item }}')" class="snap-center w-full md:w-3/4 flex-shrink-0 cursor-pointer">
+            {% optimizedImage item, "Carousel Image", "(max-width: 768px) 100vw, 800px", "w-full h-[400px] rounded-xl shadow-lg object-cover pointer-events-none" %}
+        </div>
+    {% endfor %}
+</div>
 
                 <button onclick="scrollCarousel('carousel-{{ date | slug }}', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow hover:bg-white text-gray-800 transition-opacity opacity-0 group-hover:opacity-100">←</button>
                 <button onclick="scrollCarousel('carousel-{{ date | slug }}', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow hover:bg-white text-gray-800 transition-opacity opacity-0 group-hover:opacity-100">→</button>
