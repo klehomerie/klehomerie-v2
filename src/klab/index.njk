@@ -59,57 +59,59 @@ title: Klehomerie Lab - Technical Insights
 
 <section class="container mx-auto px-6 py-16 min-h-[50vh]">
     <div id="postsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        {% for post in collections.posts | reverse %}
-        <article class="card rounded-xl overflow-hidden flex flex-col h-full shadow-lg transition-transform duration-300 hover:-translate-y-1 relative group"
-                 data-category="{{ post.data.category }}"
-                 data-language="{{ post.data.language or 'en' }}"
-                 data-date="{{ post.date }}"
-                 data-id="{{ post.url }}"> <a href="{{ post.url }}" class="block h-48 overflow-hidden relative">
-                <img src="{{ post.data.image or '/assets/images/hero-athens-view.webp' }}" 
-                     alt="{{ post.data.title }}" 
-                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                
-                <div class="absolute top-4 left-4 text-white text-xs font-bold px-2 py-1 rounded shadow-sm z-10" style="background-color: var(--accent-color);">
-                    {{ post.data.category or "Insight" }}
-                </div>
-            </a>
-
-            <button class="like-btn absolute top-4 right-14 bg-white/90 backdrop-blur-sm p-1.5 rounded-full shadow-sm z-20 hover:scale-110 transition-transform cursor-pointer border border-gray-100 group/btn"
-                    onclick="toggleLike(this, '{{ post.url }}')"
-                    title="Save to Favorites">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-hover/btn:text-red-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-            </button>
-
-            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm text-lg leading-none select-none z-20 pointer-events-none">
-                {% if post.data.language == 'fr' %}🇫🇷{% else %}🇬🇧{% endif %}
+    
+    {% for post in collections.posts %}
+    <article class="card rounded-xl overflow-hidden flex flex-col h-full shadow-lg transition-transform duration-300 hover:-translate-y-1 relative group"
+             data-category="{{ post.data.category }}"
+             data-language="{{ post.data.language }}"
+             data-date="{{ post.date }}"
+             data-id="{{ post.url }}"> 
+             
+        <a href="{{ post.url }}" class="block h-48 overflow-hidden relative">
+            <img src="{{ post.data.image or '/assets/images/hero-athens-view.webp' }}" 
+                 alt="{{ post.data.title }}" 
+                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            
+            <div class="absolute top-4 left-4 text-white text-xs font-bold px-2 py-1 rounded shadow-sm z-10" style="background-color: var(--accent-color);">
+                {{ post.data.category or 'Technical Insight' }}
             </div>
+        </a>
 
-            <div class="p-6 flex-1 flex flex-col">
-                <div class="text-xs text-gray-400 mb-2 font-mono">
-                    {{ post.date | dateString }} • {{ post.data.property_type or "General" }}
-                </div>
-                
-                <h3 class="text-xl font-bold mb-3 leading-tight font-['Poppins']">
-                    <a href="{{ post.url }}" class="hover:text-[--accent-color] transition-colors" style="color: var(--title-color);">
-                        {{ post.data.title }}
-                    </a>
-                </h3>
-                
-                <p class="text-sm mb-4 line-clamp-3 flex-1 font-['Lato']" style="color: var(--text-color);">
-                    {{ post.data.summary }}
-                </p>
-                
-                <a href="{{ post.url }}" class="font-bold text-sm hover:underline mt-auto flex items-center gap-1" style="color: var(--accent-color);">
-                    Read Article <span class="text-lg">→</span>
+        <button class="like-btn absolute top-4 right-14 bg-white/90 backdrop-blur-sm p-1.5 rounded-full shadow-sm z-20 hover:scale-110 transition-transform cursor-pointer border border-gray-100 group/btn"
+                onclick="toggleLike(this, '{{ post.url }}')"
+                title="Save to Favorites">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 group-hover/btn:text-red-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+        </button>
+
+        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm text-lg leading-none select-none z-20 pointer-events-none">
+            {% if post.data.language == 'fr' %}🇫🇷{% else %}🇬🇧{% endif %}
+        </div>
+
+        <div class="p-6 flex-1 flex flex-col">
+            <div class="text-xs text-gray-400 mb-2 font-mono">
+                {{ post.date | dateString }} • {{ post.data.property_type or 'All' }}
+            </div>
+            
+            <h3 class="text-xl font-bold mb-3 leading-tight font-['Poppins']">
+                <a href="{{ post.url }}" class="hover:text-[--accent-color] transition-colors" style="color: var(--title-color);">
+                    {{ post.data.title }}
                 </a>
-            </div>
-        </article>
-        {% endfor %}
+            </h3>
+            
+            <p class="text-sm mb-4 line-clamp-3 flex-1 font-['Lato']" style="color: var(--text-color);">
+                {{ post.data.summary }}
+            </p>
+            
+            <a href="{{ post.url }}" class="font-bold text-sm hover:underline mt-auto flex items-center gap-1" style="color: var(--accent-color);">
+                Read Article <span class="text-lg">→</span>
+            </a>
+        </div>
+    </article>
+    {% endfor %}
 
-    </div>
+</div>
     
     <div id="noResults" class="hidden text-center py-20">
         <div class="text-6xl mb-4">🕵️‍♂️</div>
