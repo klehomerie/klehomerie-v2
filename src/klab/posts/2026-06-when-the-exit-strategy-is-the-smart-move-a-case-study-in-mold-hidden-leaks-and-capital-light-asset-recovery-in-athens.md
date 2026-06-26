@@ -5,7 +5,7 @@ summary: Not every property problem calls for a full renovation. Sometimes the
   smarter decision is to stabilize the asset, exit cleanly, and protect what
   capital remains. This case study documents exactly that scenario — and what
   happened when a second, hidden defect surfaced mid-execution.
-date: 2026-06-27T00:42:00.000+03:00
+date: 2026-06-25T22:57:00.000+03:00
 category: Red Flag Scans
 language: en
 property_type: Residential
