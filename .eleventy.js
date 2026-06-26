@@ -72,9 +72,17 @@ module.exports = function(eleventyConfig) {
 
   // 3. COLLECTIONS
   eleventyConfig.addCollection("posts", function(collection) {
-    return collection.getFilteredByGlob("src/klab/posts/*.md").reverse();
-  });
-
+    const allPosts = collection.getFilteredByGlob("src/klab/posts/*.md");
+    
+    // 👇 DIAGNOSTIC LOGGING
+    console.log(`\n🕵️‍♂️ ELEVENTY FOUND ${allPosts.length} POSTS:`);
+    allPosts.forEach(post => {
+      console.log(` - File: ${post.inputPath}`);
+      console.log(`   URL generated: ${post.url}`);
+    });
+    console.log("------------------------\n");
+return allPosts.reverse(); // 👈 YOU WERE MISSING THIS
+  }); // 👈 AND THIS CLOSING BRACKET
   // 4. SHORTCODES
   
   // CTA
