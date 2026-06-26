@@ -1,5 +1,4 @@
 {
   "layout": "post.njk",
-  "tags": ["posts"],
   "permalink": "/klab/{{ page.fileSlug }}/index.html"
 }
