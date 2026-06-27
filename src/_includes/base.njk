@@ -7,11 +7,6 @@
 {# 1. Check if we have a custom image, otherwise use default #}
 {% set originalImage = image or "/assets/images/hero-athens-view.webp" %}
 
-{# 2. Run it through our processor (This converts WebP -> JPEG) #}
-{% set socialImageUrl = originalImage | socialImg %}
-
-{# Use a slash-agnostic join #}
-{% set absoluteSocialImage = (siteUrl + socialImageUrl) | replace("//assets", "/assets") %}
 
     <title>{{ title or "Klehomerie - Technical Asset Management & Technical Audits Athens" }}</title>
     <meta name="title" content="{{ title or "Klehomerie | Technical Asset Management & Due Diligence Athens" }}">
@@ -21,18 +16,17 @@
     <meta name="keywords" content="Athens real estate investment, technical due diligence Greece, property audit Athens, asset management for overseas investors, Greek golden visa technical check, building inspection Athens">
 
     <meta property="og:type" content="website">
-<meta property="og:url" content="https://klehomerie.com{{ page.url }}">
-<meta property="og:title" content="{{ title or 'Investing in Athens with Your Eyes Open | Klehomerie' }}">
-<meta property="og:description" content="{{ summary or description or 'Independent Snagging Lists & Technical Due Diligence for Investors in Athens.' }}">
-<meta property="og:image" content="{{ absoluteSocialImage }}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://klehomerie.com{{ page.url }}">
+    <meta property="og:title" content="{{ title or 'Investing in Athens with Your Eyes Open | Klehomerie' }}">
+    <meta property="og:description" content="{{ summary or description or 'Independent Snagging Lists & Technical Due Diligence for Investors in Athens.' }}">
+    <meta property="og:image" content="{{ siteUrl }}{{ originalImage | socialImg }}">
+    <meta property="og:image:height" content="630">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="{{ siteUrl }}{{ page.url }}">
     <meta property="twitter:title" content="{{ title or "Athens Technical Asset Management | Klehomerie" }}">
     <meta property="twitter:description" content="{{ summary or description or "Applying French technical standards to Greek reality. Asset protection for the global investor." }}">
-    <meta property="twitter:image" content="{{ absoluteSocialImage }}">
+    <meta property="twitter:image" content="{{ siteUrl }}{{ originalImage | socialImg }}">
 
     <link rel="alternate" hreflang="en" href="https://klehomerie.com/" />
     <link rel="alternate" hreflang="fr" href="https://klehomerie.com/?lang=fr" />

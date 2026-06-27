@@ -68,7 +68,7 @@ module.exports = function(eleventyConfig) {
   });
 
   // Image Filter
-  eleventyConfig.addNunjucksAsyncFilter("socialImg", generateSocialImage);
+  eleventyConfig.addFilter("socialImg", generateSocialImage);
 
   // 3. COLLECTIONS
   eleventyConfig.addCollection("posts", function(collection) {
