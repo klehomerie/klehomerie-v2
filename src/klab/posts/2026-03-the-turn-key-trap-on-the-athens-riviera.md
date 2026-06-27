@@ -1,6 +1,5 @@
 ---
 title: The "Turn-Key" Trap on the Athens Riviera
-permalink: /klab/the-turn-key-trap-on-the-athens-riviera/
 tags: posts
 summary: A fresh coat of paint can hide severe thermal defects. Discover why a
   "turn-key" renovation on the Riviera might actually be a mold time-bomb for
