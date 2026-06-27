@@ -11,6 +11,8 @@ visual_module:
   type: None
   title: ""
   single_image: ""
+permalink: "/klab/when-the-exit-strategy-is-the-smart-move/"
+layout: "post.njk" 
 ---
 ## The Starting Condition
 
