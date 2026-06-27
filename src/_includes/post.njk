@@ -6,7 +6,7 @@ layout: base.njk
 {% set shareUrl = "https://klehomerie.com" + page.url %}
 {% set shareTitle = title | urlencode %}
 
-<header class="relative h-[40vh] min-h-[350px] flex items-end justify-center text-center overflow-hidden pb-12">
+<header class="relative min-h-[400px] md:min-h-[450px] flex items-end justify-center text-center overflow-hidden pt-28 pb-12">
     <div class="absolute inset-0 w-full h-full">
        {% set heroSrc = image or '/assets/images/hero-athens-view.webp' %}
 {% optimizedImage heroSrc, title, "(max-width: 768px) 100vw, 1200px", "w-full h-full object-cover" %}
