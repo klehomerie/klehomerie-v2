@@ -1,0 +1,72 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# 1. THIS FIXES THE LOGIN ERROR ON LOCALHOST
+local_backend: true
+
+media_folder: "src/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+preview_styles:
+  - /assets/css/style.css
+
+collections:
+  - name: "posts"
+    label: "Lab Articles"
+    folder: "src/klab/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+     
+      
+      # A. METADATA
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Summary", name: "summary", widget: "text", hint: "Short teaser (max 160 chars)."}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "select", options: ["Technical Insight", "Red Flag Scans", "Golden Visa Strategy", "French Standards", "Regulatory Vigie"]}
+      - {label: "Language", name: "language", widget: "select", options: ["en", "fr"], default: "en"}
+
+      # B. SPECIFICS
+      - {label: "Property Type", name: "property_type", widget: "string", default: "Residential"}
+      - {label: "Location", name: "location", widget: "string", default: "Athens, Greece"}
+
+      # C. HERO IMAGE
+      - {label: "Featured Image", name: "image", widget: "image"}
+
+      # D. FLEXIBLE VISUAL MODULE
+      - label: "Visual Media Module"
+        name: "visual_module"
+        widget: "object"
+        collapsed: true
+        fields:
+          - label: "Module Type"
+            name: "type"
+            widget: "select"
+            options: ["None", "Single Image", "Comparison Slider", "Image Carousel"]
+            default: "None"
+          - {label: "Module Title", name: "title", widget: "string", required: false}
+          
+          # SLIDER FIELDS (Fixed 2 images)
+          - {label: "Slider Left (Before)", name: "slider_left", widget: "image", required: false, hint: "Only for Comparison Slider"}
+          - {label: "Slider Right (After)", name: "slider_right", widget: "image", required: false, hint: "Only for Comparison Slider"}
+          
+          # 2. CAROUSEL FIELDS (Unlimited List)
+          - label: "Carousel Images"
+            name: "carousel_images"
+            widget: "list"
+            required: false
+            summary: "{{fields.image}}"
+            field: {label: "Image", name: "image", widget: "image"}
+          
+          # SINGLE IMAGE FIELD
+          - {label: "Single Image", name: "single_image", widget: "image", required: false}
+          
+          - {label: "Caption", name: "caption", widget: "string", required: false}
+
+      # E. BODY (Rich Text)
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        buttons: ["bold", "italic", "strikethrough", "code", "link", "heading-one", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
+        editor_components: ["image"]
