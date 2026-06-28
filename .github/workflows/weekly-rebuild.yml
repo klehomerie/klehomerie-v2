@@ -1,5 +1,4 @@
 name: Weekly Netlify Rebuild
-
 on:
   schedule:
     # This cron schedule runs at 00:00 UTC every Sunday (0).
