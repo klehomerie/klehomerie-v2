@@ -70,19 +70,24 @@ module.exports = function(eleventyConfig) {
   // Image Filter
   eleventyConfig.addFilter("socialImg", generateSocialImage);
 
-  // 3. COLLECTIONS
+ // 3. COLLECTIONS
   eleventyConfig.addCollection("posts", function(collection) {
     const allPosts = collection.getFilteredByGlob("src/klab/posts/*.md");
+    const now = new Date(); // Captures the current exact date and time
+    
+    // Filter out posts with a date in the future
+    const livePosts = allPosts.filter(post => post.date <= now);
     
     // 👇 DIAGNOSTIC LOGGING
-    console.log(`\n🕵️‍♂️ ELEVENTY FOUND ${allPosts.length} POSTS:`);
-    allPosts.forEach(post => {
+    console.log(`\n🕵️‍♂️ ELEVENTY FOUND ${livePosts.length} LIVE POSTS:`);
+    livePosts.forEach(post => {
       console.log(` - File: ${post.inputPath}`);
       console.log(`   URL generated: ${post.url}`);
     });
     console.log("------------------------\n");
-return allPosts.reverse(); // 👈 YOU WERE MISSING THIS
-  }); // 👈 AND THIS CLOSING BRACKET
+
+    return livePosts.reverse(); // Returns only the past/present posts, newest first
+  });
   // 4. SHORTCODES
   
   // CTA
