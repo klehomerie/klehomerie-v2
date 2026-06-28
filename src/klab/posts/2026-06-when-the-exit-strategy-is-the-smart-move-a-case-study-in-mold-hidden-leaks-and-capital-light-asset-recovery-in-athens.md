@@ -1,5 +1,5 @@
 ---
-title: "When the Exit Strategy Is the Smart Move: A Case Study in Mold, Hidden
+title: "**When the Exit Strategy Is the Smart Move: A Case Study in Mold, Hidden
   Leaks, and Capital-Light Asset Recovery in Athens"
 summary: Not every property problem calls for a full renovation. Sometimes the
   smarter decision is to stabilize the asset, exit cleanly, and protect what
