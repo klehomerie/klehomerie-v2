@@ -59,7 +59,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/*.pdf");
-
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/vanilla-cookieconsent/dist/cookieconsent.css": "assets/css/cookieconsent.css",
+    "node_modules/vanilla-cookieconsent/dist/cookieconsent.umd.js": "assets/js/cookieconsent.js"
+  });
   // 2. FILTERS
   
   // Date Filter
