@@ -1,10 +1,9 @@
 ---
 title: The "Turn-Key" Trap on the Athens Riviera
-tags: posts
 summary: A fresh coat of paint can hide severe thermal defects. Discover why a
   "turn-key" renovation on the Riviera might actually be a mold time-bomb for
   your ROI.
-date: 2026-03-02T14:27:00.000+02:00
+date: 2026-03-15T14:27:00.000+02:00
 category: Red Flag Scans
 language: en
 property_type: Residential
@@ -15,6 +14,7 @@ visual_module:
   slider_left: ""
   slider_right: ""
   title: ""
+tags: posts
 ---
 It’s a sunny winter day on the Athens Riviera. The sky is clear, and a light marine breeze is blowing. You’ve found the perfect investment property: a newly renovated ground floor house by the sea. Fresh white paint, modern A/C units, new woodwork, and a modern aesthetic. In pictures, it looks ready for a high-yield tenant. It looks flawless.
 
