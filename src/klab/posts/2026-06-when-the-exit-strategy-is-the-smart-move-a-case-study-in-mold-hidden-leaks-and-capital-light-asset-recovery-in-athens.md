@@ -1,8 +1,11 @@
 ---
-title: "When the Exit Strategy Is the Smart Move: A Case Study in Mold, Hidden Leaks, and Capital-Light Asset Recovery in Athens"
-summary: "Not every property problem calls for a full renovation. Sometimes the smarter decision is to stabilize the asset, exit cleanly, and protect what capital remains. This case study documents exactly that scenario — and what happened when a second, hidden defect surfaced mid-execution."
-tag: "posts"
-date: 2026-06-25T22:57:00.000+03:00
+title: "When the Exit Strategy Is the Smart Move: A Case Study in Mold, Hidden
+  Leaks, and Capital-Light Asset Recovery in Athens"
+summary: Not every property problem calls for a full renovation. Sometimes the
+  smarter decision is to stabilize the asset, exit cleanly, and protect what
+  capital remains. This case study documents exactly that scenario — and what
+  happened when a second, hidden defect surfaced mid-execution.
+date: 2026-07-20T15:00:00.000+03:00
 category: Red Flag Scans
 language: en
 property_type: Residential
@@ -12,6 +15,7 @@ visual_module:
   type: None
   title: ""
   single_image: ""
+tag: posts
 ---
 ## The Starting Condition
 
