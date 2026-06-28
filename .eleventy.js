@@ -63,6 +63,10 @@ module.exports = function(eleventyConfig) {
     "node_modules/vanilla-cookieconsent/dist/cookieconsent.css": "assets/css/cookieconsent.css",
     "node_modules/vanilla-cookieconsent/dist/cookieconsent.umd.js": "assets/js/cookieconsent.js"
   });
+  // Tell Eleventy to copy the files straight from src/ to the root of your deployed site
+eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_SPECIMEN_AUDIT.pdf");
+eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf");
+eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf");
   // 2. FILTERS
   
   // Date Filter
