@@ -67,7 +67,9 @@ module.exports = function(eleventyConfig) {
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_SPECIMEN_AUDIT.pdf");
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf");
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf");
-  // 2. FILTERS
+eleventyConfig.addPassthroughCopy("src/feed.xsl"); 
+
+// 2. FILTERS
   
   // Date Filter
   eleventyConfig.addFilter("dateString", (dateObj) => {
