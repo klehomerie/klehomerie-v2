@@ -1,6 +1,6 @@
 [build]
   publish = "_site"
-  command = "npm install && npm run build"
+  command = "npm run build"
   
   # Merge your environment variables into a single line
   environment = { NODE_ENV = "production", NPM_FLAGS = "--platform=linux --arch=x64" }
