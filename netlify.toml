@@ -4,3 +4,9 @@
   
   # Merge your environment variables into a single line
   environment = { NODE_ENV = "production", NPM_FLAGS = "--platform=linux --arch=x64" }
+  # Force Netlify to tell LinkedIn this is explicitly a production RSS stream
+[[headers]]
+  for = "/feed.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"
+    X-Content-Type-Options = "nosniff"
