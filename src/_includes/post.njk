@@ -124,10 +124,12 @@ layout: base.njk
         </div>
 
         <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex items-start gap-4">
-            {% optimizedImage "/assets/images/Professional Headshot.png" alt="Arnaud Zerdab", "64px", class="w-16 h-16 rounded-full object-cover border-2 border-[--accent-color]" %}
-            <div>
-                <h4 class="font-bold text-lg text-[--title-color] dark:text-white">Arnaud Zerdab</h4>
-                <p class="text-sm text-gray-500 mb-2 dark:text-gray-400">Founder, Klehomerie.</p>
+    
+    {% optimizedImage "/assets/images/Professional Headshot.png", "Arnaud Zerdab", "64px", "w-16 h-16 rounded-full object-cover border-2 border-[--accent-color]" %}
+    
+    <div>
+        <h4 class="font-bold text-lg text-[--title-color] dark:text-white">Arnaud Zerdab</h4>
+        <p class="text-sm text-gray-500 mb-2 dark:text-gray-400">Founder, Klehomerie.</p>
                 <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                     Athens-based Technical Asset Management firm. Applying French technical standards to the Greek property market, Klehomerie provides independent "Red Flag Scans" and deep audits to protect foreign capital.
                 </p>
