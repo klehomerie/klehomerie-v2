@@ -3,8 +3,7 @@ const Image = require("@11ty/eleventy-img");
 const path = require("path");
 const fs = require("fs");
 const markdownIt = require("markdown-it"); // 👈 NEW: Required for overriding markdown images
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-
+const feedPlugin = require("@11ty/eleventy-plugin-rss").default;
 /**
  * IMAGE PROCESSING FUNCTION (With Safety Check)
  * Automatically generates social media images from your posts.
@@ -55,7 +54,7 @@ module.exports = function(eleventyConfig) {
   // ADD THIS LINE AT THE TOP
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPlugin(pluginRss); 
-  
+
   // 1. PASSTHROUGH COPIES (Move these files to the live site)
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/admin");
