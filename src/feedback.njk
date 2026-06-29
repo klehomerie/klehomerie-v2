@@ -1,0 +1,208 @@
+---
+layout: base.njk
+title: Project Feedback Survey | Klehomerie
+permalink: /feedback/
+eleventyExcludeFromCollections: true
+---
+
+<style>
+/* ==========================================================================
+   KLEHOMERIE FEEDBACK ENGINE VARIABLES & LIGHT/DARK SYSTEM
+   ========================================================================== */
+:root {
+  --kh-font-title: 'Poppins', -apple-system, sans-serif;
+  --kh-font-body: 'Lato', -apple-system, sans-serif;
+
+  --kh-bg: #f8fafc;
+  --kh-card-bg: #ffffff;
+  --kh-accent: #C66C54;
+  --kh-accent-hover: #A94A2D;
+  --kh-title: #1c1a3c;
+  --kh-text: #475569;
+  --kh-hint: #64748b;
+  --kh-input-bg: #ffffff;
+  --kh-border: #e2e8f0;
+  --kh-focus-ring: rgba(198, 108, 84, 0.15);
+  --kh-shadow: 0 10px 25px -5px rgba(28, 26, 60, 0.05);
+  --kh-star-color: #cbd5e1;
+  --kh-star-active: #f59e0b;
+}
+
+body.dark-theme, body.dark {
+  --kh-bg: #0f172a;
+  --kh-card-bg: #1e293b;
+  --kh-title: #f8fafc;
+  --kh-text: #94a3b8;
+  --kh-hint: #64748b;
+  --kh-input-bg: #0f172a;
+  --kh-border: #334155;
+  --kh-focus-ring: rgba(198, 108, 84, 0.3);
+  --kh-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  --kh-star-color: #475569;
+}
+
+.kh-feedback-wrapper { font-family: var(--kh-font-body); background-color: var(--kh-bg); min-height: 100vh; padding: 60px 20px; display: flex; justify-content: center; align-items: center; transition: background-color 0.2s; }
+.kh-feedback-card { background-color: var(--kh-card-bg); max-width: 720px; width: 100%; padding: 45px; border-radius: 16px; border: 1px solid var(--kh-border); box-shadow: var(--kh-shadow); transition: background-color 0.2s, border-color 0.2s; }
+.kh-feedback-header { border-bottom: 2px solid var(--kh-border); padding-bottom: 25px; margin-bottom: 35px; text-align: left; }
+.kh-feedback-header h1 { font-family: var(--kh-font-title); color: var(--kh-title); font-size: 2rem; font-weight: 700; margin: 0 0 10px 0; }
+.kh-feedback-header p { color: var(--kh-text); font-size: 1rem; margin: 0; }
+
+.kh-form-group { margin-bottom: 32px; display: flex; flex-direction: column; }
+.kh-form-label { font-family: var(--kh-font-title); color: var(--kh-title); font-size: 1rem; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+.kh-form-control { font-family: var(--kh-font-body); background-color: var(--kh-input-bg); color: var(--kh-title); border: 1px solid var(--kh-border); border-radius: 8px; padding: 14px 18px; font-size: 1rem; outline: none; resize: vertical; min-height: 110px; transition: border-color 0.2s, box-shadow 0.2s; }
+.kh-form-control:focus { border-color: var(--kh-accent); box-shadow: 0 0 0 4px var(--kh-focus-ring); }
+
+/* Custom 5-Star Rating CSS Architecture (Reversed for pure CSS hover effects) */
+.kh-rating-stars { display: inline-flex; flex-direction: row-reverse; justify-content: flex-end; gap: 8px; margin-top: 4px; }
+.kh-rating-stars input { display: none; }
+.kh-rating-stars label { font-size: 2.25rem; color: var(--kh-star-color); cursor: pointer; transition: color 0.15s ease; }
+.kh-rating-stars input:checked ~ label,
+.kh-rating-stars label:hover,
+.kh-rating-stars label:hover ~ label { color: var(--kh-star-active); }
+
+.kh-radio-stack { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
+.kh-radio-label { display: flex; align-items: flex-start; gap: 12px; background-color: var(--kh-input-bg); border: 1px solid var(--kh-border); padding: 14px 18px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; color: var(--kh-text); transition: border-color 0.2s; }
+.kh-radio-input { appearance: none; -webkit-appearance: none; background-color: var(--kh-input-bg); margin: 4px 0 0 0; width: 16px; height: 16px; border: 2px solid var(--kh-border); border-radius: 50%; display: grid; place-content: center; flex-shrink: 0; cursor: pointer; }
+.kh-radio-input::before { content: ""; width: 8px; height: 8px; border-radius: 50%; transform: scale(0); transition: 0.15s transform; background-color: var(--kh-accent); }
+.kh-radio-input:checked { border-color: var(--kh-accent); }
+.kh-radio-input:checked::before { transform: scale(1); }
+.kh-radio-label:has(.kh-radio-input:checked) { border-color: var(--kh-accent); color: var(--kh-title); }
+
+.kh-submit-btn { font-family: var(--kh-font-title); background-color: var(--kh-accent); color: #ffffff; font-size: 1rem; font-weight: 700; width: 100%; padding: 16px; border: none; border-radius: 8px; cursor: pointer; margin-top: 15px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background-color 0.2s; }
+body.dark-theme .kh-submit-btn, body.dark .kh-submit-btn { color: #0f172a; }
+.kh-submit-btn:hover { background-color: var(--kh-accent-hover); }
+
+@media (max-width: 768px) { .kh-feedback-card { padding: 25px; } }
+</style>
+
+<div class="kh-feedback-wrapper">
+    <div class="kh-feedback-card">
+        
+        <div class="kh-feedback-header">
+            <h1>Project Feedback Survey</h1>
+            <p>Please complete these brief questions regarding your recent project experience. Your feedback is used internally to evaluate and improve our project workflows.</p>
+        </div>
+
+        <form name="project-feedback" method="POST" action="/success/" netlify data-netlify="true">
+            
+            <input type="hidden" name="form-name" value="project-feedback" />
+
+            <div class="kh-form-group">
+                <label class="kh-form-label" for="before-state">1. Looking back to before we kicked off, what were your main expectations or concerns about managing a Greek renovation from a distance?</label>
+                <textarea id="before-state" name="before_state" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
+            </div>
+
+            <div class="kh-form-group">
+                <label class="kh-form-label" for="contractor-dynamics">2. How would you describe your experience with how the third-party contractors and technical details were managed on the ground?</label>
+                <textarea id="contractor-dynamics" name="contractor_dynamics" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
+            </div>
+
+            <div class="kh-form-group">
+                <label class="kh-form-label" for="standout-moments">3. Were there any specific technical updates, reports, or moments during the build that particularly stood out to you—either positive or negative?</label>
+                <textarea id="standout-moments" name="standout_moments" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
+            </div>
+
+            <div class="kh-form-group">
+                <label class="kh-form-label" for="operational-critique">4. What is one thing I could improve or do differently next time to make the process, the data sharing, or the communication smoother for you?</label>
+                <textarea id="operational-critique" name="operational_critique" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
+            </div>
+
+            <div class="kh-form-group">
+                <label class="kh-form-label" for="coupon-context">5. Since your 30% Golden Ticket Pass for our P-008 Deep Technical Audit is fully transferable, what kind of property scenarios or investor profiles do you think would get the most practical use out of it?</label>
+                <textarea id="coupon-context" name="coupon_context" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
+            </div>
+
+            <div class="kh-form-group">
+                <label class="kh-form-label">6. Overall Service Evaluation</label>
+                <div class="kh-rating-stars">
+                    <input type="radio" id="star5" name="service_rating" value="5" required/><label for="star5">★</label>
+                    <input type="radio" id="star4" name="service_rating" value="4"/><label for="star4">★</label>
+                    <input type="radio" id="star3" name="service_rating" value="3"/><label for="star3">★</label>
+                    <input type="radio" id="star2" name="sharing_consent_fix_2" value="2" style="display:none;" />
+                    <input type="radio" name="service_rating" id="star2" value="2" class="kh-radio-input" style="display:none;"/>
+                    <input type="radio" name="q_rating" id="r5" value="5" class="kh-radio-input hidden" style="display:none;"/>
+                    <input type="radio" name="overall_rating" id="star5" value="5" class="kh-radio-input" required/>
+                    <label for="star5" title="5 stars" class="order-1">★</label>
+                    
+                    <input type="radio" name="overall_rating" id="star4" value="4" class="kh-radio-input"/>
+                    <label for="star4" title="4 stars" class="order-2">★</label>
+                    
+                    <input type="radio" name="overall_rating" value="3" class="kh-radio-input"/>
+                    <label for="star3" class="order-3">★</label>
+                    
+                    <input type="radio" name="overall_rating" value="2" class="kh-radio-input"/>
+                    <label class="order-4">★</label>
+                    
+                    <input type="radio" name="overall_rating" value="1" class="kh-radio-input"/>
+                    <label class="order-5">★</label>
+                </div>
+                <div class="kh-rating-stars" style="display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px;">
+                    <input type="radio" id="rating-5" name="rating" value="5" required style="appearance:none; -webkit-appearance:none; margin:0; cursor:pointer;" />
+                    <label onclick="document.getElementById('rating-5').checked = true" style="cursor:pointer; font-size:2rem; color:var(--kh-star-color);" onmouseover="this.style.color='#f59e0b'" onmouseout="this.style.color=''">★</label>
+                    <input type="radio" id="rating-4" name="rating" value="4" style="appearance:none; -webkit-appearance:none; margin:0; cursor:pointer;" />
+                    <label onclick="document.getElementById('rating-4').checked = true" style="cursor:pointer; font-size:2rem; color:var(--kh-star-color);">★</label>
+                    <input type="radio" id="rating-3" name="rating" value="3" style="appearance:none; -webkit-appearance:none; margin:0; cursor:pointer;" />
+                    <label onclick="document.getElementById('rating-3').checked = true" style="cursor:pointer; font-size:2rem; color:var(--kh-star-color);">★</label>
+                    <input type="radio" id="rating-2" name="rating" value="2" style="appearance:none; -webkit-appearance:none; margin:0; cursor:pointer;" />
+                    <label onclick="document.getElementById('rating-2').checked = true" style="cursor:pointer; font-size:2rem; color:var(--kh-star-color);">★</label>
+                    <input type="radio" id="rating-1" name="rating" value="1" style="appearance:none; -webkit-appearance:none; margin:0; cursor:pointer;" />
+                    <label onclick="document.getElementById('rating-1').checked = true" style="cursor:pointer; font-size:2rem; color:var(--kh-star-color);">★</label>
+                </div>
+            </div>
+
+            <div class="kh-form-group">
+                <label class="kh-form-label">7. Public Sharing Consent</label>
+                <p class="kh-form-hint" style="font-style: normal; margin-bottom: 12px; font-size: 0.95rem;">I am updating the KLEHOMERIE website soon. If your feedback describes our mission perfectly, may I feature a snippet of it as a success story?</p>
+                
+                <div class="kh-radio-stack">
+                    <label class="kh-radio-label">
+                        <input type="radio" name="public_consent" value="full-name" class="kh-radio-input" required />
+                        <span>Yes, you can use my full name.</span>
+                    </label>
+                    <label class="kh-radio-label">
+                        <input type="radio" name="public_consent" value="first-name-initials" class="kh-radio-input" />
+                        <span>Yes, but use my initials or first name only.</span>
+                    </label>
+                    <label class="kh-radio-label">
+                        <input type="radio" name="public_consent" value="anonymous" class="kh-radio-input" />
+                        <span>Yes, but keep it entirely anonymous (e.g., "Real Estate Investor, London").</span>
+                    </label>
+                    <label class="kh-radio-label">
+                        <input type="radio" name="public_consent" value="private-only" class="kh-radio-input" />
+                        <span>No, please keep this completely private.</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="kh-submit-btn">
+                <span>Submit Feedback</span>
+            </button>
+        </form>
+
+    </div>
+</div>
+
+<script>
+// Small interactive script to handle star visual selections cleanly
+document.addEventListener('DOMContentLoaded', () => {
+    const stars = document.querySelectorAll('.kh-rating-stars label');
+    const inputs = document.querySelectorAll('.kh-rating-stars input');
+    
+    stars.forEach((star, index) => {
+        // Reverse indexing because array order matches layout
+        const realIndex = 4 - index;
+        
+        star.addEventListener('click', () => {
+            inputs[realIndex].checked = true;
+            // Update color arrays instantly
+            stars.forEach((s, idx) => {
+                if (idx >= index) {
+                    s.style.color = 'var(--kh-star-active)';
+                } else {
+                    s.style.color = 'var(--kh-star-color)';
+                }
+            });
+        });
+    });
+});
+</script>

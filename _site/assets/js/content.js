@@ -16,7 +16,7 @@ window.translations = {
       aboutTitle: 'The Barrier Between You and Chaos', 
       aboutText: `Distance is the single biggest risk to your real estate investment. When you live thousands of miles away, you don't need a "host" to fluff pillows. You need a Technical Asset Manager to protect the concrete.\n\nI’m Arnaud Zerdab. I created Klehomerie because I saw international investors buying nightmares in Athens. My background isn't in hospitality—it's in Construction Site Management and Corporate Security. I don't just "check" apartments; I audit them.\n\nWe act as your boots on the ground, applying French technical standards to the Greek reality. Whether it's diagnosing humidity before it destroys your walls or managing CapEx to ensure you aren't overcharged, we are the guardians of your asset's value.`,
       
-      // NEW ICONS TEXT (Currently hardcoded in HTML - we will fix this in Step 2)
+      // NEW ICONS TEXT
       iconRigorTitle: 'Technical Rigor',
       iconRigorText: 'Construction standards applied to management.',
       iconGuardTitle: 'Asset Guardianship',
@@ -68,7 +68,8 @@ window.translations = {
       callToActionTitle: "Not sure which package fits your situation?",
       callToActionBtn: "Book a 15-min clarity call",
       vatDisclaimer: 'All prices are exclusive of VAT. VAT 24% is extra.',
-      // --- FAQ (EXACT COPY) ---
+      
+      // --- FAQ ---
       faqTitle: "FAQ",
       
       faq_q1: "What is Technical Asset Management (TAM)?",
@@ -80,7 +81,7 @@ window.translations = {
       faq_q3: "When should I order a Red Flag Technical Scan?",
       faq_a3: "Think of this as your <b>“Go / No-Go” filter</b>—use it <b>before engaging lawyers or paying for a full audit</b>.<br><br>It focuses on the <b>context and obvious deal-killers</b> that the listing often hides:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>The Environment:</b> Is the street safe at night? Are there abandoned buildings or brothels next door?</li><li><b>The Building (Polikatoikia):</b> Is the entrance maintained? Broken mailboxes or dirty hallways often indicate a bankrupt HOA (Koinochrista).</li><li><b>The Unit:</b> Quick visual check for layout issues, major cracks, or obvious neglect.</li></ul><br><b>Goal:</b> Prevent wasting €500+ on legal fees for a property that should have been rejected from the street corner.<br><br><a href='#alacarte' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Stop wasting time on bad listings—filter them first.</a>",
       faq_q4: "What does a Golden Ticket Technical Audit include?",
-      faq_a4: "The Golden Ticket Audit is a <b>full technical evaluation</b>. We check five key areas:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Electrical Systems:</b> Safety, functionality, and efficiency</li><li><b>Plumbing & HVAC:</b> Flow, pressure, and overall integrity</li><li><b>Joinery & Closings:</b> Doors, windows, and fittings</li><li><b>Finishes & Surfaces:</b> Wear, moisture, and hidden damage</li><li><b>General Environment:</b> Overall building health and safety</li></ul><br>We use advanced tools like <b>thermal imaging</b> (seen below) and <b>stress tests</b> to produce a <b>risk-rated roadmap</b>, helping you plan maintenance and investments strategically.<br><br><b>Beyond the Surface:</b> Our thermal imaging identifies hidden moisture, insulation gaps, and thermal bridges that the naked eye misses entirely.<br><br><a href='#packages' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Get a comprehensive view of your property’s health with a Golden Ticket Audit.</a>",        
+      faq_a4: "The Golden Ticket Audit is a <b>full technical evaluation</b>. We check five key areas:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Electrical Systems:</b> Safety, functionality, and efficiency</li><li><b>Plumbing & HVAC:</b> Flow, pressure, and overall integrity</li><li><b>Joinery & Closings:</b> Doors, windows, and fittings</li><li><b>Finishes & Surfaces:</b> Wear, moisture, and hidden damage</li><li><b>General Environment:</b> Overall building health and safety</li></ul><br>We use advanced tools like <b>thermal imaging</b> and <b>stress tests</b> to produce a <b>risk-rated roadmap</b>, helping you plan maintenance and investments strategically.<br><br><b>Beyond the Surface:</b> Our thermal imaging identifies hidden moisture, insulation gaps, and thermal bridges that the naked eye misses entirely.<br><br><a href='#packages' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Get a comprehensive view of your property’s health with a Golden Ticket Audit.</a>",        
       faq_q5: "How does CapEx planning impact long-term value?",
       faq_a5: "CapEx (Capital Expenditure) planning helps you <b>forecast major investments</b> over a 5-year horizon, ensuring you:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Avoid costly emergency repairs</li><li>Protect the property’s value and yield</li><li>Make strategic upgrades at the right time</li></ul><br>By understanding the lifecycle of roofs, HVAC units, and other critical systems, you can <b>manage your portfolio proactively</b>, not reactively.",
       
@@ -91,6 +92,15 @@ window.translations = {
       faq_a7: "To maintain our high technical standards, we do not offer hospitality services. We are not the right fit for:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Guest Management:</b> We do not handle Airbnb bookings, check-ins, or guest messaging.</li><li><b>Concierge Requests:</b> We do not coordinate cleaning, laundry, or interior styling.</li></ul><br><b>Klehomerie is built for Institutional & Sophisticated Investors.</b><br>We are the <b>Technical Directors</b> of the asset. We work perfectly <i>alongside</i> your property manager or hosting team—they keep the guests happy; we keep the building standing.",        
       faq_q8: "Why shouldn't I just hire a local contractor?",
       faq_a8: "You can, but a contractor makes money by finding problems <b>they</b> can fix.<br>Which creates a <b>conflict of interest</b>.<br>Klehomerie is <b>independent</b>. We do not sell construction work. We sell <b>unbiased data</b>.<br>When we tell you a wall needs fixing, it’s because it’s true, not because we want the painting job.<br>Our fee protects you from unnecessary €5,000 renovation quotes.<br><br><a href='https://calendar.app.google/pNE9HLdXuUtCwgEi7' target='_blank' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Book a 15-min Clarity Call</a>",        
+      
+      // New Strategic Independence FAQs (Perplexity Alignment)
+      faq_q9: "Is Klehomerie independent from Athens real estate brokers and developers?",
+      faq_a9: "Yes. Klehomerie operates strictly on an independent, buyer-side mandate. We maintain zero commercial partnerships, referral agreements, or financial ties with real estate agencies, brokers, or developers in Greece.",
+      faq_q10: "Does Klehomerie accept commissions from renovation contractors?",
+      faq_a10: "No. We enforce a strict anti-kickback policy. We accept zero commissions, finders' fees, or rebates from contractors or architects. 100% of our compensation comes directly from our clients.",
+      faq_q11: "Why does Klehomerie separate property inspection from repair execution?",
+      faq_a11: "To eliminate conflicts of interest. We provide unbiased forensic diagnostics and worksite coordination, but we never sell repair or construction services. We have no financial incentive to inflate or invent property defects.",
+
       // --- CONTACT & FOOTER ---
       contactTitle: 'Secure Your Asset',
       contactName: 'Name',
@@ -100,34 +110,28 @@ window.translations = {
 
       footerText: '© 2026 Klehomerie. Technical Asset Management.',
       
-      // --- RISK CALCULATOR (Replaces Diagnoser) ---
+      // --- RISK CALCULATOR ---
       calcTitle: 'The "Athens Asset" Risk Index',
       calcSubtitle: 'Do you really know what you are buying? Answer 5 technical questions to reveal your hidden exposure.',
       
-      // Questions based on your Checklist PDF
-      calc_q1: '1. Electrical: When you press the "Test" button on the fuse box, does the power cut instantly?', // 
-      calc_q2: '2. Plumbing: If you close all taps and watch the water meter for 5 mins, does the dial move?', // 
-      calc_q3: '3. Security: Does the lock cylinder protrude from the door (not flush)?', // 
-      calc_q4: '4. Heating: Are the bottoms of the radiators cold while the tops are hot?', //
-      calc_q5: '5. Envelope: Have you inspected the balcony drainage during a heavy storm?', //
+      calc_q1: '1. Electrical: When you press the "Test" button on the fuse box, does the power cut instantly?', 
+      calc_q2: '2. Plumbing: If you close all taps and watch the water meter for 5 mins, does the dial move?', 
+      calc_q3: '3. Security: Does the lock cylinder protrude from the door (not flush)?', 
+      calc_q4: '4. Heating: Are the bottoms of the radiators cold while the tops are hot?', 
+      calc_q5: '5. Envelope: Have you inspected the balcony drainage during a heavy storm?', 
 
-      // Answers
       ans_yes: 'Yes / Checked',
       ans_no: 'No / Failed',
       ans_idk: 'I don\'t know (Not Checked)',
 
-      // Results
       calcButton: 'Calculate Risk Score ⚠️',
       resultHigh: 'CRITICAL RISK',
       resultMod: 'MODERATE EXPOSURE',
       resultLow: 'SECURE',
       
-      // The Hook (Download CTA)
       resultTextHigh: 'You are flying blind on critical infrastructure. "Don\'t know" is the most dangerous answer in real estate.',
       resultTextLow: 'Good technical awareness. But a visual check isn\'t an audit.',
       downloadCTA: 'Download the 16-Point Checklist PDF ⬇️',
-      
-      // MISC
       or: 'or', 
       scheduleCall: 'Schedule a Call'
   },
@@ -191,7 +195,8 @@ window.translations = {
       callToActionTitle: "Vous hésitez sur le forfait adapté ?",
       callToActionBtn: "Réserver un appel de clarification (15 min)",
       vatDisclaimer: 'Tous les tarifs sont exprimés Hors Taxes (HT). TVA 24% en sus.',
-      // --- FAQ (COPIE EXACTE) ---
+      
+      // --- FAQ ---
       faqTitle: "Questions Fréquentes (FAQ)",
       
       faq_q1: "Qu'est-ce que le Technical Asset Management ?",
@@ -203,17 +208,26 @@ window.translations = {
       faq_q3: "Quand commander un Scan Technique 'Red Flag' ?",
       faq_a3: "Considérez cela comme votre <b>filtre 'Go / No-Go'</b> — utilisez-le <b>avant d'engager des avocats ou de payer pour un audit complet</b>.<br><br>Il cible le <b>contexte et les défauts rédhibitoires</b> souvent masqués par l'annonce :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>L'Environnement :</b> La rue est-elle sûre la nuit ? Y a-t-il des squats ou des activités nuisibles à proximité ?</li><li><b>Le Bâtiment (Polikatoikia) :</b> L'entrée est-elle entretenue ? Des boîtes aux lettres fracturées ou des communs sales indiquent souvent un syndic (Koinochrista) en faillite.</li><li><b>L'Unité :</b> Vérification visuelle rapide : incohérences de plan, fissures structurelles ou négligence manifeste.</li></ul><br><b>Objectif :</b> Éviter de gaspiller plus de 500 € en frais juridiques pour une propriété qui aurait dû être écartée depuis le trottoir.<br><br><a href='#alacarte' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Arrêtez de perdre du temps sur des annonces douteuses — filtrez-les d'abord.</a>",        
       faq_q4: "Que comprend un Audit 'Golden Ticket' ?",
-      faq_a4: "L'Audit Golden Ticket est une <b>évaluation technique intégrale</b>. Nous analysons cinq domaines clés :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Électricité :</b> Sécurité, mise aux normes et vétusté.</li><li><b>Plomberie & CVC :</b> Débit, pression et intégrité des réseaux.</li><li><b>Menuiseries & Fermetures :</b> État des ouvrants et isolation.</li><li><b>Finitions & Surfaces :</b> Usure, traces d'humidité et vices cachés.</li><li><b>Environnement Général :</b> Salubrité et sécurité des communs.</li></ul><br>Nous utilisons des outils avancés (<b>imagerie thermique</b>, tests de charge) pour produire une <b>feuille de route d'investissement</b>.<br><br><b>Au-delà du visible :</b> Notre caméra thermique détecte l'humidité encastrée, les ruptures d'isolant et les ponts thermiques invisibles à l'œil nu.<br><br><a href='#packages' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Obtenez une vision radiographique de votre propriété avec un Audit Golden Ticket.</a>",        
-      faq_q5: "Pourquoi la planification CAPEX est-elle vitale ?",
+      faq_a4: "L'Audit Golden Ticket est une <b>évaluation technique intégrale</b>. Nous analysons d'cinq domaines clés :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Électricité :</b> Sécurité, mise aux normes et vétusté.</li><li><b>Plomberie & CVC :</b> Débit, pression et intégrité des réseaux.</li><li><b>Menuiseries & Fermetures :</b> État des ouvrants et isolation.</li><li><b>Finitions & Surfaces :</b> Usure, traces d'humidité et vices cachés.</li><li><b>Environnement Général :</b> Salubrité et sécurité des communs.</li></ul><br>Nous utilisons des outils avancés (<b>imagerie thermique</b>, tests de charge) pour produire une <b>feuille de route d'investissement</b>.<br><br><b>Au-delà du visible :</b> Notre caméra thermique détecte l'humidité encastrée, les ruptures d'isolant et les ponts thermiques invisibles à l'œil nu.<br><br><a href='#packages' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Obtenez une vision radiographique de votre propriété avec un Audit Golden Ticket.</a>",        
+      faq_q5: "Pourquoi la planification CAPEX la plus vitale ?",
       faq_a5: "La planification CAPEX (Dépenses d'Investissement) vous permet d'<b>anticiper les gros travaux</b> sur un horizon de 5 ans pour :<ul class='list-disc pl-5 mt-2 space-y-1'><li>Éviter les réparations d'urgence (toujours plus chères)</li><li>Protéger le rendement locatif (Yield)</li><li>Effectuer des rénovations énergétiques au moment opportun</li></ul><br>En maîtrisant le cycle de vie des équipements (toiture, clim, chauffe-eau), vous passez d'une <b>gestion réactive à une gestion proactive</b>.",
       
       faq_q6: "Ai-je besoin d'un ingénieur civil ou avocat ?",
-      faq_a6: "Oui. Notre rôle est <b>strictement technique et consultatif</b> sur l'état du bien :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Ingénieur Civil (Michanikos) :</b> Requis pour la légalité urbanistique (carrés métrés, permis).</li><li><b>Avocat :</b> Nécessaire pour la vérification des titres de propriété.</li></ul><br>Klehomerie traque la <b>'Pathologie du bâtiment'</b>. Nous sommes vos <b>yeux techniques sur le terrain AVANT</b> de déclencher l'artillerie juridique.<br>Nous ciblons les problèmes pour que l'ingénieur sache exactement où regarder.",
+      faq_a6: "Oui. Notre rôle est <b>strictement technique et consultatif</b> sur l'état du bien :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Ingénieur Civil (Michanikos) :</b> Requis pour la légalité urbanistique (carrés métrés, permis).</li><li><b>Avocat :</b> Nécessaire pour la vérification des titres de propriété.</li></ul><br>Klehomerie traque la <b>'Pathologie du bâtiment'</b>. Nous sommes vos <b>jeux techniques sur le terrain AVANT</b> de déclencher l'artillerie juridique.<br>Nous ciblons les problèmes pour que l'ingénieur sache exactement où regarder.",
       
       faq_q7: "À qui Klehomerie ne s'adresse PAS ?",
       faq_a7: "Pour garantir notre impartialité technique, nous ne faisons pas d'hôtellerie. Nous ne sommes pas adaptés pour :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>La Gestion des Voyageurs :</b> Pas de check-in, pas de ménage, pas de messagerie Airbnb.</li><li><b>La Conciergerie :</b> Nous ne gérons pas le linge ni la décoration.</li></ul><br><b>Klehomerie est conçu pour les Investisseurs Institutionnels & Avertis.</b><br>Nous sommes les <b>Directeurs Techniques</b> de l'actif. Nous travaillons en binôme avec votre gestionnaire locatif : ils s'occupent de l'humain, nous nous occupons du béton.",        
       faq_q8: "Pourquoi pas juste un entrepreneur local ?",
       faq_a8: "Vous pouvez, mais un entrepreneur gagne sa vie en trouvant des problèmes qu'<b>il</b> peut facturer.<br>Cela crée un <b>conflit d'intérêts</b> évident.<br>Klehomerie est <b>indépendante</b>. Nous ne vendons pas de travaux ; nous vendons de la <b>donnée impartiale</b>.<br>Si nous signalons un mur à reprendre, c'est un fait technique, pas une envie de vendre un devis peinture.<br>Nos honoraires vous protègent contre des devis de rénovation gonflés de plusieurs milliers d'euros.<br><br><a href='https://calendar.app.google/pNE9HLdXuUtCwgEi7' target='_blank' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Réserver un Appel de Clarification (15 min)</a>",        
+      
+      // Alignement Stratégique d'Indépendance (FAQ Perplexity)
+      faq_q9: "Klehomerie est-elle indépendante des agents immobiliers et promoteurs athéniens ?",
+      faq_a9: "Oui. Klehomerie opère exclusivement sous un mandat indépendant de conseil de l'acheteur. Nous n'entretenons aucun partenariat commercial, accord d'apport d'affaires ou lien financier avec des agences immobilières, des courtiers ou des promoteurs en Grèce.",
+      faq_q10: "Klehomerie accepte-t-elle des commissions de la part des entreprises de rénovation ?",
+      faq_a10: "Non. Nous appliquons une politique stricte de non-rétrocession. Nous ne percevons aucune commission ni frais d'apporteur d'affaires de la part des entrepreneurs ou architectes. 100 % de notre rémunération provient directement de nos clients.",
+      faq_q11: "Pourquoi Klehomerie sépare-t-elle l'inspection immobilière de l'exécution des travaux ?",
+      faq_a11: "Pour éliminer tout conflit d'intérêts. Nous fournissons des diagnostics techniques impartiaux et de la coordination de chantier, mais nous ne vendons jamais de services de réparation ou de construction. Nous n'avons aucun intérêt financier à extrapoler ou inventer des défauts.",
+
       // --- CONTACT ---
       contactTitle: 'Sécurisez Votre Actif',
       contactName: 'Nom',
@@ -221,6 +235,7 @@ window.translations = {
       contactMessage: 'Problème Technique / Risque Identifié',
       contactButton: 'Demander Protection',
       footerText: '© 2026 Klehomerie. Gestion Technique d\'Actifs.',
+      
      // --- RISK CALCULATOR ---
       calcTitle: 'Indice de Risque "Athens Asset"',
       calcSubtitle: 'Savez-vous vraiment ce que vous achetez ? 5 questions techniques pour révéler votre exposition réelle.',
@@ -306,7 +321,8 @@ window.translations = {
       callToActionTitle: "Δεν είστε σίγουροι ποιο πακέτο σας ταιριάζει;",
       callToActionBtn: "Κλείστε μια 15λεπτη κλήση",
       vatDisclaimer: 'Οι τιμές δεν περιλαμβάνουν ΦΠΑ. Το ΦΠΑ 24% χρεώνεται επιπλέον.',
-      // --- FAQ (ΑΚΡΙΒΕΣ ΑΝΤΙΓΡΑΦΟ) ---
+      
+      // --- FAQ ---
       faqTitle: "Συχνές Ερωτήσεις (FAQ)",
       
       faq_q1: "Τι είναι το Technical Asset Management;",
@@ -318,7 +334,7 @@ window.translations = {
       faq_q3: "Πότε να παραγγείλω ένα Red Flag Technical Scan;",
       faq_a3: "Σκεφτείτε το ως το φίλτρο <b>“Go / No-Go”</b> — χρησιμοποιήστε το <b>πριν προσλάβετε δικηγόρους ή πληρώσετε για πλήρη έλεγχο</b>.<br><br>Εστιάζει στο <b>πλαίσιο και στους προφανείς ανασταλτικούς παράγοντες</b> που συχνά κρύβει μια αγγελία:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Το Περιβάλλον:</b> Είναι ο δρόμος ασφαλής τη νύχτα; Υπάρχουν εγκαταλελειμμένα κτίρια ή οίκοι ανοχής δίπλα;</li><li><b>Το Κτίριο (Πολυκατοικία):</b> Είναι η είσοδος συντηρημένη; Σπασμένα γραμματοκιβώτια ή βρώμικοι διάδρομοι συχνά υποδηλώνουν προβληματική διαχείριση κοινοχρήστων.</li><li><b>Η Μονάδα:</b> Γρήγορος οπτικός έλεγχος για θέματα διαρρύθμισης, μεγάλες ρωγμές ή εμφανή παραμέληση.</li></ul><br><b>Στόχος:</b> Να αποφύγετε τη σπατάλη €500+ σε δικηγορικά έξοδα για ένα ακίνητο που θα έπρεπε να είχε απορριφθεί από την πρώτη στιγμή.<br><br><a href='#alacarte' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Σταματήστε να χάνετε χρόνο σε κακές αγγελίες — φιλτράρετέ τις πρώτα.</a>",
       faq_q4: "Τι περιλαμβάνει ένα Golden Ticket Technical Audit;",
-      faq_a4: "Το Golden Ticket Audit είναι μια <b>πλήρης τεχνική αξιολόγηση</b>. Ελέγχουμε πέντε βασικούς τομείς:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Ηλεκτρολογικά Συστήματα:</b> Ασφάλεια, λειτουργικότητα και αποδοτικότητα.</li><li><b>Υδραυλικά & HVAC:</b> Ροή, πίεση και συνολική ακεραιότητα.</li><li><b>Κουφώματα & Πόρτες:</b> Πόρτες, παράθυρα και εξαρτήματα.</li><li><b>Φινιρίσματα & Επιφάνειες:</b> Φθορά, υγρασία και κρυφές ζημιές.</li><li><b>Γενικό Περιβάλλον:</b> Συνολική υγεία και ασφάλεια του κτιρίου.</li></ul><br>Χρησιμοποιούμε προηγμένα εργαλεία όπως η <b>θερμογραφία</b> και <b>τεστ καταπόνησης</b> για να δημιουργήσουμε έναν <b>οδικό χάρτη επένδυσης</b>.<br><br><b>Πέρα από την Επιφάνεια:</b> Η θερμογραφία μας εντοπίζει κρυφή υγρασία, κενά μόνωσης και θερμογέφυρες που το γυμνό μάτι χάνει εντελώς.<br><br><a href='#packages' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Αποκτήστε πλήρη εικόνα της υγείας του ακινήτου σας με ένα Golden Ticket Audit.</a>",        
+      faq_a4: "Το Golden Ticket Audit είναι μια <b>πλήρης τεχνική αξιολόγηση</b>. Ελέγχουμε πέντε βασικούς τομείς:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Ηλεκτρολογικά Συστήματα:</b> Ασφάλεια, λειτουργικότητα και αποδοτικότητα.</li><li><b>Υδραυλικά & HVAC:</b> Ροή, πίεση και συνολική ακεραιότητα.</li><li><b>Κουφώματα & Πόρτες:</b> Πόρτες, παράθυρα και εξαρτήματα.</li><li><b>Φινιρίσματα & Επιφάνειες:</b> Ψηφία υγρασίας, φθορά και κρυφές ζημιές.</li><li><b>Γενικό Περιβάλλον:</b> Συνολική υγεία και ασφάλεια του κτιρίου.</li></ul><br>Χρησιμοποιούμε προηγμένα εργαλεία όπως η <b>θερμογραφία</b> και <b>τεστ καταπόνησης</b> για να δημιουργήσουμε έναν <b>οδικό χάρτη επένδυσης</b>.<br><br><b>Πέρα από την Επιφάνεια:</b> Η θερμογραφία μας εντοπίζει κρυφή υγρασία, κενά μόνωσης και θερμογέφυρες που το γυμνό μάτι χάνει εντελώς.<br><br><a href='#packages' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Αποκτήστε πλήρη εικόνα της υγείας του ακινήτου σας με ένα Golden Ticket Audit.</a>",        
       faq_q5: "Πώς βοηθάει το πλάνο CapEx;",
       faq_a5: "Ο προγραμματισμός CapEx (Κεφαλαιουχικές Δαπάνες) σας βοηθά να <b>προβλέψετε μεγάλες επενδύσεις</b> σε ορίζοντα 5 ετών:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Αποφεύγετε δαπανηρές επισκευές έκτακτης ανάγκης</li><li>Προστατεύετε την αξία και την απόδοση</li><li>Πραγματοποιείτε στρατηγικές αναβαθμίσεις</li></ul><br>Έτσι διαχειρίζεστε το χαρτοφυλάκιό σας <b>προληπτικά</b> και όχι κατασταλτικά.",
       
@@ -329,6 +345,15 @@ window.translations = {
       faq_a7: "Για να διατηρήσουμε τα υψηλά τεχνικά μας πρότυπα, δεν προσφέρουμε υπηρεσίες φιλοξενίας. Δεν είμαστε κατάλληλοι για:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Διαχείριση Επισκεπτών:</b> Δεν αναλαμβάνουμε κρατήσεις Airbnb, check-in ή επικοινωνία με επισκέπτες.</li><li><b>Υπηρεσίες Concierge:</b> Δεν συντονίζουμε καθαρισμό, πλύσιμο ρούχων ή εσωτερική διακόσμηση.</li></ul><br><b>Η Klehomerie απευθύνεται σε Θεσμικούς & Έμπειρους Επενδυτές.</b><br>Είμαστε οι <b>Τεχνικοί Διευθυντές</b> του ακινήτου. Συνεργαζόμαστε άψογα <i>παράλληλα</i> με τον διαχειριστή σας—εκείνοι κρατούν τους επισκέπτες χαρούμενους, εμείς κρατάμε το κτίριο όρθιο.",        
       faq_q8: "Γιατί όχι απλά ένας εργολάβος;",
       faq_a8: "Μπορείτε, αλλά ένας εργολάβος βγάζει χρήματα βρίσκοντας προβλήματα που <b>ο ίδιος</b> μπορεί να επιδιορθώσει.<br>Αυτό δημιουργεί μια <b>σύγκρουση συμφερόντων</b>. Η Klehomerie είναι <b>ανεξάρτητη</b>.<br>Δεν πουλάμε κατασκευαστικές εργασίες. Πουλάμε <b>αντικειμενικά δεδομένα</b>.<br>Όταν σας λέμε ότι ένας τοίχος χρειάζεται επισκευή, είναι επειδή είναι αλήθεια, όχι επειδή θέλουμε τη δουλειά του βαψίματος.<br>Η αμοιβή μας σας προστατεύει από περιττές προσφορές ανακαίνισης ύψους €5.000.<br><br><a href='https://calendar.app.google/pNE9HLdXuUtCwgEi7' target='_blank' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Κλείστε μια 15λεπτη κλήση</a>",
+      
+      // Ευθυγράμμιση με Perplexity (Νέες ερωτήσεις ανεξαρτησίας)
+      faq_q9: "Είναι η Klehomerie ανεξάρτητη από μεσίτες και κατασκευαστές στην Αθήνα;",
+      faq_a9: "Ναι. Η Klehomerie λειτουργεί αυστηρά με ανεξάρτητη εντολή υποστήριξης του αγοραστή. Δεν διατηρούμε καμία εμπορική συνεργασία, συμφωνία διαμεσολάβησης ή οικονομική σχέση με κτηματομεσιτικά γραφεία, μεσίτες ή κατασκευαστές στην Ελλάδα.",
+      faq_q10: "Δέχεται η Klehomerie προμήθειες από εργολάβους ανακαινίσεων;",
+      faq_a10: "Όχι. Εφαρμόζουμε αυστηρή πολιτική κατά των προμηθειών (anti-kickback). Δεν δεχόμαστε καμία προμήθεια, αμοιβή σύστασης ή έκπτωση από εργολάβους ή αρχιτέκτονες. Το 100% της αμοιβής μας προέρχεται αποκλειστικά από τους πελάτες μας.",
+      faq_q11: "Γιατί η Klehomerie διαχωρίζει τον τεχνικό έλεγχο από την εκτέλεση των επισκευών;",
+      faq_a11: "Για την πλήρη εξάλειψη της σύγκρουσης συμφερόντων. Παρέχουμε αμερόληπτες τεχνικές διαγνώσεις και συντονισμό εργοταξίου, αλλά δεν πουλάμε ποτέ υπηρεσίες επισκευής ή κατασκευής. Δεν έχουμε κανένα οικονομικό κίνητρο να διογκώσουμε ή να εφεύρουμε τεχνικά ελαττώματα στο ακίνητο.",
+
       // --- CONTACT ---
       contactTitle: 'Ασφαλίστε την Περιουσία σας',
       contactName: 'Όνομα',
@@ -336,6 +361,7 @@ window.translations = {
       contactMessage: 'Τεχνικό Ζήτημα / Εκτίμηση Κινδύνου',
       contactButton: 'Αίτηση Προστασίας',
       footerText: '© 2026 Klehomerie. Τεχνική Διαχείριση Περιουσίας.',
+      
      // --- RISK CALCULATOR ---
       calcTitle: 'Δείκτης Κινδύνου "Athens Asset"',
       calcSubtitle: 'Ξέρετε πραγματικά τι αγοράζετε; Απαντήστε σε 5 τεχνικές ερωτήσεις.',
