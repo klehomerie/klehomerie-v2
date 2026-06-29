@@ -5,8 +5,13 @@
     <head>
       <meta charset="UTF-8" />
       <title>Klehomerie Insights Lab — RSS Directory</title>
+      
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet" />
+
       <style>
-        /* 1. Light Theme Token Architecture (Default Base) */
+        /* Light Theme Token Architecture */
         :root {
           --bg-color: #f8fafc;
           --text-color: #475569;
@@ -19,7 +24,7 @@
           --accent-color: #C66C54;
         }
 
-        /* 2. Branded Dark Theme Extensions (Matches your site framework) */
+        /* Branded Dark Theme Extensions */
         body.dark-theme {
           --bg-color: #0f172a;
           --text-color: #94a3b8;
@@ -31,8 +36,9 @@
           --alert-text: #38bdf8;
         }
 
+        /* 2. Global Typography Bindings */
         body { 
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+          font-family: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
           max-width: 800px; 
           margin: 60px auto; 
           padding: 0 20px; 
@@ -40,6 +46,11 @@
           color: var(--text-color);
           transition: background-color 0.2s, color 0.2s;
         }
+        
+        h1, h2, .item h2, .item a { 
+          font-family: 'Poppins', -apple-system, sans-serif; 
+        }
+
         .header { border-bottom: 3px solid var(--accent-color); padding-bottom: 24px; margin-bottom: 32px; }
         h1 { font-size: 2.25rem; font-weight: 800; margin: 0 0 8px 0; color: var(--title-color); tracking-tight: -0.025em; }
         .subtitle { color: var(--text-color); font-size: 1.125rem; margin: 0; }
@@ -49,7 +60,7 @@
         .item h2 { margin: 0 0 8px 0; font-size: 1.35rem; font-weight: 700; }
         .item a { color: var(--title-color); text-decoration: none; }
         .item a:hover { color: var(--accent-color); text-decoration: underline; }
-        .date { font-size: 0.8rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
+        .date { font-family: 'Poppins', sans-serif; font-size: 0.8rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; }
         .desc { color: var(--text-color); line-height: 1.6; margin: 0; font-size: 0.975rem; }
       </style>
       
