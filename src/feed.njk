@@ -1,24 +1,23 @@
 ---
 permalink: /feed.xml
 eleventyExcludeFromCollections: true
----
-<?xml version="1.0" encoding="utf-8"?>
+---<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Klehomerie Insights Lab</title>
+    <title><![CDATA[Klehomerie Insights Lab]]></title>
     <link>https://klehomerie.com/</link>
-    <description>Independent Technical Property Audits &amp; Asset Management in Athens.</description>
+    <description><![CDATA[Independent Technical Property Audits & Asset Management in Athens.]]></description>
     <language>en</language>
     <lastBuildDate>{{ collections.posts | getNewestCollectionItemDate | dateToRfc822 }}</lastBuildDate>
     <atom:link href="https://klehomerie.com/feed.xml" rel="self" type="application/rss+xml"/>
     
     {%- for post in collections.posts | reverse %}
     <item>
-      <title>{{ post.data.title }}</title>
+      <title><![CDATA[{{ post.data.title }}]]></title>
       <link>https://klehomerie.com{{ post.url }}</link>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
-      <guid>https://klehomerie.com{{ post.url }}</guid>
-      <description>{{ post.data.summary }}</description>
+      <guid isPermaLink="true">https://klehomerie.com{{ post.url }}</guid>
+      <description><![CDATA[{{ post.data.summary }}]]></description>
     </item>
     {%- endfor %}
   </channel>
