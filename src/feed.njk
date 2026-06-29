@@ -1,0 +1,26 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Klehomerie Insights Lab</title>
+  <subtitle>Independent Technical Property Audits &amp; Asset Management in Athens.</subtitle>
+  <link href="https://klehomerie.com/feed.xml" rel="self"/>
+  <link href="https://klehomerie.com/"/>
+  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>https://klehomerie.com/</id>
+  <author>
+    <name>Arnaud Zerdab</name>
+    <email>info@klehomerie.com</email>
+  </author>
+  {%- for post in collections.posts | reverse %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="https://klehomerie.com{{ post.url }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>https://klehomerie.com{{ post.url }}</id>
+    <summary>{{ post.data.summary }}</summary>
+  </entry>
+  {%- endfor %}
+</feed>
