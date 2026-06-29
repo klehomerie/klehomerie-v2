@@ -262,7 +262,7 @@ window.translations = {
       scheduleCall: 'Planifier un Appel'
   },
 
-  'gr': {
+  'el': {
       // --- NAVIGATION ---
       navServices: 'Οι Αποστολές μας', 
       navAlacarte: 'Διάγνωση', 

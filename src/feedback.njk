@@ -5,9 +5,97 @@ permalink: /feedback/
 eleventyExcludeFromCollections: true
 ---
 
+<script>
+(function() {
+  // Gracefully extend your existing window framework translations
+  window.translations = window.translations || {};
+  
+  // English Translation Branch
+  window.translations['en'] = Object.assign(window.translations['en'] || {}, {
+    surveyTitleText: "Project Feedback Survey",
+    surveyIntroText: "Thank you for partnering with Klehomerie. We request your objective feedback regarding your recent project experience to evaluate and improve our execution systems.",
+    surveyAutosaveText: "💡 Draft Auto-Saving Active: Your responses are automatically cached securely in your local browser storage as you type. You can safely close this tab and resume completing your survey at any time without losing your entries.",
+    surveyBtnStartText: "Begin Evaluation",
+    surveyTagActiveText: "Local Draft Autosave Active",
+    surveyQ1Text: "1. Looking back to before we kicked off, what were your main expectations or concerns about managing a Greek renovation from a distance?",
+    surveyQ2Text: "2. How would you describe your experience with how the third-party contractors and technical details were managed on the ground?",
+    surveyQ3Text: "3. Were there any specific technical updates, reports, or moments during the build that particularly stood out to you—either positive or negative?",
+    surveyQ4Text: "4. What is one thing I could improve or do differently next time to make the process, the data sharing, or the communication smoother for you?",
+    surveyQ5Text: "5. Since your 30% Golden Ticket Pass for our P-008 Deep Technical Audit is fully transferable, what kind of property scenarios or investor profiles do you think would get the most practical use out of it?",
+    surveyQ6Text: "6. Overall Service Evaluation",
+    surveyQ7Text: "7. Public Sharing Consent",
+    surveyQ7DescText: "I am updating the KLEHOMERIE website soon. If your feedback describes our mission perfectly, may I feature a snippet of it as a success story?",
+    surveyOpt1Text: "Yes, you can use my full name.",
+    surveyOpt2Text: "Yes, but use my initials or first name only.",
+    surveyOpt3Text: "Yes, but keep it entirely anonymous (e.g., 'Real Estate Investor, London').",
+    surveyOpt4Text: "No, please keep this completely private.",
+    surveyBtnSubmitText: "Submit Evaluation Data",
+    surveySuccessTitleText: "Data Handshake Complete",
+    surveySuccessDescText: "Your project insights have been securely transmitted to our internal optimization spreadsheet. We appreciate your objective assessment.",
+    surveyVoucherTagText: "P-008 PASS CONFIRMATION",
+    surveyVoucherTitleText: "Your 30% Transferable Golden Ticket Voucher",
+    surveyVoucherDescText: "Our system will generate and email your unique, fully transferable 30% discount pass for our P-008 Deep Technical Audit within the next 24 hours. You can allocate this asset to your own future acquisitions or transfer it directly to another investor profile operating within the Attica region."
+  });
+
+  // French Translation Branch
+  window.translations['fr'] = Object.assign(window.translations['fr'] || {}, {
+    surveyTitleText: "Questionnaire de satisfaction",
+    surveyIntroText: "Merci de votre collaboration avec Klehomerie. Nous vous demandons votre avis objectif sur votre expérience récente afin d'évaluer et d'améliorer nos processus d'exécution.",
+    surveyAutosaveText: "💡 Sauvegarde automatique active : Vos réponses sont automatiquement stockées en toute sécurité dans le stockage local de votre navigateur. Vous pouvez fermer cet onglet et reprendre votre saisie à tout moment.",
+    surveyBtnStartText: "Commencer l'évaluation",
+    surveyTagActiveText: "Brouillon local actif",
+    surveyQ1Text: "1. En repensant à la période précédant le lancement, quelles étaient vos principales attentes ou préoccupations concernant la gestion d'une rénovation en Grèce à distance ?",
+    surveyQ2Text: "2. Comment décririez-vous votre expérience quant à la gestion sur le terrain des sous-traitants et des détails techniques ?",
+    surveyQ3Text: "3. Y a-t-il eu des moments, des rapports ou des mises à jour techniques particuliers qui vous ont marqué, positivement ou négativement ?",
+    surveyQ4Text: "4. Quelle est la chose que je pourrais améliorer ou faire différemment la prochaine fois pour rendre le processus, le partage de données ou la communication plus fluides ?",
+    surveyQ5Text: "5. Puisque votre pass Golden Ticket offrant 30% de réduction sur l'audit technique P-008 est transférable, quels types de profils d'investisseurs ou de projets immobiliers en bénéficieraient le plus ?",
+    surveyQ6Text: "6. Évaluation globale du service",
+    surveyQ7Text: "7. Consentement de publication",
+    surveyQ7DescText: "Je vais bientôt mettre à jour le site web de KLEHOMERIE. Si vos retours décrivent parfaitement notre mission, puis-je en publier un extrait comme témoignage ?",
+    surveyOpt1Text: "Oui, vous pouvez utiliser mon nom complet.",
+    surveyOpt2Text: "Oui, mais utilisez uniquement mes initiales ou mon prénom.",
+    surveyOpt3Text: "Oui, mais de façon totalement anonyme (ex: 'Investisseur Immobilier, Londres').",
+    surveyOpt4Text: "Non, merci de garder ces retours strictement confidentiels.",
+    surveyBtnSubmitText: "Transmettre les données d'évaluation",
+    surveySuccessTitleText: "Transmission réussie",
+    surveySuccessDescText: "Vos analyses de projet ont été envoyées en toute sécurité vers notre feuille d'optimisation interne. Nous vous remercions pour votre évaluation objective.",
+    surveyVoucherTagText: "CONFIRMATION DU PASS P-008",
+    surveyVoucherTitleText: "Votre Pass Golden Ticket transférable de 30%",
+    surveyVoucherDescText: "Notre système générera et vous enverra par e-mail votre bon de réduction unique de 30% pour notre audit technique approfondi P-008 dans les prochaines 24 heures. Vous pourrez l'attribuer à vos futures acquisitions ou le transférer directement à un autre investisseur opérant dans la région de l'Attique."
+  });
+
+  // Greek Translation Branch (Mapped to internal 'gr' token architecture)
+  window.translations['gr'] = Object.assign(window.translations['gr'] || {}, {
+    surveyTitleText: "Ερωτηματολόγιο Ανατροφοδότησης Έργου",
+    surveyIntroText: "Σας ευχαριστούμε για τη συνεργασία σας με την Klehomerie. Ζητάμε την αντικειμενική σας ανατροφοδότηση σχετικά με την πρόσφατη εμπειρία σας, προκειμένου να αξιολογήσουμε και να βελτιώσουμε τα συστήματα εκτέλεσής μας.",
+    surveyAutosaveText: "💡 Ενεργή αυτόματη αποθήκευση προσχεδίου: Οι απαντήσεις σας αποθηκεύονται αυτόματα με ασφάλεια στο τοπικό πρόγραμμα περιήγησής σας καθώς πληκτρολογείτε. Μπορείτε να κλείσετε αυτήν την καρτέλα και να συνεχίσετε οποιαδήποτε στιγμή.",
+    surveyBtnStartText: "Έναρξη Αξιολόγησης",
+    surveyTagActiveText: "Ενεργή αυτόματη αποθήκευση προσχεδίου",
+    surveyQ1Text: "1. Κοιτάζοντας πίσω, πριν ξεκινήσουμε, ποιες ήταν οι κύριες προσδοκίες ή οι ανησυχίες σας σχετικά με τη διαχείριση μιας ανακαίνισης στην Ελλάδα από απόσταση;",
+    surveyQ2Text: "2. Πώς θα περιγράφατε την εμπειρία σας σχετικά με τον τρόπο διαχείρισης των εξωτερικών εργολάβων και των τεχνικών λεπτομερειών στο πεδίο;",
+    surveyQ3Text: "3. Υπήρξαν συγκεκριμένες τεχνικές ενημερώσεις, αναφορές ή στιγμές κατά τη διάρκεια του έργου που σας έκαναν ιδιαίτερη εντύπωση — είτε θετική είτε αρνητική;",
+    surveyQ4Text: "4. Ποιο είναι το μοναδικό πράγμα που θα μπορούσα να βελτιώσω ή να κάνω διαφορετικά την επόμενη φορά για να κάνω τη διαδικασία, την ανταλλαγή δεδομένων ή την επικοινωνία πιο ομαλή για εσάς;",
+    surveyQ5Text: "5. Δεδομένου ότι το Golden Ticket Pass (30% έκπτωση) για την Τεχνική Επιθεώρηση P-008 είναι πλήρως μεταβιβάσιμο, ποιοι τύποι επενδυτών ή σενάρια ακινήτων πιστεύετε ότι θα είχαν την πιο πρακτική χρησιμότητα;",
+    surveyQ6Text: "6. Συνολική Αξιολόγηση Υπηρεσιών",
+    surveyQ7Text: "7. Συναίνεση Δημόσιας Κοινοποίησης",
+    surveyQ7DescText: "Πρόκειται να ανανεώσω σύντομα την ιστοσελίδα της KLEHOMERIE. Εάν η ανατροφοδότησή σας αποτυπώνει τέλεια την αποστολή μας, μου επιτρέπετε να χρησιμοποιήσω ένα απόσπασμα ως ιστορία επιτυχίας;",
+    surveyOpt1Text: "Ναι, μπορείτε να χρησιμοποιήσετε το πλήρες όνομά μου.",
+    surveyOpt2Text: "Ναι, αλλά χρησιμοποιήστε μόνο τα αρχικά μου ή το μικρό μου όνομα.",
+    surveyOpt3Text: "Ναι, αλλά κρατήστε το εντελώς ανώνυμο (π.χ. 'Επενδυτής Ακινήτων, Λονδίνο').",
+    surveyOpt4Text: "Όχι, παρακαλώ κρατήστε αυτές τις πληροφορίες απολύτως εμπιστευτικές.",
+    surveyBtnSubmitText: "Υποβολή Δεδομένων Αξιολόγησης",
+    surveySuccessTitleText: "Η Μεταφορά Δεδομένων Ολοκληρώθηκε",
+    surveySuccessDescText: "Οι πληροφορίες του έργου σας έχουν διαβιβαστεί με ασφάλεια στο εσωτερικό μας υπολογιστικό φύλλο. Εκτιμούμε την αντικειμενική σας αξιολόγηση.",
+    surveyVoucherTagText: "ΕΠΙΒΕΒΑΙΩΣΗ ΕΙΣΙΤΗΡΙΟΥ P-008",
+    surveyVoucherTitleText: "Το Μεταβιβάσιμο Golden Ticket Voucher 30%",
+    surveyVoucherDescText: "Το σύστημά μας θα δημιουργήσει και θα σας αποστείλει μέσω email τον μοναδικό, πλήρως μεταβιβάσιμο κωδικό έκπτωσης 30% για την Ενδελεχή Τεχνική Επιθεώρηση P-008 εντός των επόμενων 24 ωρών. Μπορείτε να τον χρησιμοποιήσετε για δικές σας μελλοντικές αγορές ή να τον μεταβιβάσετε απευθείας σε άλλον επενδυτή που δραστηριοποιείται στην Αττική."
+  });
+})();
+</script>
+
 <style>
 /* ==========================================================================
-   1. COLOR TOKEN ARCS (ADAPTIVE DARK/LIGHT FRAMEWORKS)
+   2. STYLE CONSTANTS & DARK THEME MATRICES
    ========================================================================= */
 :root {
   --kh-font-title: 'Poppins', -apple-system, sans-serif;
@@ -26,7 +114,7 @@ eleventyExcludeFromCollections: true
   --kh-star-active: #f59e0b;
 }
 
-/* Seamless matching with your site's dark utility class architecture */
+/* Syncs with documentElement.classList updates */
 .dark :root, .dark body, body.dark {
   --kh-bg-card: #1e293b;
   --kh-border: #334155;
@@ -118,7 +206,7 @@ eleventyExcludeFromCollections: true
   box-shadow: 0 0 0 4px var(--kh-focus-ring);
 }
 
-/* 5-Star Clean Pure CSS Form Matrix */
+/* Clean 5-Star CSS Layout Mechanics */
 .kh-rating-stars {
   display: inline-flex;
   flex-direction: row-reverse;
@@ -253,22 +341,34 @@ eleventyExcludeFromCollections: true
 }
 </style>
 
-<div class="py-24 md:py-32 px-4 max-w-7xl mx-auto">
+<div class="max-w-7xl mx-auto px-4 pt-24 flex justify-end gap-4 items-center">
+    <button class="theme-toggle-btn p-2 rounded-lg text-gray-500 hover:text-[--accent-color] transition-colors" aria-label="Toggle Theme">
+        <span class="light-mode-icon hidden text-xl">☀️</span>
+        <span class="dark-mode-icon text-xl">🌙</span>
+    </button>
+    <div class="flex gap-2 text-xs font-mono font-bold">
+        <button class="lang-btn px-2 py-1 transition-colors" data-lang="en">EN</button>
+        <button class="lang-btn px-2 py-1 transition-colors" data-lang="fr">FR</button>
+        <button class="lang-btn px-2 py-1 transition-colors" data-lang="gr">EL</button>
+    </div>
+</div>
+
+<div class="pb-24 md:pb-32 pt-6 px-4 max-w-7xl mx-auto">
     <div class="kh-feedback-container">
         <div class="kh-feedback-card">
             
             <div id="kh-welcome-view" class="space-y-6">
                 <div class="kh-feedback-header">
-                    <h1>Project Feedback Survey</h1>
-                    <p>Thank you for partnering with Klehomerie. We request your objective feedback regarding your recent project experience to evaluate and improve our execution systems.</p>
+                    <h1 data-lang-key="surveyTitleText">Project Feedback Survey</h1>
+                    <p data-lang-key="surveyIntroText">Thank you for partnering with Klehomerie. We request your objective feedback regarding your recent project experience to evaluate and improve our execution systems.</p>
                 </div>
                 
-                <div class="bg-gray-50 dark:bg-slate-800/50 p-5 rounded-xl border border-dashed border-gray-200 dark:border-slate-700 text-sm leading-relaxed text-[--kh-text]">
+                <div class="bg-gray-50 dark:bg-slate-800/50 p-5 rounded-xl border border-dashed border-gray-200 dark:border-slate-700 text-sm leading-relaxed text-[--kh-text]" data-lang-key="surveyAutosaveText">
                     💡 <strong>Draft Auto-Saving Active:</strong> Your responses are automatically cached securely in your local browser storage as you type. You can safely close this tab and resume completing your survey at any time without losing your entries.
                 </div>
 
                 <button type="button" id="kh-start-survey-btn" class="kh-btn mt-4">
-                    <span>Begin Evaluation</span>
+                    <span data-lang-key="surveyBtnStartText">Begin Evaluation</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </button>
             </div>
@@ -277,36 +377,37 @@ eleventyExcludeFromCollections: true
                 <input type="hidden" name="form-name" value="project-feedback" />
 
                 <div class="kh-autosave-tag">
-                    <span class="inline-block w-2 h-2 rounded-full bg-[#C66C54] animate-pulse"></span> Local Draft Autosave Active
+                    <span class="inline-block w-2 h-2 rounded-full bg-[#C66C54] animate-pulse"></span> 
+                    <span data-lang-key="surveyTagActiveText">Local Draft Autosave Active</span>
                 </div>
 
                 <div class="kh-form-group">
-                    <label class="kh-form-label" for="before-state">1. Looking back to before we kicked off, what were your main expectations or concerns about managing a Greek renovation from a distance?</label>
+                    <label class="kh-form-label" for="before-state" data-lang-key="surveyQ1Text">1. Looking back to before we kicked off, what were your main expectations or concerns about managing a Greek renovation from a distance?</label>
                     <textarea id="before-state" name="before_state" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
                 </div>
 
                 <div class="kh-form-group">
-                    <label class="kh-form-label" for="contractor-dynamics">2. How would you describe your experience with how the third-party contractors and technical details were managed on the ground?</label>
+                    <label class="kh-form-label" for="contractor-dynamics" data-lang-key="surveyQ2Text">2. How would you describe your experience with how the third-party contractors and technical details were managed on the ground?</label>
                     <textarea id="contractor-dynamics" name="contractor_dynamics" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
                 </div>
 
                 <div class="kh-form-group">
-                    <label class="kh-form-label" for="standout-moments">3. Were there any specific technical updates, reports, or moments during the build that particularly stood out to you—either positive or negative?</label>
+                    <label class="kh-form-label" for="standout-moments" data-lang-key="surveyQ3Text">3. Were there any specific technical updates, reports, or moments during the build that particularly stood out to you—either positive or negative?</label>
                     <textarea id="standout-moments" name="standout_moments" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
                 </div>
 
                 <div class="kh-form-group">
-                    <label class="kh-form-label" for="operational-critique">4. What is one thing I could improve or do differently next time to make the process, the data sharing, or the communication smoother for you?</label>
+                    <label class="kh-form-label" for="operational-critique" data-lang-key="surveyQ4Text">4. What is one thing I could improve or do differently next time to make the process, the data sharing, or the communication smoother for you?</label>
                     <textarea id="operational-critique" name="operational_critique" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
                 </div>
 
                 <div class="kh-form-group">
-                    <label class="kh-form-label" for="coupon-context">5. Since your 30% Golden Ticket Pass for our P-008 Deep Technical Audit is fully transferable, what kind of property scenarios or investor profiles do you think would get the most practical use out of it?</label>
+                    <label class="kh-form-label" for="coupon-context" data-lang-key="surveyQ5Text">5. Since your 30% Golden Ticket Pass for our P-008 Deep Technical Audit is fully transferable, what kind of property scenarios or investor profiles do you think would get the most practical use out of it?</label>
                     <textarea id="coupon-context" name="coupon_context" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
                 </div>
 
                 <div class="kh-form-group">
-                    <label class="kh-form-label">6. Overall Service Evaluation</label>
+                    <label class="kh-form-label" data-lang-key="surveyQ6Text">6. Overall Service Evaluation</label>
                     <div class="kh-rating-stars">
                         <input type="radio" id="star5" name="service_rating" value="5" required />
                         <label for="star5" title="5 Stars">★</label>
@@ -326,43 +427,43 @@ eleventyExcludeFromCollections: true
                 </div>
 
                 <div class="kh-form-group">
-                    <label class="kh-form-label">7. Public Sharing Consent</label>
-                    <p class="kh-form-hint">I am updating the KLEHOMERIE website soon. If your feedback describes our mission perfectly, may I feature a snippet of it as a success story?</p>
+                    <label class="kh-form-label" data-lang-key="surveyQ7Text">7. Public Sharing Consent</label>
+                    <p class="kh-form-hint" data-lang-key="surveyQ7DescText">I am updating the KLEHOMERIE website soon. If your feedback describes our mission perfectly, may I feature a snippet of it as a success story?</p>
                     
                     <div class="kh-radio-stack">
                         <label class="kh-radio-label">
                             <input type="radio" name="public_consent" value="full-name" class="kh-radio-input" required />
-                            <span>Yes, you can use my full name.</span>
+                            <span data-lang-key="surveyOpt1Text">Yes, you can use my full name.</span>
                         </label>
                         <label class="kh-radio-label">
                             <input type="radio" name="public_consent" value="initials-only" class="kh-radio-input" />
-                            <span>Yes, but use my initials or first name only.</span>
+                            <span data-lang-key="surveyOpt2Text">Yes, but use my initials or first name only.</span>
                         </label>
                         <label class="kh-radio-label">
                             <input type="radio" name="public_consent" value="anonymous" class="kh-radio-input" />
-                            <span>Yes, but keep it entirely anonymous (e.g., "Real Estate Investor, London").</span>
+                            <span data-lang-key="surveyOpt3Text">Yes, but keep it entirely anonymous (e.g., "Real Estate Investor, London").</span>
                         </label>
                         <label class="kh-radio-label">
                             <input type="radio" name="public_consent" value="private" class="kh-radio-input" />
-                            <span>No, please keep this completely private.</span>
+                            <span data-lang-key="surveyOpt4Text">No, please keep this completely private.</span>
                         </label>
                     </div>
                 </div>
 
                 <button type="submit" class="kh-btn w-full mt-4">
-                    <span>Submit Evaluation Data</span>
+                    <span data-lang-key="surveyBtnSubmitText">Submit Evaluation Data</span>
                 </button>
             </form>
 
             <div id="kh-success-view" class="hidden text-center py-6 space-y-6">
                 <div class="text-5xl">🛡️</div>
-                <h1 class="font-bold text-2xl" style="font-family: var(--kh-font-title); color: var(--kh-title);">Data Handshake Complete</h1>
-                <p class="max-w-md mx-auto text-sm leading-relaxed" style="color: var(--kh-text);">Your project insights have been securely transmitted to our internal optimization spreadsheet. We appreciate your objective assessment.</p>
+                <h1 class="font-bold text-2xl" style="font-family: var(--kh-font-title); color: var(--kh-title);" data-lang-key="surveySuccessTitleText">Data Handshake Complete</h1>
+                <p class="max-w-md mx-auto text-sm leading-relaxed" style="color: var(--kh-text);" data-lang-key="surveySuccessDescText">Your project insights have been securely transmitted to our internal optimization spreadsheet. We appreciate your objective assessment.</p>
                 
                 <div class="p-6 rounded-xl border-2 max-w-md mx-auto text-left shadow-md" style="background-color: var(--kh-input-bg); border-color: var(--kh-accent);">
-                    <span class="text-[10px] font-extrabold px-2 py-1 rounded text-white tracking-wider inline-block mb-3" style="background-color: var(--kh-accent);">P-008 PASS CONFIRMATION</span>
-                    <h3 class="font-bold text-lg mb-1" style="font-family: var(--kh-font-title); color: var(--kh-title);">Your 30% Transferable Golden Ticket Voucher</h3>
-                    <p class="text-xs leading-relaxed" style="color: var(--kh-text);">Our system will generate and email your unique, fully transferable 30% discount pass for our P-008 Deep Technical Audit within the next 24 hours. You can allocate this asset to your own future acquisitions or transfer it directly to another investor profile operating within the Attica region.</p>
+                    <span class="text-[10px] font-extrabold px-2 py-1 rounded text-white tracking-wider inline-block mb-3" style="background-color: var(--kh-accent);" data-lang-key="surveyVoucherTagText">P-008 PASS CONFIRMATION</span>
+                    <h3 class="font-bold text-lg mb-1" style="font-family: var(--kh-font-title); color: var(--kh-title);" data-lang-key="surveyVoucherTitleText">Your 30% Transferable Golden Ticket Voucher</h3>
+                    <p class="text-xs leading-relaxed" style="color: var(--kh-text);" data-lang-key="surveyVoucherDescText">Our system will generate and email your unique, fully transferable 30% discount pass for our P-008 Deep Technical Audit within the next 24 hours. You can allocate this asset to your own future acquisitions or transfer it directly to another investor profile operating within the Attica region.</p>
                 </div>
             </div>
 
@@ -371,15 +472,14 @@ eleventyExcludeFromCollections: true
 </div>
 
 <script>
-// All scripting encapsulated inside a clean DOM listener block to avoid leaked global text strings
 document.addEventListener('DOMContentLoaded', function () {
     const welcomeView = document.getElementById('kh-welcome-view');
     const surveyForm = document.getElementById('kh-survey-form');
     const successView = document.getElementById('kh-success-view');
     const startBtn = document.getElementById('kh-start-survey-btn');
-    const STORAGE_KEY = 'kh_feedback_draft_v3';
+    const STORAGE_KEY = 'kh_feedback_draft_v4';
 
-    // 1. STATE MACHINE ANIMATION TRIGGER
+    // 1. STEP ROUTER ANIMATION
     if(startBtn) {
         startBtn.addEventListener('click', function() {
             welcomeView.classList.add('hidden');
@@ -388,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // 2. NETWORK TRANSMISSION HANDLER
+    // 2. NETLIFY FORMS TRANSACTION CHANNEL
     if(surveyForm) {
         surveyForm.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -421,7 +521,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        // 3. STORAGE SYNC FUNCTIONS
+        // 3. STORAGE STATE CACHING DECK
         function saveDraft() {
             const data = {};
             surveyForm.querySelectorAll('textarea').forEach(el => {

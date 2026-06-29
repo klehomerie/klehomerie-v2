@@ -49,11 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (urlLang === 'fr') {
       initialLang = 'fr';
-  } else if (urlLang === 'el') {
-      // IMPORTANT: Map URL 'el' (Standard) to Internal 'gr' (Your Code)
-      initialLang = 'gr';
-  } else if (urlLang === 'en') {
-      initialLang = 'en';
+  } else if (urlLang === 'el') 
   }
 
   let currentLang = initialLang;
