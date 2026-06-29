@@ -287,6 +287,8 @@ eleventyExcludeFromCollections: true
 
             <form id="kh-survey-form" name="project-feedback" method="POST" class="hidden">
                 <input type="hidden" name="form-name" value="project-feedback" />
+                <input type="hidden" id="kh-client-name" name="client_name" value="" />
+                <input type="hidden" id="kh-quote-id" name="quote_id" value="" />
 
                 <div class="kh-autosave-tag">
                     <span class="inline-block w-2 h-2 rounded-full bg-[#C66C54] animate-pulse"></span> 
@@ -475,7 +477,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (typeof updateLanguage === 'function') {
         updateLanguage(activeLang);
     }
+// Capture invisible parameters from the URL address bar
+    const urlClientName = urlParams.get('name');
+    const urlQuoteId = urlParams.get('quote');
 
+    if (urlClientName) {
+        document.getElementById('kh-client-name').value = urlClientName.replace(/_/g, ' ');
+    }
+    if (urlQuoteId) {
+        document.getElementById('kh-quote-id').value = urlQuoteId.toUpperCase();
+    }
     // 3. STEP MACHINE HANDSHAKES
     const welcomeView = document.getElementById('kh-welcome-view');
     const surveyForm = document.getElementById('kh-survey-form');
@@ -524,11 +535,12 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
 
-        // 5. CACHE REHYDRATION MECHANISM
+     // 5. CACHE REHYDRATION MECHANISM WITH HIDDEN FIELD RETENTION
         function saveDraft() {
             const data = {};
-            surveyForm.querySelectorAll('textarea').forEach(el => {
-                data[el.name] = el.value;
+            // Include both standard textareas and hidden crm input nodes
+            surveyForm.querySelectorAll('textarea, input[type="hidden"]').forEach(el => {
+                if (el.name !== 'form-name') data[el.name] = el.value;
             });
             const activeRating = surveyForm.querySelector('input[name="service_rating"]:checked');
             if (activeRating) data['service_rating'] = activeRating.value;
@@ -547,7 +559,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 Object.keys(data).forEach(key => {
                     const el = surveyForm.querySelector(`[name="${key}"]`);
                     if (el) {
-                        if (el.type === 'textarea') {
+                        if (el.type === 'textarea' || el.type === 'hidden') {
                             el.value = data[key];
                         } else {
                             const radioTarget = surveyForm.querySelector(`input[name="${key}"][value="${data[key]}"]`);
@@ -555,6 +567,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                     }
                 });
+                
+                // Absolute priority rule: If fresh params are explicitly passed in URL, overwrite cache parameters
+                if (urlClientName) document.getElementById('kh-client-name').value = urlClientName.replace(/_/g, ' ');
+                if (urlQuoteId) document.getElementById('kh-quote-id').value = urlQuoteId.toUpperCase();
             } catch (e) {
                 console.error(e);
             }
