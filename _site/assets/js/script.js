@@ -39,17 +39,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const scrollLinks = document.querySelectorAll('a[href^="#"]');
   
   // --- SEO FIX: READ URL PARAMETERS ---
-  // 1. Get the 'lang' parameter from the URL (e.g., ?lang=fr)
   const urlParams = new URLSearchParams(window.location.search);
   const urlLang = urlParams.get('lang');
 
-  // 2. Determine initial language
-  // Priority: URL Parameter > LocalStorage > Default 'en'
+  // Determine initial language (URL Parameter > LocalStorage > Default 'en')
   let initialLang = localStorage.getItem('lang') || 'en';
 
   if (urlLang === 'fr') {
       initialLang = 'fr';
-  } else if (urlLang === 'el') 
+  } else if (urlLang === 'el') {
+      initialLang = 'el'; // Cleanly mapped to your content.js 'el' key array
+  } else if (urlLang === 'en') {
+      initialLang = 'en';
   }
 
   let currentLang = initialLang;
@@ -111,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- 6. LANGUAGE LOGIC (FIXED) ---
   function updateLanguage(lang) {
-      // SAFETY: Check window.translations
       if (typeof window.translations === 'undefined') {
           console.warn("Translations not loaded yet.");
           return; 
@@ -150,9 +150,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- 7. NAVIGATION SCROLL ---
   function handleScroll() {
-      if (window.scrollY > 50) {
+      if (header && window.scrollY > 50) {
           header.classList.add('bg-white', 'shadow-md', 'dark:bg-gray-900');
-      } else {
+      } else if (header) {
           header.classList.remove('bg-white', 'shadow-md', 'dark:bg-gray-900');
       }
   }
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const targetElement = document.querySelector(targetId);
       if (!targetElement) return;
       
-      const headerOffset = header.offsetHeight;
+      const headerOffset = header ? header.offsetHeight : 0;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -183,7 +183,6 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- 9. RECOMMENDER LOGIC ---
   function getRecommendation(prompt) {
       const lowerCasePrompt = prompt.toLowerCase();
-      // SAFETY: Use window.translations
       const t = (typeof window.translations !== 'undefined') ? (window.translations[currentLang] || window.translations['en']) : {};
       
       const keywords = {
@@ -318,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-// --- 14. FAQ GENERATION ---
+  // --- 14. FAQ GENERATION ---
   const faqData = [
       { q: 'faq_q1', a: 'faq_a1' }, 
       { q: 'faq_q2', a: 'faq_a2' },
@@ -401,8 +400,7 @@ document.addEventListener('DOMContentLoaded', function () {
   scrollLinks.forEach(link => link.addEventListener('click', scrollToSection));
   if (recommendServicesButton) recommendServicesButton.addEventListener('click', handleRecommendClick);
 
-  // Force update on load, with retry for slow network/loading
-  // The currentLang here is now correctly set based on URL params due to Logic in Section 3
+  // Force unified translation mapping sync
   if (typeof window.translations !== 'undefined') {
       updateLanguage(currentLang);
   } else {
