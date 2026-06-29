@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-  // --- 14. FAQ GENERATION ---
+// --- 14. FAQ GENERATION ---
   const faqData = [
       { q: 'faq_q1', a: 'faq_a1' }, 
       { q: 'faq_q2', a: 'faq_a2' },
@@ -331,7 +331,10 @@ document.addEventListener('DOMContentLoaded', function () {
       { q: 'faq_q5', a: 'faq_a5' },
       { q: 'faq_q6', a: 'faq_a6' },
       { q: 'faq_q7', a: 'faq_a7' },
-      { q: 'faq_q8', a: 'faq_a8' }
+      { q: 'faq_q8', a: 'faq_a8' },
+      { q: 'faq_q9', a: 'faq_a9' },
+      { q: 'faq_q10', a: 'faq_a10' },
+      { q: 'faq_q11', a: 'faq_a11' }
   ];
 
   const faqContainer = document.getElementById('faq-container');
