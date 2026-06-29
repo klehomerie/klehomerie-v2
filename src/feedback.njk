@@ -8,360 +8,461 @@ eleventyExcludeFromCollections: true
 <style>
 /* ==========================================================================
    1. COLOR TOKEN ARCS (ADAPTIVE DARK/LIGHT FRAMEWORKS)
-   ========================================================================== */
+   ========================================================================= */
 :root {
   --kh-font-title: 'Poppins', -apple-system, sans-serif;
   --kh-font-body: 'Lato', -apple-system, sans-serif;
-
-  --kh-bg: #f8fafc;
-  --kh-card-bg: #ffffff;
-  --kh-accent: #C66C54;
-  --kh-accent-hover: #A94A2D;
+  --kh-bg-card: #ffffff;
+  --kh-border: #e2e8f0;
   --kh-title: #1c1a3c;
   --kh-text: #475569;
   --kh-hint: #64748b;
   --kh-input-bg: #ffffff;
-  --kh-border: #e2e8f0;
+  --kh-accent: #C66C54;
+  --kh-accent-hover: #A94A2D;
   --kh-focus-ring: rgba(198, 108, 84, 0.15);
   --kh-shadow: 0 10px 25px -5px rgba(28, 26, 60, 0.05);
   --kh-star-color: #cbd5e1;
   --kh-star-active: #f59e0b;
 }
 
-/* Scodes dark rules perfectly to match your html.classList toggle logic */
-.dark :root, .dark, body.dark {
-  --kh-bg: #0f172a;
-  --kh-card-bg: #1e293b;
+/* Seamless matching with your site's dark utility class architecture */
+.dark :root, .dark body, body.dark {
+  --kh-bg-card: #1e293b;
+  --kh-border: #334155;
   --kh-title: #f8fafc;
   --kh-text: #94a3b8;
   --kh-hint: #64748b;
   --kh-input-bg: #0f172a;
-  --kh-border: #334155;
   --kh-focus-ring: rgba(198, 108, 84, 0.3);
   --kh-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   --kh-star-color: #475569;
 }
 
-/* ==========================================================================
-   2. STRUCTURAL GRID COMPONENTS
-   ========================================================================== */
-.kh-feedback-wrapper { 
-  font-family: var(--kh-font-body); 
-  background-color: var(--kh-bg); 
-  min-height: 100vh; 
-  padding: 80px 20px; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  transition: background-color 0.2s ease; 
+.kh-feedback-container {
+  font-family: var(--kh-font-body);
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.kh-feedback-card { 
-  background-color: var(--kh-card-bg); 
-  max-width: 680px; 
-  width: 100%; 
-  padding: 45px; 
-  border-radius: 16px; 
-  border: 1px solid var(--kh-border); 
-  box-shadow: var(--kh-shadow); 
-  transition: background-color 0.2s ease, border-color 0.2s ease; 
+.kh-feedback-card {
+  background-color: var(--kh-bg-card);
+  padding: 45px;
+  border-radius: 16px;
+  border: 1px solid var(--kh-border);
+  box-shadow: var(--kh-shadow);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.kh-feedback-header { 
-  border-bottom: 2px solid var(--kh-border); 
-  padding-bottom: 25px; 
-  margin-bottom: 35px; 
+.kh-feedback-header {
+  border-bottom: 2px solid var(--kh-border);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
 }
 
-.kh-feedback-header h1 { 
-  font-family: var(--kh-font-title); 
-  color: var(--kh-title); 
-  font-size: 2rem; 
-  font-weight: 700; 
-  margin: 0 0 10px 0; 
+.kh-feedback-header h1 {
+  font-family: var(--kh-font-title);
+  color: var(--kh-title);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
 }
 
-.kh-feedback-header p { 
-  color: var(--kh-text); 
-  font-size: 1rem; 
+.kh-feedback-header p {
+  color: var(--kh-text);
+  font-size: 1rem;
   line-height: 1.6;
-  margin: 0; 
+  margin: 0;
 }
 
-.kh-form-group { margin-bottom: 32px; display: flex; flex-direction: column; }
-.kh-form-label { font-family: var(--kh-font-title); color: var(--kh-title); font-size: 1rem; font-weight: 700; line-height: 1.5; margin-bottom: 12px; }
-.kh-form-control { font-family: var(--kh-font-body); background-color: var(--kh-input-bg); color: var(--kh-title); border: 1px solid var(--kh-border); border-radius: 8px; padding: 14px 18px; font-size: 1rem; line-height: 1.6; outline: none; resize: vertical; min-height: 120px; transition: border-color 0.2s, box-shadow 0.2s; }
-.kh-form-control:focus { border-color: var(--kh-accent); box-shadow: 0 0 0 4px var(--kh-focus-ring); }
+.kh-form-group {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+}
 
-/* ==========================================================================
-   3. CLEAN 5-STAR DECK SYSTEM (PURE CSS FLIP RATINGS)
-   ========================================================================== */
-.kh-rating-stars { 
-  display: inline-flex; 
-  flex-direction: row-reverse; 
-  justify-content: flex-end; 
-  gap: 12px; 
-  margin-top: 4px; 
+.kh-form-label {
+  font-family: var(--kh-font-title);
+  color: var(--kh-title);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
-.kh-rating-stars input { display: none; }
-.kh-rating-stars label { 
-  font-size: 2.5rem; 
-  color: var(--kh-star-color); 
-  cursor: pointer; 
-  transition: color 0.15s ease, transform 0.1s ease; 
+
+.kh-form-hint {
+  color: var(--kh-hint);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
 }
-.kh-rating-stars label:hover { transform: scale(1.1); }
+
+.kh-form-control {
+  font-family: var(--kh-font-body);
+  background-color: var(--kh-input-bg);
+  color: var(--kh-title);
+  border: 1px solid var(--kh-border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  line-height: 1.6;
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.kh-form-control:focus {
+  border-color: var(--kh-accent);
+  box-shadow: 0 0 0 4px var(--kh-focus-ring);
+}
+
+/* 5-Star Clean Pure CSS Form Matrix */
+.kh-rating-stars {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.kh-rating-stars input {
+  display: none;
+}
+
+.kh-rating-stars label {
+  font-size: 2.25rem;
+  color: var(--kh-star-color);
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.1s ease;
+}
+
+.kh-rating-stars label:hover {
+  transform: scale(1.1);
+}
+
 .kh-rating-stars input:checked ~ label,
 .kh-rating-stars label:hover,
-.kh-rating-stars label:hover ~ label { 
-  color: var(--kh-star-active); 
+.kh-rating-stars label:hover ~ label {
+  color: var(--kh-star-active);
 }
 
-/* ==========================================================================
-   4. SELECTION CONTROLS (RADIO INPUTS)
-   ========================================================================== */
-.kh-radio-stack { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
-.kh-radio-label { display: flex; align-items: flex-start; gap: 12px; background-color: var(--kh-input-bg); border: 1px solid var(--kh-border); padding: 14px 18px; border-radius: 8px; cursor: pointer; font-size: 0.95rem; color: var(--kh-text); transition: border-color 0.2s, background-color 0.2s; }
-.kh-radio-input { appearance: none; -webkit-appearance: none; background-color: var(--kh-input-bg); margin: 4px 0 0 0; width: 16px; height: 16px; border: 2px solid var(--kh-border); border-radius: 50%; display: grid; place-content: center; flex-shrink: 0; cursor: pointer; }
-.kh-radio-input::before { content: ""; width: 8px; height: 8px; border-radius: 50%; transform: scale(0); transition: 0.15s transform; background-color: var(--kh-accent); }
-.kh-radio-input:checked { border-color: var(--kh-accent); }
-.kh-radio-input:checked::before { transform: scale(1); }
-.kh-radio-label:has(.kh-radio-input:checked) { border-color: var(--kh-accent); color: var(--kh-title); background-color: var(--kh-focus-ring); }
+.kh-radio-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
-/* ==========================================================================
-   5. UTILITIES & INTERFACES
-   ========================================================================== */
-.kh-btn { font-family: var(--kh-font-title); background-color: var(--kh-accent); color: #ffffff; font-size: 1rem; font-weight: 700; padding: 16px 32px; border: none; border-radius: 8px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: background-color 0.2s, transform 0.1s; }
-.dark .kh-btn, body.dark .kh-btn { color: #0f172a; }
-.kh-btn:hover { background-color: var(--kh-accent-hover); }
-.kh-btn:active { transform: scale(0.99); }
+.kh-radio-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: var(--kh-input-bg);
+  border: 1px solid var(--kh-border);
+  padding: 14px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--kh-text);
+  transition: border-color 0.2s, background-color 0.2s;
+}
 
-.kh-autosave-tag { font-size: 0.75rem; color: var(--kh-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 4px; margin-bottom: 12px; }
-.hidden { display: none !important; }
+.kh-radio-input {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--kh-input-bg);
+  margin: 4px 0 0 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--kh-border);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
 
-@media (max-width: 768px) { 
-  .kh-feedback-card { padding: 30px 20px; } 
+.kh-radio-input::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.15s transform;
+  background-color: var(--kh-accent);
+}
+
+.kh-radio-input:checked {
+  border-color: var(--kh-accent);
+}
+
+.kh-radio-input:checked::before {
+  transform: scale(1);
+}
+
+.kh-radio-label:has(.kh-radio-input:checked) {
+  border-color: var(--kh-accent);
+  color: var(--kh-title);
+  background-color: var(--kh-focus-ring);
+}
+
+.kh-btn {
+  font-family: var(--kh-font-title);
+  background-color: var(--kh-accent);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.dark .kh-btn, body.dark .kh-btn {
+  color: #0f172a;
+}
+
+.kh-btn:hover {
+  background-color: var(--kh-accent-hover);
+}
+
+.kh-autosave-tag {
+  font-size: 0.75rem;
+  color: var(--kh-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .kh-feedback-card { padding: 30px 20px; }
   .kh-feedback-header h1 { font-size: 1.65rem; }
 }
 </style>
 
-<div class="kh-feedback-wrapper">
-    <div class="kh-feedback-card">
-        
-        <div id="kh-welcome-view" class="space-y-6">
-            <div class="kh-feedback-header">
-                <h1>Project Feedback Survey</h1>
-                <p>Thank you for partnering with Klehomerie. We request your objective feedback regarding your recent project experience to evaluate and improve our execution systems.</p>
-            </div>
+<div class="py-24 md:py-32 px-4 max-w-7xl mx-auto">
+    <div class="kh-feedback-container">
+        <div class="kh-feedback-card">
             
-            <div class="bg-slate-50 dark:bg-slate-800/40 p-5 rounded-xl border border-dashed var(--kh-border) text-sm leading-relaxed text-[--kh-text]">
-                💡 <strong>Draft Auto-Saving Active:</strong> Your responses are automatically cached securely in your local browser storage as you type. You can close this tab and resume completing your survey at any time without losing your entries.
-            </div>
-
-            <button type="button" id="kh-start-survey-btn" class="kh-btn mt-4">
-                <span>Begin Evaluation</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-            </button>
-        </div>
-
-        <form id="kh-survey-form" name="project-feedback" method="POST" class="hidden">
-            
-            <input type="hidden" name="form-name" value="project-feedback" />
-
-            <div class="kh-autosave-tag">
-                <span class="animate-pulse">●</span> Local Draft Autosave Terminal Active
-            </div>
-
-            <div class="kh-form-group">
-                <label class="kh-form-label" for="before-state">1. Looking back to before we kicked off, what were your main expectations or concerns about managing a Greek renovation from a distance?</label>
-                <textarea id="before-state" name="before_state" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
-            </div>
-
-            <div class="kh-form-group">
-                <label class="kh-form-label" for="contractor-dynamics">2. How would you describe your experience with how the third-party contractors and technical details were managed on the ground?</label>
-                <textarea id="contractor-dynamics" name="contractor_dynamics" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
-            </div>
-
-            <div class="kh-form-group">
-                <label class="kh-form-label" for="standout-moments">3. Were there any specific technical updates, reports, or moments during the build that particularly stood out to you—either positive or negative?</label>
-                <textarea id="standout-moments" name="standout_moments" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
-            </div>
-
-            <div class="kh-form-group">
-                <label class="kh-form-label" for="operational-critique">4. What is one thing I could improve or do differently next time to make the process, the data sharing, or the communication smoother for you?</label>
-                <textarea id="operational-critique" name="operational_critique" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
-            </div>
-
-            <div class="kh-form-group">
-                <label class="kh-form-label" for="coupon-context">5. Since your 30% Golden Ticket Pass for our P-008 Deep Technical Audit is fully transferable, what kind of property scenarios or investor profiles do you think would get the most practical use out of it?</label>
-                <textarea id="coupon-context" name="coupon_context" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
-            </div>
-
-            <div class="kh-form-group">
-                <label class="kh-form-label">6. Overall Service Evaluation</label>
-                <div class="kh-rating-stars">
-                    <input type="radio" id="star5" name="service_rating" value="5" required />
-                    <label for="star5" title="5 Stars">★</label>
-                    
-                    <input type="radio" id="star4" name="service_rating" value="4" />
-                    <label for="star4" title="4 Stars">★</label>
-                    
-                    <input type="radio" id="star3" name="service_rating" value="3" />
-                    <label for="star3" title="3 Stars">★</label>
-                    
-                    <input type="radio" id="star2" name="service_rating" value="2" />
-                    <label for="star2" title="2 Stars">★</label>
-                    
-                    <input type="radio" id="star1" name="service_rating" value="1" />
-                    <label for="star1" title="1 Star">★</label>
+            <div id="kh-welcome-view" class="space-y-6">
+                <div class="kh-feedback-header">
+                    <h1>Project Feedback Survey</h1>
+                    <p>Thank you for partnering with Klehomerie. We request your objective feedback regarding your recent project experience to evaluate and improve our execution systems.</p>
                 </div>
-            </div>
-
-            <div class="kh-form-group">
-                <label class="kh-form-label">7. Public Sharing Consent</label>
-                <p class="kh-form-hint" style="color: var(--kh-text); font-style: normal; margin-bottom: 12px; font-size: 0.95rem;">I am updating the KLEHOMERIE website soon. If your feedback describes our mission perfectly, may I feature a snippet of it as a success story?</p>
                 
-                <div class="kh-radio-stack">
-                    <label class="kh-radio-label">
-                        <input type="radio" name="public_consent" value="full-name" class="kh-radio-input" required />
-                        <span>Yes, you can use my full name.</span>
-                    </label>
-                    <label class="kh-radio-label">
-                        <input type="radio" name="public_consent" value="initials-only" class="kh-radio-input" />
-                        <span>Yes, but use my initials or first name only.</span>
-                    </label>
-                    <label class="kh-radio-label">
-                        <input type="radio" name="public_consent" value="anonymous" class="kh-radio-input" />
-                        <span>Yes, but keep it entirely anonymous (e.g., "Real Estate Investor, London").</span>
-                    </label>
-                    <label class="kh-radio-label">
-                        <input type="radio" name="public_consent" value="private" class="kh-radio-input" />
-                        <span>No, please keep this completely private.</span>
-                    </label>
+                <div class="bg-gray-50 dark:bg-slate-800/50 p-5 rounded-xl border border-dashed border-gray-200 dark:border-slate-700 text-sm leading-relaxed text-[--kh-text]">
+                    💡 <strong>Draft Auto-Saving Active:</strong> Your responses are automatically cached securely in your local browser storage as you type. You can safely close this tab and resume completing your survey at any time without losing your entries.
+                </div>
+
+                <button type="button" id="kh-start-survey-btn" class="kh-btn mt-4">
+                    <span>Begin Evaluation</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </button>
+            </div>
+
+            <form id="kh-survey-form" name="project-feedback" method="POST" class="hidden">
+                <input type="hidden" name="form-name" value="project-feedback" />
+
+                <div class="kh-autosave-tag">
+                    <span class="inline-block w-2 h-2 rounded-full bg-[#C66C54] animate-pulse"></span> Local Draft Autosave Active
+                </div>
+
+                <div class="kh-form-group">
+                    <label class="kh-form-label" for="before-state">1. Looking back to before we kicked off, what were your main expectations or concerns about managing a Greek renovation from a distance?</label>
+                    <textarea id="before-state" name="before_state" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
+                </div>
+
+                <div class="kh-form-group">
+                    <label class="kh-form-label" for="contractor-dynamics">2. How would you describe your experience with how the third-party contractors and technical details were managed on the ground?</label>
+                    <textarea id="contractor-dynamics" name="contractor_dynamics" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
+                </div>
+
+                <div class="kh-form-group">
+                    <label class="kh-form-label" for="standout-moments">3. Were there any specific technical updates, reports, or moments during the build that particularly stood out to you—either positive or negative?</label>
+                    <textarea id="standout-moments" name="standout_moments" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
+                </div>
+
+                <div class="kh-form-group">
+                    <label class="kh-form-label" for="operational-critique">4. What is one thing I could improve or do differently next time to make the process, the data sharing, or the communication smoother for you?</label>
+                    <textarea id="operational-critique" name="operational_critique" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
+                </div>
+
+                <div class="kh-form-group">
+                    <label class="kh-form-label" for="coupon-context">5. Since your 30% Golden Ticket Pass for our P-008 Deep Technical Audit is fully transferable, what kind of property scenarios or investor profiles do you think would get the most practical use out of it?</label>
+                    <textarea id="coupon-context" name="coupon_context" class="kh-form-control" placeholder="Your thoughts..." required></textarea>
+                </div>
+
+                <div class="kh-form-group">
+                    <label class="kh-form-label">6. Overall Service Evaluation</label>
+                    <div class="kh-rating-stars">
+                        <input type="radio" id="star5" name="service_rating" value="5" required />
+                        <label for="star5" title="5 Stars">★</label>
+                        
+                        <input type="radio" id="star4" name="service_rating" value="4" />
+                        <label for="star4" title="4 Stars">★</label>
+                        
+                        <input type="radio" id="star3" name="service_rating" value="3" />
+                        <label for="star3" title="3 Stars">★</label>
+                        
+                        <input type="radio" id="star2" name="service_rating" value="2" />
+                        <label for="star2" title="2 Stars">★</label>
+                        
+                        <input type="radio" id="star1" name="service_rating" value="1" />
+                        <label for="star1" title="1 Star">★</label>
+                    </div>
+                </div>
+
+                <div class="kh-form-group">
+                    <label class="kh-form-label">7. Public Sharing Consent</label>
+                    <p class="kh-form-hint">I am updating the KLEHOMERIE website soon. If your feedback describes our mission perfectly, may I feature a snippet of it as a success story?</p>
+                    
+                    <div class="kh-radio-stack">
+                        <label class="kh-radio-label">
+                            <input type="radio" name="public_consent" value="full-name" class="kh-radio-input" required />
+                            <span>Yes, you can use my full name.</span>
+                        </label>
+                        <label class="kh-radio-label">
+                            <input type="radio" name="public_consent" value="initials-only" class="kh-radio-input" />
+                            <span>Yes, but use my initials or first name only.</span>
+                        </label>
+                        <label class="kh-radio-label">
+                            <input type="radio" name="public_consent" value="anonymous" class="kh-radio-input" />
+                            <span>Yes, but keep it entirely anonymous (e.g., "Real Estate Investor, London").</span>
+                        </label>
+                        <label class="kh-radio-label">
+                            <input type="radio" name="public_consent" value="private" class="kh-radio-input" />
+                            <span>No, please keep this completely private.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="kh-btn w-full mt-4">
+                    <span>Submit Evaluation Data</span>
+                </button>
+            </form>
+
+            <div id="kh-success-view" class="hidden text-center py-6 space-y-6">
+                <div class="text-5xl">🛡️</div>
+                <h1 class="font-bold text-2xl" style="font-family: var(--kh-font-title); color: var(--kh-title);">Data Handshake Complete</h1>
+                <p class="max-w-md mx-auto text-sm leading-relaxed" style="color: var(--kh-text);">Your project insights have been securely transmitted to our internal optimization spreadsheet. We appreciate your objective assessment.</p>
+                
+                <div class="p-6 rounded-xl border-2 max-w-md mx-auto text-left shadow-md" style="background-color: var(--kh-input-bg); border-color: var(--kh-accent);">
+                    <span class="text-[10px] font-extrabold px-2 py-1 rounded text-white tracking-wider inline-block mb-3" style="background-color: var(--kh-accent);">P-008 PASS CONFIRMATION</span>
+                    <h3 class="font-bold text-lg mb-1" style="font-family: var(--kh-font-title); color: var(--kh-title);">Your 30% Transferable Golden Ticket Voucher</h3>
+                    <p class="text-xs leading-relaxed" style="color: var(--kh-text);">Our system will generate and email your unique, fully transferable 30% discount pass for our P-008 Deep Technical Audit within the next 24 hours. You can allocate this asset to your own future acquisitions or transfer it directly to another investor profile operating within the Attica region.</p>
                 </div>
             </div>
 
-            <button type="submit" class="kh-btn w-full mt-4">
-                <span>Submit Evaluation Data</span>
-            </button>
-        </form>
-
-        <div id="kh-success-view" class="hidden space-y-6 text-center py-6">
-            <div style="font-size: 4rem; margin-bottom: 15px;">🛡️</div>
-            <h1 style="font-family: var(--kh-font-title); color: var(--kh-title); font-size: 1.85rem; font-weight: 700;">Data Handshake Complete</h1>
-            <p style="color: var(--kh-text); line-height: 1.6; max-width: 550px; margin: 0 auto 25px auto;">Your project insights have been securely transmitted to our internal optimization spreadsheet. We appreciate your objective assessment.</p>
-            
-            <div style="background-color: var(--kh-input-bg); border: 2px solid var(--kh-accent); padding: 30px; border-radius: 12px; text-align: left; max-width: 550px; margin: 0 auto;" class="shadow-md">
-                <span style="background-color: var(--kh-accent); color: #fff; font-size: 0.65rem; font-weight: 800; padding: 4px 8px; border-radius: 4px; uppercase; tracking-wider; display: inline-block; margin-bottom: 12px;">P-008 PASS CONFIRMATION</span>
-                <h3 style="font-family: var(--kh-font-title); color: var(--kh-title); font-weight: 700; margin: 0 0 8px 0; font-size: 1.15rem;">Your 30% Transferable Golden Ticket Voucher</h3>
-                <p style="color: var(--kh-text); font-size: 0.9rem; line-height: 1.5; margin: 0;">Our system will generate and email your unique, fully transferable 30% discount pass for our P-008 Deep Technical Audit within the next 24 hours. You can allocate this asset to your own future acquisitions or transfer it directly to another investor profile operating within the Attica region.</p>
-            </div>
         </div>
-
     </div>
 </div>
 
-/* ==========================================================================
-   6. STATE ENGAGEMENT & RECOVERY SYSTEM SCRIPTS
-   ========================================================================== */
 <script>
+// All scripting encapsulated inside a clean DOM listener block to avoid leaked global text strings
 document.addEventListener('DOMContentLoaded', function () {
     const welcomeView = document.getElementById('kh-welcome-view');
     const surveyForm = document.getElementById('kh-survey-form');
     const successView = document.getElementById('kh-success-view');
     const startBtn = document.getElementById('kh-start-survey-btn');
+    const STORAGE_KEY = 'kh_feedback_draft_v3';
 
-    const STORAGE_KEY = 'kh_feedback_draft';
-
-    // 1. STEP NAVIGATION TRIGGER
-    startBtn.addEventListener('click', function() {
-        welcomeView.classList.add('hidden');
-        surveyForm.classList.remove('hidden');
-        window.scrollTo({ top: surveyForm.offsetTop - 100, behavior: 'smooth' });
-    });
-
-    // 2. BACKEND TRANSMISSION INTERCEPTOR
-    surveyForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const formData = new FormData(surveyForm);
-        const submitBtn = surveyForm.querySelector('button[type="submit"]');
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Transmitting...';
-
-        // Direct async delivery to Netlify Forms engine
-        fetch('/', {
-            method: 'POST',
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString()
-        })
-        .then(response => {
-            if (response.ok) {
-                // Wipe cache memory on successful transaction
-                localStorage.removeItem(STORAGE_KEY);
-                surveyForm.classList.add('hidden');
-                successView.classList.remove('hidden');
-                window.scrollTo({ top: successView.offsetTop - 120, behavior: 'smooth' });
-            } else {
-                alert("Transmission error. Please try again.");
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Submit Feedback';
-            }
-        })
-        .catch(error => {
-            alert("Network connection error. Please verify link.");
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit Feedback';
+    // 1. STATE MACHINE ANIMATION TRIGGER
+    if(startBtn) {
+        startBtn.addEventListener('click', function() {
+            welcomeView.classList.add('hidden');
+            surveyForm.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-    });
-
-    // 3. PERSISTENT AUTOSAVE CACHE OPERATIONS
-    function saveDraft() {
-        const data = {};
-        // Scrape textarea text assets
-        surveyForm.querySelectorAll('textarea').forEach(el => {
-            data[el.name] = el.value;
-        });
-        // Scrape active metric checks
-        const activeRating = surveyForm.querySelector('input[name="service_rating"]:checked');
-        if (activeRating) data['service_rating'] = activeRating.value;
-
-        const activeConsent = surveyForm.querySelector('input[name="public_consent"]:checked');
-        if (activeConsent) data['public_consent'] = activeConsent.value;
-
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     }
 
-    function loadDraft() {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) return;
-        try {
-            const data = JSON.parse(raw);
-            
-            // Rehydrate string inputs
-            Object.keys(data).forEach(key => {
-                const el = surveyForm.querySelector(`[name="${key}"]`);
-                if (el) {
-                    if (el.type === 'textarea') {
-                        el.value = data[key];
-                    } else {
-                        // Rehydrate checked inputs (radios)
-                        const radioTarget = surveyForm.querySelector(`input[name="${key}"][value="${data[key]}"]`);
-                        if (radioTarget) radioTarget.checked = true;
-                    }
+    // 2. NETWORK TRANSMISSION HANDLER
+    if(surveyForm) {
+        surveyForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(surveyForm);
+            const submitBtn = surveyForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Transmitting...';
+
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(response => {
+                if (response.ok) {
+                    localStorage.removeItem(STORAGE_KEY);
+                    surveyForm.classList.add('hidden');
+                    successView.classList.remove('hidden');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    alert("Transmission error. Please try again.");
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Evaluation Data';
                 }
+            })
+            .catch(error => {
+                alert("Network connection error.");
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Evaluation Data';
             });
-        } catch (e) {
-            console.error("Draft parsing recovery aborted.", e);
+        });
+
+        // 3. STORAGE SYNC FUNCTIONS
+        function saveDraft() {
+            const data = {};
+            surveyForm.querySelectorAll('textarea').forEach(el => {
+                data[el.name] = el.value;
+            });
+            const activeRating = surveyForm.querySelector('input[name="service_rating"]:checked');
+            if (activeRating) data['service_rating'] = activeRating.value;
+
+            const activeConsent = surveyForm.querySelector('input[name="public_consent"]:checked');
+            if (activeConsent) data['public_consent'] = activeConsent.value;
+
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
         }
+
+        function loadDraft() {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return;
+            try {
+                const data = JSON.parse(raw);
+                Object.keys(data).forEach(key => {
+                    const el = surveyForm.querySelector(`[name="${key}"]`);
+                    if (el) {
+                        if (el.type === 'textarea') {
+                            el.value = data[key];
+                        } else {
+                            const radioTarget = surveyForm.querySelector(`input[name="${key}"][value="${data[key]}"]`);
+                            if (radioTarget) radioTarget.checked = true;
+                        }
+                    }
+                });
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        surveyForm.addEventListener('input', saveDraft);
+        surveyForm.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', saveDraft);
+        });
+
+        loadDraft();
     }
-
-    // Bind real-time tracker observers
-    surveyForm.addEventListener('input', saveDraft);
-    surveyForm.querySelectorAll('input[type="radio"]').forEach(radio => {
-        radio.addEventListener('change', saveDraft);
-    });
-
-    // Execute instant memory assembly on lifecycle start
-    loadDraft();
 });
 </script>
