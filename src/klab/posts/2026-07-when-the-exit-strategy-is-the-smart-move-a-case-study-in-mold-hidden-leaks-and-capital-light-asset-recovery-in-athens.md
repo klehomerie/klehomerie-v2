@@ -83,7 +83,9 @@ Our Golden Ticket Technical Audit is a comprehensive pre-purchase review coverin
 
 **A five-year capital expenditure estimate**, separating what needs attention now from what can wait, with cost ranges based on current Athens contractor rates.
 
-The output is a written technical report — documentation of what the apartment actually contains, and a solid basis for negotiating the purchase price on evidence rather than assumption.
+[The output is a written technical report — documentation of what the apartment actually contains, and a solid basis for negotiating the purchase price on evidence rather than assumption.](https://www.klehomerie.com/klehomerie_specimen_audit.pdf)
+
+*[Download the Klehomerie - Specimen Audit](https://www.klehomerie.com/klehomerie_specimen_audit.pdf)* 
 
 **Investment: €490 (excl. 24% VAT)**
 
