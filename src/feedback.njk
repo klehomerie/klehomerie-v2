@@ -256,8 +256,8 @@ eleventyExcludeFromCollections: true
                 </button>
             </div>
 
-            <form id="kh-survey-form" name="project-feedback-v2" action="/feedback/" method="POST" class="hidden" data-netlify="true">
-                <input type="hidden" name="form-name" value="project-feedback" />
+            <form id="kh-survey-form" name="project-feedback-v2" method="POST" class="hidden" data-netlify="true">
+                <input type="hidden" name="form-name" value="project-feedback-v2" />
                 <input type="hidden" id="kh-client-name" name="client_name" value="" />
                 <input type="hidden" id="kh-quote-id" name="quote_id" value="" />
 
@@ -542,6 +542,10 @@ document.addEventListener('DOMContentLoaded', function () {
         surveyForm.addEventListener('submit', function (e) {
             e.preventDefault();
             let formData = new FormData(surveyForm);
+            
+            // FIX 2: FORCE the new form name into the payload to guarantee Netlify creates the v2 database
+            formData.set('form-name', 'project-feedback-v2');
+
             let submitBtn = surveyForm.querySelector('button[type="submit"]');
             
             if (submitBtn) {
@@ -549,7 +553,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 submitBtn.textContent = 'Transmitting...';
             }
 
-            fetch('/feedback/', {
+            // FIX 3: Fetching against the root '/' to prevent the 404 error
+            fetch('/', {
                 method: 'POST',
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString()
