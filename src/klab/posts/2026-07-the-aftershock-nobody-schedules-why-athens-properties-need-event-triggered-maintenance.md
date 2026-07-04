@@ -29,7 +29,7 @@ Nobody schedules an inspection for that. There's no cracked plaster to trigger a
 
 ## 2. The Smoke You Can't See Anymore (and the CapEx Acceleration)
 
-Attica has lost [37% of its forests and grassland to wildfire since 2017](https://thebulletin.org/2025/08/a-perfect-firestorm/). The [2018 Mati fire](https://en.wikipedia.org/wiki/2018_Attica_wildfires) and the [2024 Attica wildfire that reached the Athens suburbs of Vrilissia and Chalandri](https://en.wikipedia.org/wiki/2024_Attica_wildfires) made international headlines — but the properties that matter here aren't just the ones that burned. They're the thousands that sat downwind, absorbing weeks of ash and fine particulate through open windows, balconies, and outdoor HVAC units.
+Attica has lost [37% of its forests and grassland to wildfire since 2017](https://thebulletin.org/2025/08/a-perfect-firestorm/). The [2024 Attica wildfire that reached the Athens suburbs of Vrilissia and Chalandri](https://en.wikipedia.org/wiki/2024_Attica_wildfires) made international headlines — but the properties that matter here aren't just the ones that burned. They're the thousands that sat downwind, absorbing weeks of ash and fine particulate through open windows, balconies, and outdoor HVAC units.
 
 ![](/assets/images/uploads/wildfire_ash_hvac_system_impact.png)
 
