@@ -256,7 +256,7 @@ eleventyExcludeFromCollections: true
                 </button>
             </div>
 
-            <form id="kh-survey-form" name="project-feedback-v2" method="POST" class="hidden" data-netlify="true">
+            <form id="kh-survey-form" name="project-feedback-v2" action="/feedback/" method="POST" class="hidden" data-netlify="true">
                 <input type="hidden" name="form-name" value="project-feedback" />
                 <input type="hidden" id="kh-client-name" name="client_name" value="" />
                 <input type="hidden" id="kh-quote-id" name="quote_id" value="" />
@@ -549,7 +549,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 submitBtn.textContent = 'Transmitting...';
             }
 
-            fetch('/', {
+            fetch('/feedback/', {
                 method: 'POST',
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString()
