@@ -30,7 +30,7 @@ For the first time in modern Greek history, the state has consolidated over 181 
 
 This is a genuine, welcome simplification. But do not mistake unification for leniency. The new [Local and Special Urban Plans (TPS / EPS)](https://ypen.gov.gr/chorikos-schediasmos/tps-eps/) define municipal building parameters with far more precision than before. The rulebook is shorter, but it is also significantly tighter.
 
-> ***The Klehomerie Perspective:** In our experience, this is exactly the kind of regulatory transition where confident-sounding advice from a contractor or a well-meaning local "fixer" starts to diverge from what the law actually requires. Independent technical verification matters more today, not less.*
+> **\*The Klehomerie Perspective:** In our experience, this is exactly the kind of regulatory transition where confident-sounding advice from a contractor or a well-meaning local "fixer" starts to diverge from what the law actually requires. Independent technical verification matters more today, not less.*
 
 - - -
 
@@ -44,7 +44,7 @@ This is the shift foreign investors underestimate most. A beautifully renovated 
 
 - - -
 
-![Athens Urban Planning Reform Guide](Athens_Urban_Planning_Reform_Guide (1)
+![Athens Urban Planning Reform Guide](/assets/images/uploads/athens_urban_planning_reform_guide-1-.png)
 
 .png)
 
@@ -61,8 +61,6 @@ To help our clients navigate this, we categorize renovations into three distinct
 | **Tier A: Cosmetic**       | [Article 30 Works (Law 4495/17)](https://www.lawspot.gr/nomothesia/n-4495-2017/arthro-30-nomos-4495-2017-ergasies-gia-tis-opoies-den/)                                                                                                                              | Purely aesthetic work: painting, replacing doors/windows within existing openings, or changing flooring (provided the underlying waterproofing membrane isn't disturbed). | **No full permit, but electronic engineer verification is mandatory.** Must secure an electronic Article 30 Certificate (*Βεβαίωση Άρθρου 30*) via the TEE platform before works begin. |
 | **Tier B: Value-Add**      | [EEDMK (Small-Scale Approval)](https://portal.tee.gr/portal/page/portal/TEE/MyTEE/adeies)                                                                                                                                                                           | Knocking down non-load-bearing internal partitions to open a floor plan, erecting external scaffolding, altering HVAC/gas lines, or installing external insulation.       | **Yes.** Must be signed and filed by a certified engineer via the *e-Adeies* portal.                                                                                                    |
 | **Tier C: Structural/Use** | [Oikodomiki Adeia (Full Permit)](https://mitos.gov.gr/index.php/%CE%94%CE%94:%CE%88%CE%BA%CE%B4%CE%BF%CF%83%CE%B7_%CE%BF%CE%B9%CE%BA%CE%BF%CE%B4%CE%BF%CE%BC%CE%B9%CE%BA%CF%8E%CE%BD_%CE%B1%CE%B4%CE%B5%CE%B9%CF%8E%CE%BD_(e-%CE%86%CE%B4%CE%B5%CE%B9%CE%B5%CF%82)) | Structural interventions, changes to the building's core mechanical layout, or changing the property's legal destination.                                                 | **Yes.** Requires full architectural/engineering structural approval.                                                                                                                   |
-
-
 
 Even when works fall under Tier A and are technically exempt from a full building permit or small-scale approval, property owners still face specific legal and procedural obligations. It is standard practice and an explicit administrative rule to secure an **Article 30 Certificate (*Βεβαίωση Άρθρου 30*)** issued by a certified civil engineer or architect. This electronic filing, submitted through the Technical Chamber of Greece platform, officially verifies that the proposed changes strictly match the legal definitions of an exemption and ensures no external institutional permissions are quietly bypassed.
 
