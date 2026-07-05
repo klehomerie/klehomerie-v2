@@ -350,13 +350,14 @@ function resetQuiz() {
 </script>
 
 <section id="testimonials-slider" class="py-20 bg-[--secondary-bg] overflow-hidden">
-    <div class="container mx-auto px-6 max-w-7xl">
-        <h2 class="text-3xl font-bold text-center mb-12 text-[--title-color]" data-lang-key="testimonialsTitle">What People Say</h2>
+    <div class="container mx-auto px-6 max-w-7xl text-center">
+        <h2 class="text-3xl font-bold mb-16 text-[--title-color]" data-lang-key="testimonialsTitle">What People Say</h2>
         
-        <div id="testimonial-track" class="flex overflow-x-auto snap-x snap-mandatory gap-8 pb-12 pt-8 hide-scrollbar justify-start md:justify-center items-center px-[5vw] md:px-0">
+        <div id="testimonial-deck" class="relative h-[480px] md:h-[380px] max-w-[1100px] mx-auto flex items-center justify-center">
             {% for item in testimonials.items %}
                 {% if item.featured %}
-                <div class="testimonial-card snap-center shrink-0 w-[80vw] md:w-[550px] bg-[--card-bg] p-8 rounded-xl shadow-lg border-l-4 border-[--accent-color] relative overflow-hidden transition-all duration-500 ease-out opacity-60 scale-90 z-0">
+                
+                <div class="testimonial-card absolute w-[85vw] md:w-[540px] bg-[--card-bg] p-8 rounded-xl shadow-xl border-l-4 border-[--accent-color] text-left cursor-pointer transition-all duration-500 ease-in-out select-none" data-index="{{ loop.index0 }}">
                     
                     {% if item.type == 'client' %}
                         <div class="absolute top-0 right-0 bg-[--accent-color] text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-sm">
@@ -369,20 +370,20 @@ function resetQuiz() {
                     {% endif %}
                     
                     <div class="testimonial-text-wrapper mt-4">
-                        <p class="text-lg text-[--text-color] italic mb-6 lang-en">
+                        <p class="text-base md:text-lg text-[--text-color] italic mb-6 lang-en">
                             &ldquo;{{ item.shortQuote_en }}&rdquo;
                         </p>
-                        <p class="text-lg text-[--text-color] italic mb-6 lang-fr hidden">
+                        <p class="text-base md:text-lg text-[--text-color] italic mb-6 lang-fr hidden">
                             &ldquo;{{ item.shortQuote_fr if item.shortQuote_fr else item.shortQuote_en }}&rdquo;
                         </p>
-                        <p class="text-lg text-[--text-color] italic mb-6 lang-el hidden">
+                        <p class="text-base md:text-lg text-[--text-color] italic mb-6 lang-el hidden">
                             &ldquo;{{ item.shortQuote_el if item.shortQuote_el else item.shortQuote_en }}&rdquo;
                         </p>
                     </div>
 
                     <div class="flex items-center gap-4 border-t border-gray-100 dark:border-gray-800 pt-4 mt-2">
                         {% if item.image %}
-                            <img src="{{ item.image }}" alt="{{ item.name }}" class="h-12 w-12 rounded-full object-cover border-2 border-[--accent-color]">
+                            <img src="{{ item.image }}" alt="{{ item.name }}" class="h-12 w-12 rounded-full object-cover border-2 border-[--accent-color]" draggable="false">
                         {% else %}
                             <div class="h-12 w-12 bg-[--accent-color] rounded-full flex items-center justify-center text-white font-bold shadow-sm">
                                 {{ item.name | truncate(2, true, "") }}
@@ -392,7 +393,7 @@ function resetQuiz() {
                             <div class="font-bold text-[--title-color]">{{ item.name }}</div>
                             <div class="text-sm text-gray-500">
                                 {% if item.website %}
-                                    <a href="{{ item.website }}" target="_blank" rel="noopener noreferrer" class="hover:text-[--accent-color] hover:underline transition-colors">
+                                    <a href="{{ item.website }}" target="_blank" rel="noopener noreferrer" class="hover:text-[--accent-color] hover:underline transition-colors" onclick="event.stopPropagation();">
                                         {{ item.role }}
                                     </a>
                                 {% else %}
@@ -407,93 +408,118 @@ function resetQuiz() {
             {% endfor %}
         </div>
         
-        <div class="text-center mt-4">
+        <div class="text-center mt-12">
             <a href="/testimonials/" class="text-[--accent-color] font-bold hover:underline" data-lang-key="readAllTestimonials">Read all detailed reviews &rarr;</a>
         </div>
     </div>
 </section>
 
-<style>
-  /* Hides the ugly scrollbar but keeps the scroll functionality */
-  .hide-scrollbar::-webkit-scrollbar { display: none; }
-  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-</style>
-
 <script>
     // ==========================================
-    // 1. CAROUSEL FOCUS & SCROLL LOGIC
+    // 1. STACKED CAROUSEL MANAGEMENT (3D DECK)
     // ==========================================
-    const track = document.getElementById('testimonial-track');
-    const cards = document.querySelectorAll('.testimonial-card');
-    let scrollInterval;
-    let isHovered = false;
+    const deck = document.getElementById('testimonial-deck');
+    const deckCards = Array.from(document.querySelectorAll('.testimonial-card'));
+    let activeDeckIndex = 0;
+    let deckInterval;
+    let deckHovered = false;
 
-    function updateCarouselFocus() {
-        if (!track || cards.length === 0) return;
+    function renderDeckState() {
+        if (deckCards.length === 0) return;
 
-        const trackRect = track.getBoundingClientRect();
-        const trackCenter = trackRect.left + (trackRect.width / 2);
+        deckCards.forEach((card, i) => {
+            // Calculate structural distance positioning from active center card
+            let offset = i - activeDeckIndex;
+            
+            // Handle circular data arrays for seamless tracking loops
+            if (offset < -1) offset += deckCards.length;
+            if (offset > 1) offset -= deckCards.length;
 
-        cards.forEach(card => {
-            const cardRect = card.getBoundingClientRect();
-            const cardCenter = cardRect.left + (cardRect.width / 2);
-            const distance = Math.abs(trackCenter - cardCenter);
-
-            if (distance < (cardRect.width / 2)) {
-                card.classList.remove('opacity-60', 'scale-90', 'z-0');
-                card.classList.add('opacity-100', 'scale-100', 'z-10', 'shadow-2xl');
+            if (offset === 0) {
+                // ACTIVE MIDDLE CARD
+                card.style.transform = "translateX(0) scale(1)";
+                card.style.opacity = "1";
+                card.style.zIndex = "30";
+                card.style.pointerEvents = "auto";
+                card.classList.add('shadow-2xl');
+            } else if (offset === 1 || (offset === -(deckCards.length - 1) && deckCards.length > 2)) {
+                // RIGHT BACKGROUND CARD
+                card.style.transform = window.innerWidth < 768 ? "translateX(25px) scale(0.9)" : "translateX(220px) scale(0.9)";
+                card.style.opacity = "0.35";
+                card.style.zIndex = "20";
+                card.style.pointerEvents = "auto";
+                card.classList.remove('shadow-2xl');
+            } else if (offset === -1 || (offset === (deckCards.length - 1) && deckCards.length > 2)) {
+                // LEFT BACKGROUND CARD
+                card.style.transform = window.innerWidth < 768 ? "translateX(-25px) scale(0.9)" : "translateX(-220px) scale(0.9)";
+                card.style.opacity = "0.35";
+                card.style.zIndex = "20";
+                card.style.pointerEvents = "auto";
+                card.classList.remove('shadow-2xl');
             } else {
-                card.classList.add('opacity-60', 'scale-90', 'z-0');
-                card.classList.remove('opacity-100', 'scale-100', 'z-10', 'shadow-2xl');
+                // HIDE HIDDEN EXTRA TRACK CARDS
+                card.style.transform = "translateX(0) scale(0.8)";
+                card.style.opacity = "0";
+                card.style.zIndex = "10";
+                card.style.pointerEvents = "none";
+                card.classList.remove('shadow-2xl');
             }
         });
     }
 
-    if (track) {
-        track.addEventListener('scroll', updateCarouselFocus);
-        window.addEventListener('load', updateCarouselFocus);
-        setTimeout(updateCarouselFocus, 150); // Increased timeout padding for SSG render assurance
-
-        function autoScroll() {
-            if (!isHovered && track) {
-                if (track.scrollLeft >= (track.scrollWidth - track.clientWidth - 10)) {
-                    track.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    track.scrollBy({ left: 450, behavior: 'smooth' });
-                }
-            }
+    // Go to next item in order
+    function nextDeckCard() {
+        if (!deckHovered) {
+            activeDeckIndex = (activeDeckIndex + 1) % deckCards.length;
+            renderDeckState();
         }
+    }
 
-        scrollInterval = setInterval(autoScroll, 5000);
+    // Bind element index targets on background cards directly to click interactions
+    deckCards.forEach((card, idx) => {
+        card.addEventListener('click', () => {
+            if (idx !== activeDeckIndex) {
+                activeDeckIndex = idx;
+                renderDeckState();
+            }
+        });
+    });
 
-        track.addEventListener('mouseenter', () => isHovered = true);
-        track.addEventListener('mouseleave', () => isHovered = false);
-        track.addEventListener('touchstart', () => isHovered = true);
-        track.addEventListener('touchend', () => {
-            setTimeout(() => isHovered = false, 3000); 
+    // Auto layout tracking intervals
+    deckInterval = setInterval(nextDeckCard, 5000);
+
+    if (deck) {
+        deck.addEventListener('mouseenter', () => deckHovered = true);
+        deck.addEventListener('mouseleave', () => deckHovered = false);
+        deck.addEventListener('touchstart', () => deckHovered = true);
+        deck.addEventListener('touchend', () => {
+            setTimeout(() => deckHovered = false, 3000);
         });
     }
+
+    // Dynamic viewport width window layout scaling sync parameters
+    window.addEventListener('resize', renderDeckState);
+    window.addEventListener('load', renderDeckState);
+    setTimeout(renderDeckState, 150);
 
     // ==========================================
-    // 2. LANGUAGE TOGGLE FIX FOR TESTIMONIALS
+    // 2. LANGUAGE TOGGLE INTEGRATION HOOK
     // ==========================================
     document.addEventListener('click', function(e) {
-        // Find the closest clicked element that has the 'lang-btn' class
         const langBtn = e.target.closest('.lang-btn');
-        
         if (langBtn) {
-            // Get the language code directly from the data attribute (en, fr, el)
             const targetLang = langBtn.getAttribute('data-lang'); 
             
-            // 1. Hide ALL testimonial quotes
             document.querySelectorAll('.lang-en, .lang-fr, .lang-el').forEach(quote => {
                 quote.style.display = 'none';
             });
 
-            // 2. Show ONLY the quotes for the selected language
             document.querySelectorAll('.lang-' + targetLang).forEach(quote => {
                 quote.style.display = 'block';
             });
+            
+            // Recalculate layers to account for any changed element dimensions
+            renderDeckState();
         }
     });
 </script>
