@@ -265,7 +265,7 @@
                 
                 <div class="bg-[--card-bg] p-8 rounded-xl shadow-md border-l-4 border-[--accent-color]">
                     
-                    <div class="lang-en">
+                    <div class="lang-en testimonial-render-block">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.&rdquo;
                         </p>
@@ -274,7 +274,7 @@
                         
                     </div>
 
-                    <div class="lang-fr hidden">
+                    <div class="lang-fr hidden testimonial-render-block">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;&rdquo;
                         </p>
@@ -285,7 +285,7 @@
                         
                     </div>
 
-                    <div class="lang-el hidden">
+                    <div class="lang-el hidden testimonial-render-block">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;&rdquo;
                         </p>
@@ -324,7 +324,7 @@
                 
                 <div class="bg-[--secondary-bg] p-8 rounded-xl border border-gray-200 dark:border-gray-700">
                     
-                    <div class="lang-en">
+                    <div class="lang-en testimonial-render-block">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.&rdquo;
                         </p>
@@ -335,7 +335,7 @@
                         
                     </div>
 
-                    <div class="lang-fr hidden">
+                    <div class="lang-fr hidden testimonial-render-block">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;&rdquo;
                         </p>
@@ -346,7 +346,7 @@
                         
                     </div>
 
-                    <div class="lang-el hidden">
+                    <div class="lang-el hidden testimonial-render-block">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;&rdquo;
                         </p>
@@ -380,21 +380,21 @@
 </main>
 
 <style>
-  /* CSS Language Fix - English visible by default */
-  .lang-en { display: block !important; }
-  .lang-fr, .lang-el { display: none !important; }
-
-  /* When French is active */
-  html[lang="fr"] .lang-en { display: none !important; }
-  html[lang="fr"] .lang-fr { display: block !important; }
-
-  /* When Greek is active */
-  html[lang="el"] .lang-en { display: none !important; }
-  html[lang="el"] .lang-el { display: block !important; }
+  /* Local isolation rules fallback */
+  .testimonial-render-block { display: none; }
+  
+  html[lang="en"] .testimonial-render-block.lang-en,
+  :root:not([lang]) .testimonial-render-block.lang-en,
+  html:not([lang]) .testimonial-render-block.lang-en { display: block !important; }
+  
+  html[lang="fr"] .testimonial-render-block.lang-fr { display: block !important; }
+  html[lang="el"] .testimonial-render-block.lang-el { display: block !important; }
+  
+  html[lang="fr"] .testimonial-render-block.lang-en { display: none !important; }
+  html[lang="el"] .testimonial-render-block.lang-en { display: none !important; }
 </style>
 
 <script>
-// --- TAB SWITCHING LOGIC ---
 function switchTab(tab) {
     const tabClients = document.getElementById('tab-clients');
     const tabPartners = document.getElementById('tab-partners');
@@ -425,18 +425,19 @@ function switchTab(tab) {
     }
 }
 
-// --- LANGUAGE TOGGLE FIX FOR TESTIMONIALS PAGE ---
+// Global hook integration for sync across layouts
 document.addEventListener('click', function(e) {
     const langBtn = e.target.closest('.lang-btn');
     if (langBtn) {
         const targetLang = langBtn.getAttribute('data-lang'); 
         
-        document.querySelectorAll('.lang-en, .lang-fr, .lang-el').forEach(quote => {
-            quote.style.display = 'none';
+        document.querySelectorAll('.testimonial-render-block').forEach(quote => {
+            quote.style.setProperty('display', 'none', 'important');
         });
 
-        document.querySelectorAll('.lang-' + targetLang).forEach(quote => {
-            quote.style.display = 'block';
+        const activeClass = targetLang === 'en' ? '.lang-en' : (targetLang === 'fr' ? '.lang-fr' : '.lang-el');
+        document.querySelectorAll('.testimonial-render-block' + activeClass).forEach(quote => {
+            quote.style.setProperty('display', 'block', 'important');
         });
     }
 });
