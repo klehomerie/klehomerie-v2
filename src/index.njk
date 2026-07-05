@@ -353,35 +353,37 @@ function resetQuiz() {
     <div class="container mx-auto px-6 max-w-7xl text-center">
         <h2 class="text-3xl font-bold mb-16 text-[--title-color]" data-lang-key="testimonialsTitle">What People Say</h2>
         
-        <div id="testimonial-deck" class="relative h-[480px] md:h-[380px] max-w-[1100px] mx-auto flex items-center justify-center">
+        <div id="testimonial-deck" class="relative h-[480px] md:h-[400px] max-w-[1100px] mx-auto flex items-center justify-center">
             {% for item in testimonials.items %}
                 {% if item.featured %}
                 
-                <div class="testimonial-card absolute w-[85vw] md:w-[540px] bg-[--card-bg] p-8 rounded-xl shadow-xl border-l-4 border-[--accent-color] text-left cursor-pointer transition-all duration-500 ease-in-out select-none" data-index="{{ loop.index0 }}">
+                <div class="testimonial-card absolute w-[85vw] md:w-[540px] h-[380px] md:h-[320px] bg-[--card-bg] p-8 rounded-xl shadow-xl border-l-4 border-[--accent-color] text-left cursor-pointer transition-all duration-500 ease-in-out select-none flex flex-col justify-between" data-index="{{ loop.index0 }}">
                     
-                    {% if item.type == 'client' %}
-                        <div class="absolute top-0 right-0 bg-[--accent-color] text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-sm">
-                            Investor / Client
+                    <div>
+                        {% if item.type == 'client' %}
+                            <div class="absolute top-0 right-0 bg-[--accent-color] text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-sm">
+                                Investor / Client
+                            </div>
+                        {% else %}
+                            <div class="absolute top-0 right-0 bg-gray-700 dark:bg-gray-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-sm">
+                                Local Partner
+                            </div>
+                        {% endif %}
+                        
+                        <div class="testimonial-text-wrapper mt-4 overflow-y-auto max-h-[180px] md:max-h-[140px] pr-2 hide-scrollbar">
+                            <p class="text-base md:text-lg text-[--text-color] italic mb-4 lang-en">
+                                &ldquo;{{ item.shortQuote_en }}&rdquo;
+                            </p>
+                            <p class="text-base md:text-lg text-[--text-color] italic mb-4 lang-fr hidden">
+                                &ldquo;{{ item.shortQuote_fr if item.shortQuote_fr else item.shortQuote_en }}&rdquo;
+                            </p>
+                            <p class="text-base md:text-lg text-[--text-color] italic mb-4 lang-el hidden">
+                                &ldquo;{{ item.shortQuote_el if item.shortQuote_el else item.shortQuote_en }}&rdquo;
+                            </p>
                         </div>
-                    {% else %}
-                        <div class="absolute top-0 right-0 bg-gray-700 dark:bg-gray-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-sm">
-                            Local Partner
-                        </div>
-                    {% endif %}
-                    
-                    <div class="testimonial-text-wrapper mt-4">
-                        <p class="text-base md:text-lg text-[--text-color] italic mb-6 lang-en">
-                            &ldquo;{{ item.shortQuote_en }}&rdquo;
-                        </p>
-                        <p class="text-base md:text-lg text-[--text-color] italic mb-6 lang-fr hidden">
-                            &ldquo;{{ item.shortQuote_fr if item.shortQuote_fr else item.shortQuote_en }}&rdquo;
-                        </p>
-                        <p class="text-base md:text-lg text-[--text-color] italic mb-6 lang-el hidden">
-                            &ldquo;{{ item.shortQuote_el if item.shortQuote_el else item.shortQuote_en }}&rdquo;
-                        </p>
                     </div>
 
-                    <div class="flex items-center gap-4 border-t border-gray-100 dark:border-gray-800 pt-4 mt-2">
+                    <div class="flex items-center gap-4 border-t border-gray-100 dark:border-gray-800 pt-4">
                         {% if item.image %}
                             <img src="{{ item.image }}" alt="{{ item.name }}" class="h-12 w-12 rounded-full object-cover border-2 border-[--accent-color]" draggable="false">
                         {% else %}
@@ -428,10 +430,8 @@ function resetQuiz() {
         if (deckCards.length === 0) return;
 
         deckCards.forEach((card, i) => {
-            // Calculate structural distance positioning from active center card
             let offset = i - activeDeckIndex;
             
-            // Handle circular data arrays for seamless tracking loops
             if (offset < -1) offset += deckCards.length;
             if (offset > 1) offset -= deckCards.length;
 
@@ -444,20 +444,20 @@ function resetQuiz() {
                 card.classList.add('shadow-2xl');
             } else if (offset === 1 || (offset === -(deckCards.length - 1) && deckCards.length > 2)) {
                 // RIGHT BACKGROUND CARD
-                card.style.transform = window.innerWidth < 768 ? "translateX(25px) scale(0.9)" : "translateX(220px) scale(0.9)";
+                card.style.transform = window.innerWidth < 768 ? "translateX(20px) scale(0.9)" : "translateX(200px) scale(0.9)";
                 card.style.opacity = "0.35";
                 card.style.zIndex = "20";
                 card.style.pointerEvents = "auto";
                 card.classList.remove('shadow-2xl');
             } else if (offset === -1 || (offset === (deckCards.length - 1) && deckCards.length > 2)) {
                 // LEFT BACKGROUND CARD
-                card.style.transform = window.innerWidth < 768 ? "translateX(-25px) scale(0.9)" : "translateX(-220px) scale(0.9)";
+                card.style.transform = window.innerWidth < 768 ? "translateX(-20px) scale(0.9)" : "translateX(-200px) scale(0.9)";
                 card.style.opacity = "0.35";
                 card.style.zIndex = "20";
                 card.style.pointerEvents = "auto";
                 card.classList.remove('shadow-2xl');
             } else {
-                // HIDE HIDDEN EXTRA TRACK CARDS
+                // HIDDEN TRACK CARDS
                 card.style.transform = "translateX(0) scale(0.8)";
                 card.style.opacity = "0";
                 card.style.zIndex = "10";
@@ -467,7 +467,6 @@ function resetQuiz() {
         });
     }
 
-    // Go to next item in order
     function nextDeckCard() {
         if (!deckHovered) {
             activeDeckIndex = (activeDeckIndex + 1) % deckCards.length;
@@ -475,7 +474,6 @@ function resetQuiz() {
         }
     }
 
-    // Bind element index targets on background cards directly to click interactions
     deckCards.forEach((card, idx) => {
         card.addEventListener('click', () => {
             if (idx !== activeDeckIndex) {
@@ -485,7 +483,6 @@ function resetQuiz() {
         });
     });
 
-    // Auto layout tracking intervals
     deckInterval = setInterval(nextDeckCard, 5000);
 
     if (deck) {
@@ -497,7 +494,6 @@ function resetQuiz() {
         });
     }
 
-    // Dynamic viewport width window layout scaling sync parameters
     window.addEventListener('resize', renderDeckState);
     window.addEventListener('load', renderDeckState);
     setTimeout(renderDeckState, 150);
@@ -518,7 +514,6 @@ function resetQuiz() {
                 quote.style.display = 'block';
             });
             
-            // Recalculate layers to account for any changed element dimensions
             renderDeckState();
         }
     });
