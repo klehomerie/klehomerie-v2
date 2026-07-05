@@ -1,37 +1,52 @@
 {
-    "items": [
-  {
-    "name": "Boaz Katan",
-    "role": "International Property Investor",
-    "location": "",
-    "image": "/assets/images/B_K_headshot.png",
-    "type": "client",
-    "featured": true,
-    "shortQuote_en": "Working with Arnaud simply brings peace of mind. He is a true professional who protects your interests.",
-    "shortQuote_fr": "Travailler avec Arnaud apporte tout simplement la tranquillité d'esprit. C'est un vrai professionnel qui protège vos intérêts.",
-    "shortQuote_el": "Η συνεργασία με τον Arnaud προσφέρει απλώς ηρεμία.",
-    "fullQuote_en": "I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.",
-    "fullQuote_fr":"",
-    "fullQuote_el":"",
-    "fullQuoteOriginal": "I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.",
-    "originalLanguage": "en"
-  },
-  {
-    "name": "Viktor L.",
-    "role": "General Contractor - LV Renovation",
-    "location": "Athens - Attiki",
-    "website": "https://www.lvrenovation.gr",
-    "image": "/assets/images/LV_Renovation_logo.png",
-    "type": "contractor",
-    "featured": true,
-    "shortQuote_en": "Working with Arnaud simply brings peace of mind. He is a true professional who protects your interests.",
-    "shortQuote_fr": "Travailler avec Arnaud apporte tout simplement la tranquillité d'esprit. C'est un vrai professionnel qui protège vos intérêts.",
-    "shortQuote_el": "Η συνεργασία με τον Arnaud προσφέρει απλώς ηρεμία.",
-    "fullQuote_en": "I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.",
-    "fullQuote_fr":"",
-    "fullQuote_el":"",
-    "fullQuoteOriginal": "I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.",
-    "originalLanguage": "el"
-  }
-]
+  "items": [
+    {
+      "shortQuote_el": "Η συνεργασία με τον Arnaud προσφέρει απλώς ηρεμία.",
+      "shortQuote_en": "Working with Arnaud simply brings peace of mind. He is a true professional who protects your interests.",
+      "originalLanguage": "en",
+      "shortQuote_fr": "Travailler avec Arnaud apporte tout simplement la tranquillité d'esprit. C'est un vrai professionnel qui protège vos intérêts.",
+      "name": "Boaz Katan",
+      "featured": true,
+      "location": "",
+      "role": "International Property Investor",
+      "fullQuote_el": "Θα ήθελα να μοιραστώ μια θερμή σύσταση, βασισμένη στην προσωπική μου εμπειρία, για έναν εξαιρετικό επαγγελματία στην Αθήνα. Αν έχετε ένα κενό ακίνητο και αναζητάτε τεχνικό διαχειριστή περιουσίας (technical asset manager) ή υπεύθυνο έργου ανακαίνισης, ο Arnaud Zerdab είναι αναμφίβολα ο άνθρωπός σας. Ο Arnaud είναι ο ιδρυτής της Klehomerie και η συνεργασία μαζί του προσφέρει απλώς απόλυτη ηρεμία. Είναι ένας πραγματικός επαγγελματίας που προσφέρει μια προσωπική προσέγγιση, είναι εξαιρετικά προσεκτικός, προστατεύει πάντα τα συμφέροντά σας καθ' όλη τη διάρκεια της διαδικασίας και, το σημαντικότερο, είναι εξαιρετικά οργανωμένος και δομημένος (ένα κρίσιμο χαρακτηριστικό για τη διαχείριση έργων από απόσταση). Τον συνιστώ ανεπιφύλακτα σε όποιον χρειάζεται τεχνική καθοδήγηση, ανακαίνιση ή διαχείριση ακινήτων.",
+      "type": "client",
+      "fullQuote_en": "I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.",
+      "image": "/assets/images/B_K_headshot.png",
+      "fullQuote_fr": "Je tenais à partager une recommandation chaleureuse basée sur mon expérience personnelle avec un excellent professionnel à Athènes. Si vous avez un bien immobilier vacant et que vous recherchez un gestionnaire technique de patrimoine ou un chef de projet en rénovation, Arnaud Zerdab est absolument l'homme de la situation. Arnaud est le fondateur de Klehomerie, et travailler avec lui apporte tout simplement une véritable tranquillité d'esprit. C'est un vrai professionnel qui offre une touche personnelle, se montre très à l'écoute, protège toujours vos intérêts tout au long du processus et, surtout, est extrêmement organisé et structuré (une qualité essentielle pour la gestion de projets à distance). Je le recommande vivement à quiconque a besoin d'accompagnement technique, de rénovation ou de gestion immobilière.",
+      "fullQuoteOriginal": "I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management."
+    },
+    {
+      "shortQuote_el": "Ο Arnaud με την Klehomerie είναι ένας εξαιρετικός συνεργάτης που διαχειρίζεται την επικοινωνία με γνώμονα το καλύτερο συμφέρον των πελατών. Αυτό επιτρέπει στην ομάδα μου να επικεντρώνεται ομαλά στην κατασκευή, διασφαλίζοντας μια διαφανή και επαγγελματική σχέση.",
+      "shortQuote_en": "Arnaud with Klehomerie is an outstanding partner who handles all client communication with their best interests at heart. This allows my team to focus entirely on the construction work, keeping the link between the client and the site transparent and professional.",
+      "originalLanguage": "el",
+      "shortQuote_fr": "Arnaud, avec Klehomerie, est un partenaire exceptionnel qui gère toute la communication en ayant à cœur le meilleur intérêt des clients. Cela permet à mon équipe de se concentrer pleinement sur la construction, assurant une relation transparente et professionnelle du début à la fin.",
+      "name": "Viktor L.",
+      "featured": true,
+      "location": "Athens - Attiki",
+      "role": "General Contractor - LV Renovation",
+      "fullQuote_el": "Ο Arnaud με την Klehomerie είναι ένας εξαιρετικός επαγγελματίας συνεργάτης. Διαχειρίζεται όλη την επικοινωνία και τις προσδοκίες των πελατών έχοντας πάντα ως προτεραιότητα το καλύτερο συμφέρον τους, διασφαλίζοντας ότι είναι πλήρως καθοδηγημένοι και εκπροσωπούμενοι σε όλη τη διάρκεια του έργου. Αυτό επιτρέπει στην ομάδα μου να επικεντρώνεται αποκλειστικά στις κατασκευαστικές εργασίες, γνωρίζοντας ότι η σχέση μεταξύ πελάτη και εργοταξίου είναι διαφανής και επαγγελματική από το Α μέχρι το Ω. ",
+      "type": "contractor",
+      "website": "https://www.lvrenovation.gr",
+      "fullQuote_en": "Arnaud with Klehomerie is an outstanding professional partner.\nHe handles all client communication and expectations with their best interests at heart, ensuring they are fully guided and represented throughout the project. This allows my team to focus entirely on the construction work, knowing that the link between the client and the site is transparent, and professional from A to Z",
+      "image": "/assets/images/LV_Renovation_logo.png",
+      "fullQuote_fr": "Arnaud, avec Klehomerie, est un partenaire professionnel exceptionnel. Il gère toute la communication et les attentes des clients en ayant toujours à cœur leur meilleur intérêt, veillant à ce qu'ils soient parfaitement guidés et représentés tout au long du projet. Cela permet à mon équipe de se concentrer entièrement sur le travail de construction, sachant que la relation entre le client et le chantier est transparente et professionnelle de A à Z.",
+      "fullQuoteOriginal": "Ο Arnaud με την Klehomerie είναι ένας εξαιρετικός επαγγελματίας συνεργάτης. Διαχειρίζεται όλη την επικοινωνία και τις προσδοκίες των πελατών έχοντας πάντα ως προτεραιότητα το καλύτερο συμφέρον τους, διασφαλίζοντας ότι είναι πλήρως καθοδηγημένοι και εκπροσωπούμενοι σε όλη τη διάρκεια του έργου. Αυτό επιτρέπει στην ομάδα μου να επικεντρώνεται αποκλειστικά στις κατασκευαστικές εργασίες, γνωρίζοντας ότι η σχέση μεταξύ πελάτη και εργοταξίου είναι διαφανής και επαγγελματική από το Α μέχρι το Ω. "
+    },
+    {
+      "shortQuote_el": "Το Κlehomerie με βοήθησε ουσιαστικά σε όλη τη διαδικασία της ανακαίνισης. Ό,τι συμφωνούσαμε γραπτώς μέσω mail γινόταν ακριβώς στην πράξη στο εργοτάξιο. Πραγματικά δεν περίμενα ένα έργο χωρίς κανένα απολύτως πρόβλημα! Τους προτείνω ανεπιφύλακτα.",
+      "shortQuote_en": "Klehomerie genuinely helped me through my entire renovation. Everything we agreed on via email was executed exactly to the letter on-site. I truly didn't expect a project to be completely hassle-free! I recommend them without reservation.",
+      "originalLanguage": "el",
+      "shortQuote_fr": "Klehomerie m'a accompagné tout au long de ma rénovation. Tout ce qui était convenu par e-mail a été exécuté à la lettre sur le terrain. Un projet totalement sans encombre ! Je les recommande les yeux fermés.",
+      "name": "X.P",
+      "featured": true,
+      "location": "Athens - Attiki",
+      "role": "Private Owner",
+      "fullQuote_el": "Πρώτη φορά ανακαίνισα το παλιό μας σπίτι και στην αρχή δυσκολεύτηκα πολύ, γιατί δεν είχα γνώσεις και δεν ήξερα πώς να συνεννοηθώ με μάστορες. Το Κlehomerie με βοήθησε ουσιαστικά σε όλη τη διαδικασία. Ο Arnaud και η ομάδα του έχουν άψογους μάστορες που προσέχουν τη λεπτομέρεια, είναι απόλυτα αξιόπιστοι χρονικά και με πολύ οικονομικές τιμές. Κάθε τι που συμφωνούσαμε ερχόταν πρώτα αναλυτικά σε mail και ό,τι έγραφε το mail γινόταν ακριβώς στην πράξη. Πραγματικά δεν περίμενα ότι δεν θα συναντήσω κανένα πρόβλημα!!! Τους προτείνω ανεπιφύλακτα.",
+      "type": "client",
+      "fullQuote_en": "It was my first time renovating our old house and at the beginning I struggled a lot because I lacked the technical knowledge and didn't know how to communicate with contractors. Klehomerie genuinely helped me throughout the entire process. Arnaud and his network have excellent technicians who pay close attention to detail, are completely punctual, and offer very fair pricing. Everything we agreed on was first sent as a detailed breakdown via email, and whatever was written in that email was executed exactly in practice. I truly didn't expect a project could be completely hassle-free!!! I recommend them without reservation.",
+      "fullQuote_fr": "C'était la première fois que je rénovais notre ancienne maison et, au début, j'ai beaucoup galéré car je n'avais pas les connaissances nécessaires et je ne savais pas comment communiquer avec les artisans. Klehomerie m'a apporté un soutien essentiel tout au long du processus. Arnaud et son réseau travaillent avec des artisans impeccables qui ont le sens du détail, respectent scrupuleusement les délais et proposent des tarifs très compétitifs. Tout ce que nous convenions arrivait d'abord par écrit de manière détaillée par e-mail, et ce qui était écrit était exécuté à la lettre sur le terrain. Je ne m'attendais vraiment pas à ce que tout se passe sans le moindre problème !!! Je les recommande les yeux fermés.",
+      "fullQuoteOriginal": "Πρώτη φορά ανακαίνισα το παλιό μας σπίτι και στην αρχή δυσκολεύτηκα πολύ, γιατί δεν είχα γνώσεις και δεν ήξερα πώς να συνεννοηθώ με μάστορες. Το Κlehomerie με βοήθησε ουσιαστικά σε όλη τη διαδικασία. Ο Arnaud και η ομάδα του έχουν άψογους μάστορες που προσέχουν τη λεπτομέρεια, είναι απόλυτα αξιόπιστοι χρονικά και με πολύ οικονομικές τιμές. Κάθε τι που συμφωνούσαμε ερχόταν πρώτα αναλυτικά σε mail και ό,τι έγραφε το mail γινόταν ακριβώς στην πράξη. Πραγματικά δεν περίμενα ότι δεν θα συναντήσω κανένα πρόβλημα!!! Τους προτείνω ανεπιφύλακτα."
+    }
+  ]
 }
