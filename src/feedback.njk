@@ -485,6 +485,26 @@ Object.assign(window.translations['el'], {
 
 // 2. Initialize Interactive Elements once the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
+    
+    // --- NEW: SINGLE SUBMISSION LOCK ---
+    if (localStorage.getItem('kh_survey_completed_v2') === 'true') {
+        let welcomeView = document.getElementById('kh-welcome-view');
+        let surveyForm = document.getElementById('kh-survey-form');
+        let successView = document.getElementById('kh-success-view');
+
+        if (welcomeView) welcomeView.classList.add('hidden');
+        if (surveyForm) surveyForm.classList.add('hidden');
+        if (successView) {
+            successView.classList.remove('hidden');
+            let successTitle = successView.querySelector('h1');
+            let successDesc = successView.querySelector('p');
+            if(successTitle) successTitle.textContent = "Evaluation Already Submitted";
+            if(successDesc) successDesc.textContent = "You have already completed this project feedback survey. Thank you for your insights!";
+        }
+        return; // Halt script execution so the form remains locked
+    }
+    // -----------------------------------
+
     let urlParams = new URLSearchParams(window.location.search);
     let activeLang = urlParams.get('lang') || localStorage.getItem('lang') || 'en';
     
@@ -543,7 +563,7 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
             let formData = new FormData(surveyForm);
             
-            // FIX 2: FORCE the new form name into the payload to guarantee Netlify creates the v2 database
+            // FORCE the new form name into the payload to guarantee Netlify creates the v2 database
             formData.set('form-name', 'project-feedback-v2');
 
             let submitBtn = surveyForm.querySelector('button[type="submit"]');
@@ -553,7 +573,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 submitBtn.textContent = 'Transmitting...';
             }
 
-            // FIX 3: Fetching against the root '/' to prevent the 404 error
+            // Fetching against the root '/' to prevent the 404 error
             fetch('/', {
                 method: 'POST',
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -561,6 +581,9 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(response => {
                 if (response.ok) {
+                    // NEW: Set the completion lock in local storage
+                    localStorage.setItem('kh_survey_completed_v2', 'true');
+                    
                     localStorage.removeItem(STORAGE_KEY);
                     surveyForm.classList.add('hidden');
                     if (successView) successView.classList.remove('hidden');

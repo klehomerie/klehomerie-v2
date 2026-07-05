@@ -48,19 +48,19 @@ title: Klehomerie - Technical Asset Management & Technical Audits Athens
                     <p class="text-lg" data-lang-key="aboutText"></p>
                 </div>
             </div>
-            
+        
            <div class="grid md:grid-cols-3 gap-8 justify-center mt-12">
              <div class="text-center p-4">
                 <div class="text-[--accent-color] text-4xl mb-4">🏗️</div>
                 <h3 class="font-bold text-xl mb-2" data-lang-key="iconRigorTitle">Technical Rigor</h3>
                 <p class="text-sm" data-lang-key="iconRigorText">Construction standards applied to management.</p>
-            </div>
+             </div>
             <div class="text-center p-4">
                 <div class="text-[--accent-color] text-4xl mb-4">🛡️</div>
                 <h3 class="font-bold text-xl mb-2" data-lang-key="iconGuardTitle">Asset Guardianship</h3>
                 <p class="text-sm" data-lang-key="iconGuardText">Protecting the structure while you sleep.</p>
             </div>
-             <div class="text-center p-4">
+            <div class="text-center p-4">
                 <div class="text-[--accent-color] text-4xl mb-4">🇫🇷</div>
                 <h3 class="font-bold text-xl mb-2" data-lang-key="iconIntlTitle">Intl. Standards</h3>
                 <p class="text-sm" data-lang-key="iconIntlText">French discipline, Greek reality.</p>
@@ -80,13 +80,13 @@ title: Klehomerie - Technical Asset Management & Technical Audits Athens
             <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--title-color] group">
                 <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">👷</div> <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="serviceAuthTitle">The Authority</h3>
                 <p class="text-[--text-color] leading-relaxed" data-lang-key="serviceAuthText">
-                    Before closing the deal, we run a full audit. The weapon to negotiate.
+                   Before closing the deal, we run a full audit. The weapon to negotiate.
                 </p>
             </div>
             <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--accent-color] group">
                 <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🛡️</div> <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="serviceGuardTitle">The Guardian</h3>
                 <p class="text-[--text-color] leading-relaxed" data-lang-key="serviceGuardText">
-                    Asset preservation maintenance and corporate-grade reporting.
+                   Asset preservation maintenance and corporate-grade reporting.
                 </p>
             </div>
             <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--title-color] group">
@@ -169,7 +169,7 @@ title: Klehomerie - Technical Asset Management & Technical Audits Athens
                             <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
                         </label>
                     </div>
-                </div>
+                 </div>
 
                 <div>
                     <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q2">2. Plumbing Check...</p>
@@ -241,12 +241,12 @@ title: Klehomerie - Technical Asset Management & Technical Audits Athens
                             <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
                         </label>
                     </div>
-                </div>
+                 </div>
 
                 <button type="button" onclick="calculateRisk()" 
                         class="w-full bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300 mt-4 shadow-md" 
                         data-lang-key="calcButton">
-                    Calculate Risk Score ⚠️
+                  Calculate Risk Score ⚠️
                 </button>
             </form>
         </div>
@@ -291,7 +291,6 @@ function calculateRisk() {
     const formData = new FormData(form);
     let score = 0;
     let answered = 0;
-
     // Sum up the weighted values (0, 10, 15, 20)
     for (let pair of formData.entries()) {
         score += parseInt(pair[1]);
@@ -311,7 +310,7 @@ function calculateRisk() {
     const icon = document.getElementById('result-icon');
     const scoreDisplay = document.getElementById('score-text-display');
     const hiddenInput = document.getElementById('hidden-risk-score');
-
+    
     // Switch View
     quizContainer.classList.add('hidden');
     resultContainer.classList.remove('hidden');
@@ -350,6 +349,154 @@ function resetQuiz() {
 }
 </script>
 
+<section id="testimonials-slider" class="py-20 bg-[--secondary-bg] overflow-hidden">
+    <div class="container mx-auto px-6 max-w-7xl">
+        <h2 class="text-3xl font-bold text-center mb-12 text-[--title-color]" data-lang-key="testimonialsTitle">What People Say</h2>
+        
+        <div id="testimonial-track" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 pt-8 hide-scrollbar justify-start md:justify-center items-center">
+            {% for item in testimonials.items %}
+                {% if item.featured %}
+                
+                <div class="testimonial-card snap-center shrink-0 w-[85vw] md:w-[600px] bg-[--card-bg] p-8 rounded-xl shadow-lg border-l-4 border-[--accent-color] relative overflow-hidden transition-all duration-500 ease-out opacity-40 scale-90 z-0">
+                    
+                    {% if item.type == 'client' %}
+                        <div class="absolute top-0 right-0 bg-[--accent-color] text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-sm">
+                            Investor / Client
+                        </div>
+                    {% else %}
+                        <div class="absolute top-0 right-0 bg-gray-700 dark:bg-gray-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-sm">
+                            Local Partner
+                        </div>
+                    {% endif %}
+                    
+                    <p class="text-lg text-[--text-color] italic mb-6 mt-2 lang-en">
+                        &ldquo;{{ item.shortQuote_en }}&rdquo;
+                    </p>
+                    <p class="text-lg text-[--text-color] italic mb-6 mt-2 lang-fr hidden">
+                        &ldquo;{{ item.shortQuote_fr }}&rdquo;
+                    </p>
+                    <p class="text-lg text-[--text-color] italic mb-6 mt-2 lang-el hidden">
+                        &ldquo;{{ item.shortQuote_el }}&rdquo;
+                    </p>
+
+                    <div class="flex items-center gap-4">
+                        {% if item.image %}
+                            <img src="{{ item.image }}" alt="{{ item.name }}" class="h-12 w-12 rounded-full object-cover border-2 border-[--accent-color]">
+                        {% else %}
+                            <div class="h-12 w-12 bg-[--accent-color] rounded-full flex items-center justify-center text-white font-bold shadow-sm">
+                                {{ item.name | truncate(2, true, "") }}
+                            </div>
+                        {% endif %}
+                        <div>
+                            <div class="font-bold text-[--title-color]">{{ item.name }}</div>
+                            <div class="text-sm text-gray-500">
+    {% if item.website %}
+        <a href="{{ item.website }}" target="_blank" rel="noopener noreferrer" class="hover:text-[--accent-color] hover:underline transition-colors">
+            {{ item.role }}
+        </a>
+    {% else %}
+        {{ item.role }}
+    {% endif %}
+    {% if item.location %} • {{ item.location }}{% endif %}
+</div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-8">
+            <a href="/testimonials/" class="text-[--accent-color] font-bold hover:underline" data-lang-key="readAllTestimonials">Read all detailed reviews &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<style>
+  /* Hides the ugly scrollbar but keeps the scroll functionality */
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+<script>
+    // ==========================================
+    // 1. CAROUSEL FOCUS & SCROLL LOGIC
+    // ==========================================
+    const track = document.getElementById('testimonial-track');
+    const cards = document.querySelectorAll('.testimonial-card');
+    let scrollInterval;
+    let isHovered = false;
+
+    function updateCarouselFocus() {
+        if (!track || cards.length === 0) return;
+
+        const trackRect = track.getBoundingClientRect();
+        const trackCenter = trackRect.left + (trackRect.width / 2);
+
+        cards.forEach(card => {
+            const cardRect = card.getBoundingClientRect();
+            const cardCenter = cardRect.left + (cardRect.width / 2);
+            const distance = Math.abs(trackCenter - cardCenter);
+
+            if (distance < (cardRect.width / 2)) {
+                card.classList.remove('opacity-40', 'scale-90', 'z-0');
+                card.classList.add('opacity-100', 'scale-100', 'z-10', 'shadow-2xl');
+            } else {
+                card.classList.add('opacity-40', 'scale-90', 'z-0');
+                card.classList.remove('opacity-100', 'scale-100', 'z-10', 'shadow-2xl');
+            }
+        });
+    }
+
+    if (track) {
+        track.addEventListener('scroll', updateCarouselFocus);
+        window.addEventListener('load', updateCarouselFocus);
+        setTimeout(updateCarouselFocus, 100);
+
+        function autoScroll() {
+            if (!isHovered && track) {
+                if (track.scrollLeft >= (track.scrollWidth - track.clientWidth - 10)) {
+                    track.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    track.scrollBy({ left: 450, behavior: 'smooth' });
+                }
+            }
+        }
+
+        scrollInterval = setInterval(autoScroll, 5000);
+
+        track.addEventListener('mouseenter', () => isHovered = true);
+        track.addEventListener('mouseleave', () => isHovered = false);
+        track.addEventListener('touchstart', () => isHovered = true);
+        track.addEventListener('touchend', () => {
+            setTimeout(() => isHovered = false, 3000); 
+        });
+    }
+
+    // ==========================================
+    // 2. LANGUAGE TOGGLE FIX FOR TESTIMONIALS
+    // ==========================================
+    document.addEventListener('click', function(e) {
+        // Find the closest clicked element that has the 'lang-btn' class
+        const langBtn = e.target.closest('.lang-btn');
+        
+        if (langBtn) {
+            // Get the language code directly from the data attribute (en, fr, el)
+            const targetLang = langBtn.getAttribute('data-lang'); 
+            
+            // 1. Hide ALL testimonial quotes
+            document.querySelectorAll('.lang-en, .lang-fr, .lang-el').forEach(quote => {
+                quote.style.display = 'none';
+            });
+
+            // 2. Show ONLY the quotes for the selected language
+            document.querySelectorAll('.lang-' + targetLang).forEach(quote => {
+                quote.style.display = 'block';
+            });
+        }
+    });
+</script>
+
     <section id="faq" class="py-20 bg-[--bg-color]">
         <div class="container mx-auto px-6 max-w-4xl">
             <h2 class="text-3xl font-bold text-center mb-12 text-[--title-color]" data-lang-key="faqTitle">Frequently Asked Questions</h2>
@@ -386,7 +533,7 @@ function resetQuiz() {
                         <div class="mt-4 flex items-center justify-between">
                             <span class="border-b w-1/5 lg:w-1/4"></span>
                             <span class="text-xs text-center text-gray-500 uppercase" data-lang-key="or">or</span>
-                            <span class="border-b w-1/5 lg:w-1/4"></span>
+                             <span class="border-b w-1/5 lg:w-1/4"></span>
                         </div>
                         <div class="mt-4 text-center">
                             <a href="https://calendar.app.google/pNE9HLdXuUtCwgEi7" target="_blank" class="text-[--accent-color] font-bold hover:underline flex items-center justify-center gap-2">
@@ -399,7 +546,7 @@ function resetQuiz() {
                     </form>
              </div>
              <div class="text-center mt-12">
-                    <p>Email: info@klehomerie.com</p>
+                    <p>Email: info[at]klehomerie.com</p>
                     <p>Phone: (+30) 694 020 6368</p>
              </div>
         </div>

@@ -1,0 +1,37 @@
+{
+    "items": [
+  {
+    "name": "Boaz Katan",
+    "role": "International Property Investor",
+    "location": "",
+    "image": "/assets/images/B_K_headshot.png",
+    "type": "client",
+    "featured": true,
+    "shortQuote_en": "Working with Arnaud simply brings peace of mind. He is a true professional who protects your interests.",
+    "shortQuote_fr": "Travailler avec Arnaud apporte tout simplement la tranquillité d'esprit. C'est un vrai professionnel qui protège vos intérêts.",
+    "shortQuote_el": "Η συνεργασία με τον Arnaud προσφέρει απλώς ηρεμία.",
+    "fullQuote_en": "I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.",
+    "fullQuote_fr":"",
+    "fullQuote_el":"",
+    "fullQuoteOriginal": "I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.",
+    "originalLanguage": "en"
+  },
+  {
+    "name": "Viktor L.",
+    "role": "General Contractor - LV Renovation",
+    "location": "Athens - Attiki",
+    "website": "https://www.lvrenovation.gr",
+    "image": "/assets/images/LV_Renovation_logo.png",
+    "type": "contractor",
+    "featured": true,
+    "shortQuote_en": "Working with Arnaud simply brings peace of mind. He is a true professional who protects your interests.",
+    "shortQuote_fr": "Travailler avec Arnaud apporte tout simplement la tranquillité d'esprit. C'est un vrai professionnel qui protège vos intérêts.",
+    "shortQuote_el": "Η συνεργασία με τον Arnaud προσφέρει απλώς ηρεμία.",
+    "fullQuote_en": "I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.",
+    "fullQuote_fr":"",
+    "fullQuote_el":"",
+    "fullQuoteOriginal": "I wanted to share a warm recommendation based on my personal experience with an excellent professional in Athens. If you have a vacant property and are looking for a technical asset manager or a renovation project manager, Arnaud Zerdab is absolutely your guy. Arnaud is the founder of Klehomerie, and working with him simply brings peace of mind. He is a true professional who provides a personal touch, is highly attentive, always protects your interests throughout the process, and most importantly, is extremely organized and structured (a critical trait for managing projects remotely). I highly recommend him to anyone who needs technical guidance, renovation, or property management.",
+    "originalLanguage": "el"
+  }
+]
+}

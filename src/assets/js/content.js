@@ -3,9 +3,12 @@
 window.translations = {
   'en': {
       // --- NAVIGATION ---
-      navServices: 'Our Missions', 
+      navServices: 'Services', 
       navAlacarte: 'Diagnose', 
-      navContact: 'Secure Asset',
+      navInsights: 'Insights',
+      navReviews: 'Reviews',
+      navFaq: 'FAQ',
+      navContact: 'Contact',
 
       // --- HERO SECTION ---
       heroTitle: 'Don\'t just collect rent. Protect the concrete.', 
@@ -137,11 +140,13 @@ window.translations = {
   },
 
   'fr': {
-      // --- NAVIGATION ---
-      navServices: 'Nos Missions', 
+     // --- NAVIGATION ---
+      navServices: 'Services', 
       navAlacarte: 'Diagnostic', 
-      navContact: 'Sécuriser l\'Actif',
-
+      navInsights: 'Analyses',
+      navReviews: 'Avis',
+      navFaq: 'FAQ',
+      navContact: 'Contact',
       // --- HERO SECTION ---
       heroTitle: 'Ne vous contentez pas d\'encaisser les loyers. Protégez le béton.', 
       heroSubtitle: 'Gestion Technique d\'Actifs pour Investisseurs Internationaux. Nous vous évitons d\'acheter des cauchemars.', 
@@ -263,10 +268,13 @@ window.translations = {
   },
 
   'el': {
-      // --- NAVIGATION ---
-      navServices: 'Οι Αποστολές μας', 
-      navAlacarte: 'Διάγνωση', 
-      navContact: 'Ασφάλεια',
+     // --- NAVIGATION ---
+      navServices: 'Υπηρεσίες', 
+      navAlacarte: 'Διάγνωση',
+      navInsights: 'Άρθρα', 
+      navReviews: 'Κριτικές',
+      navFaq: 'FAQ',
+      navContact: 'Επικοινωνία',
 
       // --- HERO SECTION ---
       heroTitle: 'Μην εισπράττετε απλώς ενοίκια. Προστατέψτε το τσιμέντο.', 

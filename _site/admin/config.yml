@@ -70,3 +70,30 @@ collections:
         widget: "markdown"
         buttons: ["bold", "italic", "strikethrough", "code", "link", "heading-one", "heading-two", "heading-three", "quote", "bulleted-list", "numbered-list"]
         editor_components: ["image"]
+  - name: "testimonials_data"
+    label: "Testimonials"
+    files:
+      - label: "Client & Partner Quotes"
+        name: "testimonials"
+        file: "src/_data/testimonials.json"
+        fields:
+          - label: "Testimonials List"
+            name: "items"
+            widget: "list"
+            summary: '{{fields.name}} - {{fields.type}}'
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Role", name: "role", widget: "string"}
+              - {label: "Location", name: "location", widget: "string", required: false}
+              - {label: "Website URL", name: "website", widget: "string", required: false}
+              - {label: "Type", name: "type", widget: "select", options: ["client", "contractor"]}
+              - {label: "Featured (Show on Homepage slider)", name: "featured", widget: "boolean", default: true}
+              - {label: "Image / Avatar", name: "image", widget: "image", required: false}
+              - {label: "Original Language", name: "originalLanguage", widget: "select", options: ["en", "fr", "el"]}
+              - {label: "Short Quote (English)", name: "shortQuote_en", widget: "text"}
+              - {label: "Short Quote (French)", name: "shortQuote_fr", widget: "text", required: false}
+              - {label: "Short Quote (Greek)", name: "shortQuote_el", widget: "text", required: false}
+              - {label: "Full Original Quote", name: "fullQuoteOriginal", widget: "text"}
+              - {label: "Full English Quote", name: "fullQuote_en", widget: "text"}    
+              - {label: "Full French Quote", name: "fullQuote_fr", widget: "text"}
+              - {label: "Full Greek Quote", name: "fullQuote_el", widget: "text"}        
