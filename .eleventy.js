@@ -68,7 +68,16 @@ eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_SPECIMEN_AUDIT.pdf");
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf");
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf");
 eleventyConfig.addPassthroughCopy("src/feed.xsl"); 
-
+// 👇 PASTE THE NEW PIECE HERE 👇
+  eleventyConfig.addGlobalData("eleventyComputed", {
+    permalink: data => {
+      if (data.date && data.date > new Date()) {
+        console.log(`🔒 [Future Guard] Skipping HTML generation for: ${data.page.inputPath}`);
+        return false;
+      }
+      return data.permalink;
+    }
+  });
 // 2. FILTERS
   
   // Date Filter
