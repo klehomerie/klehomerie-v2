@@ -4,11 +4,9 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- assign current_timestamp = "now" | date: "%s" | plus: 0 -%}
 {% for page in collections.all %}
-  {%- assign page_timestamp = page.date | date: "%s" | plus: 0 -%}
-  {# FILTER: Exclude admin, success page, 404s, and future-dated pages #}
-  {% if not page.data.eleventyExcludeFromCollections and page.url and page.url != "/admin/" and page.url != "/success/" and page.url != "/404.html" and page_timestamp <= current_timestamp %}
+  {# FILTER: Exclude admin, success page, 404s, and pages without a live URL (future posts) #}
+  {% if not page.data.eleventyExcludeFromCollections and page.url and page.url != "/admin/" and page.url != "/success/" and page.url != "/404.html" %}
   <url>
     <loc>https://klehomerie.com{{ page.url | url }}</loc>
     <lastmod>{% if page.date.toISOString %}{{ page.date.toISOString() }}{% else %}{{ page.date }}{% endif %}</lastmod>
