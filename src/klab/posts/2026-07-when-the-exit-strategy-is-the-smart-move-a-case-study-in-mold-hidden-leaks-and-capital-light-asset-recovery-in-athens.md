@@ -10,7 +10,7 @@ category: Red Flag Scans
 language: en
 property_type: Residential
 location: Athens, Greece
-image: /assets/images/uploads/whatsapp-image-2026-04-14-at-09.46.43-1-.jpeg
+image: /assets/images/uploads/img_20260416_140115.jpg
 visual_module:
   type: None
   title: ""
@@ -19,11 +19,13 @@ tag: posts
 ---
 ## The Starting Condition
 
-The client came to us as the owner of a resale apartment in central Athens. The property had a known problem: rising damp originating from the ground floor level had penetrated the lower sections of the walls, and mold had developed across the affected surfaces over time.
+The client came to us as the owner of a resale apartment in central Athens. The property had a known Asset Risk: moisture-related deterioration affecting the lower sections of several interior walls, with visible surface mold as a result.
 
-The conventional response would be structural waterproofing — injecting a chemical damp-proof course into the masonry, stripping and rebuilding the affected plaster, full remediation. That's a legitimate solution. It's also a significant capital commitment, and it requires the property to be taken offline for an extended period.
+Surfaces like this can be addressed in different ways, ranging from a light cosmetic treatment to a full structural remediation, depending on scope, budget, and what the owner actually needs from the property.
 
-![Hands holding a digital moisture meter pressed against a peeling wall with visible black mold. The tool's screen shows maximum moisture saturation in the plaster.](/assets/images/uploads/whatsapp-image-2026-04-14-at-09.46.43-1-.jpeg "A wall full of water....and life")
+
+
+![A close-up shot of a small white PVC window swung wide open, surrounded by walls covered in severe black mold and mildew. The dark, widespread speckling and staining extend heavily into the corner, across the ceiling, and down the plaster walls. Fine hairline cracks run through the paint on the right wall, and the tops of white square tiles are visible along the very bottom of the frame, indicating a poorly ventilated bathroom or utility room.](/assets/images/uploads/img_20260416_140115.jpg "Severe Mold and Mildew Accumulation Around a Small Window")
 
 The client weighed the options and made a clear decision: rather than invest heavily in a property they intended to sell, they would pursue a controlled exit. The goal was to treat the affected surfaces, stage the apartment properly, and bring it to market without overcapitalizing. That's not a corner-cutting approach — it's a deliberate business call, and it required the right technical execution to hold up.
 
@@ -63,7 +65,7 @@ Once the plumbing was resolved and the wall was confirmed dry, the cosmetic fini
 
 Two separate problems. Two separate decisions. One coherent outcome.
 
-The rising damp shaped the client's strategy from day one. The plumbing failure was invisible until we looked — and it would have stayed invisible to any buyer walking through without a technical review. Caught during our delivery walkthrough, it was resolved before the apartment went to market. Caught after a sale, the cost and the headache would have landed entirely on the new owner.
+The initial Asset Risk shaped the client's strategy from day one. The plumbing failure was invisible until we looked — and it would have stayed invisible to any buyer walking through without a Technical Audit. Caught during our delivery walkthrough, it was resolved before the apartment went to market. Caught after a sale, the CapEx and the headache would have landed entirely on the new owner.
 
 The walkthrough that found the leak isn't an exceptional measure. It's just how we work. But that kind of systematic attention is exactly what makes the difference when there's something to find.
 
@@ -83,9 +85,7 @@ Our Golden Ticket Technical Audit is a comprehensive pre-purchase review coverin
 
 **A five-year capital expenditure estimate**, separating what needs attention now from what can wait, with cost ranges based on current Athens contractor rates.
 
-[The output is a written technical report — documentation of what the apartment actually contains, and a solid basis for negotiating the purchase price on evidence rather than assumption.](https://www.klehomerie.com/klehomerie_specimen_audit.pdf)
-
-*[Download the Klehomerie - Specimen Audit](https://www.klehomerie.com/klehomerie_specimen_audit.pdf)* 
+The output is a [written technical report](https://www.klehomerie.com/klehomerie_specimen_audit.pdf) — documentation of what the apartment actually contains, and a solid basis for negotiating the purchase price on evidence rather than assumption.
 
 **Investment: €490 (excl. 24% VAT)**
 
