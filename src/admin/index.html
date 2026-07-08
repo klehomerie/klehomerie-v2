@@ -8,7 +8,8 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
+<script>
+{% raw %}
   // 1. Register the Comparison Slider
   CMS.registerEditorComponent({
     id: "comparison_slider",
@@ -33,7 +34,7 @@
       };
     },
     
-    // How to write the data back into the markdown file (This example uses Hugo/Eleventy style shortcodes)
+    // How to write the data back into the markdown file
     toBlock: function(obj) {
       return `{{< slider left="${obj.slider_left || ''}" right="${obj.slider_right || ''}" caption="${obj.caption || ''}" >}}`;
     },
@@ -47,6 +48,7 @@
               </div>`;
     }
   });
+{% endraw %}
 </script>
 </body>
 </html>
