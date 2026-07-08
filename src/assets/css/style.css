@@ -347,3 +347,37 @@ html.dark .flip-card:hover .flip-card-inner {
 #image-modal.visible {
   display: flex;
 }
+/* The container holding the image */
+.oval-image-frame {
+  /* Creates the true oval (rugby ball) shape */
+  border-radius: 50%; 
+  
+  /* Locks the proportions so it NEVER squishes into a skinny sliver on mobile */
+  aspect-ratio: 2 / 3; 
+  
+  /* Prevents it from getting too small on mobile screens */
+  min-width: 180px; 
+  max-width: 300px; /* Adjust based on your preferred desktop size */
+  width: 100%;
+  
+  /* The yellow/gold border from your screenshot */
+  border: 4px solid #F5B041; 
+  
+  /* Hides the parts of the square image that fall outside the oval */
+  overflow: hidden; 
+  
+  /* Centers the frame if it's in a flex or block container */
+  margin: 0 auto; 
+}
+
+/* The actual image inside the frame */
+.oval-image-frame img {
+  width: 100%;
+  height: 100%;
+  
+  /* Ensures the image fills the space without stretching/distorting */
+  object-fit: cover; 
+  
+  /* Keeps the focal point on the top/center (your face) just in case of cropping */
+  object-position: center 15%; 
+}
