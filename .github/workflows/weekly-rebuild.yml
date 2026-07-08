@@ -1,4 +1,4 @@
-name: Weekly Netlify Rebuild
+name: Periodic Netlify Rebuild
 
 on:
   schedule:
