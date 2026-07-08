@@ -8,5 +8,45 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+  // 1. Register the Comparison Slider
+  CMS.registerEditorComponent({
+    id: "comparison_slider",
+    label: "Comparison Slider",
+    
+    // The fields the user will fill out in the popup
+    fields: [
+      { name: "slider_left", label: "Left Image (Before)", widget: "image" },
+      { name: "slider_right", label: "Right Image (After)", widget: "image" },
+      { name: "caption", label: "Caption", widget: "string", required: false }
+    ],
+    
+    // Regex pattern to find this block in the markdown
+    pattern: /^{{<\s?slider left="(.*?)" right="(.*?)" caption="(.*?)"\s?>}}$/,
+    
+    // How to extract the data from the markdown block
+    fromBlock: function(match) {
+      return {
+        slider_left: match[1],
+        slider_right: match[2],
+        caption: match[3]
+      };
+    },
+    
+    // How to write the data back into the markdown file (This example uses Hugo/Eleventy style shortcodes)
+    toBlock: function(obj) {
+      return `{{< slider left="${obj.slider_left || ''}" right="${obj.slider_right || ''}" caption="${obj.caption || ''}" >}}`;
+    },
+    
+    // How it displays in the CMS preview pane
+    toPreview: function(obj) {
+      return `<div style="border: 2px dashed #ccc; padding: 10px;">
+                <strong>Comparison Slider Preview</strong><br>
+                Before: ${obj.slider_left} <br>
+                After: ${obj.slider_right}
+              </div>`;
+    }
+  });
+</script>
 </body>
 </html>
