@@ -161,7 +161,19 @@
                        
                        <a href="/klab/" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-bold transition-colors text-[--accent-color]" data-lang-key="navInsights">Insights</a>
                        
-                       <a href="/testimonials/" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navReviews">Reviews</a>
+                       <!-- About Us Dropdown -->
+<div class="relative group inline-block">
+    <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1 focus:outline-none" data-lang-key="navAbout">
+        About
+        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+    <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-700 z-50">
+        <div class="py-2 flex flex-col">
+            <a href="/testimonials/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navReviews">Reviews</a>
+            <a href="/media/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMedia">Press</a>
+        </div>
+    </div>
+</div>
 
                        <a href="/#faq" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navFaq">FAQ</a>
                        <a href="/#contact" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navContact">Contact</a>
@@ -219,7 +231,11 @@
                 <a href="/#alacarte" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navAlacarte">Diagnose</a>
                 
                 <a href="/klab/" class="text-[--accent-color] font-bold" onclick="toggleMobileMenu()" data-lang-key="navInsights">Insights</a>
-                <a href="/testimonials/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navReviews">Reviews</a>
+                <div class="flex flex-col space-y-3 pt-2 pb-2">
+    <span class="text-gray-400 dark:text-gray-500 font-semibold text-xs uppercase tracking-wider px-2" data-lang-key="navAbout">About</span>
+    <a href="/testimonials/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navReviews">Reviews</a>
+    <a href="/media/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navMedia">Press</a>
+</div>
                 <a href="/#faq" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navFaq">FAQ</a>
 
                 <div class="pt-4 border-t border-gray-100 dark:border-gray-800">
@@ -374,11 +390,13 @@ Verify this Property (€97)
 
         </div>
 
-        <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex items-start gap-4">
+       <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
     
-    <picture><source type="image/webp" srcset="/assets/images/optimized/z7hAII6k6u-400.webp 400w, /assets/images/optimized/z7hAII6k6u-800.webp 800w, /assets/images/optimized/z7hAII6k6u-1200.webp 1200w" sizes="64px"><img src="/assets/images/optimized/z7hAII6k6u-400.jpeg" alt="Arnaud Zerdab" class="w-16 h-16 rounded-full object-cover border-2 border-[--accent-color]" loading="lazy" decoding="async" width="1200" height="2131" srcset="/assets/images/optimized/z7hAII6k6u-400.jpeg 400w, /assets/images/optimized/z7hAII6k6u-800.jpeg 800w, /assets/images/optimized/z7hAII6k6u-1200.jpeg 1200w" sizes="64px"></picture>
+    <div class="oval-image-frame shrink-0">
+        <picture><source type="image/webp" srcset="/assets/images/optimized/z7hAII6k6u-400.webp 400w, /assets/images/optimized/z7hAII6k6u-800.webp 800w, /assets/images/optimized/z7hAII6k6u-1200.webp 1200w" sizes="120px"><img src="/assets/images/optimized/z7hAII6k6u-400.jpeg" alt="Arnaud Zerdab" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1200" height="2131" srcset="/assets/images/optimized/z7hAII6k6u-400.jpeg 400w, /assets/images/optimized/z7hAII6k6u-800.jpeg 800w, /assets/images/optimized/z7hAII6k6u-1200.jpeg 1200w" sizes="120px"></picture>
+    </div>
     
-    <div>
+<div>
         <h4 class="font-bold text-lg text-[--title-color] dark:text-white">Arnaud Zerdab</h4>
         <p class="text-sm text-gray-500 mb-2 dark:text-gray-400">Founder, Klehomerie.</p>
                 <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">

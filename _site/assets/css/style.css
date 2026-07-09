@@ -347,3 +347,19 @@ html.dark .flip-card:hover .flip-card-inner {
 #image-modal.visible {
   display: flex;
 }
+/* --- AUTHOR OVAL PORTRAIT --- */
+  .oval-image-frame {
+      border-radius: 50%; 
+      aspect-ratio: 2 / 3; 
+      width: 120px; /* Perfect size for the bio block */
+      border: 3px solid var(--accent-color); /* Automatically uses your site's accent color */
+      overflow: hidden; 
+  }
+  
+  .oval-image-frame img, 
+  .oval-image-frame picture {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important; 
+      object-position: center 10% !important; /* Keeps the focus on your face */
+  }

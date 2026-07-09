@@ -6,7 +6,9 @@ window.translations = {
       navServices: 'Services', 
       navAlacarte: 'Diagnose', 
       navInsights: 'Insights',
+      navAbout: 'About',
       navReviews: 'Reviews',
+      navMedia: 'Press',
       navFaq: 'FAQ',
       navContact: 'Contact',
 
@@ -139,7 +141,23 @@ window.translations = {
       resultTextLow: 'Good technical awareness. But a visual check isn\'t an audit.',
       downloadCTA: 'Download the 16-Point Checklist PDF ⬇️',
       or: 'or', 
-      scheduleCall: 'Schedule a Call'
+      scheduleCall: 'Schedule a Call',
+
+      // --- MEDIA PAGE ---
+      mediaSubHeader: 'Extreme Curated Depth Over Breadth',
+      mediaTitle: 'Curated Press Dossier',
+      mediaDesc: 'Technical rigor in the spotlight: Shifting the standard for foreign investment in Athens',
+      mediaGridTitle: 'Selected Niche Commentary',
+      // NEW SECTIONS
+      mediaPressKitTitle: 'Executive Press Kit',
+      mediaPressKitBtn: 'DOWNLOAD EXECUTIVE PRESS KIT (ZIP)',
+      mediaPressKitItem1: 'Official Press Releases (EN & FR)',
+      mediaPressKitItem2: 'Founder Biography & Professional Headshot',
+      mediaPressKitItem3: 'Technical Services & Pricing Rate Cards',
+      mediaPressKitItem4: 'High-Resolution Brand Logos (PNG)',
+      mediaContactTitle: 'Seamless Media Contact',
+      mediaContactSub: 'For press inquiries, expert commentary on the Athens market, or investor relations, contact us directly.',
+      mediaContactNote: 'We typically respond to international inquiries within 12 hours across all time zones.'
   },
 
   'fr': {
@@ -147,7 +165,9 @@ window.translations = {
       navServices: 'Services', 
       navAlacarte: 'Diagnostic', 
       navInsights: 'Analyses',
+      navAbout: 'À propos',
       navReviews: 'Avis',
+      navMedia: 'Presse',
       navFaq: 'FAQ',
       navContact: 'Contact',
 
@@ -271,15 +291,23 @@ window.translations = {
       resultTextLow: 'Bonne conscience technique. Mais une vérification visuelle ne remplace pas un audit.',
       downloadCTA: 'Télécharger la Checklist en 16 Points ⬇️',
       or: 'ou', 
-      scheduleCall: 'Planifier un Appel'
+      scheduleCall: 'Planifier un Appel',
+
+      // --- MEDIA PAGE ---
+      mediaSubHeader: 'Profondeur Extrême et Sélection Ciblée',
+      mediaTitle: 'Dossier de Presse',
+      mediaDesc: 'La rigueur technique à l\'honneur : Redéfinir les standards de l\'investissement étranger à Athènes',
+      mediaGridTitle: 'Sélection de Commentaires Spécialisés'
   },
 
   'el': {
       // --- NAVIGATION ---
       navServices: 'Οι Αποστολές μας', 
       navAlacarte: 'Διάγνωση', 
-      navInsights: 'Άρθρα', 
+      navInsights: 'Άρθρα',
+      navAbout: 'Σχετικά', 
       navReviews: 'Κριτικές',
+      navMedia: 'Τύπος',
       navFaq: 'FAQ',
       navContact: 'Επικοινωνία',
 
@@ -403,6 +431,12 @@ window.translations = {
       resultTextLow: 'Καλή τεχνική αντίληψη. Αλλά ο οπτικός έλεγχος δεν είναι Audit.',
       downloadCTA: 'Κατεβάστε τη Λίστα Ελέγχου (PDF) ⬇️',
       or: 'ή', 
-      scheduleCall: 'Προγραμματίστε Κλήση'
+      scheduleCall: 'Προγραμματίστε Κλήση',
+
+      // --- MEDIA PAGE ---
+      mediaSubHeader: 'Εστιασμένη Ποιότητα και Βάθος',
+      mediaTitle: 'Επιλεγμένα Άρθρα & Τύπος',
+      mediaDesc: 'Η τεχνική αυστηρότητα στο προσκήνιο: Αλλάζοντας τα δεδομένα για τις ξένες επενδύσεις στην Αθήνα',
+      mediaGridTitle: 'Επιλεγμένα Εξειδικευμένα Σχόλια'
   }
 };

@@ -67,4 +67,18 @@ collections:
               - {label: "Full Original Quote", name: "fullQuoteOriginal", widget: "text"}
               - {label: "Full English Quote", name: "fullQuote_en", widget: "text"}    
               - {label: "Full French Quote", name: "fullQuote_fr", widget: "text"}
-              - {label: "Full Greek Quote", name: "fullQuote_el", widget: "text"}        
+              - {label: "Full Greek Quote", name: "fullQuote_el", widget: "text"}  
+  - name: "media"
+    label: "Press & Media"
+    folder: "src/media" # Make sure this matches your actual folder path
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publisher Name", name: "publisher", widget: "string"}
+      - {label: "Publication Date", name: "date", widget: "date"}
+      - {label: "Publisher Logo", name: "logoUrl", widget: "image", required: true}
+      - {label: "Article Thumbnail", name: "thumbnailUrl", widget: "image", required: false}
+      - {label: "Short Excerpt", name: "excerpt", widget: "text"}
+      - {label: "External Link", name: "link", widget: "string"}
+      - {label: "Article Language", name: "articleLanguage", widget: "select", options: ["English", "French", "Greek"]}      

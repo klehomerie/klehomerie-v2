@@ -161,7 +161,19 @@
                        
                        <a href="/klab/" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-bold transition-colors text-[--accent-color]" data-lang-key="navInsights">Insights</a>
                        
-                       <a href="/testimonials/" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navReviews">Reviews</a>
+                       <!-- About Us Dropdown -->
+<div class="relative group inline-block">
+    <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1 focus:outline-none" data-lang-key="navAbout">
+        About
+        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+    <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-700 z-50">
+        <div class="py-2 flex flex-col">
+            <a href="/testimonials/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navReviews">Reviews</a>
+            <a href="/media/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMedia">Press</a>
+        </div>
+    </div>
+</div>
 
                        <a href="/#faq" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navFaq">FAQ</a>
                        <a href="/#contact" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navContact">Contact</a>
@@ -219,7 +231,11 @@
                 <a href="/#alacarte" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navAlacarte">Diagnose</a>
                 
                 <a href="/klab/" class="text-[--accent-color] font-bold" onclick="toggleMobileMenu()" data-lang-key="navInsights">Insights</a>
-                <a href="/testimonials/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navReviews">Reviews</a>
+                <div class="flex flex-col space-y-3 pt-2 pb-2">
+    <span class="text-gray-400 dark:text-gray-500 font-semibold text-xs uppercase tracking-wider px-2" data-lang-key="navAbout">About</span>
+    <a href="/testimonials/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navReviews">Reviews</a>
+    <a href="/media/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navMedia">Press</a>
+</div>
                 <a href="/#faq" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navFaq">FAQ</a>
 
                 <div class="pt-4 border-t border-gray-100 dark:border-gray-800">
@@ -325,7 +341,8 @@
         
 
         <div class="prose prose-lg prose-slate dark:prose-invert max-w-prose mx-auto prose-p:mb-6 prose-p:leading-relaxed [&_img]:!max-w-full md:[&_img]:!max-w-[400px] [&_img]:!mx-auto [&_img]:!block [&_img]:!rounded-xl [&_img]:!shadow-lg [&_img]:!transition-transform [&_img]:!duration-200 [&_img:hover]:!scale-[1.02] [&_img]:!cursor-zoom-in">
-            <p>Comme beaucoup d'entre nous, j'ai traversé ces derniers étés en France avec cette sensation que la chaleur urbaine devenait chaque année un peu plus lourde, étouffante et difficile à supporter. Mais pour moi, le véritable déclic a eu lieu lors de ma dernière année passée en France, alors que j'encadrais un chantier à 20 kilomètres de l'aéroport d'Orly. Suffoquer au milieu du bitume et de la poussière par plus de 40°C m'a fait réaliser une évidence : nos infrastructures et notre mode de vie ne sont tout simplement plus adaptés à la nouvelle donne climatique. C'est ce constat qui m'a poussé à chercher une alternative et à poser mes valises à Athènes, une ville qui a appris à faire du soleil un allié plutôt qu'une contrainte.</p>
+            <p><em>🇬🇧 This article is also available in English. It was featured on the international platform XpatAthens: Read the English version <a href="Why%20Athens%20Is%20Becoming%20A%20Climate-Resilient%20Destination%20For%20International%20Residents%20&amp;%20Investors">here</a>.</em></p>
+<p>Comme beaucoup d'entre nous, j'ai traversé ces derniers étés en France avec cette sensation que la chaleur urbaine devenait chaque année un peu plus lourde, étouffante et difficile à supporter. Mais pour moi, le véritable déclic a eu lieu lors de ma dernière année passée en France, alors que j'encadrais un chantier à 20 kilomètres de l'aéroport d'Orly. Suffoquer au milieu du bitume et de la poussière par plus de 40°C m'a fait réaliser une évidence : nos infrastructures et notre mode de vie ne sont tout simplement plus adaptés à la nouvelle donne climatique. C'est ce constat qui m'a poussé à chercher une alternative et à poser mes valises à Athènes, une ville qui a appris à faire du soleil un allié plutôt qu'une contrainte.</p>
 <h2>Du bitume parisien au départ pour la Grèce</h2>
 <p>Avant de partir, j'ai pu observer de près cette vulnérabilité thermique. Que ce soit dans la métropole de Toulouse – une véritable cuvette où la brique emprisonnent la chaleur pour la restituer toute la nuit – ou sur le béton de ce chantier francilien, le constat restait le même : en France, on subit les canicules sans pouvoir s'en protéger efficacement.</p>
 <p>C’est précisément pour déconnecter de cette atmosphère saturée que j’ai pris, à l'été 2018, un billet pour la Grèce. Un voyage qui allait tout changer, bien avant les bouleversements de la période COVID.</p>
@@ -356,11 +373,13 @@
 
         </div>
 
-        <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex items-start gap-4">
+       <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
     
-    <picture><source type="image/webp" srcset="/assets/images/optimized/z7hAII6k6u-400.webp 400w, /assets/images/optimized/z7hAII6k6u-800.webp 800w, /assets/images/optimized/z7hAII6k6u-1200.webp 1200w" sizes="64px"><img src="/assets/images/optimized/z7hAII6k6u-400.jpeg" alt="Arnaud Zerdab" class="w-16 h-16 rounded-full object-cover border-2 border-[--accent-color]" loading="lazy" decoding="async" width="1200" height="2131" srcset="/assets/images/optimized/z7hAII6k6u-400.jpeg 400w, /assets/images/optimized/z7hAII6k6u-800.jpeg 800w, /assets/images/optimized/z7hAII6k6u-1200.jpeg 1200w" sizes="64px"></picture>
+    <div class="oval-image-frame shrink-0">
+        <picture><source type="image/webp" srcset="/assets/images/optimized/z7hAII6k6u-400.webp 400w, /assets/images/optimized/z7hAII6k6u-800.webp 800w, /assets/images/optimized/z7hAII6k6u-1200.webp 1200w" sizes="120px"><img src="/assets/images/optimized/z7hAII6k6u-400.jpeg" alt="Arnaud Zerdab" class="w-full h-full object-cover" loading="lazy" decoding="async" width="1200" height="2131" srcset="/assets/images/optimized/z7hAII6k6u-400.jpeg 400w, /assets/images/optimized/z7hAII6k6u-800.jpeg 800w, /assets/images/optimized/z7hAII6k6u-1200.jpeg 1200w" sizes="120px"></picture>
+    </div>
     
-    <div>
+<div>
         <h4 class="font-bold text-lg text-[--title-color] dark:text-white">Arnaud Zerdab</h4>
         <p class="text-sm text-gray-500 mb-2 dark:text-gray-400">Founder, Klehomerie.</p>
                 <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
