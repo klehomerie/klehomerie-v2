@@ -67,6 +67,7 @@ module.exports = function(eleventyConfig) {
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_SPECIMEN_AUDIT.pdf");
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf");
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf");
+eleventyConfig.addPassthroughCopy("src/assets/Press_Kit.zip");
 eleventyConfig.addPassthroughCopy("src/feed.xsl"); 
 // 👇 PASTE THE NEW PIECE HERE 👇
   eleventyConfig.addGlobalData("eleventyComputed", {
