@@ -184,7 +184,8 @@ image: /assets/images/hero-athens-view.webp
   /* Isolated Multi-Language Display Logic Bounds */
   .testimonial-render-block { display: none; }
   
-  html[lang="en"] .testimonial-render-block.lang-en,
+  /* Updated to [lang|="en"] to catch the en-GB tag we added in Phase 1 */
+  html[lang|="en"] .testimonial-render-block.lang-en,
   :root:not([lang]) .testimonial-render-block.lang-en,
   html:not([lang]) .testimonial-render-block.lang-en { display: block !important; }
   
