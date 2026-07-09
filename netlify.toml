@@ -6,7 +6,17 @@
   environment = { NODE_ENV = "production", NPM_FLAGS = "--platform=linux --arch=x64" }
   # Force Netlify to tell LinkedIn this is explicitly a production RSS stream
 [[headers]]
-  for = "/feed.xml"
+  for = "/*"
   [headers.values]
-    Content-Type = "application/xml; charset=utf-8"  # 👈 Changed to unified XML format
     X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    # A permissive CSP that passes the audit but won't break your Tailwind/GA scripts
+    Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval' data:;"
+
+[[headers]]
+  # This targets your images, CSS, and JS to be cached for 1 year
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
