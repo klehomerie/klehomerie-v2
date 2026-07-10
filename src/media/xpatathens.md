@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Why Athens Is Becoming A Climate-Resilient Destination For International Residents & Investors"
 publisher: "XpatAthens"
 date: "2026-07-08"

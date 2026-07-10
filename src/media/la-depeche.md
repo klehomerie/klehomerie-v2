@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Décryptage de l'éditorial: Le chef de projet dans la sécurité des investissements athéniens"
 publisher: "La Dépêche du Midi"
 date: "2026-06-15"

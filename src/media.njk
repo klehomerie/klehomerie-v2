@@ -45,6 +45,8 @@ description: Technical rigor in the spotlight. Selected niche commentary on Athe
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {% for article in collections.media | reverse %}
+            <!-- ADD THIS IF STATEMENT -->
+            {% if article.data.published !== false %}
             <!-- Card wrapper using theme background and adapting borders -->
             <article class="bg-[--card-bg] border border-gray-200 dark:border-gray-800 rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col">
                 
@@ -88,6 +90,7 @@ description: Technical rigor in the spotlight. Selected niche commentary on Athe
                     </svg>
                 </a>
             </article>
+            {% endif %}
             {% endfor %}
         </div>
     </section>

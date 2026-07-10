@@ -74,6 +74,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{slug}}"
     fields:
+      - {label: "Publish on website?", name: "published", widget: "boolean", default: true}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publisher Name", name: "publisher", widget: "string"}
       - {label: "Publication Date", name: "date", widget: "date"}
