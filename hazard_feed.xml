@@ -4,12 +4,6 @@
   <title>Klehomerie Geo-Hazard Feed</title>
   <link>https://github.com/klehomerie/klehomerie-v2</link>
   <description>Anonymized proximity alerts generated from private CRM.</description>
-  <pubDate>Sat, 11 Jul 2026 20:35:08 GMT</pubDate>
-  <item>
-    <title>[TEST-QUAKE] Mag 5.2 Simulation near Prop-001</title>
-    <description>Simulated seismic activity detected 1.13km away from property ID Prop-001.</description>
-    <guid isPermaLink="false">MOCK_TEST_QUAKE_1783802106938</guid>
-    <pubDate>Sat, 11 Jul 2026 20:35:06 GMT</pubDate>
-  </item>
+  <pubDate>Sun, 12 Jul 2026 20:44:37 GMT</pubDate>
 </channel>
 </rss>
