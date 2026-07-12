@@ -9,6 +9,7 @@ window.translations = {
       navAbout: 'About',
       navReviews: 'Reviews',
       navMedia: 'Press',
+      navMethodology: 'Methodology',
       navFaq: 'FAQ',
       navContact: 'Contact',
 
@@ -157,7 +158,60 @@ window.translations = {
       mediaPressKitItem4: 'High-Resolution Brand Logos (PNG)',
       mediaContactTitle: 'Direct Media Contact',
       mediaContactSub: 'For press inquiries, expert commentary on the Athens market, or investor relations, contact us directly.',
-      mediaContactNote: 'We typically respond to international inquiries within 12 hours across all time zones.'
+      mediaContactNote: 'We typically respond to international inquiries within 12 hours across all time zones.',
+
+      // --- METHODOLOGY PAGE ---
+      methodologyPageTitle: 'Our Methodology',
+      methodologyPageSub: 'A System, Not a Relationship',
+      methodologyIntroText: 'Most owners find out how their property is managed the hard way, after something has already gone wrong. By then it is too late to ask what the process was, because there wasn\'t one.\n\nKlehomerie operates differently. Every property under our management is run against a documented Asset Management System, inspired by ISO 55001, the international standard for asset management. It governs how we classify risk, forecast capital expenditure, vet contractors, and respond when something needs fixing.\n\nYou will likely never read the full document. That is fine. It was not written for you to read. It was written so that everything we do for you can be traced back to a stated policy, not a mood.',
+
+      methodologyFoundationTitle: 'The Foundation',
+      methodologyFoundationIntro: 'Three commitments sit underneath everything else we do.',
+      methodologyFoundation1Title: 'Absolute Technical Transparency',
+      methodologyFoundation1Text: 'You receive unfiltered, data-driven findings on the condition of your asset, including findings that are commercially inconvenient for us to report.',
+      methodologyFoundation2Title: 'Zero Conflict of Interest',
+      methodologyFoundation2Text: 'We operate a strict zero-kickback, zero-commission policy with every contractor, broker, and vendor we work with. We represent the asset and the owner. Nobody else.',
+      methodologyFoundation3Title: 'Protecting the Concrete',
+      methodologyFoundation3Text: 'Long-term structural integrity takes priority over the superficial, short-term fix that looks good in a monthly report and costs you twice over in three years.',
+
+      methodologyClassifyTitle: 'How We Classify What We Find',
+      methodologyClassifyIntro: 'A finding is only useful if you know how seriously to take it. Every item we inspect is scored against a consistent four-tier scale, the same scale on every visit, on every property, so a report from January means the same thing as a report from June.',
+      methodologyTier1Title: 'Critical Failure',
+      methodologyTier1Text: 'A safety, security, or structural risk that needs your decision now.',
+      methodologyTier2Title: 'Minor Defect',
+      methodologyTier2Text: 'No immediate danger, but it belongs in your maintenance and CapEx planning.',
+      methodologyTier3Title: 'Conformed',
+      methodologyTier3Text: 'Meets the expected standard. No action needed.',
+      methodologyTier4Title: 'Not Applicable',
+      methodologyTier4Text: 'Not relevant to this asset.',
+      methodologyClassifyDisclaimerText: 'Findings are diagnostic and observational. We are not certified civil engineers, and this system does not replace a formal Technical Due Diligence or legal title search. Where certification or legal sign-off is required, we coordinate it through licensed, independent professionals. That boundary is deliberate, and we state it plainly rather than blur it.',
+
+      methodologyCapexTitle: 'The CapEx Discipline',
+      methodologyCapexIntroText: 'Every serious asset manager will show you a capital expenditure forecast. Almost none will show you how accurate their last one was.\n\nOur forecasting is checked at two separate points, because a mistake in the forecast and a mistake in execution are two different problems and deserve two different answers.',
+      methodologyCapex1Title: 'Checkpoint One',
+      methodologyCapex1Text: 'Our 5-Year CapEx estimate, produced during the Golden Ticket Technical Audit, is compared against the real quotation a contractor provides when work is actually proposed. That comparison is how we know whether our own forecasting is reliable, and it is how we improve it.',
+      methodologyCapex2Title: 'Checkpoint Two',
+      methodologyCapex2Text: 'Once work is contracted, spend is tracked against budget, item by item, so scope creep and change orders are visible while they are still small.',
+      methodologyCapexClosingText: 'A forecast you can audit against reality is a financial instrument. A forecast nobody checks is a guess with good formatting.',
+
+      methodologyEngineTitle: 'The Delivery Engine',
+      methodologyEngineIntroText: 'Our four services are not separate products. They are stages in a single lifecycle, and each one produces exactly the data the next stage depends on.',
+      methodologyEngine1Title: 'The Gatekeeper',
+      methodologyEngine1Text: 'A rapid technical scan before capital is committed. A clear Go or No-Go, before you own the problem.',
+      methodologyEngine2Title: 'The Authority',
+      methodologyEngine2Text: 'A deep, 40-point technical audit across five fixed asset classes — electrical, plumbing and HVAC, joinery and closings, finishes and surfaces, amenities. The output is a baseline condition report and the 5-Year CapEx forecast referenced above.',
+      methodologyEngine3Title: 'The Coordinator',
+      methodologyEngine3Text: 'The transition from acquisition to a performing asset — utility activation, a centralized Digital Vault for every document that matters, and ongoing oversight of contracted works against the forecast.',
+      methodologyEngine4Title: 'The Guardian',
+      methodologyEngine4Text: 'Continuous protective monitoring for vacant or lightly occupied assets — scheduled visits on a fixed cadence, plus an event-triggered layer that watches live geo-hazard data for seismic, fire, and severe weather risk within range of your property, so a check-in isn\'t the only thing standing between an event and your asset.',
+
+      methodologyMandateTitle: 'Where Our Mandate Ends',
+      methodologyMandateText1: 'We are your on-the-ground technical director. We diagnose, we forecast, we coordinate. We do not execute physical repairs ourselves, we do not issue civil engineering sign-offs, and we do not perform legal title work.',
+      methodologyMandateText2: 'We say this outright because an asset manager who claims to do everything is usually the one doing nothing to a verifiable standard. Our value is the barrier we put between your asset and local operational chaos, not a claim to expertise we do not hold.',
+
+      methodologyClosingTagline: 'Don\'t just collect rent. Protect the concrete.',
+      methodologyClosingText: 'If you would like to see how this applies to a specific property, the Red Flag Technical Scan is the fastest way to find out where you stand.',
+      methodologyClosingBtn: 'Book a Red Flag Scan (€97)'
   },
 
   'fr': {
@@ -168,6 +222,7 @@ window.translations = {
       navAbout: 'À propos',
       navReviews: 'Avis',
       navMedia: 'Presse',
+      navMethodology: 'Méthodologie',
       navFaq: 'FAQ',
       navContact: 'Contact',
 
@@ -297,7 +352,60 @@ window.translations = {
       mediaSubHeader: 'Profondeur, pas volume',
       mediaTitle: 'Dossier de Presse',
       mediaDesc: 'La rigueur technique à l\'honneur : Redéfinir les standards de l\'investissement étranger à Athènes',
-      mediaGridTitle: 'Sélection de Commentaires Spécialisés'
+      mediaGridTitle: 'Sélection de Commentaires Spécialisés',
+
+      // --- METHODOLOGY PAGE ---
+      methodologyPageTitle: 'Notre Méthodologie',
+      methodologyPageSub: 'Un Système, Pas une Relation',
+      methodologyIntroText: 'La plupart des propriétaires découvrent la façon dont leur bien est géré de la manière la plus difficile : après qu\'un problème soit déjà survenu. Il est alors trop tard pour demander quel était le processus, car il n\'y en avait pas.\n\nKlehomerie fonctionne différemment. Chaque bien sous notre gestion est suivi selon un Système de Gestion d\'Actifs documenté, inspiré de la norme ISO 55001, la référence internationale en matière de gestion d\'actifs. Ce système régit la façon dont nous classons les risques, anticipons les dépenses d\'investissement (CapEx), sélectionnons les prestataires et réagissons lorsqu\'une intervention est nécessaire.\n\nVous ne lirez probablement jamais le document dans son intégralité. Ce n\'est pas grave : il n\'a pas été rédigé pour être lu par vous. Il a été rédigé pour que tout ce que nous faisons pour vous puisse être rattaché à une politique établie, et non à une impression du moment.',
+
+      methodologyFoundationTitle: 'Le Socle',
+      methodologyFoundationIntro: 'Trois engagements sous-tendent tout ce que nous faisons.',
+      methodologyFoundation1Title: 'Transparence Technique Absolue',
+      methodologyFoundation1Text: 'Vous recevez des constats bruts, fondés sur des données, sur l\'état de votre bien, y compris ceux qu\'il serait commercialement plus confortable pour nous de taire.',
+      methodologyFoundation2Title: 'Zéro Conflit d\'Intérêts',
+      methodologyFoundation2Text: 'Nous appliquons une politique stricte de zéro rétrocommission et zéro commission avec chaque artisan, courtier ou prestataire avec lequel nous travaillons. Nous représentons l\'actif et le propriétaire. Personne d\'autre.',
+      methodologyFoundation3Title: 'Protéger le Béton',
+      methodologyFoundation3Text: 'L\'intégrité structurelle à long terme prime sur la réparation superficielle et rapide qui fait bonne figure dans un rapport mensuel, mais qui vous coûtera le double dans trois ans.',
+
+      methodologyClassifyTitle: 'Comment Nous Classons Nos Constats',
+      methodologyClassifyIntro: 'Un constat n\'est utile que si vous savez avec quel sérieux le prendre. Chaque élément inspecté est noté selon une échelle cohérente à quatre niveaux, la même à chaque visite, sur chaque bien, afin qu\'un rapport de janvier signifie exactement la même chose qu\'un rapport de juin.',
+      methodologyTier1Title: 'Défaillance Critique',
+      methodologyTier1Text: 'Un risque pour la sécurité, la sûreté ou la structure qui exige une décision de votre part immédiatement.',
+      methodologyTier2Title: 'Défaut Mineur',
+      methodologyTier2Text: 'Aucun danger immédiat, mais à intégrer dans votre planification d\'entretien et de CapEx.',
+      methodologyTier3Title: 'Conforme',
+      methodologyTier3Text: 'Répond à la norme attendue. Aucune action requise.',
+      methodologyTier4Title: 'Non Applicable',
+      methodologyTier4Text: 'Sans pertinence pour ce bien.',
+      methodologyClassifyDisclaimerText: 'Ces constats sont de nature diagnostique et observationnelle. Nous ne sommes pas ingénieurs civils certifiés, et ce système ne remplace ni une Due Diligence Technique formelle, ni une vérification juridique du titre de propriété. Lorsqu\'une certification ou une validation légale est requise, nous la faisons réaliser par des professionnels indépendants agréés. Cette limite est volontaire, et nous préférons l\'énoncer clairement plutôt que de l\'estomper.',
+
+      methodologyCapexTitle: 'La Discipline CapEx',
+      methodologyCapexIntroText: 'Tout gestionnaire d\'actifs sérieux vous présentera une prévision de dépenses d\'investissement. Presque aucun ne vous montrera dans quelle mesure sa dernière prévision s\'est révélée exacte.\n\nNos prévisions sont vérifiées à deux moments distincts, car une erreur de prévision et une erreur d\'exécution sont deux problèmes différents, qui appellent deux réponses différentes.',
+      methodologyCapex1Title: 'Premier Point de Contrôle',
+      methodologyCapex1Text: 'Notre estimation CapEx à 5 ans, produite lors de l\'Audit Technique Golden Ticket, est comparée au devis réel fourni par un artisan lorsque les travaux sont effectivement proposés. Cette comparaison est ce qui nous permet de savoir si nos propres prévisions sont fiables, et c\'est ainsi que nous les améliorons.',
+      methodologyCapex2Title: 'Second Point de Contrôle',
+      methodologyCapex2Text: 'Une fois les travaux contractualisés, les dépenses sont suivies poste par poste par rapport au budget, afin que toute dérive de périmètre ou avenant reste visible pendant qu\'elle est encore mineure.',
+      methodologyCapexClosingText: 'Une prévision que l\'on peut confronter à la réalité est un instrument financier. Une prévision que personne ne vérifie n\'est qu\'une estimation bien présentée.',
+
+      methodologyEngineTitle: 'Le Moteur de Prestation',
+      methodologyEngineIntroText: 'Nos quatre services ne sont pas des produits séparés. Ce sont les étapes d\'un même cycle de vie, et chacune produit exactement les données dont l\'étape suivante a besoin.',
+      methodologyEngine1Title: 'Le Gatekeeper',
+      methodologyEngine1Text: 'Un scan technique rapide avant tout engagement de capital. Un verdict Go ou No-Go clair, avant que le problème ne devienne le vôtre.',
+      methodologyEngine2Title: 'L\'Expert',
+      methodologyEngine2Text: 'Un audit technique approfondi en 40 points couvrant cinq catégories fixes : électricité, plomberie et CVC, menuiseries et fermetures, finitions et surfaces, équipements. Le livrable est un rapport d\'état de référence ainsi que la prévision CapEx à 5 ans mentionnée plus haut.',
+      methodologyEngine3Title: 'Le Pilote',
+      methodologyEngine3Text: 'La transition entre l\'acquisition et un actif opérationnel : activation des abonnements, un Coffre-Fort Numérique centralisant chaque document important, et un suivi continu des travaux contractualisés par rapport à la prévision.',
+      methodologyEngine4Title: 'Le Gardien',
+      methodologyEngine4Text: 'Une surveillance protectrice continue pour les biens vacants ou peu occupés : visites programmées selon une fréquence fixe, complétées par un dispositif déclenché par événement qui surveille les données géo-sismiques, incendie et météorologiques en temps réel à proximité de votre bien, afin qu\'une simple visite ne soit pas le seul rempart entre un événement et votre actif.',
+
+      methodologyMandateTitle: 'Où S\'Arrête Notre Mandat',
+      methodologyMandateText1: 'Nous sommes votre directeur technique sur le terrain. Nous diagnostiquons, nous prévoyons, nous coordonnons. Nous n\'exécutons pas nous-mêmes les réparations physiques, nous ne délivrons pas de validation d\'ingénierie civile, et nous n\'effectuons pas de démarches juridiques liées au titre de propriété.',
+      methodologyMandateText2: 'Nous le disons sans détour, car un gestionnaire d\'actifs qui prétend tout faire est généralement celui qui ne fait rien selon un standard vérifiable. Notre valeur réside dans le rempart que nous plaçons entre votre actif et le chaos opérationnel local, non dans une prétention à des compétences que nous ne détenons pas.',
+
+      methodologyClosingTagline: 'Ne vous contentez pas d\'encaisser les loyers. Protégez le béton.',
+      methodologyClosingText: 'Si vous souhaitez voir comment cela s\'applique à un bien en particulier, le Scan Technique Red Flag est le moyen le plus rapide de savoir où vous en êtes.',
+      methodologyClosingBtn: 'Réserver un Scan Red Flag (97€)'
   },
 
   'el': {
@@ -308,6 +416,7 @@ window.translations = {
       navAbout: 'Σχετικά', 
       navReviews: 'Κριτικές',
       navMedia: 'Τύπος',
+      navMethodology: 'Μεθοδολογία',
       navFaq: 'FAQ',
       navContact: 'Επικοινωνία',
 
@@ -437,6 +546,59 @@ window.translations = {
       mediaSubHeader: 'Εστιασμένη Ποιότητα και Βάθος',
       mediaTitle: 'Επιλεγμένα Άρθρα & Τύπος',
       mediaDesc: 'Η τεχνική αυστηρότητα στο προσκήνιο: Αλλάζοντας τα δεδομένα για τις ξένες επενδύσεις στην Αθήνα',
-      mediaGridTitle: 'Επιλεγμένα Εξειδικευμένα Σχόλια'
+      mediaGridTitle: 'Επιλεγμένα Εξειδικευμένα Σχόλια',
+
+      // --- METHODOLOGY PAGE ---
+      methodologyPageTitle: 'Η Μεθοδολογία μας',
+      methodologyPageSub: 'Ένα Σύστημα, Όχι μια Σχέση',
+      methodologyIntroText: 'Οι περισσότεροι ιδιοκτήτες μαθαίνουν πώς διαχειρίζεται πραγματικά το ακίνητό τους με τον δύσκολο τρόπο, αφού κάτι έχει ήδη πάει στραβά. Τότε είναι πλέον αργά για να ρωτήσουν ποια ήταν η διαδικασία, γιατί απλώς δεν υπήρχε καμία.\n\nΗ Klehomerie λειτουργεί διαφορετικά. Κάθε ακίνητο υπό τη διαχείρισή μας ακολουθεί ένα τεκμηριωμένο Σύστημα Διαχείρισης Περιουσιακών Στοιχείων, εμπνευσμένο από το πρότυπο ISO 55001, το διεθνές πρότυπο διαχείρισης περιουσιακών στοιχείων. Αυτό καθορίζει πώς ταξινομούμε τον κίνδυνο, προβλέπουμε τις κεφαλαιακές δαπάνες, αξιολογούμε τους εργολάβους και ανταποκρινόμαστε όταν χρειάζεται επισκευή.\n\nΠιθανότατα δεν θα διαβάσετε ποτέ ολόκληρο το έγγραφο. Δεν πειράζει. Δεν γράφτηκε για να το διαβάσετε εσείς. Γράφτηκε ώστε καθετί που κάνουμε για εσάς να μπορεί να αναχθεί σε μια καθορισμένη πολιτική, όχι σε μια διάθεση της στιγμής.',
+
+      methodologyFoundationTitle: 'Το Θεμέλιο',
+      methodologyFoundationIntro: 'Τρεις δεσμεύσεις στηρίζουν όλα όσα κάνουμε.',
+      methodologyFoundation1Title: 'Απόλυτη Τεχνική Διαφάνεια',
+      methodologyFoundation1Text: 'Λαμβάνετε ανεπεξέργαστα ευρήματα, βασισμένα σε δεδομένα, για την κατάσταση του ακινήτου σας, συμπεριλαμβανομένων και όσων δεν μας συμφέρει εμπορικά να αναφέρουμε.',
+      methodologyFoundation2Title: 'Μηδενική Σύγκρουση Συμφερόντων',
+      methodologyFoundation2Text: 'Εφαρμόζουμε αυστηρή πολιτική μηδενικών προμηθειών με κάθε εργολάβο, μεσίτη ή προμηθευτή με τον οποίο συνεργαζόμαστε. Εκπροσωπούμε το ακίνητο και τον ιδιοκτήτη. Κανέναν άλλον.',
+      methodologyFoundation3Title: 'Προστασία του Τσιμέντου',
+      methodologyFoundation3Text: 'Η μακροπρόθεσμη δομική ακεραιότητα έχει προτεραιότητα έναντι της επιφανειακής, βραχυπρόθεσμης λύσης που φαίνεται καλή σε μια μηνιαία αναφορά αλλά σας κοστίζει διπλάσια σε τρία χρόνια.',
+
+      methodologyClassifyTitle: 'Πώς Ταξινομούμε τα Ευρήματά μας',
+      methodologyClassifyIntro: 'Ένα εύρημα είναι χρήσιμο μόνο αν γνωρίζετε πόσο σοβαρά πρέπει να το αντιμετωπίσετε. Κάθε στοιχείο που επιθεωρούμε βαθμολογείται με μια συνεπή κλίμακα τεσσάρων επιπέδων, την ίδια σε κάθε επίσκεψη, σε κάθε ακίνητο, ώστε μια αναφορά του Ιανουαρίου να σημαίνει ακριβώς το ίδιο με μια αναφορά του Ιουνίου.',
+      methodologyTier1Title: 'Κρίσιμη Βλάβη',
+      methodologyTier1Text: 'Κίνδυνος για την ασφάλεια, τη δομή ή την προστασία, που απαιτεί απόφασή σας άμεσα.',
+      methodologyTier2Title: 'Μικρή Ατέλεια',
+      methodologyTier2Text: 'Κανένας άμεσος κίνδυνος, αλλά πρέπει να συμπεριληφθεί στον προγραμματισμό συντήρησης και CapEx.',
+      methodologyTier3Title: 'Συμμορφώνεται',
+      methodologyTier3Text: 'Πληροί το αναμενόμενο πρότυπο. Δεν απαιτείται ενέργεια.',
+      methodologyTier4Title: 'Δεν Εφαρμόζεται',
+      methodologyTier4Text: 'Δεν αφορά αυτό το ακίνητο.',
+      methodologyClassifyDisclaimerText: 'Τα ευρήματα έχουν διαγνωστικό και παρατηρησιακό χαρακτήρα. Δεν είμαστε πιστοποιημένοι πολιτικοί μηχανικοί, και το σύστημα αυτό δεν αντικαθιστά μια επίσημη Τεχνική Δέουσα Επιμέλεια ή νομικό έλεγχο τίτλων ιδιοκτησίας. Όπου απαιτείται πιστοποίηση ή νομική έγκριση, τη συντονίζουμε μέσω αδειοδοτημένων, ανεξάρτητων επαγγελματιών. Το όριο αυτό είναι σκόπιμο, και το δηλώνουμε ξεκάθαρα αντί να το συγκαλύπτουμε.',
+
+      methodologyCapexTitle: 'Η Πειθαρχία στο CapEx',
+      methodologyCapexIntroText: 'Κάθε σοβαρός διαχειριστής περιουσιακών στοιχείων θα σας δείξει μια πρόβλεψη κεφαλαιακών δαπανών. Σχεδόν κανένας δεν θα σας δείξει πόσο ακριβής ήταν η τελευταία του πρόβλεψη.\n\nΟι δικές μας προβλέψεις ελέγχονται σε δύο ξεχωριστά σημεία, γιατί ένα λάθος στην πρόβλεψη και ένα λάθος στην εκτέλεση είναι δύο διαφορετικά προβλήματα και χρειάζονται δύο διαφορετικές απαντήσεις.',
+      methodologyCapex1Title: 'Πρώτο Σημείο Ελέγχου',
+      methodologyCapex1Text: 'Η 5ετής εκτίμηση CapEx μας, που παράγεται κατά τον Τεχνικό Έλεγχο Golden Ticket, συγκρίνεται με την πραγματική προσφορά που δίνει ένας εργολάβος όταν η εργασία προτείνεται στην πράξη. Αυτή η σύγκριση είναι που μας δείχνει αν οι δικές μας προβλέψεις είναι αξιόπιστες, και έτσι τις βελτιώνουμε.',
+      methodologyCapex2Title: 'Δεύτερο Σημείο Ελέγχου',
+      methodologyCapex2Text: 'Μόλις οι εργασίες ανατεθούν, η δαπάνη παρακολουθείται έναντι του προϋπολογισμού, στοιχείο προς στοιχείο, ώστε η διεύρυνση αντικειμένου και οι τροποποιήσεις να είναι ορατές όσο είναι ακόμα μικρές.',
+      methodologyCapexClosingText: 'Μια πρόβλεψη που μπορείτε να ελέγξετε έναντι της πραγματικότητας είναι ένα χρηματοοικονομικό εργαλείο. Μια πρόβλεψη που κανείς δεν ελέγχει είναι απλώς μια εικασία με καλή παρουσίαση.',
+
+      methodologyEngineTitle: 'Ο Μηχανισμός Παροχής Υπηρεσιών',
+      methodologyEngineIntroText: 'Οι τέσσερις υπηρεσίες μας δεν είναι ξεχωριστά προϊόντα. Είναι στάδια ενός ενιαίου κύκλου ζωής, και κάθε ένα παράγει ακριβώς τα δεδομένα που χρειάζεται το επόμενο στάδιο.',
+      methodologyEngine1Title: 'Ο Ελεγκτής (The Gatekeeper)',
+      methodologyEngine1Text: 'Ένας ταχύς τεχνικός έλεγχος πριν δεσμευτεί κεφάλαιο. Ένα ξεκάθαρο Go ή No-Go, πριν το πρόβλημα γίνει δικό σας.',
+      methodologyEngine2Title: 'Η Αυθεντία (The Authority)',
+      methodologyEngine2Text: 'Ένας εις βάθος τεχνικός έλεγχος 40 σημείων σε πέντε σταθερές κατηγορίες: ηλεκτρολογικά, υδραυλικά και κλιματισμός, ξυλουργικά και κουφώματα, φινιρίσματα και επιφάνειες, εξοπλισμός. Το αποτέλεσμα είναι μια αναφορά βασικής κατάστασης και η 5ετής πρόβλεψη CapEx που αναφέρθηκε παραπάνω.',
+      methodologyEngine3Title: 'Ο Συντονιστής (The Coordinator)',
+      methodologyEngine3Text: 'Η μετάβαση από την αγορά σε ένα λειτουργικό περιουσιακό στοιχείο: ενεργοποίηση παροχών κοινής ωφέλειας, ένα κεντρικό Ψηφιακό Θησαυροφυλάκιο για κάθε σημαντικό έγγραφο, και συνεχής επίβλεψη των αναθεσιμένων εργασιών σε σχέση με την πρόβλεψη.',
+      methodologyEngine4Title: 'Ο Φύλακας (The Guardian)',
+      methodologyEngine4Text: 'Συνεχής προστατευτική παρακολούθηση για κενά ή ελάχιστα κατοικημένα ακίνητα: προγραμματισμένες επισκέψεις σε σταθερή συχνότητα, συν ένα επίπεδο που ενεργοποιείται από συμβάντα και παρακολουθεί δεδομένα γεω-κινδύνου σε πραγματικό χρόνο για σεισμό, πυρκαγιά και ακραία καιρικά φαινόμενα κοντά στο ακίνητό σας, ώστε ένας έλεγχος να μην είναι το μόνο εμπόδιο ανάμεσα σε ένα συμβάν και το ακίνητό σας.',
+
+      methodologyMandateTitle: 'Πού Σταματά η Εντολή μας',
+      methodologyMandateText1: 'Είμαστε ο τεχνικός σας διευθυντής επί τόπου. Διαγιγνώσκουμε, προβλέπουμε, συντονίζουμε. Δεν εκτελούμε εμείς οι ίδιοι τις φυσικές επισκευές, δεν εκδίδουμε εγκρίσεις πολιτικού μηχανικού, και δεν διεκπεραιώνουμε νομικές εργασίες τίτλων ιδιοκτησίας.',
+      methodologyMandateText2: 'Το δηλώνουμε ξεκάθαρα, γιατί ένας διαχειριστής περιουσιακών στοιχείων που ισχυρίζεται ότι κάνει τα πάντα είναι συνήθως αυτός που δεν κάνει τίποτα σε επαληθεύσιμο επίπεδο. Η αξία μας είναι το εμπόδιο που βάζουμε ανάμεσα στο ακίνητό σας και το τοπικό επιχειρησιακό χάος, όχι μια αξίωση εξειδίκευσης που δεν διαθέτουμε.',
+
+      methodologyClosingTagline: 'Μην εισπράττετε απλώς ενοίκια. Προστατέψτε το τσιμέντο.',
+      methodologyClosingText: 'Αν θέλετε να δείτε πώς εφαρμόζεται αυτό σε ένα συγκεκριμένο ακίνητο, το Red Flag Technical Scan είναι ο ταχύτερος τρόπος να μάθετε πού βρίσκεστε.',
+      methodologyClosingBtn: 'Κλείστε Red Flag Scan (97€)'
   }
 };

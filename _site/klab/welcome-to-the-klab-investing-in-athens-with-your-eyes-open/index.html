@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en-Us">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +45,13 @@
     <link rel="alternate" hreflang="el" href="https://klehomerie.com/?lang=el" />
     <link rel="alternate" hreflang="x-default" href="https://klehomerie.com/" />
     
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="icon" href="/assets/images/header-digital-logo.png" type="image/png">
+    
+    <!-- AI LLM Directory Link -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
     <link href="/assets/css/style.css" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -58,81 +66,112 @@
     <link rel="stylesheet" href="/assets/css/cookieconsent.css" media="print" onload="this.media='all'">
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "@id": "https://klehomerie.com/#organization",
-      "name": "Klehomerie Technical Asset Management",
-      "image": "https://klehomerie.com/assets/images/hero-athens-view.webp",
-      "url": "https://klehomerie.com/",
-      "logo": "https://klehomerie.com/assets/images/header-digital-logo.png",
-      "telephone": "+306940206368",
-      "email": "info@klehomerie.com",
-      "priceRange": "€97 - €490",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Erythrou Stavrou 20",
-        "addressLocality": "Tavros",
-        "addressRegion": "Attica",
-        "postalCode": "17778",
-        "addressCountry": "GR"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://klehomerie.com/#website",
+        "url": "https://klehomerie.com/",
+        "name": "Klehomerie",
+        "inLanguage": "en-US"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 37.9625,
-        "longitude": 23.6911
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ],
-        "opens": "09:00",
-        "closes": "20:00"
-      },
-      "areaServed": [ "Athens", "Piraeus", "Glyfada", "Kifisia", "Kypseli", "Pagrati", "Attica" ],
-      "description": "Independent Technical Asset Management and structural property audits for international real estate investors in Athens, Greece. Specializing in red flag due diligence scans and thermal forensic imaging.",
-      "knowsAbout": [ 
-        "Technical Asset Management (TAM)", 
-        "Property Auditing", 
-        "Real Estate Technical Due Diligence", 
-        "Thermal Imaging Forensics", 
-        "Owner's Representation", 
-        "Golden Visa Real Estate Technical Compliance" 
-      ],
-      "founder": { 
-        "@type": "Person", 
-        "name": "Arnaud Zerdab" 
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Technical Audits",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Red Flag Technical Scan",
-              "description": "45-min Visual Diagnostic for pre-acquisition Go/No-Go decisions."
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "@id": "https://klehomerie.com/#organization",
+        "name": "Klehomerie Technical Asset Management",
+        "image": "https://klehomerie.com/assets/images/hero-athens-view.webp",
+        "url": "https://klehomerie.com/",
+        "logo": "https://klehomerie.com/assets/images/header-digital-logo.png",
+        "telephone": "+306940206368",
+        "email": "info@klehomerie.com",
+        "priceRange": "€97 - €490",
+        "inLanguage": "en-US",
+        "sameAs": [
+          "https://www.linkedin.com/company/klehomerie/",
+          "https://www.facebook.com/profile.php?id=61578938233089",
+          "https://instagram.com/klehomerie"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Erythrou Stavrou 20",
+          "addressLocality": "Tavros",
+          "addressRegion": "Attica",
+          "postalCode": "17778",
+          "addressCountry": "GR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 37.9625,
+          "longitude": 23.6911
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" ],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        "areaServed": [ "Athens", "Piraeus", "Glyfada", "Kifisia", "Kypseli", "Pagrati", "Attica" ],
+        "description": "Independent Technical Asset Management and structural property audits for international real estate investors in Athens, Greece. Specializing in red flag due diligence scans and thermal forensic imaging.",
+        "knowsAbout": [ 
+          "Technical Asset Management (TAM)", 
+          "Property Auditing", 
+          "Real Estate Technical Due Diligence", 
+          "Thermal Imaging Forensics", 
+          "Owner's Representation", 
+          "Golden Visa Real Estate Technical Compliance" 
+        ],
+        "founder": { 
+          "@type": "Person", 
+          "name": "Arnaud Zerdab",
+          "jobTitle": "Founder & Technical Asset Manager",
+          "url": "https://klehomerie.com/",
+          "sameAs": [
+            "https://www.linkedin.com/in/arnaudzerdab/" 
+          ]
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Technical Audits",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Red Flag Technical Scan",
+                "description": "45-min Visual Diagnostic for pre-acquisition Go/No-Go decisions."
+              },
+              "price": "97",
+              "priceCurrency": "EUR"
             },
-            "price": "97",
-            "priceCurrency": "EUR"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Golden Ticket Technical Audit",
-              "description": "Full 40-point technical report, moisture mapping, and CapEx budgeting."
-            },
-            "price": "490",
-            "priceCurrency": "EUR"
-          }
-        ]
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Golden Ticket Technical Audit",
+                "description": "Full 40-point technical report, moisture mapping, and CapEx budgeting."
+              },
+              "price": "490",
+              "priceCurrency": "EUR"
+            }
+          ]
+        }
       }
-    }
+    ]
     </script>
 </head>
 <body class="antialiased">
-
+<noscript>
+    <div style="background-color: #1c1a3c; color: white; padding: 1rem; text-align: center;">
+        <p>JavaScript is disabled in your browser. For the best experience, please enable JavaScript. Here are our main links:</p>
+        <div style="margin-top: 0.5rem;">
+            <a href="/#services" style="color: #A94A2D; margin: 0 10px;">Services</a>
+            <a href="/#alacarte" style="color: #A94A2D; margin: 0 10px;">Diagnose</a>
+            <a href="/klab/" style="color: #A94A2D; margin: 0 10px;">Insights</a>
+            <a href="/#contact" style="color: #A94A2D; margin: 0 10px;">Contact</a>
+        </div>
+    </div>
+</noscript>
 <nav id="header" class="fixed w-full top-0 transition-all duration-300 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20"> 
@@ -169,6 +208,7 @@
     </button>
     <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-700 z-50">
         <div class="py-2 flex flex-col">
+            <a href="/methodology/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMethodology">Methodology</a>
             <a href="/testimonials/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navReviews">Reviews</a>
             <a href="/media/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMedia">Press</a>
         </div>
@@ -233,6 +273,7 @@
                 <a href="/klab/" class="text-[--accent-color] font-bold" onclick="toggleMobileMenu()" data-lang-key="navInsights">Insights</a>
                 <div class="flex flex-col space-y-3 pt-2 pb-2">
     <span class="text-gray-400 dark:text-gray-500 font-semibold text-xs uppercase tracking-wider px-2" data-lang-key="navAbout">About</span>
+    <a href="/methodology/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navMethodology">Methodology</a>
     <a href="/testimonials/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navReviews">Reviews</a>
     <a href="/media/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navMedia">Press</a>
 </div>
@@ -589,7 +630,18 @@ Verify this Property (€97)
 <script src="/assets/js/script.js" defer></script>
 <script defer src="/assets/js/cookieconsent.js"></script>
 <script defer src="/assets/js/cookieconsent-config.js"></script>
-
+<!-- Google Analytics Consent Mode Defaults -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500,
+  });
+</script>
 <script type="text/plain" data-category="analytics" src="https://www.googletagmanager.com/gtag/js?id=G-H25GGJWH21"></script>
 <script type="text/plain" data-category="analytics">
     window.dataLayer = window.dataLayer || [];

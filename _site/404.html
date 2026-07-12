@@ -4,41 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    {% set siteUrl = "https://klehomerie.com" %}
-    {# 1. Check if we have a custom image, otherwise use default #}
-    {% set originalImage = image or "/assets/images/hero-athens-view.webp" %}
-
-    <title>{{ title or "Property Audits & Asset Management Athens | Klehomerie" }}</title>
-    <meta name="title" content="{{ title or "Property Audits & Asset Management Athens | Klehomerie" }}">
     
-    <meta name="description" content="{{ summary or description or "Independent technical audits and asset management for Athens real estate investors. Protect your capital with professional structural scans." }}">
+    
+    
+
+    <title>Page Not Found | Klehomerie</title>
+    <meta name="title" content="Page Not Found | Klehomerie">
+    
+    <meta name="description" content="Independent technical audits and asset management for Athens real estate investors. Protect your capital with professional structural scans.">
     
     <meta name="keywords" content="Athens real estate investment, technical due diligence Greece, property audit Athens, asset management for overseas investors, Greek golden visa technical check, building inspection Athens">
     
     <meta name="author" content="Arnaud Zerdab - Klehomerie">
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="canonical" href="https://klehomerie.com{{ page.url }}">
+    <link rel="canonical" href="https://klehomerie.com/404.html">
     
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://klehomerie.com{{ page.url }}">
-    <meta property="og:title" content="{{ title or 'Klehomerie | Asset Management' }}">
-    <meta property="og:description" content="{{ summary or description or 'Technical property audits and asset management in Athens.' }}">
-    <meta property="og:image" content="{{ siteUrl }}{{ originalImage | socialImg }}">
+    <meta property="og:url" content="https://klehomerie.com/404.html">
+    <meta property="og:title" content="Page Not Found | Klehomerie">
+    <meta property="og:description" content="Technical property audits and asset management in Athens.">
+    <meta property="og:image" content="https://klehomerie.com/assets/images/social/hero-athens-view-social.jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Klehomerie">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="{{ siteUrl }}{{ page.url }}">
+    <meta name="twitter:url" content="https://klehomerie.com/404.html">
     <meta name="twitter:site" content="@klehomerie">
     <meta name="twitter:creator" content="@klehomerie">
-    <meta name="twitter:title" content="{{ title or "Property Audits & Asset Management Athens | Klehomerie" }}">
-    <meta name="twitter:description" content="{{ summary or description or "Protect your real estate capital in Athens. Klehomerie provides independent technical audits, thermal imaging red flag scans, and long-term asset management for international investors." }}">
-    <meta name="twitter:image" content="{{ siteUrl }}{{ originalImage | socialImg }}">
+    <meta name="twitter:title" content="Page Not Found | Klehomerie">
+    <meta name="twitter:description" content="Protect your real estate capital in Athens. Klehomerie provides independent technical audits, thermal imaging red flag scans, and long-term asset management for international investors.">
+    <meta name="twitter:image" content="https://klehomerie.com/assets/images/social/hero-athens-view-social.jpeg">
 
     <link rel="alternate" hreflang="en" href="https://klehomerie.com/" />
     <link rel="alternate" hreflang="fr" href="https://klehomerie.com/?lang=fr" />
@@ -194,30 +194,7 @@
 
             <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-6">
-                   {% if page.url == '/' %}
-                       <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" data-lang-key="navServices">Services</button>
-                       <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('alacarte').scrollIntoView({behavior: 'smooth'})" data-lang-key="navAlacarte">Diagnose</button>
-                       
-                       <a href="/klab/" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-bold transition-colors text-[--accent-color]" data-lang-key="navInsights">Insights</a>
-                       
-                       <!-- About Us Dropdown -->
-<div class="relative group inline-block">
-    <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1 focus:outline-none" data-lang-key="navAbout">
-        About
-        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-    </button>
-    <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-700 z-50">
-        <div class="py-2 flex flex-col">
-            <a href="/methodology/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMethodology">Methodology</a>
-            <a href="/testimonials/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navReviews">Reviews</a>
-            <a href="/media/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMedia">Press</a>
-        </div>
-    </div>
-</div>
-
-                       <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('faq').scrollIntoView({behavior: 'smooth'})" data-lang-key="navFaq">FAQ</button>
-                       <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" data-lang-key="navContact">Contact</button>
-                   {% else %}
+                   
                        <a href="/#services" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navServices">Services</a>
                        <a href="/#alacarte" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navAlacarte">Diagnose</a>
                        
@@ -240,7 +217,7 @@
 
                        <a href="/#faq" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navFaq">FAQ</a>
                        <a href="/#contact" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navContact">Contact</a>
-                   {% endif %}
+                   
                     
                    <div class="ml-4 flex items-center border-l border-gray-600 pl-4">
     
@@ -324,7 +301,19 @@
     </div>
 </nav>
 
-{{ content | safe }}
+
+<main class="h-screen flex items-center justify-center bg-[--bg-color] text-center px-6">
+    <div class="max-w-xl">
+        <h1 class="text-6xl font-bold text-[--accent-color] mb-4">404</h1>
+        <h2 class="text-3xl font-bold text-[--title-color] mb-6">Asset Not Found</h2>
+        <p class="text-lg text-[--text-color] mb-8">
+            The page you are looking for has been moved, deleted, or never existed. 
+        </p>
+        <a href="/" class="bg-[--accent-color] hover:bg-[--accent-color-hover] text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+            Return to Homepage
+        </a>
+    </div>
+</main>
 
 <footer class="text-white py-8" style="background-color: #1c1a3c;">
     <div class="container mx-auto px-6 text-center">

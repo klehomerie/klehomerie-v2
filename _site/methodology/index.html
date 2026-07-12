@@ -4,41 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    {% set siteUrl = "https://klehomerie.com" %}
-    {# 1. Check if we have a custom image, otherwise use default #}
-    {% set originalImage = image or "/assets/images/hero-athens-view.webp" %}
-
-    <title>{{ title or "Property Audits & Asset Management Athens | Klehomerie" }}</title>
-    <meta name="title" content="{{ title or "Property Audits & Asset Management Athens | Klehomerie" }}">
     
-    <meta name="description" content="{{ summary or description or "Independent technical audits and asset management for Athens real estate investors. Protect your capital with professional structural scans." }}">
+    
+    
+
+    <title>Our Methodology | Klehomerie</title>
+    <meta name="title" content="Our Methodology | Klehomerie">
+    
+    <meta name="description" content="How Klehomerie&#39;s ISO 55001-referenced Asset Management System governs risk classification, CapEx forecasting, contractor vetting, and reporting for every property we manage.">
     
     <meta name="keywords" content="Athens real estate investment, technical due diligence Greece, property audit Athens, asset management for overseas investors, Greek golden visa technical check, building inspection Athens">
     
     <meta name="author" content="Arnaud Zerdab - Klehomerie">
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="canonical" href="https://klehomerie.com{{ page.url }}">
+    <link rel="canonical" href="https://klehomerie.com/methodology/">
     
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://klehomerie.com{{ page.url }}">
-    <meta property="og:title" content="{{ title or 'Klehomerie | Asset Management' }}">
-    <meta property="og:description" content="{{ summary or description or 'Technical property audits and asset management in Athens.' }}">
-    <meta property="og:image" content="{{ siteUrl }}{{ originalImage | socialImg }}">
+    <meta property="og:url" content="https://klehomerie.com/methodology/">
+    <meta property="og:title" content="Our Methodology | Klehomerie">
+    <meta property="og:description" content="How Klehomerie&#39;s ISO 55001-referenced Asset Management System governs risk classification, CapEx forecasting, contractor vetting, and reporting for every property we manage.">
+    <meta property="og:image" content="https://klehomerie.com/assets/images/social/hero-athens-view-social.jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Klehomerie">
     <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="{{ siteUrl }}{{ page.url }}">
+    <meta name="twitter:url" content="https://klehomerie.com/methodology/">
     <meta name="twitter:site" content="@klehomerie">
     <meta name="twitter:creator" content="@klehomerie">
-    <meta name="twitter:title" content="{{ title or "Property Audits & Asset Management Athens | Klehomerie" }}">
-    <meta name="twitter:description" content="{{ summary or description or "Protect your real estate capital in Athens. Klehomerie provides independent technical audits, thermal imaging red flag scans, and long-term asset management for international investors." }}">
-    <meta name="twitter:image" content="{{ siteUrl }}{{ originalImage | socialImg }}">
+    <meta name="twitter:title" content="Our Methodology | Klehomerie">
+    <meta name="twitter:description" content="How Klehomerie&#39;s ISO 55001-referenced Asset Management System governs risk classification, CapEx forecasting, contractor vetting, and reporting for every property we manage.">
+    <meta name="twitter:image" content="https://klehomerie.com/assets/images/social/hero-athens-view-social.jpeg">
 
     <link rel="alternate" hreflang="en" href="https://klehomerie.com/" />
     <link rel="alternate" hreflang="fr" href="https://klehomerie.com/?lang=fr" />
@@ -194,30 +194,7 @@
 
             <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-6">
-                   {% if page.url == '/' %}
-                       <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" data-lang-key="navServices">Services</button>
-                       <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('alacarte').scrollIntoView({behavior: 'smooth'})" data-lang-key="navAlacarte">Diagnose</button>
-                       
-                       <a href="/klab/" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-bold transition-colors text-[--accent-color]" data-lang-key="navInsights">Insights</a>
-                       
-                       <!-- About Us Dropdown -->
-<div class="relative group inline-block">
-    <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1 focus:outline-none" data-lang-key="navAbout">
-        About
-        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-    </button>
-    <div class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-700 z-50">
-        <div class="py-2 flex flex-col">
-            <a href="/methodology/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMethodology">Methodology</a>
-            <a href="/testimonials/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navReviews">Reviews</a>
-            <a href="/media/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMedia">Press</a>
-        </div>
-    </div>
-</div>
-
-                       <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('faq').scrollIntoView({behavior: 'smooth'})" data-lang-key="navFaq">FAQ</button>
-                       <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" data-lang-key="navContact">Contact</button>
-                   {% else %}
+                   
                        <a href="/#services" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navServices">Services</a>
                        <a href="/#alacarte" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navAlacarte">Diagnose</a>
                        
@@ -240,7 +217,7 @@
 
                        <a href="/#faq" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navFaq">FAQ</a>
                        <a href="/#contact" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navContact">Contact</a>
-                   {% endif %}
+                   
                     
                    <div class="ml-4 flex items-center border-l border-gray-600 pl-4">
     
@@ -324,7 +301,166 @@
     </div>
 </nav>
 
-{{ content | safe }}
+
+<header class="relative pt-32 pb-20 flex items-center justify-center text-center overflow-hidden z-10">
+    <picture class="absolute inset-0 w-full h-full z-0">
+        <source media="(max-width: 768px)" srcset="/assets/images/hero-athens-view-mobile.webp" type="image/webp">
+        <source srcset="/assets/images/hero-athens-view.webp" type="image/webp">
+        <img src="/assets/images/hero-athens-view.webp"
+             alt="Klehomerie Technical Asset Management - Our Methodology Background"
+             class="hero-img object-cover w-full h-full block filter blur-[2px] scale-105"
+             fetchpriority="high"
+             loading="eager">
+    </picture>
+
+    <div class="hero-overlay absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[--bg-color] z-10"></div>
+
+    <div class="relative z-20 px-6 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg tracking-tight" data-lang-key="methodologyPageTitle">Our Methodology</h1>
+        <p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-md" data-lang-key="methodologyPageSub">A System, Not a Relationship</p>
+    </div>
+</header>
+
+<main class="pb-20 bg-[--bg-color]">
+    <div class="container mx-auto px-6 max-w-4xl">
+
+        <div class="prose prose-lg prose-slate dark:prose-invert max-w-none mx-auto prose-p:leading-relaxed prose-p:text-[--text-color] mb-16">
+            <p class="text-lg" data-lang-key="methodologyIntroText"></p>
+        </div>
+
+        <!-- THE FOUNDATION -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+                <h2 class="text-xl font-bold text-[--title-color] tracking-widest uppercase" data-lang-key="methodologyFoundationTitle">The Foundation</h2>
+                <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+            </div>
+            <p class="text-center text-[--text-color] mb-10" data-lang-key="methodologyFoundationIntro">Three commitments sit underneath everything else we do.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg border-t-4 border-[--accent-color]">
+                    <h3 class="text-lg font-bold mb-3 text-[--title-color]" data-lang-key="methodologyFoundation1Title">Absolute Technical Transparency</h3>
+                    <p class="text-sm text-[--text-color] leading-relaxed" data-lang-key="methodologyFoundation1Text">You receive unfiltered, data-driven findings on the condition of your asset, including findings that are commercially inconvenient for us to report.</p>
+                </div>
+                <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg border-t-4 border-[--title-color]">
+                    <h3 class="text-lg font-bold mb-3 text-[--title-color]" data-lang-key="methodologyFoundation2Title">Zero Conflict of Interest</h3>
+                    <p class="text-sm text-[--text-color] leading-relaxed" data-lang-key="methodologyFoundation2Text">We operate a strict zero-kickback, zero-commission policy with every contractor, broker, and vendor we work with. We represent the asset and the owner. Nobody else.</p>
+                </div>
+                <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg border-t-4 border-[--accent-color]">
+                    <h3 class="text-lg font-bold mb-3 text-[--title-color]" data-lang-key="methodologyFoundation3Title">Protecting the Concrete</h3>
+                    <p class="text-sm text-[--text-color] leading-relaxed" data-lang-key="methodologyFoundation3Text">Long-term structural integrity takes priority over the superficial, short-term fix that looks good in a monthly report and costs you twice over in three years.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW WE CLASSIFY -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+                <h2 class="text-xl font-bold text-[--title-color] tracking-widest uppercase" data-lang-key="methodologyClassifyTitle">How We Classify What We Find</h2>
+                <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+            </div>
+            <p class="text-[--text-color] leading-relaxed mb-10" data-lang-key="methodologyClassifyIntro">A finding is only useful if you know how seriously to take it. Every item we inspect is scored against a consistent four-tier scale, the same scale on every visit, on every property, so a report from January means the same thing as a report from June.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                <div class="bg-[--card-bg] p-6 rounded-xl border-l-4 border-red-600 shadow-md">
+                    <h3 class="font-bold text-[--title-color] mb-1" data-lang-key="methodologyTier1Title">Critical Failure</h3>
+                    <p class="text-sm text-[--text-color]" data-lang-key="methodologyTier1Text">A safety, security, or structural risk that needs your decision now.</p>
+                </div>
+                <div class="bg-[--card-bg] p-6 rounded-xl border-l-4 border-amber-500 shadow-md">
+                    <h3 class="font-bold text-[--title-color] mb-1" data-lang-key="methodologyTier2Title">Minor Defect</h3>
+                    <p class="text-sm text-[--text-color]" data-lang-key="methodologyTier2Text">No immediate danger, but it belongs in your maintenance and CapEx planning.</p>
+                </div>
+                <div class="bg-[--card-bg] p-6 rounded-xl border-l-4 border-green-600 shadow-md">
+                    <h3 class="font-bold text-[--title-color] mb-1" data-lang-key="methodologyTier3Title">Conformed</h3>
+                    <p class="text-sm text-[--text-color]" data-lang-key="methodologyTier3Text">Meets the expected standard. No action needed.</p>
+                </div>
+                <div class="bg-[--card-bg] p-6 rounded-xl border-l-4 border-gray-400 shadow-md">
+                    <h3 class="font-bold text-[--title-color] mb-1" data-lang-key="methodologyTier4Title">Not Applicable</h3>
+                    <p class="text-sm text-[--text-color]" data-lang-key="methodologyTier4Text">Not relevant to this asset.</p>
+                </div>
+            </div>
+
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed italic" data-lang-key="methodologyClassifyDisclaimerText">Findings are diagnostic and observational. We are not certified civil engineers, and this system does not replace a formal Technical Due Diligence or legal title search. Where certification or legal sign-off is required, we coordinate it through licensed, independent professionals. That boundary is deliberate, and we state it plainly rather than blur it.</p>
+        </section>
+
+        <!-- THE CAPEX DISCIPLINE -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+                <h2 class="text-xl font-bold text-[--title-color] tracking-widest uppercase" data-lang-key="methodologyCapexTitle">The CapEx Discipline</h2>
+                <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+            </div>
+            <p class="text-[--text-color] leading-relaxed mb-10" data-lang-key="methodologyCapexIntroText"></p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-lg font-bold mb-3 text-[--title-color]" data-lang-key="methodologyCapex1Title">Checkpoint One</h3>
+                    <p class="text-sm text-[--text-color] leading-relaxed" data-lang-key="methodologyCapex1Text">Our 5-Year CapEx estimate, produced during the Golden Ticket Technical Audit, is compared against the real quotation a contractor provides when work is actually proposed. That comparison is how we know whether our own forecasting is reliable, and it is how we improve it.</p>
+                </div>
+                <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-lg font-bold mb-3 text-[--title-color]" data-lang-key="methodologyCapex2Title">Checkpoint Two</h3>
+                    <p class="text-sm text-[--text-color] leading-relaxed" data-lang-key="methodologyCapex2Text">Once work is contracted, spend is tracked against budget, item by item, so scope creep and change orders are visible while they are still small.</p>
+                </div>
+            </div>
+
+            <blockquote class="italic text-base md:text-lg text-gray-700 dark:text-gray-400 border-l-4 border-[--accent-color] pl-4 py-1" data-lang-key="methodologyCapexClosingText">A forecast you can audit against reality is a financial instrument. A forecast nobody checks is a guess with good formatting.</blockquote>
+        </section>
+
+        <!-- THE DELIVERY ENGINE -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+                <h2 class="text-xl font-bold text-[--title-color] tracking-widest uppercase" data-lang-key="methodologyEngineTitle">The Delivery Engine</h2>
+                <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+            </div>
+            <p class="text-[--text-color] leading-relaxed mb-10" data-lang-key="methodologyEngineIntroText">Our four services are not separate products. They are stages in a single lifecycle, and each one produces exactly the data the next stage depends on.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--accent-color] group">
+                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">⛩️</div>
+                    <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="methodologyEngine1Title">The Gatekeeper</h3>
+                    <p class="text-sm text-[--text-color] leading-relaxed" data-lang-key="methodologyEngine1Text">A rapid technical scan before capital is committed. A clear Go or No-Go, before you own the problem.</p>
+                </div>
+                <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--title-color] group">
+                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">👷</div>
+                    <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="methodologyEngine2Title">The Authority</h3>
+                    <p class="text-sm text-[--text-color] leading-relaxed" data-lang-key="methodologyEngine2Text">A deep, 40-point technical audit across five fixed asset classes — electrical, plumbing and HVAC, joinery and closings, finishes and surfaces, amenities. The output is a baseline condition report and the 5-Year CapEx forecast referenced above.</p>
+                </div>
+                <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--accent-color] group">
+                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">📋</div>
+                    <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="methodologyEngine3Title">The Coordinator</h3>
+                    <p class="text-sm text-[--text-color] leading-relaxed" data-lang-key="methodologyEngine3Text">The transition from acquisition to a performing asset — utility activation, a centralized Digital Vault for every document that matters, and ongoing oversight of contracted works against the forecast.</p>
+                </div>
+                <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--title-color] group">
+                    <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🛡️</div>
+                    <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="methodologyEngine4Title">The Guardian</h3>
+                    <p class="text-sm text-[--text-color] leading-relaxed" data-lang-key="methodologyEngine4Text">Continuous protective monitoring for vacant or lightly occupied assets — scheduled visits on a fixed cadence, plus an event-triggered layer that watches live geo-hazard data for seismic, fire, and severe weather risk within range of your property, so a check-in isn't the only thing standing between an event and your asset.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHERE OUR MANDATE ENDS -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+                <h2 class="text-xl font-bold text-[--title-color] tracking-widest uppercase" data-lang-key="methodologyMandateTitle">Where Our Mandate Ends</h2>
+                <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+            </div>
+            <p class="text-[--text-color] leading-relaxed mb-6" data-lang-key="methodologyMandateText1">We are your on-the-ground technical director. We diagnose, we forecast, we coordinate. We do not execute physical repairs ourselves, we do not issue civil engineering sign-offs, and we do not perform legal title work.</p>
+            <p class="text-[--text-color] leading-relaxed" data-lang-key="methodologyMandateText2">We say this outright because an asset manager who claims to do everything is usually the one doing nothing to a verifiable standard. Our value is the barrier we put between your asset and local operational chaos, not a claim to expertise we do not hold.</p>
+        </section>
+
+        <!-- CLOSING CTA -->
+        <section class="text-center bg-[--card-bg] rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-10 md:p-14">
+            <h2 class="text-2xl md:text-3xl font-bold text-[--title-color] mb-4" data-lang-key="methodologyClosingTagline">Don't just collect rent. Protect the concrete.</h2>
+            <p class="text-[--text-color] max-w-xl mx-auto mb-8" data-lang-key="methodologyClosingText">If you would like to see how this applies to a specific property, the Red Flag Technical Scan is the fastest way to find out where you stand.</p>
+            <a href="/#contact" class="inline-block bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-3 px-8 rounded-lg transition-colors" data-lang-key="methodologyClosingBtn">Book a Red Flag Scan (€97)</a>
+        </section>
+
+    </div>
+</main>
+
 
 <footer class="text-white py-8" style="background-color: #1c1a3c;">
     <div class="container mx-auto px-6 text-center">
