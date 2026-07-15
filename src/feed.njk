@@ -14,11 +14,11 @@ eleventyExcludeFromCollections: true
     
     {%- for post in collections.posts %}
     <item>
-      <title><![CDATA[{{ post.data.title }}]]></title>
+      <title><![CDATA[{{ post.data.title | safe }}]]></title>
       <link>https://klehomerie.com{{ post.url }}</link>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
       <guid isPermaLink="true">https://klehomerie.com{{ post.url }}</guid>
-      <description><![CDATA[{{ post.data.summary }}]]></description>
+      <description><![CDATA[{{ post.data.summary | safe }}]]></description>
     </item>
     {%- endfor %}
   </channel>
