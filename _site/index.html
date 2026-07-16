@@ -875,9 +875,18 @@ function resetQuiz() {
         }
     }
 
+    function restartDeckAutoplay() {
+        clearInterval(deckInterval);
+        deckInterval = setInterval(nextDeckCard, 5000);
+    }
+
+    // Any deliberate manual navigation (click on PC, swipe on mobile) goes
+    // through here, so give the user a full 5s to read the card they just
+    // chose instead of auto-advancing on the old cadence.
     function goToDeckIndex(idx) {
         activeDeckIndex = ((idx % deckCards.length) + deckCards.length) % deckCards.length;
         renderDeckState();
+        restartDeckAutoplay();
     }
 
     deckCards.forEach((card, idx) => {
