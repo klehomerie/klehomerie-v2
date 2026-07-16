@@ -75,8 +75,11 @@ document.addEventListener('DOMContentLoaded', function () {
                       <p class="mt-4 text-xs text-gray-400 uppercase tracking-widest">Tap to flip</p>
                   </div>
 
-                  <div class="flip-card-back absolute w-full h-full bg-[--accent-color] text-white rounded-xl shadow-lg flex flex-col items-center justify-center p-4 md:p-8 rotate-y-180 backface-hidden overflow-y-auto">
-                      <div class="text-base font-medium leading-relaxed w-full text-[--card-back-text]" data-lang-key="${pkg.descKey}">Loading info...</div>
+                  <div class="flip-card-back absolute w-full h-full bg-[--accent-color] text-white rounded-xl shadow-lg flex flex-col p-4 md:p-8 rotate-y-180 backface-hidden">
+                      <div class="flex-1 w-full flex items-start overflow-y-auto">
+                          <div class="text-base font-medium leading-relaxed w-full text-[--card-back-text]" data-lang-key="${pkg.descKey}">Loading info...</div>
+                      </div>
+                      <a href="#contact" onclick="event.stopPropagation(); document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="mt-3 flex-shrink-0 self-center inline-flex items-center gap-1 text-sm font-bold text-[--card-back-text] border border-[--card-back-text] rounded-full px-4 py-1.5 hover:bg-white/20 transition-colors" data-lang-key="cardBookCta">Book It Now →</a>
                   </div>
               </div>
           </div>

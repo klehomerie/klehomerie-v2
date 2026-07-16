@@ -55,7 +55,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPlugin(pluginRss);
   // 1. PASSTHROUGH COPIES (Move these files to the live site)
-  eleventyConfig.addPassthroughCopy("src/assets");
+  // NOTE: src/assets/css is intentionally excluded here — style.css is the
+  // Tailwind build entry point and is compiled straight into _site by the
+  // "tailwindcss" step in npm's build/start scripts. Passing it through
+  // verbatim would overwrite the compiled CSS with the unprocessed source.
+  eleventyConfig.addPassthroughCopy("src/assets/images");
+  eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/*.pdf");
@@ -68,8 +73,7 @@ eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_SPECIMEN_AUDIT.pdf");
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf");
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf");
 eleventyConfig.addPassthroughCopy("src/assets/Press_Kit.zip");
-eleventyConfig.addPassthroughCopy("src/assets/images/thermal-audit-example.png");
-eleventyConfig.addPassthroughCopy("src/feed.xsl"); 
+eleventyConfig.addPassthroughCopy("src/feed.xsl");
 // 👇 PASTE THE NEW PIECE HERE 👇
   eleventyConfig.addGlobalData("eleventyComputed", {
     permalink: data => {

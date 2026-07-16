@@ -68,6 +68,7 @@ window.translations = {
       // 4. ACTIVATION (No Price on front)
       pkg_activation_title: 'Asset Activation',
       pkg_activation_desc: '<ul class="list-disc list-inside space-y-3 text-left"><li><b>Utility & Systems Setup</b></li><li>Internet/Water/Electric Transfer</li><li>Digital Vault Creation</li><li>Initial Key Collection</li><li>Inventory (Safety & FF&E)</li></ul>',
+      cardBookCta: 'Book It Now →',
       rateCardTitle: 'How Much Do Technical Audits Cost?',
       rateCardDesc: 'Every fee, itemized: what Asset Guardianship and Technical Audits actually cost in Athens.',
       downloadLabel: 'Download',
@@ -339,6 +340,7 @@ window.translations = {
 
       pkg_activation_title: 'Mise en Service',
       pkg_activation_desc: '<ul class="list-disc list-inside space-y-3 text-left"><li><b>Mise en Service</b></li><li>Transfert Internet/Eau/Élec</li><li>Création Coffre-fort Numérique</li><li>Récupération Initiale des Clés</li><li>Inventaire (Sécurité & Mobilier)</li></ul>',
+      cardBookCta: 'Réserver Maintenant →',
       rateCardTitle: 'Combien coûte notre audit Technique ?',
       rateCardDesc: 'Chaque frais, détaillé : ce que coûtent réellement le gardiennage et les audits techniques à Athènes.',
       downloadLabel: 'Télécharger',
@@ -599,6 +601,7 @@ window.translations = {
 
       pkg_activation_title: 'Asset Activation',
       pkg_activation_desc: '<ul class="list-disc list-inside space-y-3 text-left"><li><b>Ρύθμιση Υπηρεσιών</b></li><li>Μεταφορά Internet/Νερού/Ρεύματος</li><li>Δημιουργία Ψηφιακού Αρχείου</li><li>Αρχική Παραλαβή Κλειδιών</li><li>Απογραφή (Ασφάλεια & Εξοπλισμός)</li></ul>',
+      cardBookCta: 'Κλείστε Τώρα →',
 
       rateCardDesc: 'Κάθε χρέωση, αναλυτικά: όσα πραγματικά κοστίζουν η φύλαξη και οι τεχνικοί έλεγχοι στην Αθήνα.',
       downloadLabel: 'Λήψη',
