@@ -58,6 +58,7 @@ collections:
               - {label: "Location", name: "location", widget: "string", required: false}
               - {label: "Website URL", name: "website", widget: "string", required: false}
               - {label: "Type", name: "type", widget: "select", options: ["client", "contractor"]}
+              - {label: "Review Source", name: "source", widget: "select", options: ["direct", "google"], default: "direct", required: false}
               - {label: "Featured (Show on Homepage slider)", name: "featured", widget: "boolean", default: true}
               - {label: "Image / Avatar", name: "image", widget: "image", required: false}
               - {label: "Original Language", name: "originalLanguage", widget: "select", options: ["en", "fr", "el"]}

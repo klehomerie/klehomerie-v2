@@ -77,6 +77,7 @@ window.translations = {
       
       // --- TESTIMONIALS TITLE ---
       testimonialsTitle: 'Why Do They Trust Us?',
+      googleReviewBadge: 'Google Review',
 
       // --- FAQ ---
       faqTitle: "FAQ",
@@ -282,6 +283,7 @@ window.translations = {
       
       // --- TESTIMONIALS TITLE ---
       testimonialsTitle: 'Validé par Nos Clients & Partenaires',
+      googleReviewBadge: 'Avis Google',
 
       // --- FAQ ---
       faqTitle: "Questions Fréquentes (FAQ)",
@@ -476,6 +478,7 @@ window.translations = {
       
       // --- TESTIMONIALS TITLE ---
       testimonialsTitle: 'Επικυρωμένο από τους Πελάτες & Συνεργάτες μας',
+      googleReviewBadge: 'Κριτική Google',
 
       // --- FAQ ---
       faqTitle: "Συχνές Ερωτήσεις (FAQ)",
