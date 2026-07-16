@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
               if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                   el.placeholder = translation;
               } 
-              else if (key.includes('_desc') || key.includes('aboutText') || key.includes('pkg_') || key.includes('Text') || key.includes('faq_')) {
+              else if (key.includes('_desc') || key.includes('aboutText') || key.includes('pkg_') || key.includes('Text') || key.includes('faq_') || key.startsWith('privacy_') || key.startsWith('terms_')) {
                   el.innerHTML = translation.replace(/\n/g, '<br>');
               } else {
                   el.textContent = translation;
