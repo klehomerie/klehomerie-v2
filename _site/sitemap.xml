@@ -36,15 +36,6 @@
 
   
   
-  <url>
-    <loc>https://klehomerie.com/klab/</loc>
-    <lastmod>2026-07-09T15:04:37.566Z</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  
-
-  
-  
 
   
   
@@ -126,6 +117,15 @@
   <url>
     <loc>https://klehomerie.com/legal/terms/</loc>
     <lastmod>2026-07-16T14:40:45.036Z</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+
+  
+  
+  <url>
+    <loc>https://klehomerie.com/klab/</loc>
+    <lastmod>2026-07-16T15:21:39.237Z</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   

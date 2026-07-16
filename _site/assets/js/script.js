@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { q: 'faq_q1', a: 'faq_a1' }, 
       { q: 'faq_q2', a: 'faq_a2' },
       { q: 'faq_q3', a: 'faq_a3' },
-      { q: 'faq_q4', a: 'faq_a4', img: 'images/thermal-audit-example.png' }, 
+      { q: 'faq_q4', a: 'faq_a4', img: '/assets/images/thermal-audit-example.webp' },
       { q: 'faq_q5', a: 'faq_a5' },
       { q: 'faq_q6', a: 'faq_a6' },
       { q: 'faq_q7', a: 'faq_a7' },
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function () {
                       <p class="mb-4 leading-relaxed" data-lang-key="${item.a}">Loading...</p>
                       ${hasImage ? `
                       <div class="mt-4 relative group cursor-zoom-in w-full md:w-2/3 lg:w-1/2" onclick="openModal('${item.img}')">
-                          <img src="${item.img}" alt="Technical Audit Thermal Scan" class="rounded-lg shadow-md border-2 border-[--accent-color] w-full object-cover h-48 md:h-64">
+                          <img src="${item.img}" alt="Technical Audit Thermal Scan" loading="lazy" class="rounded-lg shadow-md border-2 border-[--accent-color] w-full object-cover h-48 md:h-64">
                           <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg flex items-center justify-center">
                               <span class="opacity-0 group-hover:opacity-100 bg-black bg-opacity-75 text-white text-xs px-2 py-1 rounded">Tap to Zoom 🔍</span>
                           </div>
