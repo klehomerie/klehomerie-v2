@@ -429,6 +429,10 @@ function resetQuiz() {
   /* Hides the ugly scrollbar but keeps the scroll functionality */
   .hide-scrollbar::-webkit-scrollbar { display: none; }
   .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Tells the browser up front that this deck owns horizontal gestures,
+     so it doesn't race our JS to decide between swipe and page-scroll. */
+  #testimonial-deck, .testimonial-card { touch-action: pan-y; }
 </style>
 
 <script>
@@ -509,24 +513,16 @@ function resetQuiz() {
         deck.addEventListener('mouseleave', () => deckHovered = false);
 
         // --- SWIPE-TO-NAVIGATE (touch) ---
+        // CSS `touch-action: pan-y` above already tells the browser this deck
+        // owns horizontal gestures, so there's no need to race it in JS via
+        // preventDefault on touchmove — we only need the start/end delta.
         const SWIPE_THRESHOLD = 40;
         let touchStartX = 0;
-        let touchStartY = 0;
 
         deck.addEventListener('touchstart', (e) => {
             deckHovered = true;
             touchStartX = e.changedTouches[0].screenX;
-            touchStartY = e.changedTouches[0].screenY;
         }, { passive: true });
-
-        deck.addEventListener('touchmove', (e) => {
-            const dx = e.changedTouches[0].screenX - touchStartX;
-            const dy = e.changedTouches[0].screenY - touchStartY;
-            // Only hijack the gesture (block page scroll) once it's clearly horizontal
-            if (Math.abs(dx) > Math.abs(dy)) {
-                e.preventDefault();
-            }
-        }, { passive: false });
 
         deck.addEventListener('touchend', (e) => {
             const deltaX = e.changedTouches[0].screenX - touchStartX;
