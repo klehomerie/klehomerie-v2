@@ -54,6 +54,12 @@ module.exports = function(eleventyConfig) {
   // ADD THIS LINE AT THE TOP
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.addPlugin(pluginRss);
+
+  // Cache-busting query param for style.css/script.js/content.js: these keep
+  // the same filename across deploys but netlify.toml sets a 1-year
+  // "immutable" Cache-Control on /assets/*, so without this, browsers that
+  // cached a previous deploy's copy would never fetch the new one.
+  eleventyConfig.addGlobalData("buildVersion", () => Date.now());
   // 1. PASSTHROUGH COPIES (Move these files to the live site)
   // NOTE: src/assets/css is intentionally excluded here — style.css is the
   // Tailwind build entry point and is compiled straight into _site by the
