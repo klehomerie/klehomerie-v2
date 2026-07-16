@@ -489,11 +489,15 @@ function resetQuiz() {
         }
     }
 
+    function goToDeckIndex(idx) {
+        activeDeckIndex = ((idx % deckCards.length) + deckCards.length) % deckCards.length;
+        renderDeckState();
+    }
+
     deckCards.forEach((card, idx) => {
         card.addEventListener('click', () => {
             if (idx !== activeDeckIndex) {
-                activeDeckIndex = idx;
-                renderDeckState();
+                goToDeckIndex(idx);
             }
         });
     });
@@ -503,8 +507,35 @@ function resetQuiz() {
     if (deck) {
         deck.addEventListener('mouseenter', () => deckHovered = true);
         deck.addEventListener('mouseleave', () => deckHovered = false);
-        deck.addEventListener('touchstart', () => deckHovered = true);
-        deck.addEventListener('touchend', () => {
+
+        // --- SWIPE-TO-NAVIGATE (touch) ---
+        const SWIPE_THRESHOLD = 40;
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        deck.addEventListener('touchstart', (e) => {
+            deckHovered = true;
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+        }, { passive: true });
+
+        deck.addEventListener('touchmove', (e) => {
+            const dx = e.changedTouches[0].screenX - touchStartX;
+            const dy = e.changedTouches[0].screenY - touchStartY;
+            // Only hijack the gesture (block page scroll) once it's clearly horizontal
+            if (Math.abs(dx) > Math.abs(dy)) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        deck.addEventListener('touchend', (e) => {
+            const deltaX = e.changedTouches[0].screenX - touchStartX;
+
+            if (Math.abs(deltaX) > SWIPE_THRESHOLD) {
+                e.preventDefault(); // avoid firing a phantom click on the card under the finger
+                goToDeckIndex(activeDeckIndex + (deltaX < 0 ? 1 : -1));
+            }
+
             setTimeout(() => deckHovered = false, 3000);
         });
     }
