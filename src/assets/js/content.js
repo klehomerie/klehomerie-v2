@@ -124,6 +124,7 @@ window.translations = {
       // --- REALITY CHECK ---
       calcTitle: 'The 14-Point Reality Check',
       calcSubtitle: 'The exact checks I run before recommending any property in Athens. Get the PDF free.',
+      calcButton: 'Get the Reality Check →',
       or: 'or',
       scheduleCall: 'Schedule a Call',
       checklistCtaHeadline: 'Buying in Athens? Get the 14 checks you can run yourself before you sign.',
@@ -378,6 +379,7 @@ window.translations = {
       // --- REALITY CHECK ---
       calcTitle: 'Le Reality Check en 14 Points',
       calcSubtitle: "Les vérifications exactes que j'effectue avant de recommander un bien à Athènes. Recevez le PDF gratuitement.",
+      calcButton: 'Obtenez le Reality Check →',
       or: 'ou',
       scheduleCall: 'Planifier un Appel',
       checklistCtaHeadline: "Vous achetez à Athènes ? Obtenez les 14 vérifications à faire vous-même avant de signer.",
@@ -622,6 +624,7 @@ window.translations = {
       // --- REALITY CHECK ---
       calcTitle: 'Το Reality Check των 14 Σημείων',
       calcSubtitle: 'Οι ακριβείς έλεγχοι που κάνω πριν συστήσω οποιοδήποτε ακίνητο στην Αθήνα. Αποκτήστε το PDF δωρεάν.',
+      calcButton: 'Αποκτήστε το Reality Check →',
       or: 'ή',
       scheduleCall: 'Προγραμματίστε Κλήση',
       checklistCtaHeadline: 'Αγοράζετε στην Αθήνα; Αποκτήστε τους 14 ελέγχους που μπορείτε να κάνετε μόνοι σας πριν υπογράψετε.',
