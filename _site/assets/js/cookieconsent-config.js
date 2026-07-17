@@ -1,5 +1,17 @@
 // This runs the local banner engine and handles your trilingual translation
 window.addEventListener('load', function() {
+  // Bridges the banner's category choice into Google's own Consent Mode
+  // signal. Without this, gtag.js keeps treating analytics_storage as
+  // 'denied' (the default set in base.njk) even after the analytics
+  // script tag itself gets re-enabled, so GA4 silently drops every hit.
+  function updateGtagConsent() {
+    if (typeof gtag !== 'function') return;
+    var granted = CookieConsent.acceptedCategory('analytics');
+    gtag('consent', 'update', {
+      analytics_storage: granted ? 'granted' : 'denied'
+    });
+  }
+
   CookieConsent.run({
     guiOptions: {
       consentModal: {
@@ -12,6 +24,9 @@ window.addEventListener('load', function() {
       necessary: { enabled: true, readOnly: true },
       analytics: { enabled: false }
     },
+    onFirstConsent: updateGtagConsent,
+    onConsent: updateGtagConsent,
+    onChange: updateGtagConsent,
     language: {
       default: 'en',
       translations: {

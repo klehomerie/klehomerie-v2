@@ -52,7 +52,7 @@
     
     <!-- AI LLM Directory Link -->
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
-    <link href="/assets/css/style.css?v=1784219201915" rel="stylesheet">
+    <link href="/assets/css/style.css?v=1784273139068" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -560,6 +560,14 @@
   /* Force Marker Color in Dark Mode */
   .dark .prose ul > li::marker { color: #d1d5db; }
 
+  /* Contain wide tables (e.g. multi-column comparison tables) so they scroll
+     within themselves instead of blowing out the page width on mobile */
+  .prose table {
+      display: block;
+      overflow-x: auto;
+      max-width: 100%;
+  }
+
 </style>
 
 <footer class="text-white py-8" style="background-color: #1c1a3c;">
@@ -595,8 +603,8 @@
     </div>
 </footer>
 
-<script src="/assets/js/content.js?v=1784219201915"></script>
-<script src="/assets/js/script.js?v=1784219201915" defer></script>
+<script src="/assets/js/content.js?v=1784273139068"></script>
+<script src="/assets/js/script.js?v=1784273139068" defer></script>
 <script defer src="/assets/js/cookieconsent.js"></script>
 <script defer src="/assets/js/cookieconsent-config.js"></script>
 <!-- Google Analytics Consent Mode Defaults -->

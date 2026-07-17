@@ -274,4 +274,12 @@ layout: base.njk
   /* Force Marker Color in Dark Mode */
   .dark .prose ul > li::marker { color: #d1d5db; }
 
+  /* Contain wide tables (e.g. multi-column comparison tables) so they scroll
+     within themselves instead of blowing out the page width on mobile */
+  .prose table {
+      display: block;
+      overflow-x: auto;
+      max-width: 100%;
+  }
+
 </style>
