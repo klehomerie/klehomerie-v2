@@ -122,8 +122,6 @@ window.translations = {
       
       or: 'or',
       scheduleCall: 'Schedule a Call',
-      checklistCtaHeadline: 'Buying in Athens? Get the 14 checks you can run yourself before you sign.',
-      checklistCtaBtn: 'Download the Reality Check →',
 
       // --- MEDIA PAGE ---
       mediaSubHeader: 'Depth Over Breadth',
@@ -372,8 +370,6 @@ window.translations = {
       
       or: 'ou',
       scheduleCall: 'Planifier un Appel',
-      checklistCtaHeadline: "Vous achetez à Athènes ? Obtenez les 14 vérifications à faire vous-même avant de signer.",
-      checklistCtaBtn: 'Téléchargez le Reality Check →',
 
       // --- MEDIA PAGE ---
       mediaSubHeader: 'Profondeur, pas volume',
@@ -612,8 +608,6 @@ window.translations = {
       
       or: 'ή',
       scheduleCall: 'Προγραμματίστε Κλήση',
-      checklistCtaHeadline: 'Αγοράζετε στην Αθήνα; Αποκτήστε τους 14 ελέγχους που μπορείτε να κάνετε μόνοι σας πριν υπογράψετε.',
-      checklistCtaBtn: 'Κατεβάστε το Reality Check →',
 
       // --- MEDIA PAGE ---
       mediaSubHeader: 'Εστιασμένη Ποιότητα και Βάθος',

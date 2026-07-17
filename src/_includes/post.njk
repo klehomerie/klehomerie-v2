@@ -160,9 +160,15 @@ layout: base.njk
             </a>
         </div>
         <div class="bg-[--secondary-bg] p-6 rounded-xl border border-[--border-color] sticky top-80">
-            <h3 class="font-bold text-lg mb-2 text-[--title-color]">Free Checklist 📋</h3>
-            <p class="text-sm mb-4 text-[--text-color]">The 14 checks I run before recommending any property.</p>
-            <a href="/checklist/" class="block w-full text-center bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-2 px-4 rounded text-sm transition-colors no-underline">Get the Reality Check →</a>
+            {% if language == "fr" %}
+                <h3 class="font-bold text-lg mb-2 text-[--title-color]">Checklist Gratuite 📋</h3>
+                <p class="text-sm mb-4 text-[--text-color]">Les 14 vérifications que j'effectue avant de recommander un bien.</p>
+                <a href="/fr/checklist/" class="block w-full text-center bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-2 px-4 rounded text-sm transition-colors no-underline">Obtenez le Reality Check →</a>
+            {% else %}
+                <h3 class="font-bold text-lg mb-2 text-[--title-color]">Free Checklist 📋</h3>
+                <p class="text-sm mb-4 text-[--text-color]">The 14 checks I run before recommending any property.</p>
+                <a href="/checklist/" class="block w-full text-center bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-2 px-4 rounded text-sm transition-colors no-underline">Get the Reality Check →</a>
+            {% endif %}
         </div>
     </aside>
 </div>
