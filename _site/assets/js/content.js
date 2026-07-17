@@ -4,7 +4,6 @@ window.translations = {
   'en': {
       // --- NAVIGATION ---
       navServices: 'Services', 
-      navAlacarte: 'Diagnose', 
       navInsights: 'Insights',
       navAbout: 'About',
       navReviews: 'Reviews',
@@ -90,7 +89,7 @@ window.translations = {
       faq_a2: "Traditional property management mainly handles:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Tenant relations</li><li>Occupancy and bookings</li><li>Cleaning, styling, and aesthetic upkeep</li></ul><br>Technical Asset Management, by contrast, focuses on:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Structural integrity</b> of the building</li><li><b>Mechanical systems</b> (HVAC, plumbing, electrical)</li><li><b>Data-driven reporting</b> and long-term planning</li></ul><br>Think of us as the <b>invisible layer protecting your property’s value</b>. We work behind the scenes so your investment keeps performing.",
       
       faq_q3: "When should I order a Red Flag Technical Scan?",
-      faq_a3: "Think of this as your <b>“Go / No-Go” filter</b>. Use it <b>before engaging lawyers or paying for a full audit</b>.<br><br>It focuses on the <b>context and obvious deal-killers</b> that the listing often hides:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>The Environment:</b> Is the street safe at night? Are there abandoned buildings or brothels next door?</li><li><b>The Building (Polikatoikia):</b> Is the entrance maintained? Broken mailboxes or dirty hallways often indicate a bankrupt HOA (Koinochrista).</li><li><b>The Unit:</b> Quick visual check for layout issues, major cracks, or obvious neglect.</li></ul><br><b>Goal:</b> Prevent wasting €500+ on legal fees for a property that should have been rejected from the street corner.<br><br><a href='#alacarte' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Stop wasting time on bad listings. Filter them first.</a>",
+      faq_a3: "Think of this as your <b>“Go / No-Go” filter</b>. Use it <b>before engaging lawyers or paying for a full audit</b>.<br><br>It focuses on the <b>context and obvious deal-killers</b> that the listing often hides:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>The Environment:</b> Is the street safe at night? Are there abandoned buildings or brothels next door?</li><li><b>The Building (Polikatoikia):</b> Is the entrance maintained? Broken mailboxes or dirty hallways often indicate a bankrupt HOA (Koinochrista).</li><li><b>The Unit:</b> Quick visual check for layout issues, major cracks, or obvious neglect.</li></ul><br><b>Goal:</b> Prevent wasting €500+ on legal fees for a property that should have been rejected from the street corner.<br><br><a href='#contact' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Stop wasting time on bad listings. Book a Red Flag Scan.</a>",
       faq_q4: "What does a Golden Ticket Technical Audit include?",
       faq_a4: "The Golden Ticket Audit is a <b>full technical evaluation</b>. We check five key areas:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Electrical Systems:</b> Safety, functionality, and efficiency</li><li><b>Plumbing & HVAC:</b> Flow, pressure, and overall integrity</li><li><b>Joinery & Closings:</b> Doors, windows, and fittings</li><li><b>Finishes & Surfaces:</b> Wear, moisture, and hidden damage</li><li><b>General Environment:</b> Overall building health and safety</li></ul><br>We use advanced tools like <b>thermal imaging</b> and <b>stress tests</b> to produce a <b>risk-rated roadmap</b>, helping you plan maintenance and investments strategically.<br><br><b>Beyond the Surface:</b> Our thermal imaging identifies hidden moisture, insulation gaps, and thermal bridges that the naked eye misses entirely.<br><br><a href='#packages' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Get a comprehensive view of your property’s health with a Golden Ticket Audit.</a>",        
       faq_q5: "How does CapEx planning impact long-term value?",
@@ -121,10 +120,6 @@ window.translations = {
 
       footerText: '© 2026 Klehomerie. Technical Asset Management.',
       
-      // --- REALITY CHECK ---
-      calcTitle: 'The 14-Point Reality Check',
-      calcSubtitle: 'The exact checks I run before recommending any property in Athens. Get the PDF free.',
-      calcButton: 'Get the Reality Check →',
       or: 'or',
       scheduleCall: 'Schedule a Call',
       checklistCtaHeadline: 'Buying in Athens? Get the 14 checks you can run yourself before you sign.',
@@ -268,7 +263,6 @@ window.translations = {
   'fr': {
       // --- NAVIGATION ---
       navServices: 'Services', 
-      navAlacarte: 'Diagnostic', 
       navInsights: 'Analyses',
       navAbout: 'À propos',
       navReviews: 'Avis',
@@ -346,7 +340,7 @@ window.translations = {
       faq_a2: "La gestion immobilière traditionnelle gère principalement :<ul class='list-disc pl-5 mt-2 space-y-1'><li>Les relations locataires</li><li>Le taux d'occupation et les réservations</li><li>Le ménage et la décoration</li></ul><br>Le <b>Technical Asset Management</b>, en revanche, se concentre sur :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>L’intégrité structurelle</b> du bâtiment</li><li><b>Les systèmes mécaniques</b> (CVC/Clim, plomberie, électricité)</li><li><b>Le reporting basé sur la donnée</b> et la planification technique</li></ul><br>Considérez-nous comme le <b>bouclier invisible protégeant la valeur de votre bien</b> : nous travaillons en coulisses pour que votre investissement reste performant.",
       
       faq_q3: "Quand commander un Scan Technique 'Red Flag' ?",
-      faq_a3: "Considérez cela comme votre <b>filtre 'Go / No-Go'</b>. Utilisez-le <b>avant d'engager des avocats ou de payer pour un audit complet</b>.<br><br>Il cible le <b>contexte et les défauts rédhibitoires</b> souvent masqués par l'annonce :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>L'Environnement :</b> La rue est-elle sûre la nuit ? Y a-t-il des squats ou des activités nuisibles à proximité ?</li><li><b>Le Bâtiment (Polikatoikia) :</b> L'entrée est-elle entretenue ? Des boîtes aux lettres fracturées ou des communs sales indiquent souvent un syndic (Koinochrista) en faillite.</li><li><b>L'Unité :</b> Vérification visuelle rapide : incohérences de plan, fissures structurelles ou négligence manifeste.</li></ul><br><b>Objectif :</b> Éviter de gaspiller plus de 500 € en frais juridiques pour une propriété qui aurait dû être écartée depuis le trottoir.<br><br><a href='#alacarte' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Arrêtez de perdre du temps sur des annonces douteuses. Filtrez-les d'abord.</a>",        
+      faq_a3: "Considérez cela comme votre <b>filtre 'Go / No-Go'</b>. Utilisez-le <b>avant d'engager des avocats ou de payer pour un audit complet</b>.<br><br>Il cible le <b>contexte et les défauts rédhibitoires</b> souvent masqués par l'annonce :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>L'Environnement :</b> La rue est-elle sûre la nuit ? Y a-t-il des squats ou des activités nuisibles à proximité ?</li><li><b>Le Bâtiment (Polikatoikia) :</b> L'entrée est-elle entretenue ? Des boîtes aux lettres fracturées ou des communs sales indiquent souvent un syndic (Koinochrista) en faillite.</li><li><b>L'Unité :</b> Vérification visuelle rapide : incohérences de plan, fissures structurelles ou négligence manifeste.</li></ul><br><b>Objectif :</b> Éviter de gaspiller plus de 500 € en frais juridiques pour une propriété qui aurait dû être écartée depuis le trottoir.<br><br><a href='#contact' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Arrêtez de perdre du temps sur des annonces douteuses. Réservez un Red Flag Scan.</a>",        
       faq_q4: "Que comprend un Audit 'Golden Ticket' ?",
       faq_a4: "L'Audit Golden Ticket est une <b>évaluation technique intégrale</b>. Nous analysons cinq domaines clés :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Électricité :</b> Sécurité, mise aux normes et vétusté.</li><li><b>Plomberie & CVC :</b> Débit, pression et intégrité des réseaux.</li><li><b>Menuiseries & Fermetures :</b> État des ouvrants et isolation.</li><li><b>Finitions & Surfaces :</b> Usure, traces d'humidité et vices cachés.</li><li><b>Environnement Général :</b> Salubrité et sécurité des communs.</li></ul><br>Nous utilisons des outils avancés (<b>imagerie thermique</b>, tests de charge) pour produire une <b>feuille de route d'investissement</b>.<br><br><b>Au-delà du visible :</b> Notre caméra thermique détecte l'humidité encastrée, les ruptures d'isolant et les ponts thermiques invisibles à l'œil nu.<br><br><a href='#packages' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Obtenez une vision radiographique de votre propriété avec un Audit Golden Ticket.</a>",        
       faq_q5: "Pourquoi la planification CAPEX la plus vitale ?",
@@ -376,10 +370,6 @@ window.translations = {
       contactButton: 'Demander Protection',
       footerText: '© 2026 Klehomerie. Gestion Technique d\'Actifs.',
       
-      // --- REALITY CHECK ---
-      calcTitle: 'Le Reality Check en 14 Points',
-      calcSubtitle: "Les vérifications exactes que j'effectue avant de recommander un bien à Athènes. Recevez le PDF gratuitement.",
-      calcButton: 'Obtenez le Reality Check →',
       or: 'ou',
       scheduleCall: 'Planifier un Appel',
       checklistCtaHeadline: "Vous achetez à Athènes ? Obtenez les 14 vérifications à faire vous-même avant de signer.",
@@ -513,7 +503,6 @@ window.translations = {
   'el': {
       // --- NAVIGATION ---
       navServices: 'Οι Αποστολές μας', 
-      navAlacarte: 'Διάγνωση', 
       navInsights: 'Άρθρα',
       navAbout: 'Σχετικά', 
       navReviews: 'Κριτικές',
@@ -591,7 +580,7 @@ window.translations = {
       faq_a2: "Η παραδοσιακή διαχείριση ακινήτων χειρίζεται κυρίως:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Σχέσεις με ενοικιαστές</li><li>Πληρότητα και κρατήσεις</li><li>Καθαρισμό και αισθητική συντήρηση</li></ul><br>Αντίθετα, το <b>Technical Asset Management</b> εστιάζει σε:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Δομική ακεραιότητα</b> του κτιρίου</li><li><b>Μηχανολογικά συστήματα</b> (HVAC, υδραυλικά, ηλεκτρικά)</li><li><b>Αναφορές βάσει δεδομένων</b> και μακροπρόθεσμο σχεδιασμό</li></ul><br>Σκεφτείτε μας ως το <b>αόρατο στρώμα προστασίας</b> της αξίας του ακινήτου σας.",
       
       faq_q3: "Πότε να παραγγείλω ένα Red Flag Technical Scan;",
-      faq_a3: "Σκεφτείτε το ως το φίλτρο <b>“Go / No-Go”</b>. Χρησιμοποιήστε το <b>πριν προσλάβετε δικηγόρους ή πληρώσετε για πλήρη έλεγχο</b>.<br><br>Εστιάζει στο <b>πλαίσιο και στους προφανείς ανασταλτικούς παράγοντες</b> που συχνά κρύβει μια αγγελία:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Το Περιβάλλον:</b> Είναι ο δρόμος ασφαλής τη νύχτα; Υπάρχουν εγκαταλελειμμένα κτίρια ή οίκοι ανοχής δίπλα;</li><li><b>Το Κτίριο (Πολυκατοικία):</b> Είναι η είσοδος συντηρημένη; Σπασμένα γραμματοκιβώτια ή βρώμικοι διάδρομοι συχνά υποδηλώνουν προβληματική διαχείριση κοινοχρήστων.</li><li><b>Η Μονάδα:</b> Γρήγορος οπτικός έλεγχος για θέματα διαρρύθμισης, μεγάλες ρωγμές ή εμφανή παραμέληση.</li></ul><br><b>Στόχος:</b> Να αποφύγετε τη σπατάλη €500+ σε δικηγορικά έξοδα για ένα ακίνητο που θα έπρεπε να είχε απορριφθεί από την πρώτη στιγμή.<br><br><a href='#alacarte' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Σταματήστε να χάνετε χρόνο σε κακές αγγελίες. Φιλτράρετέ τις πρώτα.</a>",
+      faq_a3: "Σκεφτείτε το ως το φίλτρο <b>“Go / No-Go”</b>. Χρησιμοποιήστε το <b>πριν προσλάβετε δικηγόρους ή πληρώσετε για πλήρη έλεγχο</b>.<br><br>Εστιάζει στο <b>πλαίσιο και στους προφανείς ανασταλτικούς παράγοντες</b> που συχνά κρύβει μια αγγελία:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Το Περιβάλλον:</b> Είναι ο δρόμος ασφαλής τη νύχτα; Υπάρχουν εγκαταλελειμμένα κτίρια ή οίκοι ανοχής δίπλα;</li><li><b>Το Κτίριο (Πολυκατοικία):</b> Είναι η είσοδος συντηρημένη; Σπασμένα γραμματοκιβώτια ή βρώμικοι διάδρομοι συχνά υποδηλώνουν προβληματική διαχείριση κοινοχρήστων.</li><li><b>Η Μονάδα:</b> Γρήγορος οπτικός έλεγχος για θέματα διαρρύθμισης, μεγάλες ρωγμές ή εμφανή παραμέληση.</li></ul><br><b>Στόχος:</b> Να αποφύγετε τη σπατάλη €500+ σε δικηγορικά έξοδα για ένα ακίνητο που θα έπρεπε να είχε απορριφθεί από την πρώτη στιγμή.<br><br><a href='#contact' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Σταματήστε να χάνετε χρόνο σε κακές αγγελίες. Κλείστε ένα Red Flag Scan.</a>",
       faq_q4: "Τι περιλαμβάνει ένα Golden Ticket Technical Audit;",
       faq_a4: "Το Golden Ticket Audit είναι μια <b>πλήρης τεχνική αξιολόγηση</b>. Ελέγχουμε πέντε βασικούς τομείς:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Ηλεκτρολογικά Συστήματα:</b> Ασφάλεια, λειτουργικότητα και αποδοτικότητα.</li><li><b>Υδραυλικά & HVAC:</b> Ροή, πίεση και συνολική ακεραιότητα.</li><li><b>Κουφώματα & Πόρτες:</b> Πόρτες, παράθυρα και εξαρτήματα.</li><li><b>Φινιρίσματα & Επιφάνειες:</b> Ψηφία υγρασίας, φθορά και κρυφές ζημιές.</li><li><b>Γενικό Περιβάλλον:</b> Συνολική υγεία και ασφάλεια του κτιρίου.</li></ul><br>Χρησιμοποιούμε προηγμένα εργαλεία όπως η <b>θερμογραφία</b> και <b>τεστ καταπόνησης</b> για να δημιουργήσουμε έναν <b>οδικό χάρτη επένδυσης</b>.<br><br><b>Πέρα από την Επιφάνεια:</b> Η θερμογραφία μας εντοπίζει κρυφή υγρασία, κενά μόνωσης και θερμογέφυρες που το γυμνό μάτι χάνει εντελώς.<br><br><a href='#packages' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Αποκτήστε πλήρη εικόνα της υγείας του ακινήτου σας με ένα Golden Ticket Audit.</a>",        
       faq_q5: "Πώς βοηθάει το πλάνο CapEx;",
@@ -621,10 +610,6 @@ window.translations = {
       contactButton: 'Αίτηση Προστασίας',
       footerText: '© 2026 Klehomerie. Τεχνική Διαχείριση Περιουσίας.',
       
-      // --- REALITY CHECK ---
-      calcTitle: 'Το Reality Check των 14 Σημείων',
-      calcSubtitle: 'Οι ακριβείς έλεγχοι που κάνω πριν συστήσω οποιοδήποτε ακίνητο στην Αθήνα. Αποκτήστε το PDF δωρεάν.',
-      calcButton: 'Αποκτήστε το Reality Check →',
       or: 'ή',
       scheduleCall: 'Προγραμματίστε Κλήση',
       checklistCtaHeadline: 'Αγοράζετε στην Αθήνα; Αποκτήστε τους 14 ελέγχους που μπορείτε να κάνετε μόνοι σας πριν υπογράψετε.',
