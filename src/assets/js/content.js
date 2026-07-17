@@ -121,30 +121,13 @@ window.translations = {
 
       footerText: '© 2026 Klehomerie. Technical Asset Management.',
       
-      // --- RISK CALCULATOR ---
-      calcTitle: 'The "Athens Asset" Risk Index',
-      calcSubtitle: 'Do you really know what you are buying? Answer 5 technical questions to reveal your hidden exposure.',
-      
-      calc_q1: '1. Electrical: When you press the "Test" button on the fuse box, does the power cut instantly?', 
-      calc_q2: '2. Plumbing: If you close all taps and watch the water meter for 5 mins, does the dial move?', 
-      calc_q3: '3. Security: Does the lock cylinder protrude from the door (not flush)?', 
-      calc_q4: '4. Heating: Are the bottoms of the radiators cold while the tops are hot?', 
-      calc_q5: '5. Envelope: Have you inspected the balcony drainage during a heavy storm?', 
-
-      ans_yes: 'Yes / Checked',
-      ans_no: 'No / Failed',
-      ans_idk: 'I don\'t know (Not Checked)',
-
-      calcButton: 'Calculate Risk Score ⚠️',
-      resultHigh: 'CRITICAL RISK',
-      resultMod: 'MODERATE EXPOSURE',
-      resultLow: 'SECURE',
-      
-      resultTextHigh: 'You are flying blind on critical infrastructure. "Don\'t know" is the most dangerous answer in real estate.',
-      resultTextLow: 'Good technical awareness. But a visual check isn\'t an audit.',
-      downloadCTA: 'Download the 16-Point Checklist PDF ⬇️',
-      or: 'or', 
+      // --- REALITY CHECK ---
+      calcTitle: 'The 14-Point Reality Check',
+      calcSubtitle: 'The exact checks I run before recommending any property in Athens. Get the PDF free.',
+      or: 'or',
       scheduleCall: 'Schedule a Call',
+      checklistCtaHeadline: 'Buying in Athens? Get the 14 checks you can run yourself before you sign.',
+      checklistCtaBtn: 'Download the Reality Check →',
 
       // --- MEDIA PAGE ---
       mediaSubHeader: 'Depth Over Breadth',
@@ -392,30 +375,13 @@ window.translations = {
       contactButton: 'Demander Protection',
       footerText: '© 2026 Klehomerie. Gestion Technique d\'Actifs.',
       
-      // --- RISK CALCULATOR ---
-      calcTitle: 'Le "Athens Asset" Risk Index',
-      calcSubtitle: 'Savez-vous vraiment ce que vous achetez ? 5 questions techniques pour révéler votre exposition réelle.',
-
-      calc_q1: '1. Élec : Le disjoncteur saute-t-il instantanément via le bouton "Test" du différentiel ?',
-      calc_q2: '2. Plomberie : Robinets fermés, le compteur d\'eau tourne-t-il encore (test 5 min) ?',
-      calc_q3: '3. Sûreté : Le cylindre de la serrure dépasse-t-il de la porte (prise pour arrachement) ?',
-      calc_q4: '4. Chauffage : Les radiateurs sont-ils froids en bas mais chauds en haut (embouage) ?',
-      calc_q5: '5. Enveloppe : Avez-vous vérifié l\'évacuation du balcon sous une pluie battante ?',
-
-      ans_yes: 'Oui / Vérifié',
-      ans_no: 'Non / Échec',
-      ans_idk: 'Je ne sais pas (Non Vérifié)',
-
-      calcButton: 'Calculer le Score de Risque ⚠️',
-      resultHigh: 'RISQUE CRITIQUE',
-      resultMod: 'EXPOSITION MODÉRÉE',
-      resultLow: 'SÉCURISÉ',
-
-      resultTextHigh: 'Vous naviguez à l\'aveugle sur des points critiques. "Je ne sais pas" est la réponse la plus coûteuse en immobilier.',
-      resultTextLow: 'Bonne conscience technique. Mais une vérification visuelle ne remplace pas un audit.',
-      downloadCTA: 'Télécharger la Checklist en 16 Points ⬇️',
-      or: 'ou', 
+      // --- REALITY CHECK ---
+      calcTitle: 'Le Reality Check en 14 Points',
+      calcSubtitle: "Les vérifications exactes que j'effectue avant de recommander un bien à Athènes. Recevez le PDF gratuitement.",
+      or: 'ou',
       scheduleCall: 'Planifier un Appel',
+      checklistCtaHeadline: "Vous achetez à Athènes ? Obtenez les 14 vérifications à faire vous-même avant de signer.",
+      checklistCtaBtn: 'Téléchargez le Reality Check →',
 
       // --- MEDIA PAGE ---
       mediaSubHeader: 'Profondeur, pas volume',
@@ -653,30 +619,13 @@ window.translations = {
       contactButton: 'Αίτηση Προστασίας',
       footerText: '© 2026 Klehomerie. Τεχνική Διαχείριση Περιουσίας.',
       
-      // --- RISK CALCULATOR ---
-      calcTitle: 'Δείκτης Κινδύνου "Athens Asset"',
-      calcSubtitle: 'Ξέρετε πραγματικά τι αγοράζετε; Απαντήστε σε 5 τεχνικές ερωτήσεις.',
-
-      calc_q1: '1. Ηλεκτρολογικά: Πέφτει το ρεύμα αμέσως όταν πατάτε το κουμπί "Test" στον πίνακα;',
-      calc_q2: '2. Υδραυλικά: Αν κλείσετε τις βρύσες, γυρίζει ο μετρητής νερού (έλεγχος 5 λεπτών);',
-      calc_q3: '3. Ασφάλεια: Προεξέχει ο κύλινδρος της κλειδαριάς από την πόρτα;',
-      calc_q4: '4. Θέρμανση: Είναι κρύα τα σώματα καλοριφέρ στο κάτω μέρος ενώ καίνε επάνω;',
-      calc_q5: '5. Δομή: Έχετε ελέγξει την απορροή του μπαλκονιού κατά τη διάρκεια καταιγίδας;',
-
-      ans_yes: 'Ναι / Ελέγχθηκε',
-      ans_no: 'Όχι / Απέτυχε',
-      ans_idk: 'Δεν ξέρω (Μη Ελεγμένο)',
-
-      calcButton: 'Υπολογισμός Κινδύνου ⚠️',
-      resultHigh: 'ΚΡΙΣΙΜΟΣ ΚΙΝΔΥΝΟΣ',
-      resultMod: 'ΜΕΤΡΙΟΣ ΚΙΝΔΥΝΟΣ',
-      resultLow: 'ΑΣΦΑΛΕΣ',
-
-      resultTextHigh: 'Βαδίζετε στα τυφλά σε κρίσιμα σημεία. Το "Δεν ξέρω" είναι η πιο επικίνδυνη απάντηση.',
-      resultTextLow: 'Καλή τεχνική αντίληψη. Αλλά ο οπτικός έλεγχος δεν είναι Audit.',
-      downloadCTA: 'Κατεβάστε τη Λίστα Ελέγχου (PDF) ⬇️',
-      or: 'ή', 
+      // --- REALITY CHECK ---
+      calcTitle: 'Το Reality Check των 14 Σημείων',
+      calcSubtitle: 'Οι ακριβείς έλεγχοι που κάνω πριν συστήσω οποιοδήποτε ακίνητο στην Αθήνα. Αποκτήστε το PDF δωρεάν.',
+      or: 'ή',
       scheduleCall: 'Προγραμματίστε Κλήση',
+      checklistCtaHeadline: 'Αγοράζετε στην Αθήνα; Αποκτήστε τους 14 ελέγχους που μπορείτε να κάνετε μόνοι σας πριν υπογράψετε.',
+      checklistCtaBtn: 'Κατεβάστε το Reality Check →',
 
       // --- MEDIA PAGE ---
       mediaSubHeader: 'Εστιασμένη Ποιότητα και Βάθος',

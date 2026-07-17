@@ -52,7 +52,7 @@
     
     <!-- AI LLM Directory Link -->
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt" />
-    <link href="/assets/css/style.css?v=1784274826182" rel="stylesheet">
+    <link href="/assets/css/style.css?v=1784322459654" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -439,211 +439,21 @@
     </section>
 
 <section id="alacarte" class="py-20 bg-[--secondary-bg] transition-colors duration-300">
-    <div class="container mx-auto px-6 max-w-4xl">
-        
-        <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold mb-4 text-[--title-color]" data-lang-key="calcTitle">The "Athens Asset" Risk Index</h2>
-            <p class="text-[--text-color]" data-lang-key="calcSubtitle">Do you really know what you are buying?</p>
+    <div class="container mx-auto px-6 max-w-2xl text-center">
+
+        <div class="mb-10">
+            <h2 class="text-3xl font-bold mb-4 text-[--title-color]" data-lang-key="calcTitle">The 14-Point Reality Check</h2>
+            <p class="text-[--text-color]" data-lang-key="calcSubtitle">The exact checks I run before recommending any property in Athens. Get the PDF free.</p>
         </div>
 
-        <div id="quiz-questions" class="bg-[--card-bg] p-8 md:p-12 rounded-xl shadow-lg border-t-4 border-[--accent-color]">
-            <form id="riskForm" class="space-y-6">
-                
-                <div>
-                    <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q1">1. Electrical Check...</p>
-                    <div class="flex flex-wrap gap-4 text-sm">
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q1" value="0" class="accent-[--accent-color]" required> 
-                            <span data-lang-key="ans_yes" class="text-[--text-color]">Yes</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q1" value="10" class="accent-[--accent-color]"> 
-                            <span data-lang-key="ans_no" class="text-[--text-color]">No</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q1" value="20" class="accent-[--accent-color]"> 
-                            <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
-                        </label>
-                    </div>
-                 </div>
-
-                <div>
-                    <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q2">2. Plumbing Check...</p>
-                    <div class="flex flex-wrap gap-4 text-sm">
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q2" value="0" class="accent-[--accent-color]" required> 
-                            <span data-lang-key="ans_yes" class="text-[--text-color]">No (Good)</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q2" value="20" class="accent-[--accent-color]"> 
-                            <span data-lang-key="ans_no" class="text-[--text-color]">Yes (Moves)</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q2" value="20" class="accent-[--accent-color]"> 
-                            <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div>
-                    <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q3">3. Security Check...</p>
-                    <div class="flex flex-wrap gap-4 text-sm">
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q3" value="15" class="accent-[--accent-color]" required> 
-                            <span data-lang-key="ans_yes" class="text-[--text-color]">Yes (Protrudes)</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q3" value="0" class="accent-[--accent-color]"> 
-                            <span data-lang-key="ans_no" class="text-[--text-color]">No (Flush)</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q3" value="15" class="accent-[--accent-color]"> 
-                            <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div>
-                    <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q4">4. Heating Check...</p>
-                    <div class="flex flex-wrap gap-4 text-sm">
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q4" value="10" class="accent-[--accent-color]" required> 
-                            <span data-lang-key="ans_yes" class="text-[--text-color]">Yes (Cold bottom)</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q4" value="0" class="accent-[--accent-color]"> 
-                            <span data-lang-key="ans_no" class="text-[--text-color]">No (Uniform)</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q4" value="10" class="accent-[--accent-color]"> 
-                            <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div>
-                    <p class="font-bold text-[--title-color] mb-2" data-lang-key="calc_q5">5. Storm Check...</p>
-                    <div class="flex flex-wrap gap-4 text-sm">
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q5" value="0" class="accent-[--accent-color]" required> 
-                            <span data-lang-key="ans_yes" class="text-[--text-color]">Yes</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q5" value="20" class="accent-[--accent-color]"> 
-                            <span data-lang-key="ans_no" class="text-[--text-color]">No</span>
-                        </label>
-                        <label class="flex items-center space-x-2 cursor-pointer">
-                            <input type="radio" name="q5" value="20" class="accent-[--accent-color]"> 
-                            <span data-lang-key="ans_idk" class="text-[--text-color]">I don't know</span>
-                        </label>
-                    </div>
-                 </div>
-
-                <button type="button" onclick="calculateRisk()" 
-                        class="w-full bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300 mt-4 shadow-md" 
-                        data-lang-key="calcButton">
-                  Calculate Risk Score ⚠️
-                </button>
-            </form>
-        </div>
-
-        <div id="quiz-result" class="hidden bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-2xl border-2 border-[--accent-color] text-center">
-            
-            <div id="result-icon" class="text-6xl mb-2">🛡️</div>
-            <div id="score-text-display" class="text-2xl font-bold text-[--accent-color] mb-4"></div>
-
-            <h3 id="result-title" class="text-3xl font-bold mb-4 text-[--title-color]"></h3>
-            <p id="result-desc" class="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"></p>
-
-            <div class="bg-blue-50 dark:bg-slate-700/50 p-6 rounded-xl border border-blue-100 dark:border-slate-600 max-w-lg mx-auto">
-                <p class="font-bold text-[--title-color] mb-2">Get the Full Protection Pack</p>
-                <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                    Don't rely on just 5 questions. Enter your email to receive the official <strong>16-Point Audit Checklist</strong> and verify the rest.
-                </p>
-                
-                <form name="risk-assessment-lead" method="POST" action="/success/" netlify class="flex flex-col gap-3">
-                    <input type="hidden" name="risk_score" id="hidden-risk-score" value="">
-                    
-                    <input type="email" name="email" required placeholder="Enter your email address" 
-                           class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-slate-800 focus:ring-2 focus:ring-[--accent-color] outline-none">
-                    
-                    <button type="submit" class="w-full bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                        Send me the Checklist 📩
-                    </button>
-                </form>
+        <div class="bg-[--card-bg] p-8 md:p-12 rounded-xl shadow-lg border-t-4 border-[--accent-color]">
+            <div class="max-w-[540px] mx-auto">
+                <iframe width="540" height="305" src="https://88c314d5.sibforms.com/v2/serve/MUIFAHt1bYk83P2EA4AVvLEvNEXUakvXjLDjRjK8mSCIDl4H-7CC-ZKXqIMykh38oUx0myTX0cQnPN52tgYSOQ_-fo-UvLX0b2cIuZ-txMtIPEK0Y2bFAbP-DQGP1bMdKOhVS8L3LQDQCh9dFPzArnEkKnjKFSDqYFahIg4YdAelWKLrxcnLkE38tsO7Tac9LerK4QvcRJ_6dXikHA==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
             </div>
-
-            <button onclick="resetQuiz()" class="mt-6 text-sm text-gray-400 hover:text-[--accent-color] underline">
-                Retake Quiz
-            </button>
         </div>
 
     </div>
 </section>
-
-<script>
-function calculateRisk() {
-    const form = document.getElementById('riskForm');
-    const formData = new FormData(form);
-    let score = 0;
-    let answered = 0;
-    // Sum up the weighted values (0, 10, 15, 20)
-    for (let pair of formData.entries()) {
-        score += parseInt(pair[1]);
-        answered++;
-    }
-
-    if (answered < 5) {
-        alert("Please answer all 5 questions.");
-        return;
-    }
-
-    // Elements
-    const quizContainer = document.getElementById('quiz-questions');
-    const resultContainer = document.getElementById('quiz-result');
-    const title = document.getElementById('result-title');
-    const desc = document.getElementById('result-desc');
-    const icon = document.getElementById('result-icon');
-    const scoreDisplay = document.getElementById('score-text-display');
-    const hiddenInput = document.getElementById('hidden-risk-score');
-    
-    // Switch View
-    quizContainer.classList.add('hidden');
-    resultContainer.classList.remove('hidden');
-
-    // LOGIC: Max Score is around 85.
-    // Low: 0-20 | Med: 21-50 | High: 51+
-    
-    if (score >= 50) {
-        // HIGH RISK
-        icon.innerText = "🚨";
-        title.innerText = "Critical Risk Detected";
-        scoreDisplay.innerText = "Risk Score: " + score + " / 85";
-        desc.innerText = "Your asset is showing significant technical liabilities. Proceed with extreme caution.";
-        hiddenInput.value = "High Risk (" + score + ")";
-    } else if (score >= 20) {
-        // MEDIUM RISK
-        icon.innerText = "⚠️";
-        title.innerText = "Moderate Caution Required";
-        scoreDisplay.innerText = "Risk Score: " + score + " / 85";
-        desc.innerText = "There are red flags. Before you sign, you need to verify if these are cosmetic or structural.";
-        hiddenInput.value = "Medium Risk (" + score + ")";
-    } else {
-        // LOW RISK
-        icon.innerText = "✅";
-        title.innerText = "Preliminary Pass";
-        scoreDisplay.innerText = "Risk Score: " + score + " / 85";
-        desc.innerText = "The basics look solid. However, fresh paint can hide many sins. Use the full checklist to be sure.";
-        hiddenInput.value = "Low Risk (" + score + ")";
-    }
-}
-
-function resetQuiz() {
-    document.getElementById('riskForm').reset();
-    document.getElementById('quiz-result').classList.add('hidden');
-    document.getElementById('quiz-questions').classList.remove('hidden');
-}
-</script>
 
 <section id="testimonials-slider" class="py-20 bg-[--secondary-bg] overflow-hidden">
     <div class="container mx-auto px-6 max-w-7xl text-center">
@@ -1039,10 +849,10 @@ function resetQuiz() {
     </div>
 </footer>
 
-<script src="/assets/js/content.js?v=1784274826182"></script>
-<script src="/assets/js/script.js?v=1784274826182" defer></script>
-<script defer src="/assets/js/cookieconsent.js?v=1784274826182"></script>
-<script defer src="/assets/js/cookieconsent-config.js?v=1784274826182"></script>
+<script src="/assets/js/content.js?v=1784322459654"></script>
+<script src="/assets/js/script.js?v=1784322459654" defer></script>
+<script defer src="/assets/js/cookieconsent.js?v=1784322459654"></script>
+<script defer src="/assets/js/cookieconsent-config.js?v=1784322459654"></script>
 <!-- Google Analytics Consent Mode Defaults -->
 <script>
   window.dataLayer = window.dataLayer || [];

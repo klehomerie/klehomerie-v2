@@ -97,15 +97,6 @@
   
   
   <url>
-    <loc>https://klehomerie.com/</loc>
-    <lastmod>2026-07-16T13:14:25.730Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-
-  
-  
-  <url>
     <loc>https://klehomerie.com/legal/privacy/</loc>
     <lastmod>2026-07-16T14:40:26.531Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -127,6 +118,33 @@
     <loc>https://klehomerie.com/klab/</loc>
     <lastmod>2026-07-16T15:32:50.672Z</lastmod>
     <changefreq>monthly</changefreq>
+  </url>
+  
+
+  
+  
+  <url>
+    <loc>https://klehomerie.com/checklist/</loc>
+    <lastmod>2026-07-17T20:59:15.200Z</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+
+  
+  
+  <url>
+    <loc>https://klehomerie.com/fr/checklist/</loc>
+    <lastmod>2026-07-17T20:59:25.927Z</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  
+
+  
+  
+  <url>
+    <loc>https://klehomerie.com/</loc>
+    <lastmod>2026-07-17T21:04:05.195Z</lastmod>
+    <changefreq>daily</changefreq>
   </url>
   
 
