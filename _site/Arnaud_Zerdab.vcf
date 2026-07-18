@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Zerdab;Arnaud;;;
+FN:Arnaud Zerdab
+ORG:Klehomerie
+TITLE:Technical Asset Manager & Founder
+TEL;TYPE=WORK,VOICE:+306940206368
+EMAIL;TYPE=WORK:azerdab@klehomerie.com
+URL:https://klehomerie.com
+ADR;TYPE=WORK:;;Erythrou Stavrou 20;Tavros;;177 78;Greece
+PHOTO;VALUE=URI:https://klehomerie.com/arnaud-zerdab-logo.png
+LOGO;VALUE=URI:https://klehomerie.com/arnaud-zerdab-logo.png
+END:VCARD

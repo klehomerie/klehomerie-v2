@@ -123,6 +123,12 @@ window.translations = {
       or: 'or',
       scheduleCall: 'Schedule a Call',
 
+      vcardEyebrow: 'Stay reachable',
+      vcardTitleText: 'Save my <span class="text-[--accent-color]">direct line</span>.',
+      vcardLede: "Buildings don't schedule their emergencies. Save my contact now, and reaching me is one tap when something moves.",
+      vcardBtn: 'Save my contact',
+      vcardScan: 'Scan to save',
+
       // --- MEDIA PAGE ---
       mediaSubHeader: 'Depth Over Breadth',
       mediaTitle: 'Curated Press Dossier',
@@ -371,6 +377,12 @@ window.translations = {
       or: 'ou',
       scheduleCall: 'Planifier un Appel',
 
+      vcardEyebrow: 'Restez joignable',
+      vcardTitleText: 'Enregistrez ma <span class="text-[--accent-color]">ligne directe</span>.',
+      vcardLede: "Les immeubles ne planifient pas leurs urgences. Enregistrez mon contact dès maintenant : me joindre ne prendra qu'un geste le jour où ça compte.",
+      vcardBtn: 'Enregistrer mon contact',
+      vcardScan: 'Scannez pour enregistrer',
+
       // --- MEDIA PAGE ---
       mediaSubHeader: 'Profondeur, pas volume',
       mediaTitle: 'Dossier de Presse',
@@ -608,6 +620,12 @@ window.translations = {
       
       or: 'ή',
       scheduleCall: 'Προγραμματίστε Κλήση',
+
+      vcardEyebrow: 'Μείνετε σε επαφή',
+      vcardTitleText: 'Αποθηκεύστε την <span class="text-[--accent-color]">απευθείας γραμμή</span> μου.',
+      vcardLede: 'Τα κτίρια δεν προγραμματίζουν τις κρίσεις τους. Αποθηκεύστε τώρα την επαφή μου — όταν χρειαστεί, θα με βρείτε με ένα άγγιγμα.',
+      vcardBtn: 'Αποθήκευση επαφής',
+      vcardScan: 'Σαρώστε για αποθήκευση',
 
       // --- MEDIA PAGE ---
       mediaSubHeader: 'Εστιασμένη Ποιότητα και Βάθος',

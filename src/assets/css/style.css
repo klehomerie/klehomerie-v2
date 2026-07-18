@@ -13,7 +13,8 @@
   --card-bg: #FFFFFF;
   --border-color: #E0C097;
   --tooltip-text-color: #FFFFFF;
-  --card-back-text: #0C2D48; 
+  --card-back-text: #0C2D48;
+  --qr-module-color: #0C2D48;
 }
 /* --- GLOBAL SCALING (ZOOM EFFECT) --- */
 html {
@@ -42,6 +43,7 @@ html.dark {
   --border-color: #4A5568;
   --tooltip-text-color: #334155;
   --card-back-text: #0C2D48;
+  --qr-module-color: #4A5568;
 }
 
 /* --- GENERAL STYLES --- */

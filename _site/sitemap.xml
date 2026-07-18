@@ -124,15 +124,6 @@
   
   
   <url>
-    <loc>https://klehomerie.com/</loc>
-    <lastmod>2026-07-17T21:17:41.638Z</lastmod>
-    <changefreq>daily</changefreq>
-  </url>
-  
-
-  
-  
-  <url>
     <loc>https://klehomerie.com/checklist/</loc>
     <lastmod>2026-07-17T21:58:34.775Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -181,6 +172,15 @@
     <loc>https://klehomerie.com/fr/checklist/confirmed/</loc>
     <lastmod>2026-07-18T07:40:05.969Z</lastmod>
     <changefreq>monthly</changefreq>
+  </url>
+  
+
+  
+  
+  <url>
+    <loc>https://klehomerie.com/</loc>
+    <lastmod>2026-07-18T14:12:09.020Z</lastmod>
+    <changefreq>daily</changefreq>
   </url>
   
 

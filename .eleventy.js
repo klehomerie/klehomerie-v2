@@ -80,6 +80,8 @@ eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_EN.pd
 eleventyConfig.addPassthroughCopy("src/KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf");
 eleventyConfig.addPassthroughCopy("src/assets/Press_Kit.zip");
 eleventyConfig.addPassthroughCopy("src/feed.xsl");
+eleventyConfig.addPassthroughCopy("src/Arnaud_Zerdab.vcf");
+eleventyConfig.addPassthroughCopy("src/arnaud-zerdab-logo.png");
 // 👇 PASTE THE NEW PIECE HERE 👇
   eleventyConfig.addGlobalData("eleventyComputed", {
     permalink: data => {
