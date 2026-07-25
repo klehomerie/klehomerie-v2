@@ -74,7 +74,27 @@ window.translations = {
       callToActionTitle: "Not sure which package fits your situation?",
       callToActionBtn: "Book a 15-min clarity call",
       vatDisclaimer: 'All prices are exclusive of VAT. VAT 24% is extra.',
-      
+
+      // --- FULL RATE CARD TABLE ---
+      rc_redflag_name: 'Red Flag Technical Scan',
+      rc_redflag_desc: '45-min Visual Diagnostic for pre-acquisition Go/No-Go decisions.',
+      rc_golden_name: 'Golden Ticket Technical Audit',
+      rc_golden_desc: 'Full 40-point technical report, moisture mapping, and CapEx budgeting.',
+      rc_amcore_name: 'Asset Management Core',
+      rc_amcore_desc: 'Monthly Asset Management: tenant issue triage, technical issue filtering, 6-month/turnover visual check.',
+      rc_ampremium_name: 'Asset Management Premium',
+      rc_ampremium_desc: 'Monthly Asset Management Core plus 2x annual technical inspections, proactive maintenance plan, priority vendor lane.',
+      rc_guardcore_name: 'Vacant Asset Guardianship Core',
+      rc_guardcore_desc: 'Monthly Vacant Asset Guardianship: 1 visit/month, humidity control, security check, storm damage assessment.',
+      rc_guardpremium_name: 'Vacant Asset Guardianship Premium',
+      rc_guardpremium_desc: 'Monthly Vacant Asset Guardianship Core plus 2 visits/month, system flushing, humidity airing, and Guest Key Holding.',
+      rc_activation_name: 'Asset Activation',
+      rc_activation_desc: 'Utility switch, key collection, Digital Vault creation, and inventory check covering safety items and FF&E.',
+      rc_techpm_name: 'Technical Project Management',
+      rc_techpm_desc: 'Hourly rate for complex coordination, renovation supervision, or custom technical tasks beyond standard packages.',
+      rc_callout_name: 'Technical Site Call-Out',
+      rc_callout_desc: 'Minimum charge for any ad-hoc visit within business hours. Includes the first hour.',
+
       // --- TESTIMONIALS TITLE ---
       testimonialsTitle: 'Why Do They Trust Us?',
       googleReviewBadge: 'Google Review',
@@ -329,6 +349,26 @@ window.translations = {
       callToActionTitle: "Vous hésitez sur le forfait adapté ?",
       callToActionBtn: "Réserver un appel de clarification (15 min)",
       vatDisclaimer: 'Tous les tarifs sont exprimés Hors Taxes (HT). TVA 24% en sus.',
+
+      // --- FULL RATE CARD TABLE ---
+      rc_redflag_name: 'Scan Technique "Red Flag"',
+      rc_redflag_desc: 'Diagnostic visuel de 45 min pour une décision Go/No-Go avant acquisition.',
+      rc_golden_name: 'Audit Technique "Golden Ticket"',
+      rc_golden_desc: 'Rapport technique complet en 40 points, cartographie d\'humidité et budget CAPEX.',
+      rc_amcore_name: 'Gestion d\'Actif Core',
+      rc_amcore_desc: 'Gestion mensuelle : tri des demandes locataires, filtrage technique, visite semestrielle/de rotation.',
+      rc_ampremium_name: 'Gestion d\'Actif Premium',
+      rc_ampremium_desc: 'Gestion d\'Actif Core, plus 2 inspections techniques annuelles, plan de maintenance proactif et priorité prestataires.',
+      rc_guardcore_name: 'Gardiennage d\'Actif Vacant Core',
+      rc_guardcore_desc: 'Gardiennage mensuel : 1 visite/mois, contrôle de l\'humidité, contrôle de sécurité, évaluation post-intempéries.',
+      rc_guardpremium_name: 'Gardiennage d\'Actif Vacant Premium',
+      rc_guardpremium_desc: 'Gardiennage Core, plus 2 visites/mois, purge des réseaux, aération anti-humidité et garde des clés visiteurs.',
+      rc_activation_name: 'Mise en Service de l\'Actif',
+      rc_activation_desc: 'Transfert des services, récupération des clés, création du Coffre-fort Numérique et inventaire (sécurité et mobilier).',
+      rc_techpm_name: 'Pilotage Technique de Projet',
+      rc_techpm_desc: 'Tarif horaire pour la coordination complexe, le suivi de rénovation ou toute tâche technique hors forfaits standards.',
+      rc_callout_name: 'Déplacement Technique sur Site',
+      rc_callout_desc: 'Forfait minimum pour toute visite ponctuelle en heures ouvrées. Inclut la première heure.',
       
       // --- TESTIMONIALS TITLE ---
       testimonialsTitle: 'Validé par Nos Clients & Partenaires',
@@ -573,6 +613,26 @@ window.translations = {
       callToActionTitle: "Δεν είστε σίγουροι ποιο πακέτο σας ταιριάζει;",
       callToActionBtn: "Κλείστε μια 15λεπτη κλήση",
       vatDisclaimer: 'Οι τιμές δεν περιλαμβάνουν ΦΠΑ. Το ΦΠΑ 24% χρεώνεται επιπλέον.',
+
+      // --- FULL RATE CARD TABLE ---
+      rc_redflag_name: 'Τεχνικός Έλεγχος "Red Flag"',
+      rc_redflag_desc: '45λεπτη οπτική διάγνωση για απόφαση Go/No-Go πριν την αγορά.',
+      rc_golden_name: 'Τεχνικός Έλεγχος "Golden Ticket"',
+      rc_golden_desc: 'Πλήρης τεχνική αναφορά 40 σημείων, χαρτογράφηση υγρασίας και προϋπολογισμός CapEx.',
+      rc_amcore_name: 'Διαχείριση Ακινήτου Core',
+      rc_amcore_desc: 'Μηνιαία διαχείριση: διαλογή θεμάτων ενοικιαστή, τεχνικός έλεγχος, οπτικός έλεγχος κάθε 6 μήνες/στην αλλαγή μισθωτή.',
+      rc_ampremium_name: 'Διαχείριση Ακινήτου Premium',
+      rc_ampremium_desc: 'Διαχείριση Core, συν 2 ετήσιες τεχνικές επιθεωρήσεις, πρόγραμμα προληπτικής συντήρησης και προτεραιότητα σε συνεργεία.',
+      rc_guardcore_name: 'Φύλαξη Κενού Ακινήτου Core',
+      rc_guardcore_desc: 'Μηνιαία φύλαξη: 1 επίσκεψη/μήνα, έλεγχος υγρασίας, έλεγχος ασφαλείας, αξιολόγηση μετά από καταιγίδα.',
+      rc_guardpremium_name: 'Φύλαξη Κενού Ακινήτου Premium',
+      rc_guardpremium_desc: 'Φύλαξη Core, συν 2 επισκέψεις/μήνα, έκπλυση συστημάτων, αερισμός κατά της υγρασίας και φύλαξη κλειδιών επισκεπτών.',
+      rc_activation_name: 'Ενεργοποίηση Ακινήτου',
+      rc_activation_desc: 'Μεταφορά υπηρεσιών κοινής ωφέλειας, παραλαβή κλειδιών, δημιουργία Ψηφιακού Θησαυροφυλακίου και απογραφή ασφάλειας/εξοπλισμού.',
+      rc_techpm_name: 'Τεχνική Διαχείριση Έργου',
+      rc_techpm_desc: 'Ωριαία χρέωση για σύνθετο συντονισμό, επίβλεψη ανακαίνισης ή εξειδικευμένες τεχνικές εργασίες εκτός τυπικών πακέτων.',
+      rc_callout_name: 'Τεχνική Επίσκεψη στο Ακίνητο',
+      rc_callout_desc: 'Ελάχιστη χρέωση για έκτακτη επίσκεψη εντός εργάσιμου ωραρίου. Περιλαμβάνει την πρώτη ώρα.',
       
       // --- TESTIMONIALS TITLE ---
       testimonialsTitle: 'Επικυρωμένο από τους Πελάτες & Συνεργάτες μας',

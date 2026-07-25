@@ -1,0 +1,65 @@
+[
+  {
+    "keyPrefix": "rc_redflag",
+    "name": "Red Flag Technical Scan",
+    "description": "45-min Visual Diagnostic for pre-acquisition Go/No-Go decisions.",
+    "price": 97,
+    "unit": null
+  },
+  {
+    "keyPrefix": "rc_golden",
+    "name": "Golden Ticket Technical Audit",
+    "description": "Full 40-point technical report, moisture mapping, and CapEx budgeting.",
+    "price": 490,
+    "unit": null
+  },
+  {
+    "keyPrefix": "rc_amcore",
+    "name": "Asset Management Core",
+    "description": "Monthly Asset Management: tenant issue triage, technical issue filtering, 6-month/turnover visual check.",
+    "price": 140,
+    "unit": "mo"
+  },
+  {
+    "keyPrefix": "rc_ampremium",
+    "name": "Asset Management Premium",
+    "description": "Monthly Asset Management Core plus 2x annual technical inspections, proactive maintenance plan, priority vendor lane.",
+    "price": 190,
+    "unit": "mo"
+  },
+  {
+    "keyPrefix": "rc_guardcore",
+    "name": "Vacant Asset Guardianship Core",
+    "description": "Monthly Vacant Asset Guardianship: 1 visit/month, humidity control, security check, storm damage assessment.",
+    "price": 120,
+    "unit": "mo"
+  },
+  {
+    "keyPrefix": "rc_guardpremium",
+    "name": "Vacant Asset Guardianship Premium",
+    "description": "Monthly Vacant Asset Guardianship Core plus 2 visits/month, system flushing, humidity airing, and Guest Key Holding.",
+    "price": 180,
+    "unit": "mo"
+  },
+  {
+    "keyPrefix": "rc_activation",
+    "name": "Asset Activation",
+    "description": "Utility switch, key collection, Digital Vault creation, and inventory check covering safety items and FF&E.",
+    "price": 350,
+    "unit": null
+  },
+  {
+    "keyPrefix": "rc_techpm",
+    "name": "Technical Project Management",
+    "description": "Hourly rate for complex coordination, renovation supervision, or custom technical tasks beyond standard packages.",
+    "price": 65,
+    "unit": "hr"
+  },
+  {
+    "keyPrefix": "rc_callout",
+    "name": "Technical Site Call-Out",
+    "description": "Minimum charge for any ad-hoc visit within business hours. Includes the first hour.",
+    "price": 85,
+    "unit": null
+  }
+]
