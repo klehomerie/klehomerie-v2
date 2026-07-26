@@ -242,6 +242,45 @@
           ]
         }
       }
+      {% if page.url == '/' %}
+      ,
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://klehomerie.com/#faq",
+        "mainEntity": [
+          {% for item in faq %}
+          {
+            "@type": "Question",
+            "name": {{ item.question | dump | safe }},
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": {{ item.answer | stripHtml | dump | safe }}
+            }
+          }{% if not loop.last %},{% endif %}
+          {% endfor %}
+        ]
+      }
+      {% endif %}
+      {% if page.url == '/' or page.url == '/testimonials/' %}
+      {% for item in testimonials.items %}
+      ,
+      {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        "itemReviewed": {
+          "@type": "ProfessionalService",
+          "@id": "https://klehomerie.com/#organization",
+          "name": "Klehomerie Technical Asset Management"
+        },
+        "author": {
+          "@type": "Person",
+          "name": {{ item.name | dump | safe }}
+        },
+        "reviewBody": {{ (item.fullQuote_en or item.fullQuoteOriginal) | dump | safe }}
+      }
+      {% endfor %}
+      {% endif %}
     ]
     </script>
 </head>

@@ -102,6 +102,11 @@ eleventyConfig.addPassthroughCopy("src/arnaud-zerdab-logo.png");
   // Image Filter
   eleventyConfig.addFilter("socialImg", generateSocialImage);
 
+  // Strips HTML tags for use in structured data (JSON-LD) text fields
+  eleventyConfig.addFilter("stripHtml", (str) => {
+    return (str || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+  });
+
  // 3. COLLECTIONS
   eleventyConfig.addCollection("posts", function(collection) {
     const allPosts = collection.getFilteredByGlob("src/klab/posts/*.md");
