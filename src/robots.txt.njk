@@ -2,28 +2,32 @@
 permalink: /robots.txt
 eleventyExcludeFromCollections: true
 ---
+# Klehomerie robots.txt
+
 User-agent: *
 Disallow: /admin/
 Disallow: /success/
 Disallow: /404.html
 
-# Allow AI & LLM Crawlers
+# AI and LLM crawlers: permitted, same exclusions as above
 User-agent: GPTBot
-Allow: /
-
+User-agent: ChatGPT-User
 User-agent: OAI-SearchBot
-Allow: /
-
 User-agent: ClaudeBot
-Allow: /
-
+User-agent: Claude-User
+User-agent: Claude-SearchBot
 User-agent: anthropic-ai
-Allow: /
-
 User-agent: PerplexityBot
-Allow: /
-
+User-agent: Perplexity-User
 User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: meta-externalagent
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
 Allow: /
+Disallow: /admin/
+Disallow: /success/
+Disallow: /404.html
 
 Sitemap: {{ siteUrl or "https://klehomerie.com" }}/sitemap.xml
