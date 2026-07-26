@@ -332,14 +332,30 @@ html.dark .flip-card:hover .flip-card-inner {
 }
 /* --- FAQ ACCORDION --- */
 .faq-answer {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   overflow: hidden;
-  transition: max-height 0.4s ease-out, padding 0.4s ease;
+  transition: grid-template-rows 0.4s ease-out;
+}
+
+.faq-answer > div {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .faq-item.active .faq-answer {
-  max-height: 1000px; /* Large enough to fit content */
-  padding-top: 1rem;
+  grid-template-rows: 1fr;
+}
+
+.faq-answer ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.faq-answer li {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
 }
 
 .faq-icon {
