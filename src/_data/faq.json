@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "question": "What is Technical Asset Management (TAM)?",
+    "answer": "Technical Asset Management (TAM) is all about keeping your property <b>structurally and functionally sound</b>, protecting its value over time.<br><br>Unlike standard property management, which focuses on tenants and appearances, TAM focuses on the building’s <b>core systems and long-term health</b>.<br><br>We identify risks and maintenance needs <b>before they become costly problems</b>, giving you confidence in your investment.",
+    "image": null
+  },
+  {
+    "id": 2,
+    "question": "How is it different from traditional property management in Athens?",
+    "answer": "Traditional property management mainly handles:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Tenant relations</li><li>Occupancy and bookings</li><li>Cleaning, styling, and aesthetic upkeep</li></ul><br>Technical Asset Management, by contrast, focuses on:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Structural integrity</b> of the building</li><li><b>Mechanical systems</b> (HVAC, plumbing, electrical)</li><li><b>Data-driven reporting</b> and long-term planning</li></ul><br>Think of us as the <b>invisible layer protecting your property’s value</b>. We work behind the scenes so your investment keeps performing.",
+    "image": null
+  },
+  {
+    "id": 3,
+    "question": "When should I order a Red Flag Technical Scan?",
+    "answer": "Think of this as your <b>“Go / No-Go” filter</b>. Use it <b>before engaging lawyers or paying for a full audit</b>.<br><br>It focuses on the <b>context and obvious deal-killers</b> that the listing often hides:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>The Environment:</b> Is the street safe at night? Are there abandoned buildings or brothels next door?</li><li><b>The Building (Polikatoikia):</b> Is the entrance maintained? Broken mailboxes or dirty hallways often indicate a bankrupt HOA (Koinochrista).</li><li><b>The Unit:</b> Quick visual check for layout issues, major cracks, or obvious neglect.</li></ul><br><b>Goal:</b> Prevent wasting €500+ on legal fees for a property that should have been rejected from the street corner.<br><br><a href='#contact' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Stop wasting time on bad listings. Book a Red Flag Scan.</a>",
+    "image": null
+  },
+  {
+    "id": 4,
+    "question": "What does a Golden Ticket Technical Audit include?",
+    "answer": "The Golden Ticket Audit is a <b>full technical evaluation</b>. We check five key areas:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Electrical Systems:</b> Safety, functionality, and efficiency</li><li><b>Plumbing & HVAC:</b> Flow, pressure, and overall integrity</li><li><b>Joinery & Closings:</b> Doors, windows, and fittings</li><li><b>Finishes & Surfaces:</b> Wear, moisture, and hidden damage</li><li><b>General Environment:</b> Overall building health and safety</li></ul><br>We use advanced tools like <b>thermal imaging</b> and <b>stress tests</b> to produce a <b>risk-rated roadmap</b>, helping you plan maintenance and investments strategically.<br><br><b>Beyond the Surface:</b> Our thermal imaging identifies hidden moisture, insulation gaps, and thermal bridges that the naked eye misses entirely.<br><br><a href='#packages' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Get a comprehensive view of your property’s health with a Golden Ticket Audit.</a>",
+    "image": "/assets/images/thermal-audit-example.webp"
+  },
+  {
+    "id": 5,
+    "question": "How does CapEx planning impact long-term value?",
+    "answer": "CapEx (Capital Expenditure) planning helps you <b>forecast major investments</b> over a 5-year horizon, ensuring you:<ul class='list-disc pl-5 mt-2 space-y-1'><li>Avoid costly emergency repairs</li><li>Protect the property’s value and yield</li><li>Make strategic upgrades at the right time</li></ul><br>By understanding the lifecycle of roofs, HVAC units, and other critical systems, you can <b>manage your portfolio proactively</b>, not reactively.",
+    "image": null
+  },
+  {
+    "id": 6,
+    "question": "Do I still need a Greek Civil Engineer or Lawyer?",
+    "answer": "Yes. Our role is <b>strictly technical and advisory</b>:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Civil Engineer (Michanikos):</b> Required for urban planning approvals and legality statements</li><li><b>Lawyer:</b> Needed for title verification and contract execution</li></ul><br>Klehomerie looks for <b>'Pathology'</b>. We are your <b>technical eyes on the ground before</b> you engage the heavy legal machinery.<br>We find the problems so the Engineer knows where to look.",
+    "image": null
+  },
+  {
+    "id": 7,
+    "question": "Who is Klehomerie NOT for?",
+    "answer": "To maintain our high technical standards, we do not offer hospitality services. We are not the right fit for:<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Guest Management:</b> We do not handle Airbnb bookings, check-ins, or guest messaging.</li><li><b>Concierge Requests:</b> We do not coordinate cleaning, laundry, or interior styling.</li></ul><br><b>Klehomerie is built for Institutional & Sophisticated Investors.</b><br>We are the <b>Technical Directors</b> of the asset. We work perfectly <i>alongside</i> your property manager or hosting team. They keep the guests happy. We keep the building standing.",
+    "image": null
+  },
+  {
+    "id": 8,
+    "question": "Why shouldn't I just hire a local contractor?",
+    "answer": "You can, but a contractor makes money by finding problems <b>they</b> can fix.<br>Which creates a <b>conflict of interest</b>.<br>Klehomerie is <b>independent</b>. We do not sell construction work. We sell <b>unbiased data</b>.<br>When we tell you a wall needs fixing, it’s because it’s true, not because we want the painting job.<br>Our fee protects you from unnecessary €5,000 renovation quotes.<br><br><a href='https://calendar.app.google/pNE9HLdXuUtCwgEi7' target='_blank' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Book a 15-min Clarity Call</a>",
+    "image": null
+  },
+  {
+    "id": 9,
+    "question": "Is Klehomerie independent from Athens real estate brokers and developers?",
+    "answer": "Yes. Klehomerie operates strictly on an independent, buyer-side mandate. We maintain zero commercial partnerships, referral agreements, or financial ties with real estate agencies, brokers, or developers in Greece.",
+    "image": null
+  },
+  {
+    "id": 10,
+    "question": "Does Klehomerie accept commissions from renovation contractors?",
+    "answer": "No. We enforce a strict anti-kickback policy. We accept zero commissions, finders' fees, or rebates from contractors or architects. 100% of our compensation comes directly from our clients.",
+    "image": null
+  },
+  {
+    "id": 11,
+    "question": "Why does Klehomerie separate property inspection from repair execution?",
+    "answer": "To eliminate conflicts of interest. We provide unbiased forensic diagnostics and worksite coordination, but we never sell repair or construction services. We have no financial incentive to inflate or invent property defects.",
+    "image": null
+  }
+]

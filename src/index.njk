@@ -382,7 +382,29 @@ title: Klehomerie - Asset Management & Technical Audits Athens
     <section id="faq" class="py-20 bg-[--bg-color]">
         <div class="container mx-auto px-6 max-w-4xl">
             <h2 class="text-3xl font-bold text-center mb-12 text-[--title-color]" data-lang-key="faqTitle">Frequently Asked Questions</h2>
-            <div id="faq-container" class="space-y-4"></div>
+            <div id="faq-container" class="space-y-4">
+                {% for item in faq %}
+                <div class="faq-item bg-[--card-bg] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden mb-3">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        <span class="font-bold text-[--title-color] text-lg" data-lang-key="faq_q{{ item.id }}">{{ item.question }}</span>
+                        <svg class="faq-icon w-5 h-5 text-[--accent-color] transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-0 text-[--text-color]">
+                        <div class="py-4">
+                            <p class="mb-4 leading-relaxed" data-lang-key="faq_a{{ item.id }}">{{ item.answer | safe }}</p>
+                            {% if item.image %}
+                            <div class="mt-4 relative group cursor-zoom-in w-full md:w-2/3 lg:w-1/2" onclick="openModal('{{ item.image }}')">
+                                <img src="{{ item.image }}" alt="Technical Audit Thermal Scan" loading="lazy" class="rounded-lg shadow-md border-2 border-[--accent-color] w-full object-cover h-48 md:h-64">
+                                <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg flex items-center justify-center">
+                                    <span class="opacity-0 group-hover:opacity-100 bg-black bg-opacity-75 text-white text-xs px-2 py-1 rounded">Tap to Zoom 🔍</span>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </section>
 

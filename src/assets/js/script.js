@@ -320,66 +320,27 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
-  // --- 14. FAQ GENERATION ---
-  const faqData = [
-      { q: 'faq_q1', a: 'faq_a1' }, 
-      { q: 'faq_q2', a: 'faq_a2' },
-      { q: 'faq_q3', a: 'faq_a3' },
-      { q: 'faq_q4', a: 'faq_a4', img: '/assets/images/thermal-audit-example.webp' },
-      { q: 'faq_q5', a: 'faq_a5' },
-      { q: 'faq_q6', a: 'faq_a6' },
-      { q: 'faq_q7', a: 'faq_a7' },
-      { q: 'faq_q8', a: 'faq_a8' },
-      { q: 'faq_q9', a: 'faq_a9' },
-      { q: 'faq_q10', a: 'faq_a10' },
-      { q: 'faq_q11', a: 'faq_a11' }
-  ];
-
-  const faqContainer = document.getElementById('faq-container');
+  // --- 14. FAQ ACCORDION ---
+  // FAQ questions/answers are rendered server-side in index.njk from
+  // src/_data/faq.json so crawlers see the content without running JS.
+  // This just wires up the show/hide behaviour on top of that markup.
   const modal = document.getElementById('image-modal');
   const modalImg = document.getElementById('modal-img');
 
-  if (faqContainer) {
-      faqContainer.innerHTML = faqData.map(item => {
-          const hasImage = item.img ? true : false;
-          return `
-          <div class="faq-item bg-[--card-bg] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden mb-3">
-              <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-                  <span class="font-bold text-[--title-color] text-lg" data-lang-key="${item.q}">Loading...</span>
-                  <svg class="faq-icon w-5 h-5 text-[--accent-color] transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-              </button>
-              <div class="faq-answer px-6 pb-0 text-[--text-color]">
-                  <div class="py-4">
-                      <p class="mb-4 leading-relaxed" data-lang-key="${item.a}">Loading...</p>
-                      ${hasImage ? `
-                      <div class="mt-4 relative group cursor-zoom-in w-full md:w-2/3 lg:w-1/2" onclick="openModal('${item.img}')">
-                          <img src="${item.img}" alt="Technical Audit Thermal Scan" loading="lazy" class="rounded-lg shadow-md border-2 border-[--accent-color] w-full object-cover h-48 md:h-64">
-                          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg flex items-center justify-center">
-                              <span class="opacity-0 group-hover:opacity-100 bg-black bg-opacity-75 text-white text-xs px-2 py-1 rounded">Tap to Zoom 🔍</span>
-                          </div>
-                      </div>` : ''}
-                  </div>
-              </div>
-          </div>
-          `;
-      }).join('');
-
-      // Accordion Logic
-      document.querySelectorAll('.faq-question').forEach(btn => {
-          btn.addEventListener('click', () => {
-              const item = btn.parentElement;
-              const isActive = item.classList.contains('active');
-              document.querySelectorAll('.faq-item').forEach(i => {
-                  i.classList.remove('active');
-                  i.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
-              });
-              if (!isActive) {
-                  item.classList.add('active');
-                  btn.querySelector('.faq-icon').style.transform = 'rotate(180deg)';
-              }
+  document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+          const item = btn.parentElement;
+          const isActive = item.classList.contains('active');
+          document.querySelectorAll('.faq-item').forEach(i => {
+              i.classList.remove('active');
+              i.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
           });
+          if (!isActive) {
+              item.classList.add('active');
+              btn.querySelector('.faq-icon').style.transform = 'rotate(180deg)';
+          }
       });
-  }
+  });
 
   // Modal Logic
   window.openModal = function(src) {
