@@ -16,7 +16,7 @@
   {
     "keyPrefix": "rc_amcore",
     "name": "Asset Management Core",
-    "description": "Monthly Asset Management: tenant issue triage, technical issue filtering, 6-month/turnover visual check.",
+    "description": "Monthly Asset Management: Asset Risk triage, technical issue filtering, 6-month/turnover visual check.",
     "price": 140,
     "unit": "mo"
   },
@@ -37,7 +37,7 @@
   {
     "keyPrefix": "rc_guardpremium",
     "name": "Vacant Asset Guardianship Premium",
-    "description": "Monthly Vacant Asset Guardianship Core plus 2 visits/month, system flushing, humidity airing, and Guest Key Holding.",
+    "description": "Monthly Vacant Asset Guardianship Core plus 2 visits/month, system flushing, humidity airing, and guest access coordination.",
     "price": 180,
     "unit": "mo"
   },
