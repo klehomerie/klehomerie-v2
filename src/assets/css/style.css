@@ -62,6 +62,15 @@ h1, h2, h3, h4 {
   font-weight: 700; /* Force bold for authority */
 }
 
+/* --- PROSE CONTENT --- */
+/* Contain wide tables (e.g. multi-column comparison tables) so they scroll
+   within themselves instead of blowing out the page width on mobile */
+.prose table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
 /* --- HEADER & NAV --- */
 #header {
   background-image: url('../images/hero-marble.webp');
