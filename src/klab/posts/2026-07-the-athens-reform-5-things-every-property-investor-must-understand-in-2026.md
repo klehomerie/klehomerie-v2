@@ -104,7 +104,7 @@ Location will always matter in Athens. But increasingly, the investors who win a
 
 - - -
 
-*Is your Athenian asset digitally ready for the current market, or is it quietly becoming a legacy liability? Klehomerie provides independent technical due diligence, building risk audits, and technical asset management for foreign investors and family offices entering the Greek real estate market.*
+*Is your Athenian asset digitally ready for the current market, or is it quietly becoming a legacy liability? Klehomerie provides independent technical asset audits and protective asset management for foreign investors and family offices entering the Greek real estate market.*
 
 - - -
 
