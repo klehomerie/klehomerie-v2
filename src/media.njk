@@ -9,8 +9,10 @@ description: Technical rigor in the spotlight. Selected niche commentary on Athe
     <section class="relative w-full py-10 lg:py-16 mb-8 flex items-center bg-[--bg-color] overflow-hidden">
         <div class="absolute inset-y-0 right-0 w-full md:w-3/4 h-full z-0">
             
-            <img src="/assets/images/hero_media.png" 
-                 alt="Klehomerie Technical Audit Blueprint" 
+            <img src="/assets/images/hero_media.png"
+                 alt="Klehomerie Technical Audit Blueprint"
+                 width="1347"
+                 height="847"
                  class="object-cover object-left md:object-center w-full h-full opacity-40 dark:opacity-90 transition-opacity duration-300">
             
             <div class="absolute inset-0 bg-gradient-to-r from-[--bg-color] via-[--bg-color]/80 to-transparent"></div>
@@ -67,9 +69,10 @@ description: Technical rigor in the spotlight. Selected niche commentary on Athe
 
                 <!-- Optional Thumbnail -->
                 {% if article.data.thumbnailUrl %}
-                <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
-                    <img src="{{ article.data.thumbnailUrl }}" alt="Thumbnail for {{ article.data.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
+                <figure class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                    {% optimizedImage article.data.thumbnailUrl, "Thumbnail for " + article.data.title, "(max-width: 768px) 100vw, 400px", "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" %}
+                    <figcaption class="sr-only">{{ article.data.title }}</figcaption>
+                </figure>
                 {% endif %}
 
                 <!-- Meta Data -->

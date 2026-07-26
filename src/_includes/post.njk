@@ -21,7 +21,7 @@ layout: base.njk
             {{ title }}
         </h1>
         <div class="flex flex-wrap justify-center gap-4 text-gray-200 text-xs font-mono opacity-90">
-            <span class="flex items-center gap-1">📅 {{ date | dateString }}</span>
+            <span class="flex items-center gap-1">📅 <time datetime="{{ date | dateISO }}">{{ date | dateString }}</time></span>
             <span class="flex items-center gap-1">📍 {{ location or "Athens" }}</span>
         </div>
     </div>
@@ -137,7 +137,7 @@ layout: base.njk
                 <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                     Athens-based Technical Asset Management firm. Applying French technical standards to the Greek property market, Klehomerie provides independent "Red Flag Scans" and deep audits to protect foreign capital.
                 </p>
-                <a href="https://linkedin.com/in/arnaudzerdab" target="_blank" class="text-[--accent-color] text-xs font-bold hover:underline mt-2 inline-block">Connect on LinkedIn →</a>
+                <a href="https://linkedin.com/in/arnaudzerdab" target="_blank" rel="noopener noreferrer" class="text-[--accent-color] text-xs font-bold hover:underline mt-2 inline-block">Connect on LinkedIn →</a>
             </div>
         </div>
 

@@ -9,10 +9,12 @@ description: Client and contractor testimonials on Klehomerie's Technical Asset 
     <picture class="absolute inset-0 w-full h-full z-0">
         <source media="(max-width: 768px)" srcset="/assets/images/hero-athens-view-mobile.webp" type="image/webp">
         <source srcset="/assets/images/hero-athens-view.webp" type="image/webp">
-        <img src="/assets/images/hero-athens-view.webp" 
-             alt="Klehomerie Technical Asset Management - Client & Partner Testimonials Background" 
-             class="hero-img object-cover w-full h-full block filter blur-[2px] scale-105" 
-             fetchpriority="high" 
+        <img src="/assets/images/hero-athens-view.webp"
+             alt="Klehomerie Technical Asset Management - Client & Partner Testimonials Background"
+             width="1184"
+             height="864"
+             class="hero-img object-cover w-full h-full block filter blur-[2px] scale-105"
+             fetchpriority="high"
              loading="eager">
     </picture>
     
@@ -82,7 +84,7 @@ description: Client and contractor testimonials on Klehomerie's Technical Asset 
                     
                     <div class="flex items-center gap-4 border-t border-gray-100 dark:border-gray-700 pt-6">
                         {% if item.image %}
-                            <img src="{{ item.image }}" alt="{{ item.name }}" class="h-12 w-12 rounded-full object-cover">
+                            {% optimizedImage item.image, item.name, "48px", "h-12 w-12 rounded-full object-cover" %}
                         {% else %}
                             <div class="h-12 w-12 bg-[--accent-color] rounded-full flex items-center justify-center text-white font-bold">
                                 {{ item.name | truncate(2, true, "") }}
@@ -161,7 +163,7 @@ description: Client and contractor testimonials on Klehomerie's Technical Asset 
 
                     <div class="flex items-center gap-4 border-t border-gray-200 dark:border-gray-600 pt-6">
                         {% if item.image %}
-                            <img src="{{ item.image }}" alt="{{ item.name }}" class="h-12 w-12 rounded-full object-cover">
+                            {% optimizedImage item.image, item.name, "48px", "h-12 w-12 rounded-full object-cover" %}
                         {% else %}
                             <div class="h-12 w-12 bg-gray-400 rounded-full flex items-center justify-center text-white font-bold">
                                 {{ item.name | truncate(2, true, "") }}

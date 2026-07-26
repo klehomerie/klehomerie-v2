@@ -149,7 +149,7 @@ description: Independent, buyer-side Technical Asset Management in Athens, Red F
                 </div>
                 <div class="mt-8 flex flex-col items-center animate-pulse-slow">
                     <p class="text-sm text-[--text-color] mb-2 font-medium" data-lang-key="callToActionTitle">Not sure which package fits your situation?</p>
-                    <a href="https://calendar.app.google/pNE9HLdXuUtCwgEi7" target="_blank" class="text-[--accent-color] font-bold hover:text-[--accent-color-hover] hover:underline flex items-center gap-2 transition-all transform hover:scale-105">
+                    <a href="https://calendar.app.google/pNE9HLdXuUtCwgEi7" target="_blank" rel="noopener noreferrer" class="text-[--accent-color] font-bold hover:text-[--accent-color-hover] hover:underline flex items-center gap-2 transition-all transform hover:scale-105">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
@@ -395,12 +395,13 @@ description: Independent, buyer-side Technical Asset Management in Athens, Red F
                             <div class="py-4">
                                 <div class="mb-4 leading-relaxed" data-lang-key="faq_a{{ item.id }}">{{ item.answer | safe }}</div>
                                 {% if item.image %}
-                                <div class="mt-4 relative group cursor-zoom-in w-full md:w-2/3 lg:w-1/2" onclick="openModal('{{ item.image }}')">
-                                    <img src="{{ item.image }}" alt="Technical Audit Thermal Scan" loading="lazy" class="rounded-lg shadow-md border-2 border-[--accent-color] w-full object-cover h-48 md:h-64">
+                                <figure class="mt-4 relative group cursor-zoom-in w-full md:w-2/3 lg:w-1/2" onclick="openModal('{{ item.image }}')">
+                                    {% optimizedImage item.image, "Technical Audit Thermal Scan", "(max-width: 768px) 100vw, 50vw", "rounded-lg shadow-md border-2 border-[--accent-color] w-full object-cover h-48 md:h-64" %}
                                     <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg flex items-center justify-center">
                                         <span class="opacity-0 group-hover:opacity-100 bg-black bg-opacity-75 text-white text-xs px-2 py-1 rounded">Tap to Zoom 🔍</span>
                                     </div>
-                                </div>
+                                    <figcaption class="sr-only">Technical Audit Thermal Scan</figcaption>
+                                </figure>
                                 {% endif %}
                             </div>
                         </div>
@@ -446,7 +447,7 @@ description: Independent, buyer-side Technical Asset Management in Athens, Red F
                               <span class="border-b w-1/5 lg:w-1/4"></span>
                         </div>
                         <div class="mt-4 text-center">
-                            <a href="https://calendar.app.google/pNE9HLdXuUtCwgEi7" target="_blank" class="text-[--accent-color] font-bold hover:underline flex items-center justify-center gap-2">
+                            <a href="https://calendar.app.google/pNE9HLdXuUtCwgEi7" target="_blank" rel="noopener noreferrer" class="text-[--accent-color] font-bold hover:underline flex items-center justify-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>

@@ -98,6 +98,11 @@ eleventyConfig.addPassthroughCopy("src/arnaud-zerdab-logo.png");
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("LLLL d, yyyy");
   });
 
+  // Machine-readable date for <time datetime="..."> attributes
+  eleventyConfig.addFilter("dateISO", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat("yyyy-LL-dd");
+  });
+
   // Image Filter
   eleventyConfig.addFilter("socialImg", generateSocialImage);
 
@@ -183,24 +188,21 @@ eleventyConfig.addPassthroughCopy("src/arnaud-zerdab-logo.png");
     let inputPath = src.startsWith('/') ? "./src" + src : src;
 
     if (!fs.existsSync(inputPath)) {
-        return `<img src="${src}" alt="${alt}" class="${classes}">`;
+        return `<figure><img src="${src}" alt="${alt}" class="${classes}"><figcaption class="sr-only">${alt}</figcaption></figure>`;
     }
 
-    // Process image generation in the background
-    Image(inputPath, {
-        widths: [800], // 800px is usually plenty wide for article body text
+    const imageOptions = {
+        widths: [400, 800, 1200],
         formats: ["webp", "jpeg"],
         urlPath: "/assets/images/optimized/",
         outputDir: "./_site/assets/images/optimized/"
-    });
+    };
+
+    // Process image generation in the background
+    Image(inputPath, imageOptions);
 
     // Use statsSync to generate the HTML tag synchronously (required for markdown-it)
-    let metadata = Image.statsSync(inputPath, {
-        widths: [800],
-        formats: ["webp", "jpeg"],
-        urlPath: "/assets/images/optimized/",
-        outputDir: "./_site/assets/images/optimized/"
-    });
+    let metadata = Image.statsSync(inputPath, imageOptions);
 
     let imageAttributes = {
       alt: alt,
@@ -210,7 +212,7 @@ eleventyConfig.addPassthroughCopy("src/arnaud-zerdab-logo.png");
       decoding: "async"
     };
 
-    return Image.generateHTML(metadata, imageAttributes);
+    return `<figure>${Image.generateHTML(metadata, imageAttributes)}<figcaption class="sr-only">${alt}</figcaption></figure>`;
   };
 
   // Tell Eleventy to use our modified markdown library
