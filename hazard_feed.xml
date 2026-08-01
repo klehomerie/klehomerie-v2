@@ -4,36 +4,36 @@
   <title>Klehomerie Geo-Hazard Feed</title>
   <link>https://github.com/klehomerie/klehomerie-v2</link>
   <description>Anonymized proximity alerts generated from private CRM.</description>
-  <pubDate>Sat, 01 Aug 2026 09:40:33 GMT</pubDate>
+  <pubDate>Sat, 01 Aug 2026 21:40:42 GMT</pubDate>
   <item>
     <title>[WEATHER] Alert for Prop-001</title>
     <description>Severe condition near property ID Prop-001: Yellow Wind warning (Attiki) [until 2026-08-01T08:00:00+00:00] [warning ended - post-event inspection].</description>
     <guid isPermaLink="false">w_Prop-001_249003000GR260731041000100000011</guid>
-    <pubDate>Sat, 01 Aug 2026 09:40:31 GMT</pubDate>
+    <pubDate>Sat, 01 Aug 2026 21:40:41 GMT</pubDate>
   </item>
   <item>
     <title>[WEATHER] Alert for Prop-007</title>
     <description>Severe condition near property ID Prop-007: Yellow Wind warning (Attiki) [until 2026-08-01T08:00:00+00:00] [warning ended - post-event inspection].</description>
     <guid isPermaLink="false">w_Prop-007_249003000GR260731041000100000011</guid>
-    <pubDate>Sat, 01 Aug 2026 09:40:32 GMT</pubDate>
+    <pubDate>Sat, 01 Aug 2026 21:40:41 GMT</pubDate>
   </item>
   <item>
     <title>[WEATHER] Alert for Prop-008</title>
     <description>Severe condition near property ID Prop-008: Yellow Wind warning (Attiki) [until 2026-08-01T08:00:00+00:00] [warning ended - post-event inspection].</description>
     <guid isPermaLink="false">w_Prop-008_249003000GR260731041000100000011</guid>
-    <pubDate>Sat, 01 Aug 2026 09:40:32 GMT</pubDate>
+    <pubDate>Sat, 01 Aug 2026 21:40:42 GMT</pubDate>
   </item>
   <item>
     <title>[WEATHER] Alert for Prop-009</title>
     <description>Severe condition near property ID Prop-009: Yellow Wind warning (Attiki) [until 2026-08-01T08:00:00+00:00] [warning ended - post-event inspection].</description>
     <guid isPermaLink="false">w_Prop-009_249003000GR260731041000100000011</guid>
-    <pubDate>Sat, 01 Aug 2026 09:40:32 GMT</pubDate>
+    <pubDate>Sat, 01 Aug 2026 21:40:42 GMT</pubDate>
   </item>
   <item>
     <title>[WEATHER] Alert for Prop-012</title>
     <description>Severe condition near property ID Prop-012: Yellow Wind warning (Attiki) [until 2026-08-01T08:00:00+00:00] [warning ended - post-event inspection].</description>
     <guid isPermaLink="false">w_Prop-012_249003000GR260731041000100000011</guid>
-    <pubDate>Sat, 01 Aug 2026 09:40:32 GMT</pubDate>
+    <pubDate>Sat, 01 Aug 2026 21:40:42 GMT</pubDate>
   </item>
 </channel>
 </rss>
