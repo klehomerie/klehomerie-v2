@@ -215,6 +215,21 @@ eleventyConfig.addPassthroughCopy("src/arnaud-zerdab-logo.png");
     return `<figure>${Image.generateHTML(metadata, imageAttributes)}<figcaption class="sr-only">${alt}</figcaption></figure>`;
   };
 
+  // 👇 NEW: MARKDOWN-IT OVERRIDE FOR HEADING ANCHOR IDS (so Table of Contents links work)
+  mdLib.renderer.rules.heading_open = function (tokens, idx, options, env, self) {
+    const inlineToken = tokens[idx + 1];
+    const text = inlineToken ? inlineToken.content : "";
+    const slug = text
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+
+    if (slug) {
+      tokens[idx].attrSet("id", slug);
+    }
+    return self.renderToken(tokens, idx, options);
+  };
+
   // Tell Eleventy to use our modified markdown library
   eleventyConfig.setLibrary("md", mdLib);
 
