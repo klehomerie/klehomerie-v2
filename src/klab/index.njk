@@ -34,11 +34,9 @@ description: Technical insights on Athens real estate, structural risk, CapEx pl
                 
                 <select id="categorySelect" class="bg-gray-50 dark:bg-slate-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 text-sm rounded-lg focus:ring-[--accent-color] focus:border-[--accent-color] block p-2">
                     <option value="all">📂 All Categories</option>
-                    <option value="Red Flag Scans">🚩 Red Flag Scans</option>
-                    <option value="Golden Visa Strategy">💳 Golden Visa</option>
-                    <option value="French Standards">🇫🇷 Standards</option>
-                    <option value="Technical Insight">💡 Insights</option>
-                    <option value="Regulatory Vigie">⚖️ Regulatory</option>
+                    {% for cat in klabCategories %}
+                    <option value="{{ cat.value }}">{{ cat.emoji }} {{ cat.label }}</option>
+                    {% endfor %}
                 </select>
 
                 <select id="languageSelect" class="bg-gray-50 dark:bg-slate-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-200 text-sm rounded-lg focus:ring-[--accent-color] focus:border-[--accent-color] block p-2">
