@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-Us">
+<html lang="{{ locale or 'en-Us' }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Klehomerie">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="{% if locale == 'fr' %}fr_FR{% elif locale == 'el' %}el_GR{% else %}en_US{% endif %}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ siteUrl }}{{ page.url }}">
