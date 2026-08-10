@@ -1,21 +1,23 @@
 ---
-title: "Microcement or Tile in Athens: The Finish Is the Scope"
-permalink: /klab/microcement-or-tile-the-bathroom-decision-nobody-in-athens-warns-you-about/
-summary: "Microcement or tile in an Athens bathroom is a scope decision, not a taste one. Two real projects, the substrate mechanism behind them, and what to ask before signing."
-date: 2026-07-31T13:27:00.000+03:00
-category: Technical Insight
-language: en
+summary: Microcement and tile are both excellent finishes. Which one you end up
+  with is usually decided by the substrate, the calendar and the budget, not by
+  taste. Two Athens projects, why a 2 to 3 mm coating punishes an uneven floor
+  harder than a 15 mm tile bed does, and the questions worth asking before you
+  sign a quote.
 property_type: All
-location: Athens, Greece
-image: /assets/images/uploads/patiti_vs._tiles.png
 visual_module:
   type: None
+permalink: /klab/microcement-or-tile-the-bathroom-decision-nobody-in-athens-warns-you-about/
+title: "Microcement or Tile in Athens: The Finish Is the Scope"
+date: 2026-07-31T13:27:00.000+03:00
+updated_date: 2026-08-10T22:17:00.000+03:00
+category: Technical Insight
+language: en
+location: Athens, Greece
+image: /assets/images/uploads/patiti_vs._tiles.png
 ---
 # The Finish Is the Scope: What Actually Decides Microcement or Tile in Athens
 
-*Technical Insight | Athens, Greece*
-
-**Quick summary.** Microcement and tile are both excellent finishes. Which one you end up with is usually decided by the substrate, the calendar and the budget, not by taste. Two Athens projects, why a 2 to 3 mm coating punishes an uneven floor harder than a 15 mm tile bed does, and the questions worth asking before you sign a quote.
 
 ## Table of Contents
 
