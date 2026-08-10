@@ -69,6 +69,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/*.pdf");
+  eleventyConfig.addPassthroughCopy("src/manifest.json");
   eleventyConfig.addPassthroughCopy({
     "node_modules/vanilla-cookieconsent/dist/cookieconsent.css": "assets/css/cookieconsent.css",
     "node_modules/vanilla-cookieconsent/dist/cookieconsent.umd.js": "assets/js/cookieconsent.js"
