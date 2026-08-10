@@ -41,21 +41,30 @@
     {# hreflang alternates: only declared where the target URL actually carries
        equivalent translated content, per Google's hreflang guidelines.
        - "/", "/methodology/", "/legal/privacy/", "/legal/terms/",
-         "/testimonials/", "/golden-ticket-technical-audit/" are fully
-         translated client-side (data-lang-key / per-language fields), so the
-         fr/el alternate is the same URL with ?lang= appended.
+         "/testimonials/", "/golden-ticket-technical-audit/" now have real
+         French URLs under /fr/ (Phase 5), plus a query-param Greek
+         alternate on the English URL, since Greek stays on the client-side
+         mechanism for now (see the Phase 5 plan for why).
        - "/checklist/" and "/fr/checklist/" (and their two sub-pages) are real,
-         separate EN/FR pages with no EL equivalent.
+         separate EN/FR pages with no EL equivalent at all.
        - Everything else (scope, media, klab, thank-you) has no translated body
          copy yet, so it only self-references. #}
-    {% set fullyTranslatedUrls = ["/", "/methodology/", "/legal/privacy/", "/legal/terms/", "/testimonials/", "/golden-ticket-technical-audit/"] %}
+    {% set frRealElQueryEnUrls = ["/", "/methodology/", "/legal/privacy/", "/legal/terms/", "/testimonials/", "/golden-ticket-technical-audit/"] %}
+    {% set frRealElQueryFrUrls = ["/fr/", "/fr/methodology/", "/fr/legal/privacy/", "/fr/legal/terms/", "/fr/testimonials/", "/fr/golden-ticket-technical-audit/"] %}
     {% set checklistEnUrls = ["/checklist/", "/checklist/check-your-inbox/", "/checklist/confirmed/"] %}
     {% set checklistFrUrls = ["/fr/checklist/", "/fr/checklist/check-your-inbox/", "/fr/checklist/confirmed/"] %}
-    {% if page.url in fullyTranslatedUrls %}
+    {% if page.url in frRealElQueryEnUrls %}
+    {% set pairIndex = frRealElQueryEnUrls.indexOf(page.url) %}
     <link rel="alternate" hreflang="en" href="https://klehomerie.com{{ page.url }}" />
-    <link rel="alternate" hreflang="fr" href="https://klehomerie.com{{ page.url }}?lang=fr" />
+    <link rel="alternate" hreflang="fr" href="https://klehomerie.com{{ frRealElQueryFrUrls[pairIndex] }}" />
     <link rel="alternate" hreflang="el" href="https://klehomerie.com{{ page.url }}?lang=el" />
     <link rel="alternate" hreflang="x-default" href="https://klehomerie.com{{ page.url }}" />
+    {% elif page.url in frRealElQueryFrUrls %}
+    {% set pairIndex = frRealElQueryFrUrls.indexOf(page.url) %}
+    <link rel="alternate" hreflang="en" href="https://klehomerie.com{{ frRealElQueryEnUrls[pairIndex] }}" />
+    <link rel="alternate" hreflang="fr" href="https://klehomerie.com{{ page.url }}" />
+    <link rel="alternate" hreflang="el" href="https://klehomerie.com{{ frRealElQueryEnUrls[pairIndex] }}?lang=el" />
+    <link rel="alternate" hreflang="x-default" href="https://klehomerie.com{{ frRealElQueryEnUrls[pairIndex] }}" />
     {% elif page.url in checklistEnUrls %}
     {% set pairIndex = checklistEnUrls.indexOf(page.url) %}
     <link rel="alternate" hreflang="en" href="https://klehomerie.com{{ page.url }}" />
