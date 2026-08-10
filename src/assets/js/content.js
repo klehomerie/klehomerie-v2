@@ -165,7 +165,7 @@ window.translations = {
       mediaPressKitItem4: 'High-Resolution Brand Logos (PNG)',
       mediaContactTitle: 'Direct Media Contact',
       mediaContactSub: 'For press inquiries, expert commentary on the Athens market, or investor relations, contact us directly.',
-      mediaContactNote: 'We typically respond to international inquiries within 12 hours across all time zones.',
+      mediaContactNote: 'We typically respond to press inquiries within one business day.',
 
       // --- METHODOLOGY PAGE ---
       methodologyPageTitle: 'Our Methodology',
