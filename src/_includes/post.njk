@@ -279,3 +279,28 @@ layout: base.njk
   .dark .prose ul > li::marker { color: #d1d5db; }
 
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ title | dump | safe }},
+  "description": {{ (summary or "A deep dive into Athens construction risks.") | dump | safe }},
+  "image": "https://klehomerie.com{{ heroSrc }}",
+  "datePublished": "{{ date | dateISO }}",
+  "dateModified": "{{ date | dateISO }}",
+  "author": {
+    "@type": "Person",
+    "name": "Arnaud Zerdab",
+    "url": "https://klehomerie.com/"
+  },
+  "publisher": {
+    "@type": "ProfessionalService",
+    "@id": "https://klehomerie.com/#organization"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://klehomerie.com{{ page.url }}"
+  }
+}
+</script>
