@@ -43,7 +43,7 @@ description: Client and contractor testimonials on Klehomerie's Technical Asset 
                 {% if item.type == 'client' %}
                 <div class="bg-[--card-bg] p-8 rounded-xl shadow-md border-l-4 border-[--accent-color]">
                     
-                    <div class="lang-en testimonial-render-block">
+                    <div class="lang-en">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;{{ item.fullQuote_en | default(item.fullQuoteOriginal) }}&rdquo;
                         </p>
@@ -56,7 +56,7 @@ description: Client and contractor testimonials on Klehomerie's Technical Asset 
                         {% endif %}
                     </div>
 
-                    <div class="lang-fr hidden testimonial-render-block">
+                    <div class="lang-fr hidden">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;{{ item.fullQuote_fr | default(item.fullQuoteOriginal) }}&rdquo;
                         </p>
@@ -69,7 +69,7 @@ description: Client and contractor testimonials on Klehomerie's Technical Asset 
                         {% endif %}
                     </div>
 
-                    <div class="lang-el hidden testimonial-render-block">
+                    <div class="lang-el hidden">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;{{ item.fullQuote_el | default(item.fullQuoteOriginal) }}&rdquo;
                         </p>
@@ -122,7 +122,7 @@ description: Client and contractor testimonials on Klehomerie's Technical Asset 
                 {% if item.type != 'client' %}
                 <div class="bg-[--secondary-bg] p-8 rounded-xl border border-gray-200 dark:border-gray-700">
                     
-                    <div class="lang-en testimonial-render-block">
+                    <div class="lang-en">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;{{ item.fullQuote_en | default(item.fullQuoteOriginal) }}&rdquo;
                         </p>
@@ -135,7 +135,7 @@ description: Client and contractor testimonials on Klehomerie's Technical Asset 
                         {% endif %}
                     </div>
 
-                    <div class="lang-fr hidden testimonial-render-block">
+                    <div class="lang-fr hidden">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;{{ item.fullQuote_fr | default(item.fullQuoteOriginal) }}&rdquo;
                         </p>
@@ -148,7 +148,7 @@ description: Client and contractor testimonials on Klehomerie's Technical Asset 
                         {% endif %}
                     </div>
 
-                    <div class="lang-el hidden testimonial-render-block">
+                    <div class="lang-el hidden">
                         <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
                             &ldquo;{{ item.fullQuote_el | default(item.fullQuoteOriginal) }}&rdquo;
                         </p>
@@ -199,22 +199,6 @@ description: Client and contractor testimonials on Klehomerie's Technical Asset 
     </div>
 </main>
 
-<style>
-  /* Isolated Multi-Language Display Logic Bounds */
-  .testimonial-render-block { display: none; }
-  
-  /* Updated to [lang|="en"] to catch the en-GB tag we added in Phase 1 */
-  html[lang|="en"] .testimonial-render-block.lang-en,
-  :root:not([lang]) .testimonial-render-block.lang-en,
-  html:not([lang]) .testimonial-render-block.lang-en { display: block !important; }
-  
-  html[lang="fr"] .testimonial-render-block.lang-fr { display: block !important; }
-  html[lang="el"] .testimonial-render-block.lang-el { display: block !important; }
-  
-  html[lang="fr"] .testimonial-render-block.lang-en { display: none !important; }
-  html[lang="el"] .testimonial-render-block.lang-en { display: none !important; }
-</style>
-
 <script>
 // --- TAB SWITCHING INTERACTION ENGINE ---
 function switchTab(tab) {
@@ -246,21 +230,7 @@ function switchTab(tab) {
         btnClients.classList.add(...inactiveClasses);
     }
 }
-
-// --- GLOBAL NAVIGATION SYNC COUPLER ---
-document.addEventListener('click', function(e) {
-    const langBtn = e.target.closest('.lang-btn');
-    if (langBtn) {
-        const targetLang = langBtn.getAttribute('data-lang'); 
-        
-        document.querySelectorAll('.testimonial-render-block').forEach(quote => {
-            quote.style.setProperty('display', 'none', 'important');
-        });
-
-        const activeClass = targetLang === 'en' ? '.lang-en' : (targetLang === 'fr' ? '.lang-fr' : '.lang-el');
-        document.querySelectorAll('.testimonial-render-block' + activeClass).forEach(quote => {
-            quote.style.setProperty('display', 'block', 'important');
-        });
-    }
-});
+// Per-language quote visibility (.lang-en/.lang-fr/.lang-el) is handled
+// centrally by updateLanguage() in script.js, same mechanism as the
+// homepage testimonial slider.
 </script>

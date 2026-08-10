@@ -362,19 +362,14 @@ description: Independent, buyer-side Technical Asset Management in Athens, Red F
     // ==========================================
     // 2. LANGUAGE TOGGLE INTEGRATION HOOK
     // ==========================================
+    // The .lang-en/.lang-fr/.lang-el show/hide toggle itself is handled
+    // centrally in script.js's updateLanguage(), which runs before this
+    // delegated listener fires (direct button listeners resolve before the
+    // event bubbles to document). This only re-runs the carousel-specific
+    // layout pass after the quote text has changed underneath it.
     document.addEventListener('click', function(e) {
         const langBtn = e.target.closest('.lang-btn');
         if (langBtn) {
-            const targetLang = langBtn.getAttribute('data-lang'); 
-            
-            document.querySelectorAll('.lang-en, .lang-fr, .lang-el').forEach(quote => {
-                quote.style.display = 'none';
-            });
-
-            document.querySelectorAll('.lang-' + targetLang).forEach(quote => {
-                quote.style.display = 'block';
-            });
-            
             renderDeckState();
         }
     });

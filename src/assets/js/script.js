@@ -155,6 +155,17 @@ document.addEventListener('DOMContentLoaded', function () {
           }
       });
 
+      // Shared toggle for pre-rendered per-language quote blocks (testimonial
+      // slider on the homepage, testimonial cards on /testimonials/). These
+      // render all three languages into the DOM and hide the inactive ones
+      // via the "hidden" class, rather than going through data-lang-key.
+      document.querySelectorAll('.lang-en, .lang-fr, .lang-el').forEach(el => {
+          el.classList.add('hidden');
+      });
+      document.querySelectorAll('.lang-' + lang).forEach(el => {
+          el.classList.remove('hidden');
+      });
+
       currentLang = lang;
       localStorage.setItem('lang', lang);
   }
