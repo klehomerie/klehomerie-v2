@@ -59,7 +59,7 @@ window.translations = {
 
       // 2. GOLDEN TICKET AUDIT (Price Highlighted)
       pkg_audit_title: 'Golden Ticket Audit<br><span class="text-3xl text-[--accent-color]">€490</span>',
-      pkg_audit_desc: '<ul class="list-disc list-inside space-y-3 text-left"><li><b>The "Negotiation Weapon"</b></li><li>40-Point Technical Report</li><li>Electrical Safety Check</li><li>Humidity/Mold Scan</li><li>CapEx/Repair Budget</li></ul>',
+      pkg_audit_desc: '<ul class="list-disc list-inside space-y-3 text-left"><li><b>The "Negotiation Weapon"</b></li><li><b>32</b>-Point Inspection + <b>11</b>-Point Survey</li><li>Electrical Safety Check</li><li>Humidity/Mold Scan</li><li>CapEx/Repair Budget</li></ul>',
 
       // 3. GUARDIAN (No Price on front, Updated Desc)
       pkg_guardian_title: 'Vacant Asset Guardianship',
@@ -80,7 +80,7 @@ window.translations = {
       rc_redflag_name: 'Red Flag Technical Scan',
       rc_redflag_desc: '45-min Visual Diagnostic for pre-acquisition Go/No-Go decisions.',
       rc_golden_name: 'Golden Ticket Technical Audit',
-      rc_golden_desc: 'Full 40-point technical report, moisture mapping, and CapEx budgeting.',
+      rc_golden_desc: 'Full technical report: <b>32</b> scored inspection points plus an <b>11</b>-point environment survey, moisture mapping, and CapEx budgeting.',
       rc_amcore_name: 'Asset Management Core',
       rc_amcore_desc: 'Monthly Asset Management: Asset Risk triage, technical issue filtering, 6-month/turnover visual check.',
       rc_ampremium_name: 'Asset Management Premium',
@@ -205,7 +205,7 @@ window.translations = {
       methodologyEngine1Title: 'The Gatekeeper',
       methodologyEngine1Text: 'A rapid technical scan before capital is committed. A clear Go or No-Go, before you own the problem.',
       methodologyEngine2Title: 'The Authority',
-      methodologyEngine2Text: 'A deep, 40-point technical audit across six fixed asset classes: general environment, electrical systems, plumbing and HVAC, joinery and closings, finishes and surfaces, amenities and white goods. The output is a baseline condition report and the 5-Year CapEx forecast referenced above.',
+      methodologyEngine2Text: 'A deep technical audit made up of <b>32</b> scored inspection points across five technical lots, plus an <b>11</b>-point general environment survey, spanning six fixed asset classes: general environment, electrical systems, plumbing and HVAC, joinery and closings, finishes and surfaces, amenities and white goods. The output is a baseline condition report and the 5-Year CapEx forecast referenced above.',
       methodologyEngine3Title: 'The Coordinator',
       methodologyEngine3Text: 'The transition from acquisition to a performing asset — utility activation, a centralized Digital Vault for every document that matters, and ongoing oversight of contracted works against the forecast.',
       methodologyEngine4Title: 'The Guardian',
@@ -337,7 +337,7 @@ window.translations = {
       pkg_scan_desc: '<ul class="list-disc list-inside space-y-3 text-left"><li><b>Le "Contrôle de Viabilité"</b></li><li>Diagnostic Visuel 45-min</li><li>Verdict Go/No-Go</li></ul>',
 
       pkg_audit_title: 'Audit "Golden Ticket"<br><span class="text-3xl text-[--accent-color]">490€</span>',
-      pkg_audit_desc: '<ul class="list-disc list-inside space-y-3 text-left"><li><b>L\'Arme de Négociation</b></li><li>Rapport Technique 40 Points</li><li>Sécurité Électrique</li><li>Scan Humidité/Moisissure</li><li>Budget CAPEX/Réparations</li></ul>',
+      pkg_audit_desc: '<ul class="list-disc list-inside space-y-3 text-left"><li><b>L\'Arme de Négociation</b></li><li>Inspection en <b>32</b> Points + Relevé en <b>11</b> Points</li><li>Sécurité Électrique</li><li>Scan Humidité/Moisissure</li><li>Budget CAPEX/Réparations</li></ul>',
 
       pkg_guardian_title: 'Intendance',
       pkg_guardian_desc: '<ul class="list-disc list-inside space-y-3 text-left"><li><b>Pour Actifs de Luxe Vacants</b></li><li>"Prise de Pouls" Mensuelle</li><li>Cycle de l\'eau & Clim</li><li><b>Check Post-Intempéries/Séisme</b></li><li>Contrôle d\'Accès Prestataires</li></ul>',
@@ -356,7 +356,7 @@ window.translations = {
       rc_redflag_name: 'Scan Technique "Red Flag"',
       rc_redflag_desc: 'Diagnostic visuel de 45 min pour une décision Go/No-Go avant acquisition.',
       rc_golden_name: 'Audit Technique "Golden Ticket"',
-      rc_golden_desc: 'Rapport technique complet en 40 points, cartographie d\'humidité et budget CAPEX.',
+      rc_golden_desc: 'Rapport technique complet : <b>32</b> points d\'inspection notés plus un relevé d\'environnement de <b>11</b> points, cartographie d\'humidité et budget CAPEX.',
       rc_amcore_name: 'Gestion d\'Actif Core',
       rc_amcore_desc: 'Gestion mensuelle : triage des Risques Actif, filtrage technique, visite semestrielle/de rotation.',
       rc_ampremium_name: 'Gestion d\'Actif Premium',
@@ -470,7 +470,7 @@ window.translations = {
       methodologyEngine1Title: 'Le Gatekeeper',
       methodologyEngine1Text: 'Un scan technique rapide avant tout engagement de capital. Un verdict Go ou No-Go clair, avant que le problème ne devienne le vôtre.',
       methodologyEngine2Title: 'L\'Expert',
-      methodologyEngine2Text: 'Un audit technique approfondi en 40 points couvrant six catégories fixes : environnement général, systèmes électriques, plomberie et CVC, menuiseries et fermetures, finitions et surfaces, équipements et électroménager. Le livrable est un rapport d\'état de référence ainsi que la prévision CapEx à 5 ans mentionnée plus haut.',
+      methodologyEngine2Text: 'Un audit technique approfondi composé de <b>32</b> points d\'inspection notés répartis sur cinq lots techniques, ainsi qu\'un relevé d\'environnement général de <b>11</b> points, couvrant six catégories fixes : environnement général, systèmes électriques, plomberie et CVC, menuiseries et fermetures, finitions et surfaces, équipements et électroménager. Le livrable est un rapport d\'état de référence ainsi que la prévision CapEx à 5 ans mentionnée plus haut.',
       methodologyEngine3Title: 'Le Pilote',
       methodologyEngine3Text: 'La transition entre l\'acquisition et un actif opérationnel : activation des abonnements, un Coffre-Fort Numérique centralisant chaque document important, et un suivi continu des travaux contractualisés par rapport à la prévision.',
       methodologyEngine4Title: 'Le Gardien',
