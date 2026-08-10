@@ -3,7 +3,8 @@
 window.translations = {
   'en': {
       // --- NAVIGATION ---
-      navServices: 'Services', 
+      navServices: 'Services',
+      navGoldenTicket: 'Golden Ticket Technical Audit',
       navInsights: 'Insights',
       navAbout: 'About',
       navReviews: 'Reviews',
@@ -345,7 +346,8 @@ window.translations = {
 
   'fr': {
       // --- NAVIGATION ---
-      navServices: 'Services', 
+      navServices: 'Services',
+      navGoldenTicket: 'Golden Ticket Technical Audit',
       navInsights: 'Analyses',
       navAbout: 'À propos',
       navReviews: 'Avis',
@@ -668,7 +670,8 @@ window.translations = {
 
   'el': {
       // --- NAVIGATION ---
-      navServices: 'Οι Αποστολές μας', 
+      navServices: 'Οι Αποστολές μας',
+      navGoldenTicket: 'Golden Ticket Technical Audit',
       navInsights: 'Άρθρα',
       navAbout: 'Σχετικά', 
       navReviews: 'Κριτικές',

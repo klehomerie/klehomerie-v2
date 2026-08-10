@@ -87,7 +87,9 @@ document.addEventListener('DOMContentLoaded', function () {
                       <div class="flex-1 w-full flex items-start overflow-y-auto">
                           <div class="text-base font-medium leading-relaxed w-full text-[--card-back-text]" data-lang-key="${pkg.descKey}">Loading info...</div>
                       </div>
-                      <a href="#contact" onclick="event.stopPropagation(); document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="mt-3 flex-shrink-0 self-center inline-flex items-center gap-1 text-sm font-bold text-[--card-back-text] border border-[--card-back-text] rounded-full px-4 py-1.5 hover:bg-white/20 transition-colors" data-lang-key="cardBookCta">Book It Now →</a>
+                      ${pkg.id === 'audit'
+                          ? '<a href="/golden-ticket-technical-audit/" onclick="event.stopPropagation();" class="mt-3 flex-shrink-0 self-center inline-flex items-center gap-1 text-sm font-bold text-[--card-back-text] border border-[--card-back-text] rounded-full px-4 py-1.5 hover:bg-white/20 transition-colors" data-lang-key="cardBookCta">Book It Now →</a>'
+                          : '<a href="#contact" onclick="event.stopPropagation(); document.getElementById(\'contact\').scrollIntoView({behavior:\'smooth\'})" class="mt-3 flex-shrink-0 self-center inline-flex items-center gap-1 text-sm font-bold text-[--card-back-text] border border-[--card-back-text] rounded-full px-4 py-1.5 hover:bg-white/20 transition-colors" data-lang-key="cardBookCta">Book It Now →</a>'}
                   </div>
               </div>
           </div>

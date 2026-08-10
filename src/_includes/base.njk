@@ -372,6 +372,10 @@
 <a href="/media/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMedia">Press</a>
 {% endmacro %}
 
+{% macro servicesDropdownLinks() %}
+<a href="/golden-ticket-technical-audit/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navGoldenTicket">Golden Ticket Technical Audit</a>
+{% endmacro %}
+
 <nav id="header" class="fixed w-full top-0 transition-all duration-300 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20"> 
@@ -395,7 +399,19 @@
             <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-6">
                    {% if page.url == '/' %}
-                       <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" data-lang-key="navServices">Services</button>
+                       <!-- Services Dropdown -->
+<div class="relative group inline-block">
+    <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1 focus:outline-none" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" data-lang-key="navServices">
+        Services
+        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+    <div class="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-700 z-50">
+        <div class="py-2 flex flex-col">
+            {{ servicesDropdownLinks() }}
+        </div>
+    </div>
+</div>
+
                        <a href="/klab/" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-bold transition-colors text-[--accent-color]" data-lang-key="navInsights">Insights</a>
 
                        <!-- About Us Dropdown -->
@@ -414,7 +430,19 @@
                        <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('faq').scrollIntoView({behavior: 'smooth'})" data-lang-key="navFaq">FAQ</button>
                        <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" data-lang-key="navContact">Contact</button>
                    {% else %}
-                       <a href="/#services" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navServices">Services</a>
+                       <!-- Services Dropdown -->
+<div class="relative group inline-block">
+    <a href="/#services" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1" data-lang-key="navServices">
+        Services
+        <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </a>
+    <div class="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100 border border-gray-100 dark:border-gray-700 z-50">
+        <div class="py-2 flex flex-col">
+            {{ servicesDropdownLinks() }}
+        </div>
+    </div>
+</div>
+
                        <a href="/klab/" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-bold transition-colors text-[--accent-color]" data-lang-key="navInsights">Insights</a>
                        
                        <!-- About Us Dropdown -->
@@ -483,6 +511,9 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 absolute top-full left-0 w-full shadow-xl z-50">
             <div class="flex flex-col p-4 space-y-4">
                 <a href="/#services" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navServices">Services</a>
+                <div class="flex flex-col space-y-3 pt-2 pb-2">
+    <a href="/golden-ticket-technical-audit/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navGoldenTicket">Golden Ticket Technical Audit</a>
+</div>
                 <a href="/klab/" class="text-[--accent-color] font-bold" onclick="toggleMobileMenu()" data-lang-key="navInsights">Insights</a>
                 <div class="flex flex-col space-y-3 pt-2 pb-2">
     <span class="text-gray-400 dark:text-gray-500 font-semibold text-xs uppercase tracking-wider px-2" data-lang-key="navAbout">About</span>
