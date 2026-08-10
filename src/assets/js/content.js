@@ -222,7 +222,7 @@ window.translations = {
 
       // --- PRIVACY POLICY ---
       privacy_title: 'Privacy &amp; Data Protection Notice',
-      privacy_updated: 'Last Updated: July 2026',
+      privacy_updated: 'Version 4.3, effective July 2026',
       privacy_intro1: '<strong>Klehomerie</strong> (hereinafter referred to as the "Company") is committed to protecting your personal data in compliance with the General Data Protection Regulation (EU) 2016/679 (GDPR) and Greek Law 4624/2019. This notice outlines how we collect, use, and safeguard your information.',
       privacy_intro2: 'This notice is informational. It does not itself constitute your consent. Where we rely on consent, that consent is collected separately, is entirely optional, and may be withdrawn at any time without any effect on your Service Agreement or the services you receive.',
       privacy_s1_h: '1. Data Controller',
@@ -549,7 +549,7 @@ window.translations = {
 
       // --- PRIVACY POLICY ---
       privacy_title: 'Avis de Confidentialité et de Protection des Données',
-      privacy_updated: 'Dernière mise à jour : juillet 2026',
+      privacy_updated: 'Version 4.3, en vigueur depuis juillet 2026',
       privacy_intro1: '<strong>Klehomerie</strong> (ci-après la « Société ») s\'engage à protéger vos données personnelles conformément au Règlement Général sur la Protection des Données (UE) 2016/679 (RGPD) et à la loi grecque 4624/2019. Le présent avis décrit la manière dont nous collectons, utilisons et protégeons vos informations.',
       privacy_intro2: 'Le présent avis a une vocation purement informative. Il ne constitue pas en lui-même votre consentement. Lorsque nous nous appuyons sur le consentement, celui-ci est recueilli séparément, est entièrement facultatif et peut être retiré à tout moment, sans aucune incidence sur votre Contrat de Service ni sur les prestations dont vous bénéficiez.',
       privacy_s1_h: '1. Responsable du Traitement',
@@ -873,7 +873,7 @@ window.translations = {
 
       // --- PRIVACY POLICY ---
       privacy_title: 'Ειδοποίηση Απορρήτου και Προστασίας Δεδομένων',
-      privacy_updated: 'Τελευταία Ενημέρωση: Ιούλιος 2026',
+      privacy_updated: 'Έκδοση 4.3, σε ισχύ από τον Ιούλιο 2026',
       privacy_intro1: 'Η <strong>Klehomerie</strong> (εφεξής η «Εταιρεία») δεσμεύεται να προστατεύει τα προσωπικά σας δεδομένα σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (ΕΕ) 2016/679 (ΓΚΠΔ) και τον Ελληνικό Νόμο 4624/2019. Η παρούσα ειδοποίηση περιγράφει τον τρόπο με τον οποίο συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τις πληροφορίες σας.',
       privacy_intro2: 'Η παρούσα ειδοποίηση έχει ενημερωτικό χαρακτήρα. Δεν συνιστά η ίδια τη συγκατάθεσή σας. Όπου βασιζόμαστε σε συγκατάθεση, αυτή συλλέγεται ξεχωριστά, είναι εντελώς προαιρετική και μπορεί να ανακληθεί ανά πάσα στιγμή, χωρίς καμία επίπτωση στη Σύμβαση Παροχής Υπηρεσιών ή στις υπηρεσίες που λαμβάνετε.',
       privacy_s1_h: '1. Υπεύθυνος Επεξεργασίας',
