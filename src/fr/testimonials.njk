@@ -1,0 +1,239 @@
+---
+layout: base.njk
+title: Klehomerie - Témoignages de Clients et de Partenaires
+image: /assets/images/hero-athens-view.webp
+description: Témoignages de clients et de prestataires sur la Gestion Technique d'Actifs et les Audits Techniques Golden Ticket de Klehomerie à Athènes, Grèce.
+permalink: /fr/testimonials/
+locale: fr
+---
+
+<header class="relative pt-32 pb-20 flex items-center justify-center text-center overflow-hidden z-10">
+    <picture class="absolute inset-0 w-full h-full z-0">
+        <source media="(max-width: 768px)" srcset="/assets/images/hero-athens-view-mobile.webp" type="image/webp">
+        <source srcset="/assets/images/hero-athens-view.webp" type="image/webp">
+        <img src="/assets/images/hero-athens-view.webp"
+             alt="Klehomerie Technical Asset Management - Client & Partner Testimonials Background"
+             width="1184"
+             height="864"
+             class="hero-img object-cover w-full h-full block filter blur-[2px] scale-105"
+             fetchpriority="high"
+             loading="eager">
+    </picture>
+
+    <div class="hero-overlay absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[--bg-color] z-10"></div>
+
+    <div class="relative z-20 px-6 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg tracking-tight" data-lang-key="testiPageTitle">Une Confiance Bâtie sur le Béton</h1>
+        <p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-md" data-lang-key="testiPageSub">Découvrez les témoignages complets de nos investisseurs internationaux et de nos partenaires locaux.</p>
+    </div>
+</header>
+
+<main class="pb-20 bg-[--bg-color]">
+    <div class="container mx-auto px-6 max-w-4xl">
+
+        <div class="flex justify-center gap-4 mb-12 -mt-6 relative z-20">
+            <button id="btn-clients" onclick="switchTab('clients')" class="px-6 py-2 rounded-full font-bold bg-[--accent-color] text-white shadow-md transition-colors">
+                Avis Clients
+            </button>
+            <button id="btn-partners" onclick="switchTab('partners')" class="px-6 py-2 rounded-full font-bold bg-gray-200 text-gray-600 dark:bg-gray-800 dark:text-gray-300 shadow-md transition-colors">
+                Avis Partenaires
+            </button>
+        </div>
+
+        <div id="tab-clients" class="space-y-8 animate-fade-in">
+            {% for item in testimonials.items %}
+                {% if item.type == 'client' %}
+                <div class="bg-[--card-bg] p-8 rounded-xl shadow-md border-l-4 border-[--accent-color]">
+
+                    <div class="lang-en hidden">
+                        <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
+                            &ldquo;{{ item.fullQuote_en | default(item.fullQuoteOriginal) }}&rdquo;
+                        </p>
+                        {% if item.originalLanguage and item.originalLanguage != 'en' %}
+                            <p class="text-xs text-gray-400 font-bold uppercase tracking-wider mt-2 mb-6">
+                                (Original language: {% if item.originalLanguage == 'fr' %}French{% elif item.originalLanguage == 'el' %}Greek{% endif %})
+                            </p>
+                        {% else %}
+                            <div class="mb-6"></div>
+                        {% endif %}
+                    </div>
+
+                    <div class="lang-fr">
+                        <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
+                            &ldquo;{{ item.fullQuote_fr | default(item.fullQuoteOriginal) }}&rdquo;
+                        </p>
+                        {% if item.originalLanguage and item.originalLanguage != 'fr' %}
+                            <p class="text-xs text-gray-400 font-bold uppercase tracking-wider mt-2 mb-6">
+                                (Langue d'origine : {% if item.originalLanguage == 'en' %}Anglais{% elif item.originalLanguage == 'el' %}Grec{% endif %})
+                            </p>
+                        {% else %}
+                            <div class="mb-6"></div>
+                        {% endif %}
+                    </div>
+
+                    <div class="lang-el hidden">
+                        <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
+                            &ldquo;{{ item.fullQuote_el | default(item.fullQuoteOriginal) }}&rdquo;
+                        </p>
+                        {% if item.originalLanguage and item.originalLanguage != 'el' %}
+                            <p class="text-xs text-gray-400 font-bold uppercase tracking-wider mt-2 mb-6">
+                                (Αρχική γλώσσα: {% if item.originalLanguage == 'en' %}Αγγλικά{% elif item.originalLanguage == 'fr' %}Γαλλικά{% endif %})
+                            </p>
+                        {% else %}
+                            <div class="mb-6"></div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex items-center gap-4 border-t border-gray-100 dark:border-gray-700 pt-6">
+                        {% if item.image %}
+                            {% optimizedImage item.image, item.name, "48px", "h-12 w-12 rounded-full object-cover" %}
+                        {% else %}
+                            <div class="h-12 w-12 bg-[--accent-color] rounded-full flex items-center justify-center text-white font-bold">
+                                {{ item.name | truncate(2, true, "") }}
+                            </div>
+                        {% endif %}
+                        <div>
+                            <div class="font-bold text-[--title-color] flex flex-wrap items-center gap-2">
+                                {{ item.name }}
+                                {% if item.source == 'google' %}
+                                <span class="inline-flex items-center gap-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-full px-2 py-0.5 text-[10px] font-semibold text-gray-500 dark:text-gray-300" title="Verified on Google Business">
+                                    <svg class="w-3 h-3 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29A11.94 11.94 0 000 12c0 1.92.46 3.74 1.29 5.38l3.98-3.09z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/></svg>
+                                    <span data-lang-key="googleReviewBadge">Avis Google</span>
+                                </span>
+                                {% endif %}
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                {% if item.website %}
+                                    <a href="{{ item.website }}" target="_blank" rel="noopener noreferrer" class="hover:text-[--accent-color] hover:underline transition-colors">
+                                        {{ item.role }}
+                                    </a>
+                                {% else %}
+                                    {{ item.role }}
+                                {% endif %}
+                                {% if item.location %} • {{ item.location }}{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div id="tab-partners" class="space-y-8 hidden animate-fade-in">
+            {% for item in testimonials.items %}
+                {% if item.type != 'client' %}
+                <div class="bg-[--secondary-bg] p-8 rounded-xl border border-gray-200 dark:border-gray-700">
+
+                    <div class="lang-en hidden">
+                        <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
+                            &ldquo;{{ item.fullQuote_en | default(item.fullQuoteOriginal) }}&rdquo;
+                        </p>
+                        {% if item.originalLanguage and item.originalLanguage != 'en' %}
+                            <p class="text-xs text-gray-400 font-bold uppercase tracking-wider mt-2 mb-6">
+                                (Original language: {% if item.originalLanguage == 'fr' %}French{% elif item.originalLanguage == 'el' %}Greek{% endif %})
+                            </p>
+                        {% else %}
+                            <div class="mb-6"></div>
+                        {% endif %}
+                    </div>
+
+                    <div class="lang-fr">
+                        <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
+                            &ldquo;{{ item.fullQuote_fr | default(item.fullQuoteOriginal) }}&rdquo;
+                        </p>
+                        {% if item.originalLanguage and item.originalLanguage != 'fr' %}
+                            <p class="text-xs text-gray-400 font-bold uppercase tracking-wider mt-2 mb-6">
+                                (Langue d'origine : {% if item.originalLanguage == 'en' %}Anglais{% elif item.originalLanguage == 'el' %}Grec{% endif %})
+                            </p>
+                        {% else %}
+                            <div class="mb-6"></div>
+                        {% endif %}
+                    </div>
+
+                    <div class="lang-el hidden">
+                        <p class="text-lg text-[--text-color] mb-4 whitespace-pre-line italic">
+                            &ldquo;{{ item.fullQuote_el | default(item.fullQuoteOriginal) }}&rdquo;
+                        </p>
+                        {% if item.originalLanguage and item.originalLanguage != 'el' %}
+                            <p class="text-xs text-gray-400 font-bold uppercase tracking-wider mt-2 mb-6">
+                                (Αρχική γλώσσα: {% if item.originalLanguage == 'en' %}Αγγλικά{% elif item.originalLanguage == 'fr' %}Γαλλικά{% endif %})
+                            </p>
+                        {% else %}
+                            <div class="mb-6"></div>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex items-center gap-4 border-t border-gray-200 dark:border-gray-600 pt-6">
+                        {% if item.image %}
+                            {% optimizedImage item.image, item.name, "48px", "h-12 w-12 rounded-full object-cover" %}
+                        {% else %}
+                            <div class="h-12 w-12 bg-gray-400 rounded-full flex items-center justify-center text-white font-bold">
+                                {{ item.name | truncate(2, true, "") }}
+                            </div>
+                        {% endif %}
+                        <div>
+                            <div class="font-bold text-[--title-color] flex flex-wrap items-center gap-2">
+                                {{ item.name }}
+                                {% if item.source == 'google' %}
+                                <span class="inline-flex items-center gap-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-full px-2 py-0.5 text-[10px] font-semibold text-gray-500 dark:text-gray-300" title="Verified on Google Business">
+                                    <svg class="w-3 h-3 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29A11.94 11.94 0 000 12c0 1.92.46 3.74 1.29 5.38l3.98-3.09z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/></svg>
+                                    <span data-lang-key="googleReviewBadge">Avis Google</span>
+                                </span>
+                                {% endif %}
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                {% if item.website %}
+                                    <a href="{{ item.website }}" target="_blank" rel="noopener noreferrer" class="hover:text-[--accent-color] hover:underline transition-colors">
+                                        {{ item.role }}
+                                    </a>
+                                {% else %}
+                                    {{ item.role }}
+                                {% endif %}
+                                {% if item.location %} • {{ item.location }}{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+    </div>
+</main>
+
+<script>
+// --- TAB SWITCHING INTERACTION ENGINE ---
+function switchTab(tab) {
+    const tabClients = document.getElementById('tab-clients');
+    const tabPartners = document.getElementById('tab-partners');
+    const btnClients = document.getElementById('btn-clients');
+    const btnPartners = document.getElementById('btn-partners');
+
+    const activeClasses = ['bg-[--accent-color]', 'text-white'];
+    const inactiveClasses = ['bg-gray-200', 'text-gray-600', 'dark:bg-gray-800', 'dark:text-gray-300'];
+
+    if (tab === 'clients') {
+        tabClients.classList.remove('hidden');
+        tabPartners.classList.add('hidden');
+
+        btnClients.classList.remove(...inactiveClasses);
+        btnClients.classList.add(...activeClasses);
+
+        btnPartners.classList.remove(...activeClasses);
+        btnPartners.classList.add(...inactiveClasses);
+    } else {
+        tabPartners.classList.remove('hidden');
+        tabClients.classList.add('hidden');
+
+        btnPartners.classList.remove(...inactiveClasses);
+        btnPartners.classList.add(...activeClasses);
+
+        btnClients.classList.remove(...activeClasses);
+        btnClients.classList.add(...inactiveClasses);
+    }
+}
+// Per-language quote visibility (.lang-en/.lang-fr/.lang-el) is handled
+// centrally by updateLanguage() in script.js, same mechanism as the
+// homepage testimonial slider. Rendered with .lang-fr visible by default
+// here since this is a dedicated French page.
+</script>

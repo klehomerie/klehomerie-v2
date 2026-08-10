@@ -50,8 +50,19 @@ document.addEventListener('DOMContentLoaded', function () {
       contactSourceInput.value = urlSource;
   }
 
-  // Determine initial language (URL Parameter > LocalStorage > Default 'en')
+  // Determine initial language (URL Parameter > page's own dedicated locale > LocalStorage > Default 'en')
   let initialLang = localStorage.getItem('lang') || 'en';
+
+  // Dedicated-locale pages (e.g. /fr/legal/terms/, set via the `locale`
+  // frontmatter var and rendered into <html lang="...">) are real French/Greek
+  // URLs, not the query-param mechanism. Their own locale must win over a
+  // stale localStorage choice, otherwise a visitor who last saw an English
+  // page would land here and immediately watch the French text get swapped
+  // back to English by this very function.
+  const pageLocale = document.documentElement.lang;
+  if (pageLocale === 'fr' || pageLocale === 'el') {
+      initialLang = pageLocale;
+  }
 
   if (urlLang === 'fr') {
       initialLang = 'fr';

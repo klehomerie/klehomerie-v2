@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "question": "Qu'est-ce que le Technical Asset Management ?",
+    "answer": "Le <b>Technical Asset Management (TAM)</b> consiste à maintenir l’intégrité <b>structurelle et fonctionnelle</b> de votre propriété, protégeant ainsi sa valeur au fil du temps.<br><br>Contrairement à la gestion locative classique, qui se concentre sur les locataires et l'esthétique, le TAM se concentre sur les <b>systèmes vitaux et la santé à long terme</b> du bâtiment.<br><br>Nous identifions les risques et les besoins de maintenance <b>avant qu'ils ne deviennent des pathologies coûteuses</b>, vous donnant ainsi une totale confiance dans votre investissement.",
+    "image": null
+  },
+  {
+    "id": 2,
+    "question": "En quoi est-ce différent de la gestion traditionnelle ?",
+    "answer": "La gestion immobilière traditionnelle gère principalement :<ul class='list-disc pl-5 mt-2 space-y-1'><li>Les relations locataires</li><li>Le taux d'occupation et les réservations</li><li>Le ménage et la décoration</li></ul><br>Le <b>Technical Asset Management</b>, en revanche, se concentre sur :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>L’intégrité structurelle</b> du bâtiment</li><li><b>Les systèmes mécaniques</b> (CVC/Clim, plomberie, électricité)</li><li><b>Le reporting basé sur la donnée</b> et la planification technique</li></ul><br>Considérez-nous comme le <b>bouclier invisible protégeant la valeur de votre bien</b> : nous travaillons en coulisses pour que votre investissement reste performant.",
+    "image": null
+  },
+  {
+    "id": 3,
+    "question": "Quand commander un Scan Technique 'Red Flag' ?",
+    "answer": "Considérez cela comme votre <b>filtre 'Go / No-Go'</b>. Utilisez-le <b>avant d'engager des avocats ou de payer pour un audit complet</b>.<br><br>Il cible le <b>contexte et les défauts rédhibitoires</b> souvent masqués par l'annonce :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>L'Environnement :</b> La rue est-elle sûre la nuit ? Y a-t-il des squats ou des activités nuisibles à proximité ?</li><li><b>Le Bâtiment (Polikatoikia) :</b> L'entrée est-elle entretenue ? Des boîtes aux lettres fracturées ou des communs sales indiquent souvent un syndic (Koinochrista) en faillite.</li><li><b>L'Unité :</b> Vérification visuelle rapide : incohérences de plan, fissures structurelles ou négligence manifeste.</li></ul><br><b>Objectif :</b> Éviter de gaspiller plus de 500 € en frais juridiques pour une propriété qui aurait dû être écartée depuis le trottoir.<br><br><a href='#contact' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Arrêtez de perdre du temps sur des annonces douteuses. Réservez un Red Flag Scan.</a>",
+    "image": null
+  },
+  {
+    "id": 4,
+    "question": "Que comprend un Audit 'Golden Ticket' ?",
+    "answer": "L'Audit Golden Ticket est une <b>évaluation technique intégrale</b>. Nous analysons six catégories fixes :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Environnement Général :</b> Salubrité et sécurité des communs.</li><li><b>Systèmes Électriques :</b> Sécurité, mise aux normes et vétusté.</li><li><b>Plomberie et CVC :</b> Débit, pression et intégrité des réseaux.</li><li><b>Menuiseries et Fermetures :</b> État des ouvrants et isolation.</li><li><b>Finitions et Surfaces :</b> Usure, traces d'humidité et vices cachés.</li><li><b>Équipements et Électroménager :</b> Réfrigérateur, four, lave-vaisselle et autres appareils encastrés.</li></ul><br>Nous utilisons des outils avancés (<b>imagerie thermique</b>, tests de charge) pour produire une <b>feuille de route d'investissement</b>.<br><br><b>Au-delà du visible :</b> Notre caméra thermique détecte l'humidité encastrée, les ruptures d'isolant et les ponts thermiques invisibles à l'œil nu.<br><br><a href='/fr/golden-ticket-technical-audit/' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Obtenez une vision radiographique de votre propriété avec un Audit Golden Ticket.</a>",
+    "image": "/assets/images/thermal-audit-example.webp"
+  },
+  {
+    "id": 5,
+    "question": "Pourquoi la planification CAPEX la plus vitale ?",
+    "answer": "La planification CAPEX (Dépenses d'Investissement) vous permet d'<b>anticiper les gros travaux</b> sur un horizon de 5 ans pour :<ul class='list-disc pl-5 mt-2 space-y-1'><li>Éviter les réparations d'urgence (toujours plus chères)</li><li>Protéger le rendement locatif (Yield)</li><li>Effectuer des rénovations énergétiques au moment opportun</li></ul><br>En maîtrisant le cycle de vie des équipements (toiture, clim, chauffe-eau), vous passez d'une <b>gestion réactive à une gestion proactive</b>.",
+    "image": null
+  },
+  {
+    "id": 6,
+    "question": "Ai-je besoin d'un ingénieur civil ou avocat ?",
+    "answer": "Oui. Notre rôle est <b>strictement technique et consultatif</b> sur l'état du bien :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>Ingénieur Civil (Michanikos) :</b> Requis pour la légalité urbanistique (carrés métrés, permis).</li><li><b>Avocat :</b> Nécessaire pour la vérification des titres de propriété.</li></ul><br>Klehomerie traque la <b>'Pathologie du bâtiment'</b>. Nous sommes vos <b>jeux techniques sur le terrain AVANT</b> de déclencher l'artillerie juridique.<br>Nous ciblons les problèmes pour que l'ingénieur sache exactement où regarder.<br><br>Pour la limite exacte entre notre rôle technique et leur rôle juridique, consultez notre <a href='/fr/scope/' class='text-[--accent-color] font-bold hover:underline'>périmètre de mission complet</a>.",
+    "image": null
+  },
+  {
+    "id": 7,
+    "question": "À qui Klehomerie ne s'adresse PAS ?",
+    "answer": "Pour garantir notre prévisibilité technique, nous ne faisons pas d'hôtellerie. Nous ne sommes pas adaptés pour :<ul class='list-disc pl-5 mt-2 space-y-1'><li><b>La Gestion des Voyageurs :</b> Pas de check-in, pas de ménage, pas de messagerie Airbnb.</li><li><b>La Conciergerie :</b> Nous ne gérons pas le linge ni la décoration.</li></ul><br><b>Klehomerie est conçu pour les Investisseurs Institutionnels &amp; Avertis.</b><br>Nous sommes les <b>Directeurs Techniques</b> de l'actif. Nous travaillons en binôme avec votre gestionnaire locatif : ils s'occupent de l'humain, nous nous occupons du béton.",
+    "image": null
+  },
+  {
+    "id": 8,
+    "question": "Pourquoi pas juste un entrepreneur local ?",
+    "answer": "Vous pouvez, mais un entrepreneur gagne sa vie en trouvant des problèmes qu'<b>il</b> peut facturer.<br>Cela crée un <b>conflit d'intérêts</b> évident.<br>Klehomerie est <b>indépendante</b>. Nous ne vendons pas de travaux ; nous vendons de la <b>donnée impartiale</b>.<br>Si nous signalons un mur à reprendre, c'est un fait technique, pas une envie de vendre un devis peinture.<br>Nos honoraires vous protègent contre des devis de rénovation gonflés de plusieurs milliers d'euros.<br><br><a href='https://calendar.app.google/pNE9HLdXuUtCwgEi7' target='_blank' class='inline-block text-[--accent-color] font-bold hover:underline'>→ Réserver un Appel de Clarification (15 min)</a>",
+    "image": null
+  },
+  {
+    "id": 9,
+    "question": "Klehomerie est-elle indépendante des agents immobiliers et promoteurs athéniens ?",
+    "answer": "Oui. Klehomerie opère exclusivement sous un mandat indépendant de conseil de l'acheteur. Nous n'entretenons aucun partenariat commercial, accord d'apport d'affaires ou lien financier avec des agences immobilières, des courtiers ou des promoteurs en Grèce.",
+    "image": null
+  },
+  {
+    "id": 10,
+    "question": "Klehomerie accepte-t-elle des commissions de la part des entreprises de rénovation ?",
+    "answer": "Non. Nous appliquons une politique stricte de non-rétrocession. Nous ne percevons aucune commission ni frais d'apporteur d'affaires de la part des entrepreneurs ou architectes. 100 % de notre rémunération provient directement de nos clients.",
+    "image": null
+  },
+  {
+    "id": 11,
+    "question": "Pourquoi Klehomerie sépare-t-elle l'inspection immobilière de l'exécution des travaux ?",
+    "answer": "Pour éliminer tout conflit d'intérêts. Nous fournissons des diagnostics techniques impartiaux et de la coordination de chantier, mais nous ne vendons jamais de services de réparation ou de construction. Nous n'avons aucun intérêt financier à extrapoler ou inventer des défauts.",
+    "image": null
+  }
+]

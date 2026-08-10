@@ -1,0 +1,221 @@
+---
+layout: base.njk
+title: Audit Technique Golden Ticket Athènes | 6 Classes d'Actifs, CapEx 5 Ans | Klehomerie
+description: "Un audit technique indépendant de votre appartement à Athènes. Six classes d'actifs, constats notés selon une échelle à quatre niveaux, preuves photo et thermiques, et une prévision CapEx sur 5 ans. 490 € hors TVA."
+image: /assets/images/thermal-audit-example.webp
+permalink: /fr/golden-ticket-technical-audit/
+locale: fr
+---
+
+<header class="relative pt-32 pb-20 flex items-center justify-center text-center overflow-hidden z-10">
+    <picture class="absolute inset-0 w-full h-full z-0">
+        <source media="(max-width: 768px)" srcset="/assets/images/hero-athens-view-mobile.webp" type="image/webp">
+        <source srcset="/assets/images/hero-athens-view.webp" type="image/webp">
+        <img src="/assets/images/hero-athens-view.webp"
+             alt="Klehomerie Golden Ticket Technical Audit - Athens apartment technical inspection"
+             width="1184"
+             height="864"
+             class="hero-img object-cover w-full h-full block filter blur-[2px] scale-105"
+             fetchpriority="high"
+             loading="eager">
+    </picture>
+
+    <div class="hero-overlay absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[--bg-color] z-10"></div>
+
+    <div class="relative z-20 px-6 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg tracking-tight" data-lang-key="gtHeroTitle">L'Audit Technique Golden Ticket</h1>
+        <p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto drop-shadow-md" data-lang-key="gtHeroSubtitle">Un audit technique indépendant pour votre appartement à Athènes, 490 € hors TVA</p>
+    </div>
+</header>
+
+<main class="pb-20 bg-[--bg-color]">
+    <div class="container mx-auto px-6 max-w-4xl">
+
+        <div class="prose prose-lg prose-slate dark:prose-invert max-w-none mx-auto prose-p:leading-relaxed prose-p:text-[--text-color]">
+
+            <p class="text-lg" data-lang-key="gtIntroText"><strong>Un avocat confirme que vous pouvez acquérir l'appartement.</strong> Un ingénieur civil (Michanikos) confirme qu'il est légalement autorisé. Ni l'un ni l'autre ne vous dit ce que l'immeuble va vous coûter au cours des cinq prochaines années. C'est exactement la question à laquelle cet audit répond.</p>
+
+            <h2 data-lang-key="gtArrivesTitle">Ce que vous recevez</h2>
+
+            <p data-lang-key="gtArrivesIntroText">Un rapport technique écrit sur l'état constaté de l'actif. Le rapport spécimen compte <strong>16 pages</strong> et contient :</p>
+
+            <ul data-lang-key="gtArrivesListText">
+                <li>Une synthèse des points signalés en tête de document, afin que les constats qui appellent une décision se trouvent en page quatre et non en page quatorze</li>
+                <li>Chaque point d'inspection noté selon une échelle fixe à quatre niveaux</li>
+                <li>Des preuves photographiques attachées à chaque constat, horodatées le jour de la visite</li>
+                <li>Des images thermiques lorsqu'une anomalie de température est relevée</li>
+                <li>Une <strong>prévision CapEx sur 5 ans</strong> pour l'actif</li>
+                <li>La note complète de limitation de périmètre, afin que vous sachiez précisément ce que le rapport couvre et ce qu'il ne couvre pas</li>
+            </ul>
+
+            <p data-lang-key="gtArrivesClosingText">Le rapport est émis en anglais. Il vous appartient et il suit l'actif.</p>
+
+            <h2 data-lang-key="gtClassesTitle">Les six classes d'actifs</h2>
+
+            <p data-lang-key="gtClassesIntroText">Chaque audit couvre les mêmes six classes d'actifs, dans le même ordre, sur chaque bien. Un rapport de janvier signifie donc exactement la même chose qu'un rapport de juin. Au total, cela représente <strong>{{ audit.scoredPoints }}</strong> points d'inspection notés répartis sur cinq lots techniques, ainsi qu'un relevé d'environnement général de <strong>{{ audit.surveyPoints }}</strong> points.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th data-lang-key="gtTableHeadLot">LOT</th>
+                        <th data-lang-key="gtTableHeadClass">Classe d'actifs</th>
+                        <th data-lang-key="gtTableHeadScope">Périmètre représentatif</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>LOT 00</strong></td>
+                        <td data-lang-key="gtLot00Class">Environnement général</td>
+                        <td data-lang-key="gtLot00Desc">Type de rue et nuisances sonores, accès à l'immeuble, interphone, boîtes aux lettres, cage d'escalier, état de service de l'ascenseur, colonne gaz</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LOT 01</strong></td>
+                        <td data-lang-key="gtLot01Class">Installations électriques</td>
+                        <td data-lang-key="gtLot01Desc">Tableau électrique, test du disjoncteur différentiel 30mA, serrage des bornes, prises de courant, volumes de sécurité en salle de bains, points lumineux, ligne cuisine 32A, réseau courants faibles et données</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LOT 02</strong></td>
+                        <td data-lang-key="gtLot02Class">Plomberie et CVC</td>
+                        <td data-lang-key="gtLot02Desc">Vanne d'arrêt générale, pression du réseau, chauffe-eau, groupe de sécurité, évacuations et siphons, robinetterie, performance des splits, évacuation des condensats, installation du lave-linge</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LOT 03</strong></td>
+                        <td data-lang-key="gtLot03Class">Menuiseries et fermetures</td>
+                        <td data-lang-key="gtLot03Desc">Porte d'entrée et système de verrouillage, baies coulissantes, fenêtres oscillo-battantes, volets roulants, quincaillerie des portes intérieures</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LOT 04</strong></td>
+                        <td data-lang-key="gtLot04Class">Finitions et surfaces</td>
+                        <td data-lang-key="gtLot04Desc">Adhérence du carrelage au sol, étanchéité des pièces humides, adhérence des plinthes, peintures</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LOT 05</strong></td>
+                        <td data-lang-key="gtLot05Class">Équipements et électroménager</td>
+                        <td data-lang-key="gtLot05Desc">Réfrigérateur, four et plaques, lave-vaisselle, hotte, inventaire des télécommandes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 data-lang-key="gtTierTitle">Comment un constat est noté</h2>
+
+            <p data-lang-key="gtTierIntroText">Quatre niveaux, et quatre seulement. L'intérêt d'une échelle fixe est qu'elle supprime l'adjectif.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th data-lang-key="gtTierHeadTier">Niveau</th>
+                        <th data-lang-key="gtTierHeadMeaning">Signification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong data-lang-key="gtTier1Name">Critical Failure (défaillance critique)</strong></td>
+                        <td data-lang-key="gtTier1Meaning">Un risque de sécurité, de sûreté, structurel ou fonctionnel systémique qui appelle une décision immédiate</td>
+                    </tr>
+                    <tr>
+                        <td><strong data-lang-key="gtTier2Name">Minor Defect (défaut mineur)</strong></td>
+                        <td data-lang-key="gtTier2Meaning">Aucun risque immédiat, mais laissé en l'état il devient un CapEx futur</td>
+                    </tr>
+                    <tr>
+                        <td><strong data-lang-key="gtTier3Name">Conformed (conforme)</strong></td>
+                        <td data-lang-key="gtTier3Meaning">Correspond à l'état et au standard attendus pour son type et son âge</td>
+                    </tr>
+                    <tr>
+                        <td><strong data-lang-key="gtTier4Name">Not Applicable (sans objet)</strong></td>
+                        <td data-lang-key="gtTier4Meaning">Absent de ce bien</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p data-lang-key="gtTierExampleText">Une vanne d'arrêt générale inaccessible constitue une défaillance critique, non parce qu'elle est cassée, mais parce que le jour où un flexible lâche, la personne présente dans l'appartement ne peut pas couper l'eau. Un coup de bélier dans le réseau constitue un défaut mineur : rien ne casse aujourd'hui, et le choc de pression répété réduit la durée de vie de chaque raccord situé en aval. Le niveau exprime une conséquence et une échéance, non une gravité apparente.</p>
+
+            <h2 data-lang-key="gtThermalTitle">Ce qu'apporte l'imagerie thermique</h2>
+
+            <p data-lang-key="gtThermalText1">Une caméra thermique lit la température de surface. Lorsqu'un écart de température existe entre l'intérieur et l'extérieur, elle montre où la chaleur traverse l'enveloppe, ce qui rend visible un pont thermique autour d'un dormant de porte, et révèle une humidité derrière une surface finie sous la forme d'une zone froide qu'un mur peint dissimule entièrement.</p>
+
+            <p data-lang-key="gtThermalText2">Deux limites énoncées franchement. Le relevé dépend de l'existence d'un différentiel de température le jour même, les résultats varient donc selon la saison et l'heure. Et une anomalie thermique signale un désordre sans en prouver la cause, ce qui exigerait une investigation invasive que l'audit ne pratique pas.</p>
+
+            <h2 data-lang-key="gtCapexTitle">La prévision CapEx, et comment elle est vérifiée</h2>
+
+            <p data-lang-key="gtCapexText1">L'audit produit une prévision de dépenses d'investissement sur 5 ans pour l'actif, établie à partir des moyennes du marché athénien. Ce sont des ordres de grandeur indicatifs, non des devis d'entreprise.</p>
+
+            <p data-lang-key="gtCapexText2">Concrètement, lorsque des travaux sont ensuite envisagés et qu'un devis réel arrive, ce devis est comparé à la prévision initiale, avec un objectif de travail de <strong>±15%</strong> d'écart. Une prévision que personne ne confronte à la réalité reste une estimation bien mise en page.</p>
+
+            <p data-lang-key="gtCapexText3">Le parc immobilier ancien d'Athènes a généralement entre 30 et 50 ans. Les éléments qui consomment du capital dans ce parc sont prévisibles : le chauffe-eau, la porte d'entrée, le tableau électrique, l'étanchéité des pièces humides. Savoir où chacun se situe dans son cycle de vie fait la différence entre planifier le CapEx et le subir.</p>
+
+            <h2 data-lang-key="gtNotTitle">Ce que cet audit n'est pas</h2>
+
+            <p data-lang-key="gtNotIntroText">Énoncé sans détour, parce qu'un périmètre défini vous est plus utile qu'un périmètre flou.</p>
+
+            <ul data-lang-key="gtNotListText">
+                <li>Ce n'est pas une expertise technique (Technical Due Diligence) signée par un ingénieur civil certifié (Michanikos)</li>
+                <li>Ce n'est pas un substitut à l'Identité Électronique du Bâtiment (Ilektroniki Taftotita Ktiriou) exigée par la loi grecque pour le transfert de propriété</li>
+                <li>Ce n'est pas une recherche de titre de propriété</li>
+                <li>L'inspection est visuelle et non destructive. Les éléments structurels ne sont pas démontés, les équipements ne sont pas déposés, les fondations ne sont pas excavées</li>
+                <li>Les vérifications d'équipements sont des contrôles fonctionnels ponctuels et ne certifient pas la conformité aux normes industrielles grecques (ELOT)</li>
+            </ul>
+
+            <p data-lang-key="gtNotClosingText">Avant de finaliser une transaction, vous avez toujours besoin d'un avocat pour les vérifications de titre et de dettes auprès du cadastre, et d'un ingénieur civil pour certifier la légalité urbanistique. Nous vous le dirons systématiquement, y compris lorsque cela ralentit une opération. Le périmètre complet, y compris ce que nous refusons de faire, figure sur <a href="/fr/scope/" class="text-[--accent-color] font-bold hover:underline">la page périmètre</a>.</p>
+
+            <h2 data-lang-key="gtIndependenceTitle">Indépendance</h2>
+
+            <p data-lang-key="gtIndependenceText1">Klehomerie n'entretient aucune relation commerciale avec une agence immobilière, un courtier ou un promoteur en Grèce, et n'accepte aucune commission, aucun apport d'affaires ni aucune ristourne d'un entrepreneur ou d'un architecte. La totalité des honoraires provient du client.</p>
+
+            <p data-lang-key="gtIndependenceText2">Cela compte davantage qu'il n'y paraît. Un entrepreneur qui inspecte votre appartement gagne de l'argent en identifiant des travaux qu'il peut réaliser. Nous ne vendons pas de travaux, un constat ne nous coûte donc rien à omettre et rien à inscrire.</p>
+
+            <!--
+              FLAG: specimen section held back per Arnaud's instruction.
+              KLEHOMERIE_SPECIMEN_AUDIT.pdf has text-layer rendering faults
+              (run-together strings, overlapping lines pages 4-7) and an
+              outdated "Digital Vault (G-Drive)" header field that predates
+              the PropOS move. Do not add a specimen preview/download section
+              until a corrected PDF is supplied.
+            -->
+
+            <h2 data-lang-key="gtPriceTitle">Tarif et étape suivante</h2>
+
+            <p data-lang-key="gtPriceText1"><strong>490 €</strong>, hors TVA de 24%.</p>
+
+            <p data-lang-key="gtPriceText2">Si vous hésitez encore sur l'opportunité d'un audit complet, le Red Flag Technical Scan à <strong>97 €</strong> est un diagnostic visuel de 45 minutes conçu précisément pour cette décision de poursuite ou d'abandon.</p>
+
+        </div>
+
+        <section class="text-center bg-[--card-bg] rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-10 md:p-14 mt-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-[--title-color] mb-4" data-lang-key="methodologyClosingTagline">Ne vous contentez pas d'encaisser les loyers. Protégez le béton.</h2>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+                <a href="/?source=golden-ticket&lang=fr#contact" class="inline-block bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-3 px-8 rounded-lg transition-colors" data-lang-key="gtCtaPrimaryBtn">Réserver l'Audit Technique Golden Ticket</a>
+                <a href="https://calendar.app.google/pNE9HLdXuUtCwgEi7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[--accent-color] font-bold hover:underline transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    <span data-lang-key="gtCtaSecondaryBtn">Réserver un appel de cadrage de 15 minutes</span>
+                </a>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Technical Property Audit",
+  "name": "Golden Ticket Technical Audit",
+  "description": "An independent technical audit of an Athens apartment across six asset classes, with findings scored on a four-tier scale, photo and thermal evidence, and a 5-year CapEx forecast.",
+  "provider": {
+    "@type": "ProfessionalService",
+    "@id": "https://klehomerie.com/#organization"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Athens"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "490",
+    "priceCurrency": "EUR",
+    "url": "https://klehomerie.com/fr/golden-ticket-technical-audit/"
+  }
+}
+</script>
