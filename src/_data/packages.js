@@ -1,4 +1,6 @@
-[
+const audit = require("./audit.json");
+
+module.exports = [
   {
     "keyPrefix": "rc_redflag",
     "name": "Red Flag Technical Scan",
@@ -9,7 +11,7 @@
   {
     "keyPrefix": "rc_golden",
     "name": "Golden Ticket Technical Audit",
-    "description": "Full technical report: 32 scored inspection points plus an 11-point environment survey, moisture mapping, and CapEx budgeting.",
+    "description": `Full technical report: ${audit.scoredPoints} scored inspection points plus an ${audit.surveyPoints}-point environment survey, moisture mapping, and CapEx budgeting.`,
     "price": 490,
     "unit": null
   },
@@ -62,4 +64,4 @@
     "price": 85,
     "unit": null
   }
-]
+];

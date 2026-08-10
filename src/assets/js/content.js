@@ -294,7 +294,10 @@ window.translations = {
       gtArrivesListText: '<li>A flagged items summary at the front, so the findings that need a decision are on page four rather than page fourteen</li><li>Every inspection point scored on a fixed four-tier scale</li><li>Photographic evidence attached to each finding, timestamped on the day of the visit</li><li>Thermal imagery where a temperature anomaly is present</li><li>A <strong>5-year CapEx</strong> forecast for the asset</li><li>The full scope limitation notice, so you know exactly what the report does and does not cover</li>',
       gtArrivesClosingText: 'The report is issued in English. It is yours, and it travels with the asset.',
       gtClassesTitle: 'The six asset classes',
-      gtClassesIntroText: 'Every audit covers the same six asset classes, in the same order, on every property. A report from January therefore means the same thing as a report from June.',
+      // NOTE: 32 / 11 must match src/_data/audit.json (scoredPoints/surveyPoints).
+      // content.js isn't run through Eleventy's template engine, so this can't
+      // pull from that file directly; keep them in sync by hand.
+      gtClassesIntroText: 'Every audit covers the same six asset classes, in the same order, on every property. A report from January therefore means the same thing as a report from June. In total, that is <b>32</b> scored inspection points across five technical lots, plus an <b>11</b>-point general environment survey.',
       gtTableHeadLot: 'LOT',
       gtTableHeadClass: 'Asset class',
       gtTableHeadScope: 'Representative scope',
@@ -618,7 +621,7 @@ window.translations = {
       gtArrivesListText: '<li>Une synthèse des points signalés en tête de document, afin que les constats qui appellent une décision se trouvent en page quatre et non en page quatorze</li><li>Chaque point d\'inspection noté selon une échelle fixe à quatre niveaux</li><li>Des preuves photographiques attachées à chaque constat, horodatées le jour de la visite</li><li>Des images thermiques lorsqu\'une anomalie de température est relevée</li><li>Une <strong>prévision CapEx sur 5 ans</strong> pour l\'actif</li><li>La note complète de limitation de périmètre, afin que vous sachiez précisément ce que le rapport couvre et ce qu\'il ne couvre pas</li>',
       gtArrivesClosingText: 'Le rapport est émis en anglais. Il vous appartient et il suit l\'actif.',
       gtClassesTitle: 'Les six classes d\'actifs',
-      gtClassesIntroText: 'Chaque audit couvre les mêmes six classes d\'actifs, dans le même ordre, sur chaque bien. Un rapport de janvier signifie donc exactement la même chose qu\'un rapport de juin.',
+      gtClassesIntroText: 'Chaque audit couvre les mêmes six classes d\'actifs, dans le même ordre, sur chaque bien. Un rapport de janvier signifie donc exactement la même chose qu\'un rapport de juin. Au total, cela représente <b>32</b> points d\'inspection notés répartis sur cinq lots techniques, ainsi qu\'un relevé d\'environnement général de <b>11</b> points.',
       gtTableHeadLot: 'LOT',
       gtTableHeadClass: 'Classe d\'actifs',
       gtTableHeadScope: 'Périmètre représentatif',
@@ -942,7 +945,7 @@ window.translations = {
       gtArrivesListText: '<li>Σύνοψη των επισημασμένων ευρημάτων στην αρχή του εγγράφου, ώστε τα ευρήματα που απαιτούν απόφαση να βρίσκονται στη σελίδα τέσσερα και όχι στη σελίδα δεκατέσσερα</li><li>Κάθε σημείο ελέγχου βαθμολογημένο σε σταθερή κλίμακα τεσσάρων επιπέδων</li><li>Φωτογραφική τεκμηρίωση συνημμένη σε κάθε εύρημα, με χρονοσήμανση της ημέρας της επίσκεψης</li><li>Θερμογραφικές λήψεις όπου εντοπίζεται θερμική ανωμαλία</li><li>Πρόβλεψη <strong>CapEx 5 ετών</strong> για το πάγιο</li><li>Την πλήρη δήλωση περιορισμού πεδίου, ώστε να γνωρίζετε ακριβώς τι καλύπτει και τι δεν καλύπτει η αναφορά</li>',
       gtArrivesClosingText: 'Η αναφορά εκδίδεται στα αγγλικά. Σας ανήκει και συνοδεύει το πάγιο.',
       gtClassesTitle: 'Οι έξι κατηγορίες παγίων',
-      gtClassesIntroText: 'Κάθε έλεγχος καλύπτει τις ίδιες έξι κατηγορίες, με την ίδια σειρά, σε κάθε ακίνητο. Μια αναφορά του Ιανουαρίου σημαίνει επομένως ακριβώς το ίδιο με μια αναφορά του Ιουνίου.',
+      gtClassesIntroText: 'Κάθε έλεγχος καλύπτει τις ίδιες έξι κατηγορίες, με την ίδια σειρά, σε κάθε ακίνητο. Μια αναφορά του Ιανουαρίου σημαίνει επομένως ακριβώς το ίδιο με μια αναφορά του Ιουνίου. Συνολικά, αυτό αντιστοιχεί σε <b>32</b> βαθμολογημένα σημεία ελέγχου σε πέντε τεχνικούς τομείς, καθώς και μια επισκόπηση γενικού περιβάλλοντος <b>11</b> σημείων.',
       gtTableHeadLot: 'LOT',
       gtTableHeadClass: 'Κατηγορία παγίου',
       gtTableHeadScope: 'Ενδεικτικό πεδίο',
