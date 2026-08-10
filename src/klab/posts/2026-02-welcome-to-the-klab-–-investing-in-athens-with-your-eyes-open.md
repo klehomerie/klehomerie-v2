@@ -78,7 +78,7 @@ Navigating the €250k or €800k threshold is about more than just paperwork; i
 
 We bridge the gap by applying the rigor of French worksite coordination and European maintenance standards to the local Greek context. This category explores how we bring "military-grade" discipline to local projects, ensuring that "Greek reality" meets "International Quality."
 
-### **5. Regulatory Vigie: Your Technical Gatekeeper**
+### **5. Regulatory Watch: Your Technical Gatekeeper**
 
 The Greek regulatory landscape is constantly evolving. As your "Gatekeeper," we monitor local laws, building codes, and compliance updates (like that elusive "Article 3" for instance) to ensure your portfolio remains **Asset-Ready** and legally sound at all times.
 

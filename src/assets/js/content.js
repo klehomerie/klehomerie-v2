@@ -3,7 +3,8 @@
 window.translations = {
   'en': {
       // --- NAVIGATION ---
-      navServices: 'Services', 
+      navServices: 'Services',
+      navGoldenTicket: 'Golden Ticket Technical Audit',
       navInsights: 'Insights',
       navAbout: 'About',
       navReviews: 'Reviews',
@@ -164,7 +165,7 @@ window.translations = {
       mediaPressKitItem4: 'High-Resolution Brand Logos (PNG)',
       mediaContactTitle: 'Direct Media Contact',
       mediaContactSub: 'For press inquiries, expert commentary on the Athens market, or investor relations, contact us directly.',
-      mediaContactNote: 'We typically respond to international inquiries within 12 hours across all time zones.',
+      mediaContactNote: 'We typically respond to press inquiries within one business day.',
 
       // --- METHODOLOGY PAGE ---
       methodologyPageTitle: 'Our Methodology',
@@ -221,7 +222,7 @@ window.translations = {
 
       // --- PRIVACY POLICY ---
       privacy_title: 'Privacy &amp; Data Protection Notice',
-      privacy_updated: 'Last Updated: July 2026',
+      privacy_updated: 'Version 4.3, effective July 2026',
       privacy_intro1: '<strong>Klehomerie</strong> (hereinafter referred to as the "Company") is committed to protecting your personal data in compliance with the General Data Protection Regulation (EU) 2016/679 (GDPR) and Greek Law 4624/2019. This notice outlines how we collect, use, and safeguard your information.',
       privacy_intro2: 'This notice is informational. It does not itself constitute your consent. Where we rely on consent, that consent is collected separately, is entirely optional, and may be withdrawn at any time without any effect on your Service Agreement or the services you receive.',
       privacy_s1_h: '1. Data Controller',
@@ -267,7 +268,7 @@ window.translations = {
       terms_s2_p1: 'Klehomerie provides services solely as <strong>Technical Asset Manager and Owner\'s Representative</strong>. We are not a General Contractor, Civil Engineer, Architect, Topographer, or Insurance Provider, nor a guarantor of results.',
       terms_s2_p2: '<strong>Third-Party Liability:</strong> Klehomerie acts as an intermediary for third-party vendors (e.g., artisans, plumbers, electricians). We bear no liability for their acts or omissions, provided we exercised due professional care in selecting licensed vendors at engagement.',
       terms_s2_p3: '<strong>No Guarantees:</strong> We do not guarantee rental yields, sale outcomes, or property performance. Services exclude force majeure events (e.g., natural disasters, pandemics).',
-      terms_s2_p4: '<strong>Limitation of Liability:</strong> Klehomerie\'s total aggregate liability arising out of or in connection with the applicable Service Agreement shall not exceed the total fees paid by the Client under that Agreement. This limitation does not apply to liability arising from gross negligence, wilful misconduct, or fraud. We disclaim indirect damages (e.g., lost profits).',
+      terms_s2_p4: '<strong>Limitation of Liability:</strong> Klehomerie\'s total aggregate liability arising out of or in connection with the applicable Service Agreement shall not exceed the fee paid for that specific service. This limitation does not apply to liability arising from gross negligence, wilful misconduct, or fraud. We disclaim indirect damages (e.g., lost profits).',
       terms_s3_h: '3. Operational Authority (Asset Guardianship)',
       terms_s3_p: 'Under an active Service Agreement, Klehomerie may execute emergency repairs up to <strong>€150 (+VAT) per incident</strong> without prior approval, solely to ensure asset safety or habitability. Clients will be notified promptly thereafter.',
       terms_s4_h: '4. Payment Terms',
@@ -293,7 +294,10 @@ window.translations = {
       gtArrivesListText: '<li>A flagged items summary at the front, so the findings that need a decision are on page four rather than page fourteen</li><li>Every inspection point scored on a fixed four-tier scale</li><li>Photographic evidence attached to each finding, timestamped on the day of the visit</li><li>Thermal imagery where a temperature anomaly is present</li><li>A <strong>5-year CapEx</strong> forecast for the asset</li><li>The full scope limitation notice, so you know exactly what the report does and does not cover</li>',
       gtArrivesClosingText: 'The report is issued in English. It is yours, and it travels with the asset.',
       gtClassesTitle: 'The six asset classes',
-      gtClassesIntroText: 'Every audit covers the same six asset classes, in the same order, on every property. A report from January therefore means the same thing as a report from June.',
+      // NOTE: 32 / 11 must match src/_data/audit.json (scoredPoints/surveyPoints).
+      // content.js isn't run through Eleventy's template engine, so this can't
+      // pull from that file directly; keep them in sync by hand.
+      gtClassesIntroText: 'Every audit covers the same six asset classes, in the same order, on every property. A report from January therefore means the same thing as a report from June. In total, that is <b>32</b> scored inspection points across five technical lots, plus an <b>11</b>-point general environment survey.',
       gtTableHeadLot: 'LOT',
       gtTableHeadClass: 'Asset class',
       gtTableHeadScope: 'Representative scope',
@@ -345,7 +349,8 @@ window.translations = {
 
   'fr': {
       // --- NAVIGATION ---
-      navServices: 'Services', 
+      navServices: 'Services',
+      navGoldenTicket: 'Golden Ticket Technical Audit',
       navInsights: 'Analyses',
       navAbout: 'À propos',
       navReviews: 'Avis',
@@ -544,7 +549,7 @@ window.translations = {
 
       // --- PRIVACY POLICY ---
       privacy_title: 'Avis de Confidentialité et de Protection des Données',
-      privacy_updated: 'Dernière mise à jour : juillet 2026',
+      privacy_updated: 'Version 4.3, en vigueur depuis juillet 2026',
       privacy_intro1: '<strong>Klehomerie</strong> (ci-après la « Société ») s\'engage à protéger vos données personnelles conformément au Règlement Général sur la Protection des Données (UE) 2016/679 (RGPD) et à la loi grecque 4624/2019. Le présent avis décrit la manière dont nous collectons, utilisons et protégeons vos informations.',
       privacy_intro2: 'Le présent avis a une vocation purement informative. Il ne constitue pas en lui-même votre consentement. Lorsque nous nous appuyons sur le consentement, celui-ci est recueilli séparément, est entièrement facultatif et peut être retiré à tout moment, sans aucune incidence sur votre Contrat de Service ni sur les prestations dont vous bénéficiez.',
       privacy_s1_h: '1. Responsable du Traitement',
@@ -590,7 +595,7 @@ window.translations = {
       terms_s2_p1: 'Klehomerie fournit exclusivement des services en qualité de <strong>Gestionnaire Technique d\'Actifs et Représentant du Propriétaire</strong>. Nous ne sommes ni Entrepreneur Général, ni Ingénieur Civil, ni Architecte, ni Géomètre, ni Assureur, ni garant de résultat.',
       terms_s2_p2: '<strong>Responsabilité des tiers :</strong> Klehomerie agit comme intermédiaire pour des prestataires tiers (artisans, plombiers, électriciens, etc.). Nous n\'assumons aucune responsabilité pour leurs actes ou omissions, dès lors que nous avons fait preuve de la diligence professionnelle requise dans la sélection de prestataires agréés lors de leur engagement.',
       terms_s2_p3: '<strong>Absence de garantie :</strong> Nous ne garantissons ni les rendements locatifs, ni les résultats d\'une vente, ni la performance du bien. Les services excluent les cas de force majeure (catastrophes naturelles, pandémies, etc.).',
-      terms_s2_p4: '<strong>Limitation de responsabilité :</strong> La responsabilité totale cumulée de Klehomerie découlant du Contrat de Service applicable, ou en lien avec celui-ci, ne pourra excéder le total des honoraires versés par le Client au titre de ce contrat. Cette limitation ne s\'applique pas à la responsabilité résultant d\'une faute lourde, d\'une faute intentionnelle ou d\'une fraude. Nous déclinons toute responsabilité pour les dommages indirects (par exemple, perte de profits).',
+      terms_s2_p4: '<strong>Limitation de responsabilité :</strong> La responsabilité totale cumulée de Klehomerie découlant du Contrat de Service applicable, ou en lien avec celui-ci, ne pourra excéder les honoraires versés au titre du service spécifique concerné. Cette limitation ne s\'applique pas à la responsabilité résultant d\'une faute lourde, d\'une faute intentionnelle ou d\'une fraude. Nous déclinons toute responsabilité pour les dommages indirects (par exemple, perte de profits).',
       terms_s3_h: '3. Autorité Opérationnelle (Gardiennage de l\'Actif)',
       terms_s3_p: 'Dans le cadre d\'un Contrat de Service actif, Klehomerie peut faire exécuter des réparations d\'urgence jusqu\'à <strong>150 € (+TVA) par incident</strong> sans accord préalable, dans le seul but d\'assurer la sécurité ou l\'habitabilité de l\'actif. Les clients en seront informés dans les meilleurs délais.',
       terms_s4_h: '4. Modalités de Paiement',
@@ -616,7 +621,7 @@ window.translations = {
       gtArrivesListText: '<li>Une synthèse des points signalés en tête de document, afin que les constats qui appellent une décision se trouvent en page quatre et non en page quatorze</li><li>Chaque point d\'inspection noté selon une échelle fixe à quatre niveaux</li><li>Des preuves photographiques attachées à chaque constat, horodatées le jour de la visite</li><li>Des images thermiques lorsqu\'une anomalie de température est relevée</li><li>Une <strong>prévision CapEx sur 5 ans</strong> pour l\'actif</li><li>La note complète de limitation de périmètre, afin que vous sachiez précisément ce que le rapport couvre et ce qu\'il ne couvre pas</li>',
       gtArrivesClosingText: 'Le rapport est émis en anglais. Il vous appartient et il suit l\'actif.',
       gtClassesTitle: 'Les six classes d\'actifs',
-      gtClassesIntroText: 'Chaque audit couvre les mêmes six classes d\'actifs, dans le même ordre, sur chaque bien. Un rapport de janvier signifie donc exactement la même chose qu\'un rapport de juin.',
+      gtClassesIntroText: 'Chaque audit couvre les mêmes six classes d\'actifs, dans le même ordre, sur chaque bien. Un rapport de janvier signifie donc exactement la même chose qu\'un rapport de juin. Au total, cela représente <b>32</b> points d\'inspection notés répartis sur cinq lots techniques, ainsi qu\'un relevé d\'environnement général de <b>11</b> points.',
       gtTableHeadLot: 'LOT',
       gtTableHeadClass: 'Classe d\'actifs',
       gtTableHeadScope: 'Périmètre représentatif',
@@ -668,7 +673,8 @@ window.translations = {
 
   'el': {
       // --- NAVIGATION ---
-      navServices: 'Οι Αποστολές μας', 
+      navServices: 'Οι Αποστολές μας',
+      navGoldenTicket: 'Golden Ticket Technical Audit',
       navInsights: 'Άρθρα',
       navAbout: 'Σχετικά', 
       navReviews: 'Κριτικές',
@@ -867,7 +873,7 @@ window.translations = {
 
       // --- PRIVACY POLICY ---
       privacy_title: 'Ειδοποίηση Απορρήτου και Προστασίας Δεδομένων',
-      privacy_updated: 'Τελευταία Ενημέρωση: Ιούλιος 2026',
+      privacy_updated: 'Έκδοση 4.3, σε ισχύ από τον Ιούλιο 2026',
       privacy_intro1: 'Η <strong>Klehomerie</strong> (εφεξής η «Εταιρεία») δεσμεύεται να προστατεύει τα προσωπικά σας δεδομένα σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (ΕΕ) 2016/679 (ΓΚΠΔ) και τον Ελληνικό Νόμο 4624/2019. Η παρούσα ειδοποίηση περιγράφει τον τρόπο με τον οποίο συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τις πληροφορίες σας.',
       privacy_intro2: 'Η παρούσα ειδοποίηση έχει ενημερωτικό χαρακτήρα. Δεν συνιστά η ίδια τη συγκατάθεσή σας. Όπου βασιζόμαστε σε συγκατάθεση, αυτή συλλέγεται ξεχωριστά, είναι εντελώς προαιρετική και μπορεί να ανακληθεί ανά πάσα στιγμή, χωρίς καμία επίπτωση στη Σύμβαση Παροχής Υπηρεσιών ή στις υπηρεσίες που λαμβάνετε.',
       privacy_s1_h: '1. Υπεύθυνος Επεξεργασίας',
@@ -913,7 +919,7 @@ window.translations = {
       terms_s2_p1: 'Η Klehomerie παρέχει υπηρεσίες αποκλειστικά ως <strong>Τεχνικός Διαχειριστής Περιουσιακών Στοιχείων και Εκπρόσωπος Ιδιοκτήτη</strong>. Δεν είμαστε Γενικός Εργολάβος, Πολιτικός Μηχανικός, Αρχιτέκτονας, Τοπογράφος ή Ασφαλιστικός Πάροχος, ούτε εγγυόμαστε αποτελέσματα.',
       terms_s2_p2: '<strong>Ευθύνη Τρίτων:</strong> Η Klehomerie ενεργεί ως μεσάζων για τρίτους παρόχους (π.χ. τεχνίτες, υδραυλικούς, ηλεκτρολόγους). Δεν φέρουμε ευθύνη για τις πράξεις ή παραλείψεις τους, εφόσον έχουμε επιδείξει την απαιτούμενη επαγγελματική επιμέλεια κατά την επιλογή αδειοδοτημένων παρόχων κατά την ανάθεση.',
       terms_s2_p3: '<strong>Απουσία Εγγυήσεων:</strong> Δεν εγγυόμαστε αποδόσεις ενοικίασης, αποτελέσματα πώλησης ή απόδοση του ακινήτου. Οι υπηρεσίες εξαιρούν περιστατικά ανωτέρας βίας (π.χ. φυσικές καταστροφές, πανδημίες).',
-      terms_s2_p4: '<strong>Περιορισμός Ευθύνης:</strong> Η συνολική ευθύνη της Klehomerie που απορρέει από ή σχετίζεται με την εφαρμοστέα Σύμβαση Παροχής Υπηρεσιών δεν θα υπερβαίνει το σύνολο των αμοιβών που κατέβαλε ο Πελάτης βάσει της εν λόγω σύμβασης. Ο περιορισμός αυτός δεν ισχύει για ευθύνη που προκύπτει από βαρεία αμέλεια, εκ προθέσεως παράπτωμα ή απάτη. Αποποιούμαστε κάθε ευθύνη για έμμεσες ζημίες (π.χ. διαφυγόντα κέρδη).',
+      terms_s2_p4: '<strong>Περιορισμός Ευθύνης:</strong> Η συνολική ευθύνη της Klehomerie που απορρέει από ή σχετίζεται με την εφαρμοστέα Σύμβαση Παροχής Υπηρεσιών δεν θα υπερβαίνει την αμοιβή που καταβλήθηκε για τη συγκεκριμένη υπηρεσία. Ο περιορισμός αυτός δεν ισχύει για ευθύνη που προκύπτει από βαρεία αμέλεια, εκ προθέσεως παράπτωμα ή απάτη. Αποποιούμαστε κάθε ευθύνη για έμμεσες ζημίες (π.χ. διαφυγόντα κέρδη).',
       terms_s3_h: '3. Επιχειρησιακή Εξουσία (Φύλαξη Περιουσιακού Στοιχείου)',
       terms_s3_p: 'Στο πλαίσιο ενεργής Σύμβασης Παροχής Υπηρεσιών, η Klehomerie δύναται να εκτελεί επείγουσες επισκευές έως <strong>150 € (+ΦΠΑ) ανά περιστατικό</strong> χωρίς προηγούμενη έγκριση, αποκλειστικά για τη διασφάλιση της ασφάλειας ή κατοικησιμότητας του ακινήτου. Οι πελάτες θα ενημερώνονται άμεσα εν συνεχεία.',
       terms_s4_h: '4. Όροι Πληρωμής',
@@ -939,7 +945,7 @@ window.translations = {
       gtArrivesListText: '<li>Σύνοψη των επισημασμένων ευρημάτων στην αρχή του εγγράφου, ώστε τα ευρήματα που απαιτούν απόφαση να βρίσκονται στη σελίδα τέσσερα και όχι στη σελίδα δεκατέσσερα</li><li>Κάθε σημείο ελέγχου βαθμολογημένο σε σταθερή κλίμακα τεσσάρων επιπέδων</li><li>Φωτογραφική τεκμηρίωση συνημμένη σε κάθε εύρημα, με χρονοσήμανση της ημέρας της επίσκεψης</li><li>Θερμογραφικές λήψεις όπου εντοπίζεται θερμική ανωμαλία</li><li>Πρόβλεψη <strong>CapEx 5 ετών</strong> για το πάγιο</li><li>Την πλήρη δήλωση περιορισμού πεδίου, ώστε να γνωρίζετε ακριβώς τι καλύπτει και τι δεν καλύπτει η αναφορά</li>',
       gtArrivesClosingText: 'Η αναφορά εκδίδεται στα αγγλικά. Σας ανήκει και συνοδεύει το πάγιο.',
       gtClassesTitle: 'Οι έξι κατηγορίες παγίων',
-      gtClassesIntroText: 'Κάθε έλεγχος καλύπτει τις ίδιες έξι κατηγορίες, με την ίδια σειρά, σε κάθε ακίνητο. Μια αναφορά του Ιανουαρίου σημαίνει επομένως ακριβώς το ίδιο με μια αναφορά του Ιουνίου.',
+      gtClassesIntroText: 'Κάθε έλεγχος καλύπτει τις ίδιες έξι κατηγορίες, με την ίδια σειρά, σε κάθε ακίνητο. Μια αναφορά του Ιανουαρίου σημαίνει επομένως ακριβώς το ίδιο με μια αναφορά του Ιουνίου. Συνολικά, αυτό αντιστοιχεί σε <b>32</b> βαθμολογημένα σημεία ελέγχου σε πέντε τεχνικούς τομείς, καθώς και μια επισκόπηση γενικού περιβάλλοντος <b>11</b> σημείων.',
       gtTableHeadLot: 'LOT',
       gtTableHeadClass: 'Κατηγορία παγίου',
       gtTableHeadScope: 'Ενδεικτικό πεδίο',

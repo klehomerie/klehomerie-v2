@@ -8,7 +8,7 @@ summary: For years, investing in Athenian real estate meant accepting a familiar
   trade-off is disappearing, so let's break down what this structural shift
   means for your portfolio.
 date: 2026-07-15T14:20:00.000+03:00
-category: Regulatory Vigie
+category: Regulatory Watch
 language: en
 property_type: All
 location: Athens, Greece

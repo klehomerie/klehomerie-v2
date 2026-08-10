@@ -87,7 +87,9 @@ document.addEventListener('DOMContentLoaded', function () {
                       <div class="flex-1 w-full flex items-start overflow-y-auto">
                           <div class="text-base font-medium leading-relaxed w-full text-[--card-back-text]" data-lang-key="${pkg.descKey}">Loading info...</div>
                       </div>
-                      <a href="#contact" onclick="event.stopPropagation(); document.getElementById('contact').scrollIntoView({behavior:'smooth'})" class="mt-3 flex-shrink-0 self-center inline-flex items-center gap-1 text-sm font-bold text-[--card-back-text] border border-[--card-back-text] rounded-full px-4 py-1.5 hover:bg-white/20 transition-colors" data-lang-key="cardBookCta">Book It Now →</a>
+                      ${pkg.id === 'audit'
+                          ? '<a href="/golden-ticket-technical-audit/" onclick="event.stopPropagation();" class="mt-3 flex-shrink-0 self-center inline-flex items-center gap-1 text-sm font-bold text-[--card-back-text] border border-[--card-back-text] rounded-full px-4 py-1.5 hover:bg-white/20 transition-colors" data-lang-key="cardBookCta">Book It Now →</a>'
+                          : '<a href="#contact" onclick="event.stopPropagation(); document.getElementById(\'contact\').scrollIntoView({behavior:\'smooth\'})" class="mt-3 flex-shrink-0 self-center inline-flex items-center gap-1 text-sm font-bold text-[--card-back-text] border border-[--card-back-text] rounded-full px-4 py-1.5 hover:bg-white/20 transition-colors" data-lang-key="cardBookCta">Book It Now →</a>'}
                   </div>
               </div>
           </div>
@@ -153,6 +155,17 @@ document.addEventListener('DOMContentLoaded', function () {
               btn.classList.remove('text-[--accent-color]', 'underline');
               btn.classList.add('text-gray-500');
           }
+      });
+
+      // Shared toggle for pre-rendered per-language quote blocks (testimonial
+      // slider on the homepage, testimonial cards on /testimonials/). These
+      // render all three languages into the DOM and hide the inactive ones
+      // via the "hidden" class, rather than going through data-lang-key.
+      document.querySelectorAll('.lang-en, .lang-fr, .lang-el').forEach(el => {
+          el.classList.add('hidden');
+      });
+      document.querySelectorAll('.lang-' + lang).forEach(el => {
+          el.classList.remove('hidden');
       });
 
       currentLang = lang;
