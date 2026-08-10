@@ -1,0 +1,499 @@
+---
+layout: base.njk
+title: Klehomerie - Gestion d'Actifs et Audits Techniques Athènes
+description: Gestion Technique d'Actifs indépendante, côté acheteur, à Athènes. Scans Techniques Red Flag, Audits Techniques Golden Ticket et Gardiennage d'Actifs.
+permalink: /fr/
+locale: fr
+---
+
+<header id="hero" class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+    <picture class="absolute inset-0 w-full h-full">
+        <source media="(max-width: 768px)" srcset="/assets/images/hero-athens-view-mobile.webp" type="image/webp">
+        <source srcset="/assets/images/hero-athens-view.webp" type="image/webp">
+<img src="/assets/images/hero-athens-view.webp"
+             alt="Klehomerie Technical Asset Management - Athens Property Inspection"
+             width="1920"
+             height="1080"
+             class="hero-img object-cover w-full h-full"
+             fetchpriority="high"
+             loading="eager">
+    </picture>
+
+    <div class="hero-overlay absolute inset-0 bg-black bg-opacity-40"></div>
+
+    <div class="relative z-10 px-4 max-w-4xl mx-auto mt-16">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg tracking-tight" data-lang-key="heroTitle">
+            Ne vous contentez pas d'encaisser les loyers. Protégez le béton.
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 mb-8 font-light drop-shadow-md" data-lang-key="heroSubtitle">
+            Gestion Technique d'Actifs pour Investisseurs Internationaux. Nous vous évitons d'acheter des cauchemars.
+        </p>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+                class="bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg flex items-center mx-auto gap-2">
+            <span data-lang-key="heroCTA">Réserver un Scan Technique</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+           <h2 class="text-3xl font-bold mb-12 text-center" data-lang-key="aboutTitle">Le Rempart entre Vous et le Chaos</h2>
+            <div class="grid md:grid-cols-3 gap-8 md:gap-12 items-center mb-16">
+                <div class="md:col-span-1">
+                    <picture>
+                        <source type="image/webp" srcset="/assets/images/moi.webp">
+                        <img src="/assets/images/moi.webp" width="600" height="600" loading="lazy" alt="Arnaud Zerdab - Technical Asset Manager & Construction Auditor Athens" class="rounded-lg mx-auto slide-in w-full max-w-xs md:max-w-full">
+                    </picture>
+                </div>
+                <div class="md:col-span-2 text-center md:text-left">
+                    <p class="text-lg" data-lang-key="aboutText">La distance est le risque majeur pour votre investissement immobilier. Quand vous vivez à des milliers de kilomètres, vous n'avez pas besoin d'un "hôte" pour tapoter les coussins. Vous avez besoin d'un Gestionnaire Technique pour protéger le béton.<br><br>Je suis Arnaud Zerdab. J'ai créé Klehomerie car j'ai vu des investisseurs internationaux acheter des gouffres financiers à Athènes. Mon parcours n'est pas dans l'hôtellerie, mais dans la Conduite de Travaux et la Sécurité d'Entreprise. Je ne "visite" pas les appartements ; je les audite.<br><br>Nous sommes vos yeux et vos oreilles sur le terrain, appliquant la rigueur technique française à la réalité grecque. Qu'il s'agisse de diagnostiquer l'humidité avant qu'elle ne ravage vos murs ou de piloter vos CAPEX pour éviter les surfacturations, nous sommes les gardiens de la valeur de votre actif.</p>
+                </div>
+            </div>
+
+           <div class="grid md:grid-cols-3 gap-8 justify-center mt-12">
+             <div class="text-center p-4">
+                <div class="text-[--accent-color] text-4xl mb-4">🏗️</div>
+                <h3 class="font-bold text-xl mb-2" data-lang-key="iconRigorTitle">Rigueur Technique</h3>
+                <p class="text-sm" data-lang-key="iconRigorText">L'exigence du BTP appliquée à la gestion.</p>
+             </div>
+            <div class="text-center p-4">
+                <div class="text-[--accent-color] text-4xl mb-4">🛡️</div>
+                <h3 class="font-bold text-xl mb-2" data-lang-key="iconGuardTitle">Protection d'Actif</h3>
+                <p class="text-sm" data-lang-key="iconGuardText">Surveillance structurelle en votre absence.</p>
+            </div>
+            <div class="text-center p-4">
+                <div class="text-[--accent-color] text-4xl mb-4">🇫🇷</div>
+                <h3 class="font-bold text-xl mb-2" data-lang-key="iconIntlTitle">Standards Int.</h3>
+                <p class="text-sm" data-lang-key="iconIntlText">Discipline française, réalité grecque.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 px-6 container mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-[--title-color]" data-lang-key="servicesTitle">Quelles Sont Nos Missions Principales ?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--accent-color] group">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">⛩️</div> <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="serviceGateTitle">Le Gatekeeper</h3>
+                <p class="text-[--text-color] leading-relaxed" data-lang-key="serviceGateText">
+                    Avant même de réserver votre vol, nous vérifions que l'annonce correspond à la réalité. Un filtre technique indispensable pour éviter les déplacements inutiles.
+                </p>
+            </div>
+            <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--title-color] group">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">👷</div> <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="serviceAuthTitle">L'Expert</h3>
+                <p class="text-[--text-color] leading-relaxed" data-lang-key="serviceAuthText">
+                   Avant la signature, nous réalisons un audit inquisiteur de l'actif. Nous vous fournissons le levier technique nécessaire pour négocier le prix.
+                </p>
+            </div>
+            <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--accent-color] group">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🛡️</div> <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="serviceGuardTitle">Le Gardien</h3>
+                <p class="text-[--text-color] leading-relaxed" data-lang-key="serviceGuardText">
+                   Une fois l'actif acquis, nous déployons une maintenance préventive. Des rapports de niveau "Corporate" pour que vous dormiez sur vos deux oreilles.
+                </p>
+            </div>
+            <div class="bg-[--card-bg] p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-[--title-color] group">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">📋</div> <h3 class="text-xl font-bold mb-4 text-[--title-color]" data-lang-key="serviceCoordTitle">Le Pilote</h3>
+                <p class="text-[--text-color] leading-relaxed" data-lang-key="serviceCoordText">
+                    Rénovations ou réparations ? Nous ne faisons pas que "trouver un gars". Nous pilotons le chantier pour que ce soit fait dans les règles de l'art, du premier coup.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="packages" class="mt-20">
+        <div id="packages-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4"></div>
+        <div class="mt-16 py-10 bg-[--secondary-bg] rounded-2xl mx-4 slide-in">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-2xl font-bold mb-2 text-[--title-color]" data-lang-key="rateCardTitle">Combien coûte notre audit Technique ?</h3>
+                <p class="text-[--text-color] mb-8 px-6" data-lang-key="rateCardDesc">Chaque frais, détaillé : ce que coûtent réellement le gardiennage et les audits techniques à Athènes.</p>
+
+                <div id="full-rate-card" class="max-w-3xl mx-auto mb-10 px-2 sm:px-6 text-left">
+                    <div class="bg-[--card-bg] rounded-xl shadow-md border border-gray-100 dark:border-gray-700 divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden">
+                        {% for item in packagesFr %}
+                        <div class="flex items-center justify-between gap-4 p-4 sm:p-5">
+                            <div>
+                                <p class="font-bold text-[--title-color]" data-lang-key="{{ item.keyPrefix }}_name">{{ item.name }}</p>
+                                <p class="text-sm text-[--text-color] mt-1" data-lang-key="{{ item.keyPrefix }}_desc">{{ item.description }}</p>
+                            </div>
+                            <div class="flex-shrink-0 text-right whitespace-nowrap">
+                                <span class="text-lg font-bold text-[--accent-color]">&euro;{{ item.price }}</span>{% if item.unit %}<span class="text-xs text-gray-400">/{{ item.unit }}</span>{% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-6 px-6">
+                    <div class="flex-1 bg-[--card-bg] p-6 rounded-xl shadow-md border-b-4 border-[--accent-color] flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <span class="text-3xl">🇬🇧</span>
+                            <div class="text-left">
+                                <p class="font-bold text-sm text-[--title-color]">ENGLISH VERSION</p>
+                                <p class="text-xs text-gray-400">PDF • Technical Specs</p>
+                            </div>
+                        </div>
+                        <a href="/KLEHOMERIE_Services_Pricing_2026_Q1_EN.pdf" download class="bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 text-xs font-bold py-2 px-4 rounded transition-colors" data-lang-key="downloadLabel">Télécharger</a>
+                    </div>
+
+                    <div class="flex-1 bg-[--card-bg] p-6 rounded-xl shadow-md border-b-4 border-[--accent-color] flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <span class="text-3xl">🇫🇷</span>
+                            <div class="text-left">
+                                <p class="font-bold text-sm text-[--title-color]">VERSION FRANÇAISE</p>
+                                <p class="text-xs text-gray-400">PDF • Spécifications</p>
+                            </div>
+                        </div>
+                        <a href="/KLEHOMERIE_Services_Pricing_2026_Q1_FR.pdf" download class="bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 text-xs font-bold py-2 px-4 rounded transition-colors" data-lang-key="downloadLabel">Télécharger</a>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-col items-center animate-pulse-slow">
+                    <p class="text-sm text-[--text-color] mb-2 font-medium" data-lang-key="callToActionTitle">Vous hésitez sur le forfait adapté ?</p>
+                    <a href="https://calendar.app.google/pNE9HLdXuUtCwgEi7" target="_blank" rel="noopener noreferrer" class="text-[--accent-color] font-bold hover:text-[--accent-color-hover] hover:underline flex items-center gap-2 transition-all transform hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span data-lang-key="callToActionBtn">Réserver un appel de clarification (15 min)</span>
+                    </a>
+                </div>
+                <p class="text-[10px] text-gray-400 mt-6 uppercase tracking-widest" data-lang-key="vatDisclaimer">Tous les tarifs sont exprimés Hors Taxes (HT). TVA 24% en sus.</p>
+            </div>
+        </div>
+    </section>
+
+<section id="testimonials-slider" class="py-20 bg-[--secondary-bg] overflow-hidden">
+    <div class="container mx-auto px-6 max-w-7xl text-center">
+        <h2 class="text-3xl font-bold mb-16 text-[--title-color]" data-lang-key="testimonialsTitle">Validé par Nos Clients &amp; Partenaires</h2>
+
+        <div id="testimonial-deck" class="relative h-[480px] md:h-[400px] max-w-[1100px] mx-auto flex items-center justify-center">
+            {% for item in testimonials.items %}
+                {% if item.featured %}
+                <div class="testimonial-card absolute w-[85vw] md:w-[540px] h-[380px] md:h-[320px] bg-[--card-bg] p-8 rounded-xl shadow-xl border-l-4 border-[--accent-color] text-left cursor-pointer transition-all duration-500 ease-in-out select-none flex flex-col justify-between" data-index="{{ loop.index0 }}">
+
+                    <div>
+                        {% if item.type == 'client' %}
+                            <div class="absolute top-0 right-0 bg-[--accent-color] text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-sm">
+                                Investisseur / Client
+                            </div>
+                        {% else %}
+                            <div class="absolute top-0 right-0 bg-gray-700 dark:bg-gray-600 text-white text-xs font-bold px-4 py-1 rounded-bl-xl shadow-sm">
+                                Partenaire Local
+                            </div>
+                        {% endif %}
+
+                        <div class="testimonial-text-wrapper mt-4 overflow-y-auto max-h-[180px] md:max-h-[140px] pr-2 hide-scrollbar">
+                            <p class="text-base md:text-lg text-[--text-color] italic mb-4 lang-en hidden">
+                                &ldquo;{{ item.shortQuote_en }}&rdquo;
+                            </p>
+                            <p class="text-base md:text-lg text-[--text-color] italic mb-4 lang-fr">
+                                &ldquo;{{ item.shortQuote_fr if item.shortQuote_fr else item.shortQuote_en }}&rdquo;
+                            </p>
+                            <p class="text-base md:text-lg text-[--text-color] italic mb-4 lang-el hidden">
+                                &ldquo;{{ item.shortQuote_el if item.shortQuote_el else item.shortQuote_en }}&rdquo;
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 border-t border-gray-100 dark:border-gray-800 pt-4">
+                        {% if item.image %}
+                           <img src="{{ item.image }}" alt="{{ item.name }}" width="48" height="48" loading="lazy" class="h-12 w-12 rounded-full object-cover border-2 border-[--accent-color]" draggable="false">
+                        {% else %}
+                            <div class="h-12 w-12 bg-[--accent-color] rounded-full flex items-center justify-center text-white font-bold shadow-sm">
+                                {{ item.name | truncate(2, true, "") }}
+                            </div>
+                        {% endif %}
+                        <div>
+                            <div class="font-bold text-[--title-color] flex flex-wrap items-center gap-2">
+                                {{ item.name }}
+                                {% if item.source == 'google' %}
+                                <span class="inline-flex items-center gap-1 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-full px-2 py-0.5 text-[10px] font-semibold text-gray-500 dark:text-gray-300" title="Verified on Google Business">
+                                    <svg class="w-3 h-3 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29A11.94 11.94 0 000 12c0 1.92.46 3.74 1.29 5.38l3.98-3.09z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/></svg>
+                                    <span data-lang-key="googleReviewBadge">Avis Google</span>
+                                </span>
+                                {% endif %}
+                            </div>
+                            <div class="text-sm text-gray-500">
+                                {% if item.website %}
+                                    <a href="{{ item.website }}" target="_blank" rel="noopener noreferrer" class="hover:text-[--accent-color] hover:underline transition-colors" onclick="event.stopPropagation();">
+                                        {{ item.role }}
+                                    </a>
+                                {% else %}
+                                    {{ item.role }}
+                                {% endif %}
+                                {% if item.location %} • {{ item.location }}{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="/fr/testimonials/" class="text-[--accent-color] font-bold hover:underline" data-lang-key="readAllTestimonials">Lire tous les avis détaillés &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<style>
+  /* Hides the ugly scrollbar but keeps the scroll functionality */
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Tells the browser up front that this deck owns horizontal gestures,
+     so it doesn't race our JS to decide between swipe and page-scroll. */
+  #testimonial-deck, .testimonial-card { touch-action: pan-y; }
+</style>
+
+<script>
+    // ==========================================
+    // 1. STACKED CAROUSEL MANAGEMENT (3D DECK)
+    // ==========================================
+    const deck = document.getElementById('testimonial-deck');
+    const deckCards = Array.from(document.querySelectorAll('.testimonial-card'));
+    let activeDeckIndex = 0;
+    let deckInterval;
+    let deckHovered = false;
+
+    function renderDeckState() {
+        if (deckCards.length === 0) return;
+
+        deckCards.forEach((card, i) => {
+            let offset = i - activeDeckIndex;
+
+            if (offset < -1) offset += deckCards.length;
+            if (offset > 1) offset -= deckCards.length;
+
+            if (offset === 0) {
+                // ACTIVE MIDDLE CARD
+                card.style.transform = "translateX(0) scale(1)";
+                card.style.opacity = "1";
+                card.style.zIndex = "30";
+                card.style.pointerEvents = "auto";
+                card.classList.add('shadow-2xl');
+            } else if (offset === 1 || (offset === -(deckCards.length - 1) && deckCards.length > 2)) {
+                // RIGHT BACKGROUND CARD
+                card.style.transform = window.innerWidth < 768 ? "translateX(20px) scale(0.9)" : "translateX(200px) scale(0.9)";
+                card.style.opacity = "0.35";
+                card.style.zIndex = "20";
+                card.style.pointerEvents = "auto";
+                card.classList.remove('shadow-2xl');
+            } else if (offset === -1 || (offset === (deckCards.length - 1) && deckCards.length > 2)) {
+                // LEFT BACKGROUND CARD
+                card.style.transform = window.innerWidth < 768 ? "translateX(-20px) scale(0.9)" : "translateX(-200px) scale(0.9)";
+                card.style.opacity = "0.35";
+                card.style.zIndex = "20";
+                card.style.pointerEvents = "auto";
+                card.classList.remove('shadow-2xl');
+            } else {
+                // HIDDEN TRACK CARDS
+                card.style.transform = "translateX(0) scale(0.8)";
+                card.style.opacity = "0";
+                card.style.zIndex = "10";
+                card.style.pointerEvents = "none";
+                card.classList.remove('shadow-2xl');
+            }
+        });
+    }
+
+    function nextDeckCard() {
+        if (!deckHovered) {
+            activeDeckIndex = (activeDeckIndex + 1) % deckCards.length;
+            renderDeckState();
+        }
+    }
+
+    function restartDeckAutoplay() {
+        clearInterval(deckInterval);
+        deckInterval = setInterval(nextDeckCard, 5000);
+    }
+
+    // Any deliberate manual navigation (click on PC, swipe on mobile) goes
+    // through here, so give the user a full 5s to read the card they just
+    // chose instead of auto-advancing on the old cadence.
+    function goToDeckIndex(idx) {
+        activeDeckIndex = ((idx % deckCards.length) + deckCards.length) % deckCards.length;
+        renderDeckState();
+        restartDeckAutoplay();
+    }
+
+    deckCards.forEach((card, idx) => {
+        card.addEventListener('click', () => {
+            if (idx !== activeDeckIndex) {
+                goToDeckIndex(idx);
+            }
+        });
+    });
+
+    deckInterval = setInterval(nextDeckCard, 5000);
+
+    if (deck) {
+        deck.addEventListener('mouseenter', () => deckHovered = true);
+        deck.addEventListener('mouseleave', () => deckHovered = false);
+
+        // --- SWIPE-TO-NAVIGATE (touch) ---
+        // CSS `touch-action: pan-y` above already tells the browser this deck
+        // owns horizontal gestures, so there's no need to race it in JS via
+        // preventDefault on touchmove — we only need the start/end delta.
+        const SWIPE_THRESHOLD = 40;
+        let touchStartX = 0;
+
+        deck.addEventListener('touchstart', (e) => {
+            deckHovered = true;
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        deck.addEventListener('touchend', (e) => {
+            const deltaX = e.changedTouches[0].screenX - touchStartX;
+
+            if (Math.abs(deltaX) > SWIPE_THRESHOLD) {
+                e.preventDefault(); // avoid firing a phantom click on the card under the finger
+                goToDeckIndex(activeDeckIndex + (deltaX < 0 ? 1 : -1));
+            }
+
+            setTimeout(() => deckHovered = false, 3000);
+        });
+    }
+
+    window.addEventListener('resize', renderDeckState);
+    window.addEventListener('load', renderDeckState);
+    setTimeout(renderDeckState, 150);
+
+    // ==========================================
+    // 2. LANGUAGE TOGGLE INTEGRATION HOOK
+    // ==========================================
+    // The .lang-en/.lang-fr/.lang-el show/hide toggle itself is handled
+    // centrally in script.js's updateLanguage(), which runs before this
+    // delegated listener fires (direct button listeners resolve before the
+    // event bubbles to document). This only re-runs the carousel-specific
+    // layout pass after the quote text has changed underneath it.
+    document.addEventListener('click', function(e) {
+        const langBtn = e.target.closest('.lang-btn');
+        if (langBtn) {
+            renderDeckState();
+        }
+    });
+</script>
+
+    <section id="faq" class="py-20 bg-[--bg-color]">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12 text-[--title-color]" data-lang-key="faqTitle">Questions Fréquentes (FAQ)</h2>
+            <div id="faq-container" class="space-y-4">
+                {% for item in faqFr %}
+                <div class="faq-item bg-[--card-bg] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden mb-3">
+                    <button class="faq-question w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        <span class="font-bold text-[--title-color] text-lg" data-lang-key="faq_q{{ item.id }}">{{ item.question }}</span>
+                        <svg class="faq-icon w-5 h-5 text-[--accent-color] transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 text-[--text-color]">
+                        <div>
+                            <div class="py-4">
+                                <div class="mb-4 leading-relaxed" data-lang-key="faq_a{{ item.id }}">{{ item.answer | safe }}</div>
+                                {% if item.image %}
+                                <figure class="mt-4 relative group cursor-zoom-in w-full md:w-2/3 lg:w-1/2" onclick="openModal('{{ item.image }}')">
+                                    {% optimizedImage item.image, "Technical Audit Thermal Scan", "(max-width: 768px) 100vw, 50vw", "rounded-lg shadow-md border-2 border-[--accent-color] w-full object-cover h-48 md:h-64" %}
+                                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg flex items-center justify-center">
+                                        <span class="opacity-0 group-hover:opacity-100 bg-black bg-opacity-75 text-white text-xs px-2 py-1 rounded">Tap to Zoom 🔍</span>
+                                    </div>
+                                    <figcaption class="sr-only">Technical Audit Thermal Scan</figcaption>
+                                </figure>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <div id="image-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-90 flex items-center justify-center p-4 cursor-pointer">
+        <img id="modal-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl transform transition-transform duration-300 scale-95" alt="Expanded view">
+        <p class="absolute bottom-10 text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded">Tap anywhere to close</p>
+    </div>
+
+    <section id="contact" class="py-20 bg-[--secondary-bg]">
+        <div class="container mx-auto px-6">
+             <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="contactTitle">Sécurisez Votre Actif</h2>
+             <div class="max-w-lg mx-auto card p-8 rounded-lg shadow-lg">
+
+                     <p id="contact-form-message" class="text-sm mb-6 hidden p-3 rounded-lg bg-blue-100 text-blue-800"></p>
+                    <form id="contact-form" name="contact" netlify data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact">
+                        <input type="hidden" id="contact-source-input" name="source" value="homepage">
+                        <div class="mb-4">
+                            <label for="name" class="block font-bold mb-2" data-lang-key="contactName">Nom</label>
+                             <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[--accent-color] text-[--text-color]" required>
+                        </div>
+                        <div class="mb-4">
+                             <label for="email" class="block font-bold mb-2" data-lang-key="contactEmail">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[--accent-color] text-[--text-color]" required>
+                        </div>
+
+                     <div class="mb-6">
+                            <label for="message" class="block font-bold mb-2" data-lang-key="contactMessage">Problème Technique / Risque Identifié</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[--accent-color] text-[--text-color]" required></textarea>
+                     </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 font-bold py-3 px-8 rounded-lg w-full transition duration-300" data-lang-key="contactButton">Demander Protection</button>
+                        </div>
+
+                    <div class="mt-4 flex items-center justify-between">
+                            <span class="border-b w-1/5 lg:w-1/4"></span>
+                            <span class="text-xs text-center text-gray-500 uppercase" data-lang-key="or">ou</span>
+                              <span class="border-b w-1/5 lg:w-1/4"></span>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <a href="https://calendar.app.google/pNE9HLdXuUtCwgEi7" target="_blank" rel="noopener noreferrer" class="text-[--accent-color] font-bold hover:underline flex items-center justify-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span data-lang-key="scheduleCall">Planifier un Appel</span>
+                            </a>
+                        </div>
+                    </form>
+             </div>
+             <div class="text-center mt-12">
+                    <p>Email : <a href="mailto:info@klehomerie.com" class="hover:text-[--accent-color]">info@klehomerie.com</a></p>
+                     <p>Téléphone : (+30) 694 020 6368</p>
+             </div>
+        </div>
+    </section>
+
+    <section id="save-contact" class="py-20 bg-[--bg-color]" aria-labelledby="vcard-title">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-sm uppercase tracking-wide font-bold text-[--accent-color] mb-2" data-lang-key="vcardEyebrow">Restez joignable</p>
+                    <h2 id="vcard-title" class="text-3xl font-bold mb-4 text-[--title-color]" data-lang-key="vcardTitleText">Enregistrez ma <span class="text-[--accent-color]">ligne directe</span>.</h2>
+                    <p class="mb-6" data-lang-key="vcardLede">Les immeubles ne planifient pas leurs urgences. Enregistrez mon contact dès maintenant : me joindre ne prendra qu'un geste le jour où ça compte.</p>
+                    <a class="inline-flex items-center gap-2 bg-[--accent-color] hover:bg-[--accent-color-hover] text-white dark:text-gray-900 font-bold py-3 px-8 rounded-lg transition duration-300" href="/Arnaud_Zerdab.vcf" download="Arnaud-Zerdab.vcf">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/>
+                        </svg>
+                        <span data-lang-key="vcardBtn">Enregistrer mon contact</span>
+                    </a>
+                </div>
+
+                <div class="flex flex-col items-center">
+                    <div class="card p-4 rounded-lg shadow-lg inline-block">
+                        <svg viewBox="0 0 45 45" role="img" aria-label="QR code to save Arnaud Zerdab's contact card" class="w-48 h-48 md:w-56 md:h-56">
+                            <rect width="45" height="45" fill="#FFFFFF"/>
+                            <path d="M4,4H11V5H4ZM14,4H15V5H14ZM16,4H20V5H16ZM21,4H22V5H21ZM23,4H27V5H23ZM28,4H32V5H28ZM34,4H41V5H34ZM4,5H5V6H4ZM10,5H11V6H10ZM12,5H13V6H12ZM19,5H20V6H19ZM21,5H23V6H21ZM25,5H26V6H25ZM27,5H30V6H27ZM32,5H33V6H32ZM34,5H35V6H34ZM40,5H41V6H40ZM4,6H5V7H4ZM6,6H9V7H6ZM10,6H11V7H10ZM13,6H15V7H13ZM16,6H17V7H16ZM18,6H21V7H18ZM22,6H25V7H22ZM31,6H32V7H31ZM34,6H35V7H34ZM36,6H39V7H36ZM40,6H41V7H40ZM4,7H5V8H4ZM6,7H9V8H6ZM10,7H11V8H10ZM13,7H14V8H13ZM16,7H17V8H16ZM19,7H20V8H19ZM27,7H29V8H27ZM30,7H33V8H30ZM34,7H35V8H34ZM36,7H39V8H36ZM40,7H41V8H40ZM4,8H5V9H4ZM6,8H9V9H6ZM10,8H11V9H10ZM15,8H18V9H15ZM21,8H22V9H21ZM27,8H29V9H27ZM31,8H32V9H31ZM34,8H35V9H34ZM36,8H39V9H36ZM40,8H41V9H40ZM4,9H5V10H4ZM10,9H11V10H10ZM12,9H13V10H12ZM14,9H15V10H14ZM16,9H17V10H16ZM21,9H23V10H21ZM24,9H25V10H24ZM26,9H29V10H26ZM32,9H33V10H32ZM34,9H35V10H34ZM40,9H41V10H40ZM4,10H11V11H4ZM12,10H13V11H12ZM14,10H15V11H14ZM16,10H17V11H16ZM18,10H19V11H18ZM20,10H21V11H20ZM22,10H23V11H22ZM24,10H25V11H24ZM26,10H27V11H26ZM28,10H29V11H28ZM30,10H31V11H30ZM32,10H33V11H32ZM34,10H41V11H34ZM12,11H16V12H12ZM17,11H18V12H17ZM20,11H22V12H20ZM24,11H26V12H24ZM28,11H30V12H28ZM8,12H12V13H8ZM13,12H14V13H13ZM15,12H16V13H15ZM17,12H19V13H17ZM20,12H21V13H20ZM22,12H25V13H22ZM27,12H30V13H27ZM31,12H32V13H31ZM34,12H36V13H34ZM39,12H40V13H39ZM4,13H8V14H4ZM9,13H10V14H9ZM11,13H14V14H11ZM16,13H17V14H16ZM18,13H21V14H18ZM22,13H24V14H22ZM25,13H27V14H25ZM30,13H31V14H30ZM33,13H34V14H33ZM36,13H38V14H36ZM4,14H5V15H4ZM6,14H7V15H6ZM8,14H9V15H8ZM10,14H12V15H10ZM13,14H14V15H13ZM15,14H17V15H15ZM18,14H24V15H18ZM25,14H27V15H25ZM29,14H34V15H29ZM36,14H40V15H36ZM4,15H6V16H4ZM8,15H9V16H8ZM15,15H18V16H15ZM20,15H21V16H20ZM22,15H23V16H22ZM24,15H26V16H24ZM30,15H31V16H30ZM33,15H34V16H33ZM35,15H37V16H35ZM38,15H39V16H38ZM5,16H6V17H5ZM7,16H8V17H7ZM10,16H11V17H10ZM12,16H16V17H12ZM19,16H20V17H19ZM22,16H27V17H22ZM28,16H29V17H28ZM33,16H36V17H33ZM38,16H40V17H38ZM4,17H6V18H4ZM11,17H12V18H11ZM13,17H15V18H13ZM16,17H20V18H16ZM23,17H26V18H23ZM30,17H34V18H30ZM36,17H37V18H36ZM38,17H39V18H38ZM5,18H6V19H5ZM7,18H8V19H7ZM10,18H14V19H10ZM16,18H17V19H16ZM19,18H25V19H19ZM27,18H28V19H27ZM29,18H32V19H29ZM36,18H39V19H36ZM5,19H7V20H5ZM8,19H9V20H8ZM11,19H12V20H11ZM15,19H16V20H15ZM17,19H18V20H17ZM20,19H21V20H20ZM22,19H23V20H22ZM24,19H26V20H24ZM31,19H32V20H31ZM38,19H39V20H38ZM6,20H7V21H6ZM8,20H9V21H8ZM10,20H11V21H10ZM15,20H18V21H15ZM22,20H24V21H22ZM26,20H28V21H26ZM33,20H36V21H33ZM37,20H41V21H37ZM4,21H5V22H4ZM6,21H10V22H6ZM15,21H19V22H15ZM21,21H23V22H21ZM27,21H29V22H27ZM30,21H34V22H30ZM36,21H37V22H36ZM38,21H39V22H38ZM6,22H9V23H6ZM10,22H11V23H10ZM13,22H17V23H13ZM19,22H22V23H19ZM23,22H24V23H23ZM25,22H28V23H25ZM29,22H32V23H29ZM34,22H36V23H34ZM37,22H39V23H37ZM4,23H7V24H4ZM8,23H9V24H8ZM11,23H15V24H11ZM16,23H17V24H16ZM18,23H20V24H18ZM24,23H25V24H24ZM26,23H27V24H26ZM28,23H29V24H28ZM30,23H37V24H30ZM38,23H40V24H38ZM6,24H7V25H6ZM8,24H11V25H8ZM17,24H18V25H17ZM19,24H20V25H19ZM21,24H22V25H21ZM23,24H24V25H23ZM26,24H27V25H26ZM28,24H30V25H28ZM31,24H32V25H31ZM33,24H35V25H33ZM38,24H39V25H38ZM5,25H6V26H5ZM9,25H10V26H9ZM14,25H15V26H14ZM16,25H17V26H16ZM19,25H20V26H19ZM22,25H23V26H22ZM25,25H30V26H25ZM31,25H32V26H31ZM36,25H39V26H36ZM6,26H9V27H6ZM10,26H11V27H10ZM13,26H15V27H13ZM18,26H22V27H18ZM23,26H26V27H23ZM31,26H33V27H31ZM5,27H7V28H5ZM8,27H10V28H8ZM11,27H12V28H11ZM13,27H14V28H13ZM17,27H20V28H17ZM22,27H23V28H22ZM24,27H25V28H24ZM26,27H27V28H26ZM30,27H31V28H30ZM32,27H36V28H32ZM38,27H41V28H38ZM4,28H5V29H4ZM8,28H9V29H8ZM10,28H11V29H10ZM12,28H13V29H12ZM14,28H15V29H14ZM17,28H21V29H17ZM23,28H24V29H23ZM25,28H27V29H25ZM29,28H32V29H29ZM33,28H36V29H33ZM40,28H41V29H40ZM4,29H5V30H4ZM7,29H9V30H7ZM11,29H12V30H11ZM14,29H16V30H14ZM17,29H19V30H17ZM20,29H22V30H20ZM23,29H27V30H23ZM28,29H29V30H28ZM31,29H33V30H31ZM35,29H37V30H35ZM6,30H11V31H6ZM13,30H14V31H13ZM16,30H19V31H16ZM21,30H23V31H21ZM24,30H30V31H24ZM31,30H32V31H31ZM33,30H34V31H33ZM36,30H37V31H36ZM38,30H39V31H38ZM7,31H8V32H7ZM9,31H10V32H9ZM12,31H13V32H12ZM16,31H20V32H16ZM24,31H25V32H24ZM27,31H28V32H27ZM30,31H31V32H30ZM32,31H33V32H32ZM34,31H35V32H34ZM38,31H39V32H38ZM40,31H41V32H40ZM4,32H8V33H4ZM10,32H12V33H10ZM13,32H15V33H13ZM16,32H17V33H16ZM18,32H19V33H18ZM20,32H21V33H20ZM23,32H24V33H23ZM26,32H27V33H26ZM32,32H37V33H32ZM38,32H40V33H38ZM12,33H13V34H12ZM14,33H18V34H14ZM19,33H25V34H19ZM26,33H28V34H26ZM29,33H33V34H29ZM36,33H38V34H36ZM4,34H11V35H4ZM12,34H13V35H12ZM15,34H16V35H15ZM19,34H23V35H19ZM24,34H26V35H24ZM27,34H30V35H27ZM32,34H33V35H32ZM34,34H35V35H34ZM36,34H39V35H36ZM4,35H5V36H4ZM10,35H11V36H10ZM12,35H13V36H12ZM14,35H15V36H14ZM16,35H19V36H16ZM20,35H24V36H20ZM25,35H29V36H25ZM30,35H31V36H30ZM32,35H33V36H32ZM36,35H37V36H36ZM38,35H40V36H38ZM4,36H5V37H4ZM6,36H9V37H6ZM10,36H11V37H10ZM12,36H16V37H12ZM18,36H20V37H18ZM21,36H22V37H21ZM23,36H24V37H23ZM28,36H29V37H28ZM32,36H40V37H32ZM4,37H5V38H4ZM6,37H9V38H6ZM10,37H11V38H10ZM15,37H16V38H15ZM18,37H19V38H18ZM20,37H21V38H20ZM24,37H26V38H24ZM30,37H32V38H30ZM34,37H35V38H34ZM37,37H39V38H37ZM4,38H5V39H4ZM6,38H9V39H6ZM10,38H11V39H10ZM15,38H17V39H15ZM18,38H19V39H18ZM21,38H22V39H21ZM24,38H27V39H24ZM29,38H30V39H29ZM31,38H33V39H31ZM34,38H36V39H34ZM39,38H40V39H39ZM4,39H5V40H4ZM10,39H11V40H10ZM13,39H17V40H13ZM18,39H22V40H18ZM23,39H25V40H23ZM26,39H27V40H26ZM28,39H29V40H28ZM31,39H32V40H31ZM33,39H34V40H33ZM35,39H36V40H35ZM38,39H40V40H38ZM4,40H11V41H4ZM14,40H15V41H14ZM19,40H22V41H19ZM23,40H24V41H23ZM25,40H26V41H25ZM27,40H29V41H27ZM31,40H32V41H31ZM35,40H37V41H35ZM38,40H41V41H38Z" class="fill-[--qr-module-color]"/>
+                            <defs>
+                                <clipPath id="qrLogoClip">
+                                    <rect x="17.75" y="17.75" width="9.5" height="9.5" rx="1.8"/>
+                                </clipPath>
+                            </defs>
+                            <rect x="17" y="17" width="11" height="11" rx="2" class="fill-[--card-bg]"/>
+                            <image x="17.75" y="17.75" width="9.5" height="9.5" clip-path="url(#qrLogoClip)" href="/arnaud-zerdab-logo.png"/>
+                        </svg>
+                    </div>
+                    <p class="text-xs text-center mt-3 text-[--text-color]" data-lang-key="vcardScan">Scannez pour enregistrer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
