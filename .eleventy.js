@@ -146,6 +146,19 @@ eleventyConfig.addPassthroughCopy("src/arnaud-zerdab-logo.png");
     </div>`;
   });
 
+  eleventyConfig.addShortcode("CTA_TECHNICAL_AUDIT", function() {
+    return `
+    <div class="my-8 p-6 bg-blue-50 dark:bg-slate-800 border-l-4 border-[--title-color] rounded-r-lg not-prose">
+      <h4 class="font-bold text-lg text-[--title-color] mb-2 m-0">🏗️ Ready to see the full picture?</h4>
+      <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">
+        The Golden Ticket Technical Audit covers six asset classes, scores every finding on a four-tier scale, and produces a 5-year CapEx forecast for the apartment.
+      </p>
+      <a href="/golden-ticket-technical-audit/" class="inline-block bg-[--accent-color] text-white font-bold py-2 px-6 rounded hover:bg-[#A94A2D] transition-colors no-underline">
+        Explore the Golden Ticket Audit (€490)
+      </a>
+    </div>`;
+  });
+
   // 👇 NEW: ASYNC SHORTCODE FOR TEMPLATE IMAGES (Hero, Slider, etc.)
   eleventyConfig.addAsyncShortcode("optimizedImage", async function(src, alt, sizes = "100vw", classes = "") {
     if (!src) return "";
