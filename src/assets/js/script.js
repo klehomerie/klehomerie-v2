@@ -41,6 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
   // --- SEO FIX: READ URL PARAMETERS ---
   const urlParams = new URLSearchParams(window.location.search);
   const urlLang = urlParams.get('lang');
+  const urlSource = urlParams.get('source');
+
+  // Tag the contact form with where the visitor came from (e.g. "golden-ticket"),
+  // so /thank-you/ can pass it on to the contact_request GA4 event.
+  const contactSourceInput = document.getElementById('contact-source-input');
+  if (contactSourceInput && urlSource) {
+      contactSourceInput.value = urlSource;
+  }
 
   // Determine initial language (URL Parameter > LocalStorage > Default 'en')
   let initialLang = localStorage.getItem('lang') || 'en';
@@ -230,19 +238,32 @@ document.addEventListener('DOMContentLoaded', function () {
           event.preventDefault();
           const submitButton = contactForm.querySelector('button[type="submit"]');
           const originalText = submitButton.textContent;
-          
+
           submitButton.disabled = true;
           submitButton.textContent = 'Sending...';
-          await new Promise(r => setTimeout(r, 1000));
-          
-          contactForm.reset();
-          formSuccessMessage.classList.remove('hidden');
-          formSuccessMessage.textContent = "Message sent! We will protect your concrete shortly.";
-          formSuccessMessage.style.display = 'block';
-          
-          submitButton.disabled = false;
-          submitButton.textContent = originalText;
-          setTimeout(() => { formSuccessMessage.classList.add('hidden'); }, 5000);
+
+          try {
+              const formData = new URLSearchParams(new FormData(contactForm)).toString();
+              const response = await fetch('/', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                  body: formData
+              });
+
+              if (!response.ok) throw new Error('Form submission failed');
+
+              const source = contactSourceInput ? contactSourceInput.value : 'homepage';
+              window.location.href = '/thank-you/?source=' + encodeURIComponent(source);
+              return;
+          } catch (error) {
+              formSuccessMessage.classList.remove('hidden', 'bg-blue-100', 'text-blue-800');
+              formSuccessMessage.classList.add('bg-red-100', 'text-red-800');
+              formSuccessMessage.textContent = "Something went wrong. Please email info@klehomerie.com directly.";
+              formSuccessMessage.style.display = 'block';
+          } finally {
+              submitButton.disabled = false;
+              submitButton.textContent = originalText;
+          }
       });
   }
 

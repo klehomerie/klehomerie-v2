@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: Request received | Klehomerie
+description: Your technical request has been received by Klehomerie.
+---
+<div class="min-h-[70vh] flex flex-col items-center justify-center text-center px-4 py-24">
+
+    <div class="bg-green-100 dark:bg-green-900/30 p-6 rounded-full mb-6 text-6xl shadow-inner">
+        ✅
+    </div>
+
+    <h1 class="text-3xl md:text-4xl font-bold mb-4 text-[--title-color]">
+        Request received
+    </h1>
+
+    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-lg mb-8 leading-relaxed">
+        Thank you for contacting Klehomerie. Your message has arrived, and we will respond within <strong>24 hours</strong>.
+    </p>
+
+    <a href="/klab/" class="inline-block bg-[--accent-color] hover:bg-[#A94A2D] text-white font-bold py-3 px-8 rounded-lg transition-colors mb-6">
+        Explore the Klab while you wait
+    </a>
+
+    <div class="mt-2">
+        <a href="/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-500 no-underline">or go to Homepage</a>
+    </div>
+
+</div>
+
+<script>
+(function() {
+    var params = new URLSearchParams(window.location.search);
+    var pageSource = params.get('source') || 'homepage';
+
+    if (typeof gtag === 'function') {
+        gtag('event', 'contact_request', {
+            'page_source': pageSource
+        });
+    }
+})();
+</script>

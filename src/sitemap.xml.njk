@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {% for page in collections.all %}
   {# FILTER: Exclude admin, success page, 404s, and pages without a live URL (future posts) #}
-  {% if not page.data.eleventyExcludeFromCollections and page.url and page.url != "/admin/" and page.url != "/success/" and page.url != "/404.html" %}
+  {% if not page.data.eleventyExcludeFromCollections and page.url and page.url != "/admin/" and page.url != "/success/" and page.url != "/thank-you/" and page.url != "/404.html" %}
   <url>
     <loc>https://klehomerie.com{{ page.url | url }}</loc>
     <lastmod>{% if page.date.toISOString %}{{ page.date.toISOString() }}{% else %}{{ page.date }}{% endif %}</lastmod>
