@@ -394,22 +394,36 @@
         </div>
     </div>
 </noscript>
+{# Resolves an English nav path to its real /fr/ equivalent when the current
+   page is French and one exists (reusing the hreflang pairs from <head>);
+   otherwise returns the path unchanged. Keeps in-site nav/footer links from
+   bouncing a French visitor back into the English page tree. #}
+{% macro frHref(enPath) -%}
+    {%- if locale == 'fr' and enPath in frRealElQueryEnUrls -%}
+        {{- frRealElQueryFrUrls[frRealElQueryEnUrls.indexOf(enPath)] -}}
+    {%- elif locale == 'fr' and enPath in frOnlyPairEnUrls -%}
+        {{- frOnlyPairFrUrls[frOnlyPairEnUrls.indexOf(enPath)] -}}
+    {%- else -%}
+        {{- enPath -}}
+    {%- endif -%}
+{%- endmacro %}
+
 {% macro aboutDropdownLinks() %}
-<a href="/methodology/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMethodology">Methodology</a>
-<a href="/scope/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navScope">Scope</a>
-<a href="/testimonials/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navReviews">Reviews</a>
+<a href="{{ frHref('/methodology/') }}" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMethodology">Methodology</a>
+<a href="{{ frHref('/scope/') }}" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navScope">Scope</a>
+<a href="{{ frHref('/testimonials/') }}" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navReviews">Reviews</a>
 <a href="/media/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMedia">Press</a>
 {% endmacro %}
 
 {% macro servicesDropdownLinks() %}
-<a href="/golden-ticket-technical-audit/" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navGoldenTicket">Golden Ticket Technical Audit</a>
+<a href="{{ frHref('/golden-ticket-technical-audit/') }}" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navGoldenTicket">Golden Ticket Technical Audit</a>
 {% endmacro %}
 
 <nav id="header" class="fixed w-full top-0 transition-all duration-300 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20"> 
             
-            <a href="/" class="flex-shrink-0 flex items-center group no-underline">
+            <a href="{{ frHref('/') }}" class="flex-shrink-0 flex items-center group no-underline">
                 <img id="header-logo" 
                      src="/assets/images/header-digital-logo.png" 
                      width="56" 
@@ -427,7 +441,7 @@
 
             <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-6">
-                   {% if page.url == '/' %}
+                   {% if page.url == '/' or page.url == '/fr/' %}
                        <!-- Services Dropdown -->
 <div class="relative group inline-block">
     <button class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1 focus:outline-none" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})" data-lang-key="navServices">
@@ -461,7 +475,7 @@
                    {% else %}
                        <!-- Services Dropdown -->
 <div class="relative group inline-block">
-    <a href="/#services" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1" data-lang-key="navServices">
+    <a href="{{ frHref('/') }}#services" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1" data-lang-key="navServices">
         Services
         <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
     </a>
@@ -487,8 +501,8 @@
     </div>
 </div>
 
-                       <a href="/#faq" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navFaq">FAQ</a>
-                       <a href="/#contact" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navContact">Contact</a>
+                       <a href="{{ frHref('/') }}#faq" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navFaq">FAQ</a>
+                       <a href="{{ frHref('/') }}#contact" class="nav-link hover:text-[--accent-color] px-3 py-2 rounded-md text-sm font-medium transition-colors" data-lang-key="navContact">Contact</a>
                    {% endif %}
                     
                    <div class="ml-4 flex items-center border-l border-gray-600 pl-4">
@@ -539,22 +553,22 @@
     
     <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 absolute top-full left-0 w-full shadow-xl z-50">
             <div class="flex flex-col p-4 space-y-4">
-                <a href="/#services" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navServices">Services</a>
+                <a href="{{ frHref('/') }}#services" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navServices">Services</a>
                 <div class="flex flex-col space-y-3 pt-2 pb-2">
-    <a href="/golden-ticket-technical-audit/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navGoldenTicket">Golden Ticket Technical Audit</a>
+    <a href="{{ frHref('/golden-ticket-technical-audit/') }}" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navGoldenTicket">Golden Ticket Technical Audit</a>
 </div>
                 <a href="/klab/" class="text-[--accent-color] font-bold" onclick="toggleMobileMenu()" data-lang-key="navInsights">Insights</a>
                 <div class="flex flex-col space-y-3 pt-2 pb-2">
     <span class="text-gray-400 dark:text-gray-500 font-semibold text-xs uppercase tracking-wider px-2" data-lang-key="navAbout">About</span>
-    <a href="/methodology/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navMethodology">Methodology</a>
-    <a href="/scope/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navScope">Scope</a>
-    <a href="/testimonials/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navReviews">Reviews</a>
+    <a href="{{ frHref('/methodology/') }}" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navMethodology">Methodology</a>
+    <a href="{{ frHref('/scope/') }}" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navScope">Scope</a>
+    <a href="{{ frHref('/testimonials/') }}" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navReviews">Reviews</a>
     <a href="/media/" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors pl-4 border-l-2 border-transparent hover:border-[--accent-color]" onclick="toggleMobileMenu()" data-lang-key="navMedia">Press</a>
 </div>
-                <a href="/#faq" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navFaq">FAQ</a>
+                <a href="{{ frHref('/') }}#faq" class="text-gray-600 dark:text-gray-300 hover:text-[--accent-color] font-medium transition-colors" onclick="toggleMobileMenu()" data-lang-key="navFaq">FAQ</a>
 
                 <div class="pt-4 border-t border-gray-100 dark:border-gray-800">
-                    <a href="/#contact" class="block w-full text-center bg-[--accent-color] text-white font-bold py-3 rounded-lg shadow-md hover:bg-[#A94A2D] transition-colors" onclick="toggleMobileMenu()" data-lang-key="navContact">
+                    <a href="{{ frHref('/') }}#contact" class="block w-full text-center bg-[--accent-color] text-white font-bold py-3 rounded-lg shadow-md hover:bg-[#A94A2D] transition-colors" onclick="toggleMobileMenu()" data-lang-key="navContact">
                         Contact
                     </a>
                 </div>
@@ -581,9 +595,9 @@
     <div class="container mx-auto px-6 text-center">
         <p data-lang-key="footerText" class="mt-2">© 2026 Klehomerie. Athens Technical Asset Management.</p>
         <div class="flex justify-center gap-6 text-sm text-gray-500 mb-8 font-['Lato']">
-            <a href="/legal/privacy/" class="hover:text-[--accent-color] transition-colors">Privacy Policy (GDPR)</a>
+            <a href="{{ frHref('/legal/privacy/') }}" class="hover:text-[--accent-color] transition-colors">Privacy Policy (GDPR)</a>
             <span class="text-gray-700">|</span>
-            <a href="/legal/terms/" class="hover:text-[--accent-color] transition-colors">Terms of Service</a>
+            <a href="{{ frHref('/legal/terms/') }}" class="hover:text-[--accent-color] transition-colors">Terms of Service</a>
         </div>
        <div class="mt-4 flex justify-center space-x-6">
        
