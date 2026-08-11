@@ -405,7 +405,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // --- 15. INITIALIZATION & EVENTS ---
   window.addEventListener('scroll', handleScroll);
-  langButtons.forEach(btn => btn.addEventListener('click', () => updateLanguage(btn.dataset.lang)));
+  // Some pages have a real, dedicated URL for a language (e.g. /fr/methodology/)
+  // rather than just a client-side string swap over the English page. When one
+  // exists for the clicked language, navigate there instead of calling
+  // updateLanguage() so visitors land on the actual translated markup/copy.
+  // window.__langAlt is rendered per-page in base.njk from the same EN/FR/EL
+  // pairs used for the hreflang tags.
+  function goToDedicatedLangUrl(lang) {
+      const altUrl = (window.__langAlt || {})[lang];
+      if (!altUrl) return false;
+      if (altUrl.split('?')[0] === window.location.pathname) return false;
+      localStorage.setItem('lang', lang);
+      window.location.href = altUrl;
+      return true;
+  }
+
+  langButtons.forEach(btn => btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      if (goToDedicatedLangUrl(lang)) return;
+      updateLanguage(lang);
+  }));
   scrollLinks.forEach(link => link.addEventListener('click', scrollToSection));
   if (recommendServicesButton) recommendServicesButton.addEventListener('click', handleRecommendClick);
 

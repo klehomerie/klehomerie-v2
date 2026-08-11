@@ -81,6 +81,27 @@
     <link rel="alternate" hreflang="x-default" href="https://klehomerie.com{{ page.url }}" />
     {% endif %}
 
+    {# Real-URL language map for the nav language switcher (script.js): when the
+       current page has a dedicated /fr/ (and/or query-param /el) equivalent, the
+       switcher should navigate there instead of just swapping strings via
+       content.js. Built from the same pairs used for hreflang above, so a page
+       only gets an entry for a language it actually has. #}
+    {% set langAlt = {} %}
+    {% if page.url in frRealElQueryEnUrls %}
+      {% set pairIndex = frRealElQueryEnUrls.indexOf(page.url) %}
+      {% set langAlt = { en: page.url, fr: frRealElQueryFrUrls[pairIndex], el: page.url + "?lang=el" } %}
+    {% elif page.url in frRealElQueryFrUrls %}
+      {% set pairIndex = frRealElQueryFrUrls.indexOf(page.url) %}
+      {% set langAlt = { en: frRealElQueryEnUrls[pairIndex], fr: page.url, el: frRealElQueryEnUrls[pairIndex] + "?lang=el" } %}
+    {% elif page.url in frOnlyPairEnUrls %}
+      {% set pairIndex = frOnlyPairEnUrls.indexOf(page.url) %}
+      {% set langAlt = { en: page.url, fr: frOnlyPairFrUrls[pairIndex] } %}
+    {% elif page.url in frOnlyPairFrUrls %}
+      {% set pairIndex = frOnlyPairFrUrls.indexOf(page.url) %}
+      {% set langAlt = { en: frOnlyPairEnUrls[pairIndex], fr: page.url } %}
+    {% endif %}
+    <script>window.__langAlt = {{ langAlt | dump | safe }};</script>
+
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
