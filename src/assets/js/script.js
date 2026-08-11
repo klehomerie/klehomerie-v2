@@ -435,15 +435,4 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(() => updateLanguage(currentLang), 100);
       setTimeout(() => updateLanguage(currentLang), 500);
   }
-
-  // --- 14. PRICELIST PDF DOWNLOAD TRACKING ---
-  document.querySelectorAll('a[download][href$=".pdf"]').forEach(function(link) {
-      link.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-              gtag('event', 'pricelist_download', {
-                  'file_language': link.href.indexOf('_FR.pdf') !== -1 ? 'fr' : 'en'
-              });
-          }
-      });
-  });
 });
