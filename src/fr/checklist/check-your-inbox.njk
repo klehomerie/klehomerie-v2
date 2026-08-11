@@ -8,3 +8,13 @@ locale: fr
     <h1 class="text-3xl md:text-4xl font-bold mb-4 text-[--title-color]">Presque terminé</h1>
     <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">Vérifiez votre boîte mail et cliquez sur le lien de confirmation. La checklist arrive.</p>
 </div>
+
+<script>
+(function() {
+    if (typeof gtag === 'function') {
+        gtag('event', 'checklist_signup_started', {
+            'page_source': 'checklist'
+        });
+    }
+})();
+</script>

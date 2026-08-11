@@ -7,3 +7,13 @@ permalink: /checklist/confirmed/
     <h1 class="text-3xl md:text-4xl font-bold mb-4 text-[--title-color]">Confirmed</h1>
     <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">Your checklist is in your inbox now.</p>
 </div>
+
+<script>
+(function() {
+    if (typeof gtag === 'function') {
+        gtag('event', 'checklist_download', {
+            'page_source': 'checklist'
+        });
+    }
+})();
+</script>
