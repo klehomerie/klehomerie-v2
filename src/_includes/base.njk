@@ -384,16 +384,6 @@
     </script>
 </head>
 <body class="antialiased">
-<noscript>
-    <div style="background-color: #1c1a3c; color: white; padding: 1rem; text-align: center;">
-        <p>JavaScript is disabled in your browser. For the best experience, please enable JavaScript. Here are our main links:</p>
-        <div style="margin-top: 0.5rem;">
-            <a href="/#services" style="color: #A94A2D; margin: 0 10px;">Services</a>
-            <a href="/klab/" style="color: #A94A2D; margin: 0 10px;">Insights</a>
-            <a href="/#contact" style="color: #A94A2D; margin: 0 10px;">Contact</a>
-        </div>
-    </div>
-</noscript>
 {# Resolves an English nav path to its real /fr/ equivalent when the current
    page is French and one exists (reusing the hreflang pairs from <head>);
    otherwise returns the path unchanged. Keeps in-site nav/footer links from
@@ -407,6 +397,17 @@
         {{- enPath -}}
     {%- endif -%}
 {%- endmacro %}
+
+<noscript>
+    <div style="background-color: #1c1a3c; color: white; padding: 1rem; text-align: center;">
+        <p>JavaScript is disabled in your browser. For the best experience, please enable JavaScript. Here are our main links:</p>
+        <div style="margin-top: 0.5rem;">
+            <a href="{{ frHref('/') }}#services" style="color: #A94A2D; margin: 0 10px;">Services</a>
+            <a href="/klab/" style="color: #A94A2D; margin: 0 10px;">Insights</a>
+            <a href="{{ frHref('/') }}#contact" style="color: #A94A2D; margin: 0 10px;">Contact</a>
+        </div>
+    </div>
+</noscript>
 
 {% macro aboutDropdownLinks() %}
 <a href="{{ frHref('/methodology/') }}" class="text-left px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-[--accent-color] transition-colors" data-lang-key="navMethodology">Methodology</a>
