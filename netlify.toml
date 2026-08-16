@@ -13,7 +13,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     # A permissive CSP that passes the audit but won't break your Tailwind/GA scripts
-    Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval' data:;"
+    Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval' data: blob:;"
 
 [[headers]]
   # This targets your images, CSS, and JS to be cached for 1 year
