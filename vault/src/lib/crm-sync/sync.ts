@@ -4,8 +4,6 @@ import { createAdminClient } from '@/lib/supabase/admin';
 import { readCrmClients, readCrmProperties } from '@/lib/google/sheets';
 import { normalizeClientId, parseCrmLanguage, parseCrmDate } from './parse';
 
-const TEST_DOMAIN = 'klehomerie.com';
-
 interface SyncIssue {
   tab: '01_Clients' | '02_Properties';
   raw_value: unknown;
@@ -49,16 +47,12 @@ export async function syncFromCrm(): Promise<CrmSyncResult> {
         issues.push({ tab: '01_Clients', raw_value: row, reason: 'Missing or unreadable ClientID.' });
         continue;
       }
-      if (row.email.trim().toLowerCase().endsWith(`@${TEST_DOMAIN}`)) {
-        rowsSkipped += 1;
-        issues.push({
-          tab: '01_Clients',
-          raw_value: row,
-          reason: 'Internal test domain (klehomerie.com), excluded from the mirror.',
-        });
-        continue;
-      }
-
+      // klehomerie.com addresses ARE mirrored (unlike Slice 1's original
+      // blanket sync-time exclusion) -- otherwise the one deliberate test
+      // account (ID001) could never exist as a client row to flag
+      // is_test_account on in the first place. The invite function is the
+      // sole enforcement point now: it still blocks every klehomerie.com
+      // address except the one row hand-flagged is_test_account = true.
       const firstName = row.firstName.trim();
       const lastName = row.lastName.trim();
       const name = [firstName, lastName].filter(Boolean).join(' ') || 'Unknown';
