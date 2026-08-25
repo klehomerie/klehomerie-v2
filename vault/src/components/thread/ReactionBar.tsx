@@ -33,8 +33,8 @@ export function ReactionBar({
             }
             className={`rounded-full border px-2 py-0.5 text-xs ${
               active
-                ? 'border-slate-900 bg-slate-900 text-white'
-                : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
+                ? 'border-[var(--accent-color)] bg-[var(--accent-color)] text-white'
+                : 'border-[var(--border-color)] bg-[var(--card-bg)] text-[var(--text-color)] hover:bg-[var(--secondary-bg)]'
             }`}
           >
             {emoji}

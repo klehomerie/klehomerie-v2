@@ -35,13 +35,19 @@ export function ThreadPanel({
 }: ThreadPanelProps) {
   return (
     <div className="space-y-4">
-      <div className="space-y-3 rounded-md border border-slate-200 bg-white p-4">
-        {view.messages.length === 0 && <p className="text-sm text-slate-500">No messages yet.</p>}
+      <div className="space-y-3 rounded-xl border border-[var(--border-color)] bg-[var(--card-bg)] p-4">
+        {view.messages.length === 0 && (
+          <p className="text-sm text-[var(--text-color)]">
+            {role === 'client'
+              ? 'Nothing here yet. Klehomerie is watching over this asset. Updates, documents, and any authorization requests will appear in this thread.'
+              : 'No activity yet on this asset. A message or an authorization raised here reaches the client directly.'}
+          </p>
+        )}
 
         {view.messages.map((message) => {
           if (message.deleted_at) {
             return (
-              <p key={message.id} className="text-sm italic text-slate-400">
+              <p key={message.id} className="text-sm italic text-[var(--text-color)]">
                 Message withdrawn
               </p>
             );
@@ -49,7 +55,7 @@ export function ThreadPanel({
 
           if (message.author_role === 'system') {
             return (
-              <p key={message.id} className="text-center text-xs text-slate-400">
+              <p key={message.id} className="text-center text-xs text-[var(--text-color)]">
                 {message.body} · {new Date(message.created_at).toLocaleString()}
               </p>
             );
@@ -64,23 +70,26 @@ export function ThreadPanel({
           if (isAuthorizationCard) {
             return (
               <div key={message.id}>
-                <p className="text-xs font-medium text-slate-500">
+                <p className="text-xs font-medium text-[var(--text-color)]">
                   {roleLabel(message.author_role)} · {new Date(message.created_at).toLocaleString()}
                 </p>
                 <div className="mt-1">
                   {authorization ? (
                     <AuthorizationCard
                       authorization={authorization}
-                      documentTitle={
+                      document={
                         authorization.doc_id
-                          ? (view.documentTitlesById.get(authorization.doc_id) ?? null)
+                          ? {
+                              id: authorization.doc_id,
+                              title: view.documentTitlesById.get(authorization.doc_id) ?? 'Document',
+                            }
                           : null
                       }
                       canDecide={role === 'client'}
                       onDecide={decideAction}
                     />
                   ) : (
-                    <p className="text-sm text-slate-500">Authorization unavailable.</p>
+                    <p className="text-sm text-[var(--text-color)]">Authorization unavailable.</p>
                   )}
                 </div>
               </div>
@@ -91,13 +100,13 @@ export function ThreadPanel({
             <div key={message.id} className={`flex ${isOwn ? 'justify-end' : 'justify-start'}`}>
               <div className="max-w-[80%]">
                 <p
-                  className={`text-xs font-medium text-slate-500 ${isOwn ? 'text-right' : 'text-left'}`}
+                  className={`text-xs font-medium text-[var(--text-color)] ${isOwn ? 'text-right' : 'text-left'}`}
                 >
                   {roleLabel(message.author_role)} · {new Date(message.created_at).toLocaleString()}
                 </p>
                 <div
-                  className={`mt-0.5 rounded-md px-3 py-2 text-sm whitespace-pre-wrap ${
-                    isOwn ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-900'
+                  className={`mt-0.5 rounded-xl px-3 py-2 text-sm whitespace-pre-wrap ${
+                    isOwn ? 'bg-[var(--accent-color)] text-white' : 'bg-[var(--secondary-bg)] text-[var(--title-color)]'
                   }`}
                 >
                   {message.body}

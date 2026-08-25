@@ -25,15 +25,15 @@ export function CreateAuthorizationForm({
           if (result.ok) formRef.current?.reset();
         })
       }
-      className="space-y-3 rounded-md border border-slate-200 bg-white p-4"
+      className="space-y-3 rounded-xl border border-[var(--border-color)] bg-[var(--card-bg)] p-4"
     >
-      <p className="text-sm font-medium text-slate-900">Raise an authorization</p>
+      <p className="text-sm font-medium text-[var(--title-color)]">Raise an authorization</p>
       <div>
-        <label className="block text-xs font-medium text-slate-600">Asset class</label>
+        <label className="block text-xs font-medium text-[var(--text-color)]">Asset class</label>
         <select
           name="asset_class"
           required
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+          className="mt-1 w-full rounded-xl border border-[var(--border-color)] px-3 py-2 text-sm"
         >
           {Object.entries(ASSET_CLASS_LABELS).map(([value, label]) => (
             <option key={value} value={value}>
@@ -43,39 +43,39 @@ export function CreateAuthorizationForm({
         </select>
       </div>
       <div>
-        <label className="block text-xs font-medium text-slate-600">Title</label>
+        <label className="block text-xs font-medium text-[var(--text-color)]">Title</label>
         <input
           name="title"
           required
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+          className="mt-1 w-full rounded-xl border border-[var(--border-color)] px-3 py-2 text-sm"
         />
       </div>
       <div>
-        <label className="block text-xs font-medium text-slate-600">Description</label>
+        <label className="block text-xs font-medium text-[var(--text-color)]">Description</label>
         <textarea
           name="description"
           rows={2}
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+          className="mt-1 w-full rounded-xl border border-[var(--border-color)] px-3 py-2 text-sm"
         />
       </div>
       <div>
-        <label className="block text-xs font-medium text-slate-600">Net amount (€, excl. VAT)</label>
+        <label className="block text-xs font-medium text-[var(--text-color)]">Net amount (€, excl. VAT)</label>
         <input
           name="amount_euros"
           type="number"
           step="0.01"
           min="0"
           required
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+          className="mt-1 w-full rounded-xl border border-[var(--border-color)] px-3 py-2 text-sm"
         />
       </div>
       {documents.length > 0 && (
         <div>
-          <label className="block text-xs font-medium text-slate-600">Linked document (optional)</label>
+          <label className="block text-xs font-medium text-[var(--text-color)]">Linked document (optional)</label>
           <select
             name="doc_id"
             defaultValue=""
-            className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+            className="mt-1 w-full rounded-xl border border-[var(--border-color)] px-3 py-2 text-sm"
           >
             <option value="">None</option>
             {documents.map((doc) => (
@@ -89,11 +89,11 @@ export function CreateAuthorizationForm({
       <button
         type="submit"
         disabled={isPending}
-        className="rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+        className="rounded-xl bg-[var(--accent-color)] px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
       >
         {isPending ? 'Raising' : 'Raise authorization'}
       </button>
-      {message && <p className="text-sm text-slate-600">{message}</p>}
+      {message && <p className="text-sm text-[var(--text-color)]">{message}</p>}
     </form>
   );
 }

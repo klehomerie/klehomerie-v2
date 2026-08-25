@@ -5,6 +5,7 @@ import { requireClient } from '@/lib/portal';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { ensurePropertyFolder, uploadDocumentToDrive } from '@/lib/google/drive';
 import { CLIENT_DOC_TYPES } from '@/lib/copy';
+import { generateDocumentBrief } from '@/lib/slice3/generate-brief';
 
 export type UploadResult = { ok: true } | { ok: false; error: string };
 
@@ -58,18 +59,31 @@ export async function uploadClientDocument(propertyId: string, formData: FormDat
     fileBuffer,
   });
 
-  const { error: insertError } = await admin.from('documents').insert({
-    property_id: property.id,
-    doc_type: docType,
-    title,
-    drive_file_id: driveFileId,
-    mime_type: file.type || 'application/octet-stream',
-    uploaded_by: user.id,
-  });
+  const { data: document, error: insertError } = await admin
+    .from('documents')
+    .insert({
+      property_id: property.id,
+      doc_type: docType,
+      title,
+      drive_file_id: driveFileId,
+      mime_type: file.type || 'application/octet-stream',
+      uploaded_by: user.id,
+    })
+    .select('id')
+    .single();
 
-  if (insertError) {
-    return { ok: false, error: insertError.message };
+  if (insertError || !document) {
+    return { ok: false, error: insertError?.message ?? 'Upload failed.' };
   }
+
+  // Enhancement layer, not a gate -- see the comment in admin/actions.ts's
+  // uploadDocument for why this is awaited rather than fire-and-forget.
+  await generateDocumentBrief({
+    documentId: document.id,
+    fileBuffer,
+    mimeType: file.type || 'application/octet-stream',
+    language: client.language,
+  });
 
   revalidatePath(`/portal/properties/${property.id}`);
   return { ok: true };

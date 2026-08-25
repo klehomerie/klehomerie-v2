@@ -21,8 +21,8 @@ export default async function AdminPage() {
   return (
     <div className="space-y-10">
       <section>
-        <h1 className="text-xl font-semibold text-slate-900">Assets</h1>
-        <p className="mt-1 text-sm text-slate-600">
+        <h1 className="text-xl font-semibold text-[var(--title-color)]">Assets</h1>
+        <p className="mt-1 text-sm text-[var(--text-color)]">
           Mirrored from the CRM. Run a sync to bring in the latest changes.
         </p>
         <div className="mt-4">
@@ -31,8 +31,8 @@ export default async function AdminPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-medium text-slate-900">Properties</h2>
-        <ul className="mt-3 divide-y divide-slate-200 rounded-md border border-slate-200 bg-white">
+        <h2 className="text-lg font-medium text-[var(--title-color)]">Properties</h2>
+        <ul className="mt-3 divide-y divide-[var(--border-color)] rounded-xl border border-[var(--border-color)] bg-[var(--card-bg)]">
           {(properties ?? []).map((property) => {
             const client = clientsById.get(property.client_id);
             return (
@@ -40,11 +40,11 @@ export default async function AdminPage() {
                 <div>
                   <Link
                     href={`/admin/properties/${property.id}`}
-                    className="text-sm font-medium text-slate-900 hover:underline"
+                    className="text-sm font-medium text-[var(--title-color)] hover:underline"
                   >
                     {property.address || 'Unknown'}
                   </Link>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-[var(--text-color)]">
                     {client?.name ?? 'Unknown'} - {property.prop_ref}
                     {!property.is_active && ' - inactive in CRM'}
                   </p>
@@ -53,7 +53,7 @@ export default async function AdminPage() {
             );
           })}
           {(properties ?? []).length === 0 && (
-            <li className="px-4 py-6 text-sm text-slate-500">
+            <li className="px-4 py-6 text-sm text-[var(--text-color)]">
               No assets yet. Run a CRM sync to import them.
             </li>
           )}
@@ -61,19 +61,19 @@ export default async function AdminPage() {
       </section>
 
       <section>
-        <h2 className="text-lg font-medium text-slate-900">Clients</h2>
-        <ul className="mt-3 divide-y divide-slate-200 rounded-md border border-slate-200 bg-white">
+        <h2 className="text-lg font-medium text-[var(--title-color)]">Clients</h2>
+        <ul className="mt-3 divide-y divide-[var(--border-color)] rounded-xl border border-[var(--border-color)] bg-[var(--card-bg)]">
           {(clients ?? []).map((client) => (
             <li key={client.id} className="flex items-center justify-between px-4 py-3">
               <div>
-                <p className="text-sm font-medium text-slate-900">{client.name}</p>
-                <p className="text-xs text-slate-500">{client.email}</p>
+                <p className="text-sm font-medium text-[var(--title-color)]">{client.name}</p>
+                <p className="text-xs text-[var(--text-color)]">{client.email}</p>
               </div>
               <InviteButton clientId={client.id} hasAccess={Boolean(client.auth_user_id)} />
             </li>
           ))}
           {(clients ?? []).length === 0 && (
-            <li className="px-4 py-6 text-sm text-slate-500">
+            <li className="px-4 py-6 text-sm text-[var(--text-color)]">
               No clients yet. Run a CRM sync to import them.
             </li>
           )}

@@ -10,8 +10,8 @@ export default function LoginPage() {
 
   return (
     <main className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
-      <h1 className="text-2xl font-semibold text-slate-900">Klehomerie Vault</h1>
-      <p className="mt-2 text-sm text-slate-600">
+      <h1 className="text-2xl font-semibold text-[var(--title-color)]">Klehomerie Vault</h1>
+      <p className="mt-2 text-sm text-[var(--text-color)]">
         Enter your email and we will send you a sign-in link. No password needed.
       </p>
       <form action={formAction} className="mt-6 space-y-4">
@@ -20,12 +20,12 @@ export default function LoginPage() {
           name="email"
           required
           placeholder="you@example.com"
-          className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+          className="w-full rounded-xl border border-[var(--border-color)] px-3 py-2 text-sm"
         />
         <button
           type="submit"
           disabled={pending}
-          className="w-full rounded-md bg-slate-900 px-3 py-2 text-sm font-medium text-white disabled:opacity-50"
+          className="w-full rounded-xl bg-[var(--accent-color)] px-3 py-2 text-sm font-medium text-white disabled:opacity-50"
         >
           {pending ? 'Sending' : 'Send sign-in link'}
         </button>

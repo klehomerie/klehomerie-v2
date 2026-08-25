@@ -6,6 +6,7 @@ import { createClient as createServerClient } from '@/lib/supabase/server';
 import { isOperatorEmail } from '@/lib/operators';
 import { ensurePropertyFolder, uploadDocumentToDrive } from '@/lib/google/drive';
 import { syncFromCrm, type CrmSyncResult } from '@/lib/crm-sync/sync';
+import { generateDocumentBrief } from '@/lib/slice3/generate-brief';
 
 const TEST_DOMAIN = 'klehomerie.com';
 
@@ -86,13 +87,16 @@ export async function uploadDocument(formData: FormData): Promise<UploadResult> 
 
   const { data: property, error: propertyError } = await admin
     .from('properties')
-    .select('id, external_crm_ref, prop_ref, address, drive_folder_id')
+    .select('id, external_crm_ref, prop_ref, address, drive_folder_id, clients(language)')
     .eq('id', propertyId)
     .single();
 
   if (propertyError || !property) {
     return { ok: false, error: 'Asset not found.' };
   }
+
+  const clientLanguage =
+    (property as { clients?: { language?: string } | null }).clients?.language ?? 'en';
 
   let folderId = property.drive_folder_id as string | null;
   if (!folderId) {
@@ -111,18 +115,33 @@ export async function uploadDocument(formData: FormData): Promise<UploadResult> 
     fileBuffer,
   });
 
-  const { error: insertError } = await admin.from('documents').insert({
-    property_id: property.id,
-    doc_type: docType,
-    title,
-    drive_file_id: driveFileId,
-    mime_type: file.type || 'application/octet-stream',
-    uploaded_by: operator.id,
-  });
+  const { data: document, error: insertError } = await admin
+    .from('documents')
+    .insert({
+      property_id: property.id,
+      doc_type: docType,
+      title,
+      drive_file_id: driveFileId,
+      mime_type: file.type || 'application/octet-stream',
+      uploaded_by: operator.id,
+    })
+    .select('id')
+    .single();
 
-  if (insertError) {
-    return { ok: false, error: insertError.message };
+  if (insertError || !document) {
+    return { ok: false, error: insertError?.message ?? 'Upload failed.' };
   }
+
+  // Enhancement layer, not a gate: the document above is already uploaded,
+  // visible, and downloadable regardless of what happens here. Awaited
+  // (not fire-and-forget) because Netlify's serverless functions don't
+  // guarantee execution continues after the response is sent.
+  await generateDocumentBrief({
+    documentId: document.id,
+    fileBuffer,
+    mimeType: file.type || 'application/octet-stream',
+    language: clientLanguage,
+  });
 
   revalidatePath(`/admin/properties/${property.id}`);
   return { ok: true };

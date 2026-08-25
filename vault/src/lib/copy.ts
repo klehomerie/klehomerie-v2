@@ -48,18 +48,29 @@ export const AUTHORIZATION_STATUS_LABELS: Record<string, string> = {
 
 const VAT_RATE = 0.24;
 
+// European convention: comma decimal, dot thousands (el-GR, matching the
+// CRM's own "1.612,00 €" money format) -- "€820,00", never "€820.00".
+const EUR_FORMATTER = new Intl.NumberFormat('el-GR', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
+function formatEuros(amountCents: number): string {
+  return `€${EUR_FORMATTER.format(amountCents / 100)}`;
+}
+
 // Money is always rendered net-first, per the project's copy rules:
 // "Prices always as '€X (excl. 24% VAT)'".
 export function formatNetAmount(amountNetCents: number): string {
-  return `€${(amountNetCents / 100).toFixed(2)} (excl. 24% VAT)`;
+  return `${formatEuros(amountNetCents)} (excl. 24% VAT)`;
 }
 
 export function formatVatAmount(amountNetCents: number, vatRate: number = VAT_RATE): string {
-  return `€${((amountNetCents * vatRate) / 100).toFixed(2)}`;
+  return formatEuros(amountNetCents * vatRate);
 }
 
 export function formatGrossAmount(amountNetCents: number, vatRate: number = VAT_RATE): string {
-  return `€${((amountNetCents * (1 + vatRate)) / 100).toFixed(2)}`;
+  return formatEuros(amountNetCents * (1 + vatRate));
 }
 
 // Below this, Klehomerie may mobilize without prior client authorization.
@@ -70,3 +81,16 @@ export const NIGHT_BANNER_TEXT =
 
 export const NIGHT_BANNER_URGENT_TEXT =
   'For an urgent Asset Risk, call the number in your service agreement.';
+
+export const LANGUAGE_LABELS: Record<string, string> = {
+  en: 'English',
+  fr: 'French',
+  el: 'Greek',
+};
+
+export function briefSummaryLabel(language: string): string {
+  const name = LANGUAGE_LABELS[language] ?? 'English';
+  return `Summary in ${name}. Machine generated for convenience. The original document is the authoritative version.`;
+}
+
+export const NO_TEXT_LAYER_LABEL = 'Original document only. No summary available.';

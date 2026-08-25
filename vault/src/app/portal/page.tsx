@@ -12,20 +12,22 @@ export default async function PortalPage() {
 
   return (
     <div>
-      <h1 className="text-xl font-semibold text-slate-900">Your assets</h1>
-      <ul className="mt-4 divide-y divide-slate-200 rounded-md border border-slate-200 bg-white">
+      <h1 className="text-xl font-semibold text-[var(--title-color)]">Your assets</h1>
+      <ul className="mt-4 divide-y divide-[var(--border-color)] rounded-xl border border-[var(--border-color)] bg-[var(--card-bg)]">
         {(properties ?? []).map((property) => (
           <li key={property.id} className="px-4 py-3">
             <Link
               href={`/portal/properties/${property.id}`}
-              className="text-sm font-medium text-slate-900 hover:underline"
+              className="text-sm font-medium text-[var(--title-color)] hover:underline"
             >
               {property.address || 'Unknown'}
             </Link>
           </li>
         ))}
         {(properties ?? []).length === 0 && (
-          <li className="px-4 py-6 text-sm text-slate-500">No assets on file yet.</li>
+          <li className="px-4 py-6 text-sm text-[var(--text-color)]">
+            Nothing on file yet. Once Klehomerie is set up on your property, it will appear here.
+          </li>
         )}
       </ul>
     </div>

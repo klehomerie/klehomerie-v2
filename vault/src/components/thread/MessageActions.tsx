@@ -35,7 +35,7 @@ export function MessageActions({
           value={draft}
           onChange={(event) => setDraft(event.target.value)}
           rows={2}
-          className="w-full rounded-md border border-slate-300 px-2 py-1 text-sm"
+          className="w-full rounded-xl border border-[var(--border-color)] px-2 py-1 text-sm"
         />
         <div className="flex gap-2">
           <button
@@ -52,7 +52,7 @@ export function MessageActions({
                 }
               })
             }
-            className="text-xs font-medium text-slate-900 underline disabled:opacity-50"
+            className="text-xs font-medium text-[var(--title-color)] underline disabled:opacity-50"
           >
             Save
           </button>
@@ -63,7 +63,7 @@ export function MessageActions({
               setDraft(body);
               setError(null);
             }}
-            className="text-xs text-slate-500 underline"
+            className="text-xs text-[var(--text-color)] underline"
           >
             Cancel
           </button>
@@ -74,7 +74,7 @@ export function MessageActions({
   }
 
   return (
-    <div className="mt-1 flex gap-2 text-xs text-slate-400">
+    <div className="mt-1 flex gap-2 text-xs text-[var(--text-color)]">
       {stillEditable && (
         <button type="button" onClick={() => setIsEditing(true)} className="underline">
           Edit

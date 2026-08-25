@@ -34,12 +34,12 @@ export function MessageComposer({
           required
           rows={2}
           placeholder="Write a message"
-          className="flex-1 rounded-md border border-slate-300 px-3 py-2 text-sm"
+          className="flex-1 rounded-xl border border-[var(--border-color)] px-3 py-2 text-sm"
         />
         <button
           type="submit"
           disabled={isPending}
-          className="self-end rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+          className="self-end rounded-xl bg-[var(--accent-color)] px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
         >
           {isPending ? 'Sending' : 'Send'}
         </button>

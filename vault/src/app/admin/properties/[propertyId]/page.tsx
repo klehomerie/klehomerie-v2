@@ -62,62 +62,77 @@ export default async function AdminPropertyPage({
   const threadView = operator ? await getThreadView(admin, property.id, operator.id) : null;
 
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-xl font-semibold text-slate-900">{property.address || 'Unknown'}</h1>
-        <p className="text-sm text-slate-500">
+    <div className="space-y-6">
+      {/* Collapsed header -- the thread below is the screen, this is just
+          orientation, not a competing block of stacked fields. */}
+      <header>
+        <h1 className="text-xl font-semibold text-[var(--title-color)]">{property.address || 'Unknown'}</h1>
+        <p className="text-xs text-[var(--text-color)]">
           {clientName ?? 'Unknown'} - {property.prop_ref}
         </p>
-      </div>
+      </header>
 
-      <UploadForm propertyId={property.id} action={uploadDocument} />
+      <details className="group rounded-xl border border-[var(--border-color)] bg-[var(--card-bg)]">
+        <summary className="cursor-pointer list-none px-4 py-3 text-sm font-medium text-[var(--title-color)]">
+          Documents
+          <span className="float-right text-[var(--text-color)] group-open:rotate-180">⌄</span>
+        </summary>
+        <div className="space-y-4 border-t border-[var(--border-color)] px-4 py-4">
+          {Array.from(grouped.entries()).map(([docType, docs]) => (
+            <div key={docType}>
+              <h2 className="text-xs font-semibold uppercase tracking-wide text-[var(--text-color)]">
+                {DOC_TYPE_LABELS[docType] ?? docType}
+              </h2>
+              <ul className="mt-2 divide-y divide-[var(--border-color)] rounded-xl border border-[var(--border-color)]">
+                {docs.map((doc) => (
+                  <li key={doc.id} className="px-4 py-3 text-sm text-[var(--title-color)]">
+                    {doc.title}
+                    <span className="ml-2 text-xs text-[var(--text-color)]">
+                      {new Date(doc.uploaded_at).toLocaleDateString()}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          {(documents ?? []).length === 0 && (
+            <p className="text-sm text-[var(--text-color)]">No documents filed yet for this asset.</p>
+          )}
+          <UploadForm propertyId={property.id} action={uploadDocument} />
+        </div>
+      </details>
 
-      <section className="space-y-6">
-        {Array.from(grouped.entries()).map(([docType, docs]) => (
-          <div key={docType}>
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-              {DOC_TYPE_LABELS[docType] ?? docType}
-            </h2>
-            <ul className="mt-2 divide-y divide-slate-200 rounded-md border border-slate-200 bg-white">
-              {docs.map((doc) => (
-                <li key={doc.id} className="px-4 py-3 text-sm text-slate-900">
-                  {doc.title}
-                  <span className="ml-2 text-xs text-slate-400">
-                    {new Date(doc.uploaded_at).toLocaleDateString()}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-        {(documents ?? []).length === 0 && (
-          <p className="text-sm text-slate-500">No documents uploaded yet.</p>
-        )}
-      </section>
-
-      <section className="space-y-4">
-        <h2 className="text-lg font-medium text-slate-900">Thread</h2>
-        {threadView && operator ? (
-          <>
-            <PropertyLiveRefresh propertyId={property.id} threadId={threadView.threadId} />
+      {threadView && operator && (
+        <details className="group rounded-xl border border-[var(--border-color)] bg-[var(--card-bg)]">
+          <summary className="cursor-pointer list-none px-4 py-3 text-sm font-medium text-[var(--title-color)]">
+            Raise an authorization
+            <span className="float-right text-[var(--text-color)] group-open:rotate-180">⌄</span>
+          </summary>
+          <div className="border-t border-[var(--border-color)] p-4">
             <CreateAuthorizationForm
               documents={(documents ?? []).map((doc) => ({ id: doc.id, title: doc.title }))}
               action={createAuthorization.bind(null, property.id, threadView.threadId)}
             />
-            <ThreadPanel
-              view={threadView}
-              currentUserId={operator.id}
-              role="operator"
-              postMessageAction={postOperatorMessage.bind(null, property.id, threadView.threadId)}
-              toggleReactionAction={toggleReaction.bind(null, property.id)}
-              editMessageAction={editMessage.bind(null, property.id)}
-              withdrawMessageAction={withdrawMessage.bind(null, property.id)}
-            />
-          </>
-        ) : (
-          <p className="text-sm text-slate-500">No thread for this asset yet.</p>
-        )}
-      </section>
+          </div>
+        </details>
+      )}
+
+      {threadView && operator ? (
+        <>
+          <PropertyLiveRefresh propertyId={property.id} threadId={threadView.threadId} />
+          <ThreadPanel
+            view={threadView}
+            currentUserId={operator.id}
+            role="operator"
+            postMessageAction={postOperatorMessage.bind(null, property.id, threadView.threadId)}
+            toggleReactionAction={toggleReaction.bind(null, property.id)}
+            editMessageAction={editMessage.bind(null, property.id)}
+            withdrawMessageAction={withdrawMessage.bind(null, property.id)}
+          />
+        </>
+      ) : (
+        <p className="text-sm text-[var(--text-color)]">No thread for this asset yet.</p>
+      )}
     </div>
   );
 }

@@ -22,11 +22,11 @@ export function SyncButton() {
             );
           })
         }
-        className="rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+        className="rounded-xl bg-[var(--accent-color)] px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
       >
         {isPending ? 'Syncing' : 'Sync from CRM'}
       </button>
-      {message && <p className="mt-2 text-sm text-slate-600">{message}</p>}
+      {message && <p className="mt-2 text-sm text-[var(--text-color)]">{message}</p>}
     </div>
   );
 }

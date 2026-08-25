@@ -24,15 +24,15 @@ export function UploadForm({
           if (result.ok) formRef.current?.reset();
         })
       }
-      className="space-y-3 rounded-md border border-slate-200 bg-white p-4"
+      className="space-y-3 rounded-xl border border-[var(--border-color)] bg-[var(--card-bg)] p-4"
     >
       <input type="hidden" name="property_id" value={propertyId} />
       <div>
-        <label className="block text-xs font-medium text-slate-600">Document type</label>
+        <label className="block text-xs font-medium text-[var(--text-color)]">Document type</label>
         <select
           name="doc_type"
           required
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+          className="mt-1 w-full rounded-xl border border-[var(--border-color)] px-3 py-2 text-sm"
         >
           <option value="quotation">Quotation</option>
           <option value="invoice">Invoice</option>
@@ -42,25 +42,25 @@ export function UploadForm({
         </select>
       </div>
       <div>
-        <label className="block text-xs font-medium text-slate-600">Title</label>
+        <label className="block text-xs font-medium text-[var(--text-color)]">Title</label>
         <input
           name="title"
           required
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+          className="mt-1 w-full rounded-xl border border-[var(--border-color)] px-3 py-2 text-sm"
         />
       </div>
       <div>
-        <label className="block text-xs font-medium text-slate-600">File</label>
+        <label className="block text-xs font-medium text-[var(--text-color)]">File</label>
         <input type="file" name="file" required className="mt-1 w-full text-sm" />
       </div>
       <button
         type="submit"
         disabled={isPending}
-        className="rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+        className="rounded-xl bg-[var(--accent-color)] px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
       >
         {isPending ? 'Uploading' : 'Upload document'}
       </button>
-      {message && <p className="text-sm text-slate-600">{message}</p>}
+      {message && <p className="text-sm text-[var(--text-color)]">{message}</p>}
     </form>
   );
 }
