@@ -1,6 +1,16 @@
 import { notFound } from 'next/navigation';
 import { requireClient } from '@/lib/portal';
 import { DOC_TYPE_LABELS } from '@/lib/copy';
+import { getThreadView } from '@/lib/slice2/thread';
+import { NightBanner } from '@/components/thread/NightBanner';
+import { ThreadPanel } from '@/components/thread/ThreadPanel';
+import {
+  postClientMessage,
+  decideAuthorization,
+  toggleReaction,
+  editMessage,
+  withdrawMessage,
+} from './thread-actions';
 
 interface DocumentRow {
   id: string;
@@ -15,7 +25,7 @@ export default async function PortalPropertyPage({
   params: Promise<{ propertyId: string }>;
 }) {
   const { propertyId } = await params;
-  const { supabase, client } = await requireClient();
+  const { supabase, user, client } = await requireClient();
 
   const { data: property } = await supabase
     .from('properties')
@@ -40,6 +50,8 @@ export default async function PortalPropertyPage({
     list.push(doc);
     grouped.set(doc.doc_type, list);
   }
+
+  const threadView = await getThreadView(supabase, property.id, user.id);
 
   return (
     <div className="space-y-6">
@@ -67,6 +79,25 @@ export default async function PortalPropertyPage({
       {(documents ?? []).length === 0 && (
         <p className="text-sm text-slate-500">No documents yet.</p>
       )}
+
+      <section className="space-y-4">
+        <h2 className="text-lg font-medium text-slate-900">Thread</h2>
+        <NightBanner />
+        {threadView ? (
+          <ThreadPanel
+            view={threadView}
+            currentUserId={user.id}
+            role="client"
+            postMessageAction={postClientMessage.bind(null, property.id, threadView.threadId)}
+            decideAction={decideAuthorization.bind(null, property.id, threadView.threadId)}
+            toggleReactionAction={toggleReaction.bind(null, property.id)}
+            editMessageAction={editMessage.bind(null, property.id)}
+            withdrawMessageAction={withdrawMessage.bind(null, property.id)}
+          />
+        ) : (
+          <p className="text-sm text-slate-500">No thread for this asset yet.</p>
+        )}
+      </section>
     </div>
   );
 }

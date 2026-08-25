@@ -1,8 +1,19 @@
 import { notFound } from 'next/navigation';
 import { createAdminClient } from '@/lib/supabase/admin';
+import { createClient as createServerClient } from '@/lib/supabase/server';
 import { DOC_TYPE_LABELS } from '@/lib/copy';
 import { uploadDocument } from '../../actions';
 import { UploadForm } from './upload-form';
+import { getThreadView } from '@/lib/slice2/thread';
+import { ThreadPanel } from '@/components/thread/ThreadPanel';
+import { CreateAuthorizationForm } from './create-authorization-form';
+import {
+  postOperatorMessage,
+  createAuthorization,
+  toggleReaction,
+  editMessage,
+  withdrawMessage,
+} from './thread-actions';
 
 interface DocumentRow {
   id: string;
@@ -44,6 +55,11 @@ export default async function AdminPropertyPage({
 
   const clientName = (property as { clients?: { name?: string } | null }).clients?.name;
 
+  const {
+    data: { user: operator },
+  } = await (await createServerClient()).auth.getUser();
+  const threadView = operator ? await getThreadView(admin, property.id, operator.id) : null;
+
   return (
     <div className="space-y-8">
       <div>
@@ -75,6 +91,29 @@ export default async function AdminPropertyPage({
         ))}
         {(documents ?? []).length === 0 && (
           <p className="text-sm text-slate-500">No documents uploaded yet.</p>
+        )}
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-lg font-medium text-slate-900">Thread</h2>
+        {threadView && operator ? (
+          <>
+            <CreateAuthorizationForm
+              documents={(documents ?? []).map((doc) => ({ id: doc.id, title: doc.title }))}
+              action={createAuthorization.bind(null, property.id, threadView.threadId)}
+            />
+            <ThreadPanel
+              view={threadView}
+              currentUserId={operator.id}
+              role="operator"
+              postMessageAction={postOperatorMessage.bind(null, property.id, threadView.threadId)}
+              toggleReactionAction={toggleReaction.bind(null, property.id)}
+              editMessageAction={editMessage.bind(null, property.id)}
+              withdrawMessageAction={withdrawMessage.bind(null, property.id)}
+            />
+          </>
+        ) : (
+          <p className="text-sm text-slate-500">No thread for this asset yet.</p>
         )}
       </section>
     </div>

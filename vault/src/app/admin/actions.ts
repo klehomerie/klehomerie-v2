@@ -9,7 +9,7 @@ import { syncFromCrm, type CrmSyncResult } from '@/lib/crm-sync/sync';
 
 const TEST_DOMAIN = 'klehomerie.com';
 
-async function requireOperator() {
+export async function requireOperator() {
   const supabase = await createServerClient();
   const {
     data: { user },
