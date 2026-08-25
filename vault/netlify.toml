@@ -1,5 +1,12 @@
 [build]
   command = "npm run build"
 
+[build.environment]
+  # Turbopack's persistent build cache can embed literal env var values
+  # (e.g. CLICKUP_API_TOKEN) picked up while compiling server-only code.
+  # That cache directory is never served to visitors -- it only speeds up
+  # the *next* build -- so it's safe to exclude from secrets scanning.
+  SECRETS_SCAN_OMIT_PATHS = ".netlify/.next/cache/**,.next/cache/**"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
