@@ -1,12 +1,26 @@
 // Display labels for the fixed document_type enum. Keep this list in sync
-// with the Postgres enum in supabase/migrations/0001_init_schema.sql.
+// with the Postgres enum in supabase/migrations/0001_init_schema.sql and
+// its extension in 0006_realtime_and_client_doc_types.sql.
 export const DOC_TYPE_LABELS: Record<string, string> = {
   quotation: 'Quotation',
   invoice: 'Invoice',
   inspection_report: 'Inspection Report',
   delivery_note: 'Delivery Note',
+  proof_of_payment: 'Proof of Payment',
+  signed_agreement: 'Signed Agreement',
+  insurance_document: 'Insurance Document',
   other: 'Other',
 };
+
+// The subset of doc types a client can pick when uploading from /portal.
+// The rest (quotation, invoice, inspection_report, delivery_note) are
+// documents Klehomerie issues to the client, not the other way around.
+export const CLIENT_DOC_TYPES = [
+  'proof_of_payment',
+  'signed_agreement',
+  'insurance_document',
+  'other',
+] as const;
 
 // Client-visible fallback for any value the app doesn't have. Never leave a
 // blank, and never guess.

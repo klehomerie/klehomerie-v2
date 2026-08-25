@@ -6,6 +6,7 @@ import { uploadDocument } from '../../actions';
 import { UploadForm } from './upload-form';
 import { getThreadView } from '@/lib/slice2/thread';
 import { ThreadPanel } from '@/components/thread/ThreadPanel';
+import { PropertyLiveRefresh } from '@/components/PropertyLiveRefresh';
 import { CreateAuthorizationForm } from './create-authorization-form';
 import {
   postOperatorMessage,
@@ -98,6 +99,7 @@ export default async function AdminPropertyPage({
         <h2 className="text-lg font-medium text-slate-900">Thread</h2>
         {threadView && operator ? (
           <>
+            <PropertyLiveRefresh propertyId={property.id} threadId={threadView.threadId} />
             <CreateAuthorizationForm
               documents={(documents ?? []).map((doc) => ({ id: doc.id, title: doc.title }))}
               action={createAuthorization.bind(null, property.id, threadView.threadId)}

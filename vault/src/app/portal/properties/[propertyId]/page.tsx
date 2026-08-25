@@ -4,6 +4,7 @@ import { DOC_TYPE_LABELS } from '@/lib/copy';
 import { getThreadView } from '@/lib/slice2/thread';
 import { NightBanner } from '@/components/thread/NightBanner';
 import { ThreadPanel } from '@/components/thread/ThreadPanel';
+import { PropertyLiveRefresh } from '@/components/PropertyLiveRefresh';
 import {
   postClientMessage,
   decideAuthorization,
@@ -11,6 +12,8 @@ import {
   editMessage,
   withdrawMessage,
 } from './thread-actions';
+import { uploadClientDocument } from './document-actions';
+import { ClientUploadForm } from './client-upload-form';
 
 interface DocumentRow {
   id: string;
@@ -80,20 +83,25 @@ export default async function PortalPropertyPage({
         <p className="text-sm text-slate-500">No documents yet.</p>
       )}
 
+      <ClientUploadForm action={uploadClientDocument.bind(null, property.id)} />
+
       <section className="space-y-4">
         <h2 className="text-lg font-medium text-slate-900">Thread</h2>
         <NightBanner />
         {threadView ? (
-          <ThreadPanel
-            view={threadView}
-            currentUserId={user.id}
-            role="client"
-            postMessageAction={postClientMessage.bind(null, property.id, threadView.threadId)}
-            decideAction={decideAuthorization.bind(null, property.id, threadView.threadId)}
-            toggleReactionAction={toggleReaction.bind(null, property.id)}
-            editMessageAction={editMessage.bind(null, property.id)}
-            withdrawMessageAction={withdrawMessage.bind(null, property.id)}
-          />
+          <>
+            <PropertyLiveRefresh propertyId={property.id} threadId={threadView.threadId} />
+            <ThreadPanel
+              view={threadView}
+              currentUserId={user.id}
+              role="client"
+              postMessageAction={postClientMessage.bind(null, property.id, threadView.threadId)}
+              decideAction={decideAuthorization.bind(null, property.id, threadView.threadId)}
+              toggleReactionAction={toggleReaction.bind(null, property.id)}
+              editMessageAction={editMessage.bind(null, property.id)}
+              withdrawMessageAction={withdrawMessage.bind(null, property.id)}
+            />
+          </>
         ) : (
           <p className="text-sm text-slate-500">No thread for this asset yet.</p>
         )}
