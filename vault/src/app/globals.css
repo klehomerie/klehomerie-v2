@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap');
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------
+ * Design tokens, extracted verbatim from klehomerie-v2's own stylesheet
+ * (src/assets/css/style.css) -- not invented. Same variable names and
+ * values as the marketing site, including its dark-mode overrides, so
+ * the vault reads as the same product. Do not add a color, font, or
+ * radius here that isn't traceable back to that file.
+ * ------------------------------------------------------------------- */
+:root {
+  --bg-color: #F9F6F1;
+  --text-color: #5A5A5A;
+  --title-color: #0C2D48;
+  --accent-color: #C66C54;
+  --accent-color-hover: #A94A2D;
+  --secondary-bg: #EAE5DD;
+  --card-bg: #FFFFFF;
+  --border-color: #E0C097;
+
+  /* Card radius, as literally set on .flip-card-inner / .flip-card-front /
+     .flip-card-back and used via rounded-xl on the KLab article cards --
+     the closest analog on the marketing site to a content card. */
+  --card-radius: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-color: #1c1a3c;
+    --text-color: #A0AEC0;
+    --title-color: #EDF2F7;
+    --accent-color: #FBBF24;
+    --accent-color-hover: #F59E0B;
+    --secondary-bg: #2D3748;
+    --card-bg: #2D3748;
+    --border-color: #4A5568;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #1c1a3c;
+  --text-color: #A0AEC0;
+  --title-color: #EDF2F7;
+  --accent-color: #FBBF24;
+  --accent-color-hover: #F59E0B;
+  --secondary-bg: #2D3748;
+  --card-bg: #2D3748;
+  --border-color: #4A5568;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--title-color);
+  font-weight: 700;
+}
+
+/* Financial figures get their own typographic treatment: tabular
+   numerals so amounts align, regardless of which Tailwind text-size
+   utility wraps this class. */
+.km-figures {
+  font-variant-numeric: tabular-nums;
+}
