@@ -3,7 +3,7 @@
 -- ---------------------------------------------------------------------------
 -- Test accounts
 -- ---------------------------------------------------------------------------
-alter table public.clients add column is_test_account boolean not null default false;
+alter table public.clients add column if not exists is_test_account boolean not null default false;
 
 comment on column public.clients.is_test_account is
   'Set by hand in the Supabase dashboard, never by the CRM sync -- the sheet has no such column and must never gain one. Currently true only for ID001.';
@@ -14,6 +14,9 @@ comment on column public.clients.is_test_account is
 -- forget a WHERE clause that was never its to write. security_invoker
 -- keeps the underlying RLS policies on clients/properties in force for
 -- any caller other than the service role.
+drop view if exists public.real_properties;
+drop view if exists public.real_clients;
+
 create view public.real_clients
   with (security_invoker = true) as
   select * from public.clients where is_test_account = false;
@@ -36,7 +39,7 @@ comment on view public.real_clients is
 -- webhook handler, to record where the ClickUp task landed. Every other
 -- column stays append-only. This replaces the blanket forbid-all-updates
 -- trigger from 0004 with one that checks each column individually.
-alter table public.authorizations add column clickup_task_id text;
+alter table public.authorizations add column if not exists clickup_task_id text;
 
 create or replace function public.guard_authorization_update() returns trigger
 language plpgsql as $$
@@ -67,6 +70,7 @@ end;
 $$;
 
 drop trigger if exists authorizations_forbid_update on public.authorizations;
+drop trigger if exists authorizations_guard_update on public.authorizations;
 create trigger authorizations_guard_update
   before update on public.authorizations
   for each row execute function public.guard_authorization_update();
@@ -98,6 +102,7 @@ begin
 end;
 $$;
 
+drop trigger if exists authorizations_notify_clickup on public.authorizations;
 create trigger authorizations_notify_clickup
   after insert on public.authorizations
   for each row execute function public.notify_authorization_decided();
