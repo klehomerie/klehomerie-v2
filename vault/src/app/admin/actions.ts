@@ -32,23 +32,25 @@ export type InviteResult = { ok: true } | { ok: false; error: string };
 
 // Sends a portal invite to an existing (CRM-synced) client row. This does
 // not create a client -- the CRM sync is the only thing that does that.
-// Never invites a klehomerie.com address, independent of whatever the sync
-// already filtered out, per the "enforce this at the invite function, not
-// only at sync" instruction.
+// klehomerie.com addresses are blocked unless is_test_account is true --
+// the guard stays, the exception is now a deliberate row, not a blanket
+// carve-out. Enforced here, independent of whatever the sync already
+// filtered out, per the "enforce this at the invite function, not only at
+// sync" instruction.
 export async function inviteClient(clientId: string): Promise<InviteResult> {
   await requireOperator();
   const admin = createAdminClient();
 
   const { data: client, error } = await admin
     .from('clients')
-    .select('id, email, auth_user_id')
+    .select('id, email, auth_user_id, is_test_account')
     .eq('id', clientId)
     .single();
 
   if (error || !client) {
     return { ok: false, error: 'Client not found.' };
   }
-  if (client.email.trim().toLowerCase().endsWith(`@${TEST_DOMAIN}`)) {
+  if (client.email.trim().toLowerCase().endsWith(`@${TEST_DOMAIN}`) && !client.is_test_account) {
     return { ok: false, error: 'Internal test domain: portal invites are blocked for klehomerie.com addresses.' };
   }
   if (client.auth_user_id) {

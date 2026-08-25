@@ -8,7 +8,7 @@ export default async function AdminPage() {
 
   const { data: clients } = await admin
     .from('clients')
-    .select('id, name, email, auth_user_id')
+    .select('id, name, email, auth_user_id, is_test_account')
     .order('name');
 
   const { data: properties } = await admin
@@ -66,7 +66,14 @@ export default async function AdminPage() {
           {(clients ?? []).map((client) => (
             <li key={client.id} className="flex items-center justify-between px-4 py-3">
               <div>
-                <p className="text-sm font-medium text-[var(--title-color)]">{client.name}</p>
+                <p className="text-sm font-medium text-[var(--title-color)]">
+                  {client.name}
+                  {client.is_test_account && (
+                    <span className="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-900">
+                      Test account
+                    </span>
+                  )}
+                </p>
                 <p className="text-xs text-[var(--text-color)]">{client.email}</p>
               </div>
               <InviteButton clientId={client.id} hasAccess={Boolean(client.auth_user_id)} />

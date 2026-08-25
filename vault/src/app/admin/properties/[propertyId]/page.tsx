@@ -7,6 +7,7 @@ import { UploadForm } from './upload-form';
 import { getThreadView } from '@/lib/slice2/thread';
 import { ThreadPanel } from '@/components/thread/ThreadPanel';
 import { PropertyLiveRefresh } from '@/components/PropertyLiveRefresh';
+import { TestAccountBanner } from '@/components/TestAccountBanner';
 import { CreateAuthorizationForm } from './create-authorization-form';
 import {
   postOperatorMessage,
@@ -33,7 +34,7 @@ export default async function AdminPropertyPage({
 
   const { data: property } = await admin
     .from('properties')
-    .select('id, address, prop_ref, client_id, clients(name)')
+    .select('id, address, prop_ref, client_id, clients(name, is_test_account)')
     .eq('id', propertyId)
     .single();
 
@@ -54,7 +55,9 @@ export default async function AdminPropertyPage({
     grouped.set(doc.doc_type, list);
   }
 
-  const clientName = (property as { clients?: { name?: string } | null }).clients?.name;
+  const clientInfo = (property as { clients?: { name?: string; is_test_account?: boolean } | null }).clients;
+  const clientName = clientInfo?.name;
+  const isTestAccount = Boolean(clientInfo?.is_test_account);
 
   const {
     data: { user: operator },
@@ -63,6 +66,7 @@ export default async function AdminPropertyPage({
 
   return (
     <div className="space-y-6">
+      {isTestAccount && <TestAccountBanner />}
       {/* Collapsed header -- the thread below is the screen, this is just
           orientation, not a competing block of stacked fields. */}
       <header>
