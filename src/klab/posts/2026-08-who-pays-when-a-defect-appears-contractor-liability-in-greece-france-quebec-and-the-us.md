@@ -6,14 +6,14 @@ summary: In France and Quebec, a legal presumption or an insurer carries part of
   English-speaking Canada, that risk sits with the owner from the moment of
   acceptance. Here is how the transfer works, when it happens, and what else you
   carry in Greece that no contract mentions.
-seo_title: "Who Pays for a Defect? Contractor Liability by Country"
-seo_description: "In France and Quebec, an insurer often covers structural
-  defects after a renovation. In Greece, the US, and most of Canada, that
-  risk falls on the owner."
 date: 2026-08-26T14:54:00.000+03:00
 updated_date: 2026-08-26T14:54:00.000+03:00
 category: Regulatory Watch
 language: en
+seo_title: Who Pays for a Defect? Contractor Liability by Country
+seo_description: In France and Quebec, an insurer often covers structural
+  defects after a renovation. In Greece, the US, and most of Canada, that risk
+  falls on the owner.
 property_type: All
 location: Athens, Greece
 image: /assets/images/uploads/contractor_feature.png
@@ -28,7 +28,9 @@ image: /assets/images/uploads/contractor_feature.png
 6. [Two more exposures: site wages and your consumer-law backstop](#6-two-more-exposures-site-wages-and-your-consumer-law-backstop)
 7. [Athens' structural inheritance and the digital net](#7-athens-structural-inheritance-and-the-digital-net)
 8. [Where this leaves an asset manager](#8-where-this-leaves-an-asset-manager)
-   In France, if a structural defect appears in the ten years following a renovation, an insurer funds the repair before anyone establishes whose fault it was. In Greece, that insurer does not exist. Neither does it in the United States, or in most of English-speaking Canada.
+
+
+In France, if a structural defect appears in the ten years following a renovation, an insurer funds the repair before anyone establishes whose fault it was. In Greece, that insurer does not exist. Neither does it in the United States, or in most of English-speaking Canada.
 
 None of that makes Athens riskier than Paris, Montreal, or Miami. It makes Athens a market still priced, in part, for owners who never look closely at what they are buying. The ones who do look come out ahead, and the mechanism by which they come out ahead is specific: the risk that an insurer carries elsewhere is here reallocated by contract, before signature, or not at all.
 
