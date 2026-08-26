@@ -29,7 +29,6 @@ image: /assets/images/uploads/gemini_generated_image_px3iwhpx3iwhpx3i.jpeg
 7. [Athens' structural inheritance and the digital net](#7-athens-structural-inheritance-and-the-digital-net)
 8. [Where this leaves an asset manager](#8-where-this-leaves-an-asset-manager)
 
-
 In France, if a structural defect appears in the ten years following a renovation, an insurer funds the repair before anyone establishes whose fault it was. In Greece, that insurer does not exist. Neither does it in the United States, or in most of English-speaking Canada.
 
 None of that makes Athens riskier than Paris, Montreal, or Miami. It makes Athens a market still priced, in part, for owners who never look closely at what they are buying. The ones who do look come out ahead, and the mechanism by which they come out ahead is specific: the risk that an insurer carries elsewhere is here reallocated by contract, before signature, or not at all.
@@ -187,3 +186,7 @@ Understand the concrete.
 14. Technical Chamber of Greece, Peloponnese Section, consolidated question-and-answer document on Law 4495/2017, April 2022, recording that the system rejects Category 5 declarations submitted after 30 September 2020 other than in cases falling under Article 128 of Law 4759/2020. See also B2Green on subsequent requests to reopen the category.
 15. Law 5222/2025, "National Customs Code and other provisions", ΦΕΚ Α' 134 of 28 July 2025, Article 217, inserting Article 15B into the Code of Tax Procedure (Law 5104/2024) and establishing the Property Ownership and Management Registry (MIDA) at the Independent Authority for Public Revenue. Subsequently codified with Law 5313/2026, so confirm the current wording before relying on it.
 16. B2Green, "MIDA: procedure, penalties and the necessary technical check," 2026. Sets out the document file per property and the four fields to verify (location, surface, right, use), and notes penalties applying to uses beginning 1 November 2026, movable by decision of the AADE Governor.
+
+\---
+
+*Scope note: Arnaud Zerdab and Klehomerie are not certified civil engineers or licensed architects, hold no engineering seal, and assume no legally binding structural liability. Where a task requires the signature of a licensed professional, Klehomerie's role is Technical Project Management: coordinating the right certified local professionals to get the document issued correctly. Nothing in this article constitutes legal advice. Owners structuring a transaction in Greece, Quebec, or elsewhere should confirm current provisions with a licensed lawyer in the relevant jurisdiction. The delivery inspection referenced in section 4 is reproduced with identifying details removed.*
