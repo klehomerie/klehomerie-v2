@@ -1,4 +1,4 @@
 {
   "layout": "post.njk",
-  "permalink": "/klab/{{ title | slugify }}/"
+  "permalink": "/klab/{{ slug | default: title | slugify }}/"
 }

@@ -4,6 +4,7 @@ title: "The Aftershock Nobody Schedules: Why Athens Properties Need
 summary: Discover why calendar property maintenance fails in Athens. Learn how
   event-triggered technical management protects your yield from seismic and
   wildfire risks.
+seo_title: "The Aftershock Nobody Schedules | Athens Maintenance"
 date: 2026-07-21T20:00:00.000+03:00
 category: Golden Visa Strategy
 language: en

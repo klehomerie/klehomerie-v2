@@ -90,7 +90,12 @@ eleventyConfig.addPassthroughCopy("src/arnaud-zerdab-logo.png");
         return false;
       }
       return data.permalink;
-    }
+    },
+    // Pages under /fr/ already set `locale: fr` in their own front matter,
+    // which wins here. KLAB posts don't set `locale`, so fall back to their
+    // `language` field (en/fr/el) — this drives <html lang>, og:locale, and
+    // the hreflang self-reference in base.njk.
+    locale: data => data.locale || data.language || "en"
   });
 // 2. FILTERS
   

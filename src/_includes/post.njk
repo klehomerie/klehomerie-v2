@@ -288,7 +288,7 @@ layout: base.njk
   "description": {{ (summary or "A deep dive into Athens construction risks.") | dump | safe }},
   "image": "https://klehomerie.com{{ heroSrc }}",
   "datePublished": "{{ date | dateISO }}",
-  "dateModified": "{{ date | dateISO }}",
+  "dateModified": "{{ (updated_date or date) | dateISO }}",
   "author": {
     "@type": "Person",
     "name": "Arnaud Zerdab",

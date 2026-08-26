@@ -5,6 +5,9 @@ summary: Last month a client asked me what had been approved on his apartment in
   that point was a Google Drive folder. The rest was in a WhatsApp thread, an
   email, and a PDF I had named badly. It took me 35 minutes to answer a question
   that should have taken ten seconds.
+seo_description: "A client asked what had been approved on his apartment. It
+  took 35 minutes to answer a 10-second question, because his Digital Vault
+  was a Google Drive folder."
 date: 2026-08-18T21:17:00.000+03:00
 updated_date: 2026-08-18T21:17:00.000+03:00
 category: Regulatory Watch

@@ -6,6 +6,10 @@ summary: Comme beaucoup d'entre nous, j'ai traversé ces derniers étés en Fran
   lourde, étouffante et difficile à supporter. C'est ce constat qui m'a poussé à
   chercher une alternative et à poser mes valises à Athènes, une ville qui a
   appris à faire du soleil un allié plutôt qu'une contrainte.
+seo_title: "Pourquoi j'ai choisi Athènes face aux canicules"
+seo_description: "Face à des étés de plus en plus étouffants en France,
+  pourquoi j'ai posé mes valises à Athènes, une ville qui a appris à faire du
+  soleil un allié."
 date: 2026-05-28T09:40:00.000+03:00
 updated_date: 2026-07-09T00:16:00.000+03:00
 category: French Standards

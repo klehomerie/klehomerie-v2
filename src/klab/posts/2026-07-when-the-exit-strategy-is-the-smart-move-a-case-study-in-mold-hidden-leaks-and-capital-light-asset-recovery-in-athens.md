@@ -5,6 +5,10 @@ summary: Not every property problem calls for a full renovation. Sometimes the
   smarter decision is to stabilize the asset, exit cleanly, and protect what
   capital remains. This case study documents exactly that scenario — and what
   happened when a second, hidden defect surfaced mid-execution.
+seo_title: "When Exit Beats Renovation: An Athens Case Study"
+seo_description: "Not every property problem needs a renovation. A case study
+  in stabilizing an asset, exiting cleanly, and protecting capital after a
+  hidden defect surfaced."
 date: 2026-07-09T22:57:00.000+03:00
 category: Red Flag Scans
 language: en

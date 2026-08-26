@@ -6,6 +6,10 @@ summary: In France and Quebec, a legal presumption or an insurer carries part of
   English-speaking Canada, that risk sits with the owner from the moment of
   acceptance. Here is how the transfer works, when it happens, and what else you
   carry in Greece that no contract mentions.
+seo_title: "Who Pays for a Defect? Contractor Liability by Country"
+seo_description: "In France and Quebec, an insurer often covers structural
+  defects after a renovation. In Greece, the US, and most of Canada, that
+  risk falls on the owner."
 date: 2026-08-26T14:54:00.000+03:00
 updated_date: 2026-08-26T14:54:00.000+03:00
 category: Regulatory Watch

@@ -7,6 +7,10 @@ summary: For years, investing in Athenian real estate meant accepting a familiar
   and patient contractors far more than it rewarded transparent capital. That
   trade-off is disappearing, so let's break down what this structural shift
   means for your portfolio.
+seo_title: "The Athens Reform: What Every Investor Must Know"
+seo_description: "Greece's property bureaucracy is being restructured. What
+  the shift away from opaque permitting and overlapping jurisdictions means
+  for your portfolio."
 date: 2026-07-15T14:20:00.000+03:00
 category: Regulatory Watch
 language: en

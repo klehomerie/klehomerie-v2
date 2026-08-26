@@ -28,6 +28,11 @@ collections:
       - {label: "Category", name: "category", widget: "select", options: ["Technical Insight", "Red Flag Scans", "Golden Visa Strategy", "French Standards", "Regulatory Watch"]}
       - {label: "Language", name: "language", widget: "select", options: ["en", "fr"], default: "en"}
 
+      # A2. SEO (optional overrides — leave blank to fall back to Title/Summary above)
+      - {label: "URL Slug", name: "slug", widget: "string", required: false, hint: "Locks the article's URL (e.g. \"turn-key-trap-athens-riviera\"). Leave blank to auto-generate from Title — but note editing Title later will then change the URL."}
+      - {label: "SEO Title", name: "seo_title", widget: "string", required: false, hint: "Shorter title for search results / social shares (~60 chars). Leave blank to reuse Title."}
+      - {label: "SEO Description", name: "seo_description", widget: "text", required: false, hint: "Meta description for search results (~155 chars). Leave blank to reuse Summary."}
+
       # B. SPECIFICS
       - {label: "Property Type", name: "property_type", widget: "string", default: "Residential"}
       - {label: "Location", name: "location", widget: "string", default: "Athens, Greece"}

@@ -4,6 +4,9 @@ summary: Microcement and tile are both excellent finishes. Which one you end up
   taste. Two Athens projects, why a 2 to 3 mm coating punishes an uneven floor
   harder than a 15 mm tile bed does, and the questions worth asking before you
   sign a quote.
+seo_description: "Microcement or tile? In Athens the substrate, calendar, and
+  budget decide, not taste. Why a thin coating punishes an uneven floor harder
+  than a tile bed does."
 property_type: All
 visual_module:
   type: None
