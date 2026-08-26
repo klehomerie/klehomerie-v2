@@ -16,7 +16,7 @@ seo_description: In France and Quebec, an insurer often covers structural
   falls on the owner.
 property_type: All
 location: Athens, Greece
-image: /assets/images/uploads/contractor_feature.png
+image: /assets/images/uploads/gemini_generated_image_px3iwhpx3iwhpx3i.jpeg
 ---
 ## Table of contents
 
