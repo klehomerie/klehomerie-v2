@@ -37,5 +37,9 @@ description: Your technical request has been received by Klehomerie.
             'page_source': pageSource
         });
     }
+
+    if (typeof fbq === 'function') {
+        fbq('track', 'Lead');
+    }
 })();
 </script>

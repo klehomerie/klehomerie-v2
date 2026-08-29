@@ -291,6 +291,30 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
+  // --- 10b. META PIXEL EVENT TRACKING ---
+  // Contact form + checklist opt-in conversions fire from their own thank-you/
+  // confirmation pages (see thank-you.njk, checklist/confirmed.njk) since those
+  // only render after a real submission. Click-based actions are delegated here
+  // so they work across every page without per-template wiring.
+  document.addEventListener('click', function(e) {
+      if (typeof fbq !== 'function') return;
+
+      if (e.target.closest('#whatsapp-float-btn')) {
+          fbq('track', 'Contact');
+          return;
+      }
+
+      if (e.target.closest('#contact a[href^="mailto:"], #contact a[href^="tel:"]')) {
+          fbq('track', 'Contact');
+          return;
+      }
+
+      if (e.target.closest('a[href^="https://calendar.app.google/"]')) {
+          fbq('track', 'Schedule');
+          return;
+      }
+  });
+
   // --- 11. FLIP CARD INTERACTION ---
   if (packagesContainer) {
       packagesContainer.addEventListener('click', function(e) {

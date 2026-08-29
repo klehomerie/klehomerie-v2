@@ -8,3 +8,9 @@ locale: fr
     <h1 class="text-3xl md:text-4xl font-bold mb-4 text-[--title-color]">Confirmé</h1>
     <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">Votre checklist est dans votre boîte mail.</p>
 </div>
+
+<script>
+    if (typeof fbq === 'function') {
+        fbq('track', 'CompleteRegistration');
+    }
+</script>
