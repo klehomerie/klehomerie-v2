@@ -22,7 +22,8 @@ window.addEventListener('load', function() {
     },
     categories: {
       necessary: { enabled: true, readOnly: true },
-      analytics: { enabled: false }
+      analytics: { enabled: false },
+      marketing: { enabled: false }
     },
     onFirstConsent: updateGtagConsent,
     onConsent: updateGtagConsent,
