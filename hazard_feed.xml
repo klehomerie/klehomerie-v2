@@ -4,12 +4,6 @@
   <title>Klehomerie Geo-Hazard Feed</title>
   <link>https://github.com/klehomerie/klehomerie-v2</link>
   <description>Anonymized proximity alerts generated from private CRM.</description>
-  <pubDate>Sun, 30 Aug 2026 13:58:07 GMT</pubDate>
-  <item>
-    <title>[FIRE] Thermal Point Alert near Prop-007</title>
-    <description>Satellite thermal detection 4.84km from property ID Prop-007.</description>
-    <guid isPermaLink="false">f_37.99879_23.68809_Prop-007</guid>
-    <pubDate>Sun, 30 Aug 2026 13:58:06 GMT</pubDate>
-  </item>
+  <pubDate>Tue, 01 Sep 2026 05:58:05 GMT</pubDate>
 </channel>
 </rss>
