@@ -4,30 +4,6 @@
   <title>Klehomerie Geo-Hazard Feed</title>
   <link>https://github.com/klehomerie/klehomerie-v2</link>
   <description>Anonymized proximity alerts generated from private CRM.</description>
-  <pubDate>Mon, 21 Sep 2026 13:58:10 GMT</pubDate>
-  <item>
-    <title>[WEATHER] Alert for Prop-007</title>
-    <description>Severe condition near property ID Prop-007: Yellow Thunderstorm warning (Attiki) [until 2026-09-22T18:00:00+00:00].</description>
-    <guid isPermaLink="false">w_Prop-007_249003000GR260921122700020000011</guid>
-    <pubDate>Mon, 21 Sep 2026 13:58:05 GMT</pubDate>
-  </item>
-  <item>
-    <title>[WEATHER] Alert for Prop-007</title>
-    <description>Severe condition near property ID Prop-007: Yellow Rain warning (Attiki) [until 2026-09-22T21:00:00+00:00].</description>
-    <guid isPermaLink="false">w_Prop-007_249003000GR260921122100002000011</guid>
-    <pubDate>Mon, 21 Sep 2026 13:58:06 GMT</pubDate>
-  </item>
-  <item>
-    <title>[WEATHER] Alert for Prop-009</title>
-    <description>Severe condition near property ID Prop-009: Yellow Thunderstorm warning (Attiki) [until 2026-09-22T18:00:00+00:00].</description>
-    <guid isPermaLink="false">w_Prop-009_249003000GR260921122700020000011</guid>
-    <pubDate>Mon, 21 Sep 2026 13:58:07 GMT</pubDate>
-  </item>
-  <item>
-    <title>[WEATHER] Alert for Prop-009</title>
-    <description>Severe condition near property ID Prop-009: Yellow Rain warning (Attiki) [until 2026-09-22T21:00:00+00:00].</description>
-    <guid isPermaLink="false">w_Prop-009_249003000GR260921122100002000011</guid>
-    <pubDate>Mon, 21 Sep 2026 13:58:08 GMT</pubDate>
-  </item>
+  <pubDate>Wed, 23 Sep 2026 23:58:05 GMT</pubDate>
 </channel>
 </rss>
