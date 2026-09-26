@@ -4,6 +4,18 @@
   <title>Klehomerie Geo-Hazard Feed</title>
   <link>https://github.com/klehomerie/klehomerie-v2</link>
   <description>Anonymized proximity alerts generated from private CRM.</description>
-  <pubDate>Wed, 23 Sep 2026 23:58:05 GMT</pubDate>
+  <pubDate>Sat, 26 Sep 2026 13:58:07 GMT</pubDate>
+  <item>
+    <title>[WEATHER] Alert for Prop-007</title>
+    <description>Severe condition near property ID Prop-007: Yellow Rain warning (Attiki) [until 2026-09-27T15:00:00+00:00].</description>
+    <guid isPermaLink="false">w_Prop-007_249003000GR260926131500001000011</guid>
+    <pubDate>Sat, 26 Sep 2026 13:58:05 GMT</pubDate>
+  </item>
+  <item>
+    <title>[WEATHER] Alert for Prop-009</title>
+    <description>Severe condition near property ID Prop-009: Yellow Rain warning (Attiki) [until 2026-09-27T15:00:00+00:00].</description>
+    <guid isPermaLink="false">w_Prop-009_249003000GR260926131500001000011</guid>
+    <pubDate>Sat, 26 Sep 2026 13:58:06 GMT</pubDate>
+  </item>
 </channel>
 </rss>
